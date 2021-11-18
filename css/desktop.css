@@ -1,0 +1,1086 @@
+@media only screen and (min-width: 1000px) {
+        .header{
+            height:5em;
+        }
+        .menu .bars{
+            background-color: black;
+        }
+        .hrline{
+          display: none;}
+        .menu_content {
+            color: black;
+            position: absolute;
+            top: 10px;
+            right:2em;
+            display: flex;
+            flex-direction: row;
+        }
+        #list1_hover {
+          color: rgb(241, 163, 19);
+        text-decoration: underline;
+        }
+        .dropdown div a:link{
+          text-decoration: none;
+          color: white;
+          font-size: 19px;
+        }
+        .dropdown div a:visited{
+        color: white;
+        }
+        
+        .dropdown div a:hover{
+          color: rgb(241, 163, 19);
+          text-decoration: underline;
+          }
+          
+        .dropdown div a:active{
+          color: rgb(241, 163, 19);
+          text-decoration: underline;
+          }
+         
+
+        .dropdown div{
+          margin: 4px;
+          padding: 3px;
+          animation:fadeup 1s linear;
+        }
+        .dropdown{
+          display: flex;
+          flex-direction: row;
+        }
+        .desktop-menu{
+          width: 100%;
+          display: block;
+            list-style-type: none;
+            margin: 0;
+            padding: 3em;
+            background-color: #333;
+          }
+          
+          .div-deskmenu {
+            flex: row;
+          }
+          
+          .a-deskmenu {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+          
+          }
+          .log_reg{
+            display: flex;
+            flex-direction: row;
+        }
+        .log_reg div a:link{
+          text-decoration: none;
+          color:black;
+          font-size: 20px;
+        
+        }
+        .log_reg div a:visited{
+          color:black;
+        }
+        .log_reg div a :hover{
+          color: rgb(165, 112, 42);
+        }
+        .log_reg div {
+          background-color:white;
+          margin: 3px;
+          margin-left: 4px;
+          padding: 4px;
+          border-radius: 3px;
+          animation: fadeup 1s linear;
+        
+        }
+          
+          
+        
+/*========loaging style===*/
+.rotation{
+  left:45%;
+}
+/*=====End loading=====*/
+
+/* font awesome cross icon*/
+.dropdown>span{
+  display: none;
+}
+/*end of font awesome awesome cross icon */
+
+
+  
+/*background theme*/
+
+/* line-chART*/
+.line-chart{
+  color: rgb(90, 90, 86);
+  position: absolute;
+  font-size: 3em;
+  top: 12%;
+  left: 70%;
+  }
+  /*end of line-chart*/
+  
+  /* font  awesome dollar icon*/
+  .dollar{
+    color: #eee488;
+    position: absolute;
+    font-size: 3em;
+    top: 22%;
+    left: 60%;
+  
+  }
+  /* end of font awesome dollar */
+  
+  
+  /* fa dollar2*/ 
+  .dollar2{
+  color: rgb(253, 222, 136);
+  position: absolute;
+  font-size: 3em;
+  top: 55%;
+  left: 92%;
+  }
+  /*end fa dollar2*/
+  
+  /* fa euro*/ 
+  .euro{
+  color: rgb(253, 222, 136);
+  position: absolute;
+  font-size: 2em;
+  top: 55%;
+  left: 70%;
+  }
+  /*end fa euro*/
+  
+  /* fa yen*/ 
+  .yen{
+  color: rgb(253, 222, 136);
+  position: absolute;
+  font-size: 2em;
+  top: 55%;
+  left: 50%;
+  }
+  /*end fa yen*/
+  
+  /* fa credit card*/
+  .credit-card{
+    color: rgb(243, 243, 219);
+    position: absolute;
+    font-size: 2em;
+    top: 37%;
+    left: 70%;   
+  }
+  /*end of fa credit card*/
+  
+  /* fa money*/
+  .money{
+    color: rgb(218, 248, 178);
+    position: absolute;
+    font-size: 3em;
+    top: 22%;
+    left: 80%;
+  }
+  /*end fa money*/
+  
+  /* fa money2*/ 
+  .money2{
+  color: rgb(233, 248, 178);
+  position: absolute;
+  font-size: 1em;
+  top: 20%;
+  left: 50%;
+  }
+  /*end fa money2*/
+  
+  /* fa money3*/ 
+  .money3{
+  color: rgb(250, 249, 176);
+  position: absolute;
+  font-size: 1em;
+  top: 10%;
+  left: 50%;
+  }
+  /*end fa money3*/
+  
+  /* fa money4*/ 
+  .money4{
+  color: rgb(223, 248, 177);
+  position: absolute;
+  font-size: 1em;
+  top: 15%;
+  left: 50%;
+  }
+  /*end fa money4*/
+  
+  /* fa money5*/ 
+  .money5{
+  color: rgb(242, 243, 166);
+  position: absolute;
+  font-size: 1em;
+  top: 25%;
+  left: 50%;
+  }
+  /*end fa money5*/
+  
+  /* fa money6*/ 
+  .money6{
+  color: rgb(224, 243, 170);
+  position: absolute;
+  font-size: 1em;
+  top: 30%;
+  left: 50%;
+  }
+  /*end fa money6*/
+  
+  /* fa money7*/ 
+  .money7{
+  color: rgb(249, 250, 190);
+  position: absolute;
+  font-size: 1em;
+  top: 35%;
+  left: 50%;
+  }
+  /*end fa money7*/
+  
+  /* fa money8*/ 
+  .money8{
+  color: rgb(229, 250, 190);
+  position: absolute;
+  font-size: 1em;
+  top: 40%;
+  left: 50%;
+  }
+  /*end fa money8*/
+  
+  /* fa money9*/ 
+  .money9{
+  color: rgb(246, 250, 190);
+  position: absolute;
+  font-size: 1em;
+  top: 45%;
+  left: 50%;
+  }
+  /*end fa money9*/
+  
+  /* fa money10*/ 
+  .money10{
+  color: rgb(224, 250, 190);
+  position: absolute;
+  font-size: 1em;
+  top: 45%;
+  left: 56%;
+  }
+  /*end fa money10*/
+  
+  /* fa money11*/ 
+  .money11{
+  color: rgb(249, 250, 190);
+  position: absolute;
+  font-size: 1em;
+  top: 45%;
+  left: 62%;
+  }
+  /*end fa money11*/
+  
+  /* fa money12*/ 
+  .money12{
+  color: rgb(249, 250, 190);
+  position: absolute;
+  font-size: 1em;
+  top: 45%;
+  left: 68%;
+  }
+  /*end fa money12*/
+  
+  /* fa money13*/ 
+  .money13{
+  color: rgb(232, 250, 190);
+  position: absolute;
+  font-size: 1em;
+  top: 45%;
+  left: 74%;
+  }
+  /*end fa money13*/
+  
+  /* fa money14*/ 
+  .money14{
+  color: rgb(244, 250, 190);
+  position: absolute;
+  font-size: 1em;
+  top: 45%;
+  left: 80%;
+  }
+  /*end fa money14*/
+  
+  /* fa money15*/ 
+  .money15{
+  color: rgb(224, 250, 190);
+  position: absolute;
+  font-size: 1em;
+  top: 45%;
+  left: 86%;
+  }
+  /*end fa money15*/
+  
+  /* fa money16*/ 
+  .money16{
+  color: rgb(224, 250, 190);
+  position: absolute;
+  font-size: 1em;
+  top: 45%;
+  left: 92%;
+  }
+  /*end fa money16*/
+  
+  
+  
+    /* in industry*/
+    .industry{
+  
+      color: rgb(90, 90, 86);
+      position: absolute;
+      font-size: 3em;
+      top: 23%;
+      left: 70%;
+    }
+  /* end of fa industry*/
+  
+  /* fa tree*/
+  .tree{
+  
+      color: rgb(63, 63, 61);
+      position: absolute;
+      font-size: 7em;
+      bottom:-1%;
+      top:70%;
+    }
+  
+  /*  end fa tree*/
+  
+   /* fa tree2*/
+   .tree2{
+  
+    color: rgb(100, 100, 96);
+    position: absolute;
+    font-size: 3em;
+    bottom:0%;
+    top:55%;
+    left:30%;
+  }
+  /*  end of fa tree2*/
+  
+  /*  fa tree3*/
+  .tree3{
+  color: rgb(88, 86, 86);
+  position: absolute;
+  left:50%;
+  top: 62%;
+  font-size: 5em;
+  /* fa tree3 */
+  }
+  
+  
+   /* fa tree4*/
+   .tree4{
+  
+    color: rgb(78, 78, 75);
+    position: absolute;
+    font-size: 4em;
+    bottom:0%;
+    top:55%;
+    left:10%;
+  }
+  /*  end of fa tree4*/
+  
+  /*  fa tree5*/
+  .tree5{
+  color: rgb(92, 90, 90);
+  position: absolute;
+  left:70%;
+  top: 78%;
+  font-size: 4em;
+  }
+  /* fa tree5*/
+  
+  /*fa sun*/
+  .sun{
+    color: rgb(253, 240, 155);
+    position: absolute;
+    font-size: 3em;
+    left:1em;
+    top: 2em;
+    animation:sun 60s linear infinite;
+  
+  }
+  /* end of fa sun*/
+  
+  /*fa cloud */
+  
+  .cloud{
+        color: rgb(102, 102, 101);
+        position: absolute;
+        font-size: 3em;
+        left:0;
+        top: 2em;
+        animation:cloud 40s linear infinite;
+  }
+  /*end fa cloud*/
+  
+  /* fa cloud 2 */
+  .cloud2{
+    color: rgb(109, 109, 105);
+    position: absolute;
+    font-size: 3em;
+    left:70px;
+    top: 2em;
+    animation:cloud2 40s linear infinite;
+  }    
+  
+  
+   /* fa home*/
+   .home{
+  
+    color: rgb(230, 230, 219);
+    position: absolute;
+    font-size: 2em;
+    top:70%;
+    left: 4em;
+  }
+  /*  end fa home*/
+  
+   /* fa home*/
+   .home2{
+  
+    color: rgb(243, 243, 240);
+    position: absolute;
+    font-size: 3em;
+    top:80%;
+    left: 4em;
+  }
+  /*  end fa home*/
+  
+   /* fa home3*/
+   .home3{
+  
+    color: rgb(247, 247, 242);
+    position: absolute;
+    font-size: 3em;
+    bottom:0%;
+    top:70%;
+    left:30%;
+  }
+  /*  end of fa home3*/  
+  
+  /*  fa home4*/
+  .home4{
+  color: rgb(245, 238, 238);
+  position: absolute;
+  left:50%;
+  top: 80%;
+  font-size: 3em;
+  }
+  /* fa home4 */
+  
+  /*  fa car*/
+  .car{
+  color: rgb(92, 90, 90);
+  position: absolute;
+  left:47%;
+  top: 84%;
+  font-size: 2em;
+  }
+  /* fa car*/ 
+  
+
+/*Widget style */
+.widget{
+  position: absolute;
+  top:4em;
+}
+/*end of widget style*/
+   
+
+/*==== Smart investor text======*/
+.smart_investor{
+  top:4em;
+  left: 10%;
+font-size: 30px;
+font-weight: bold;
+width: 20em;
+text-align: center;
+height: 20em;
+border-radius: 50%;
+}
+
+.smart_investor .text_smart{
+  position: relative;
+  top: 2em;
+}
+.text_welcome{
+  top:85%;
+  left: 16%;
+}
+.milestone{
+  top: 57%;
+  left: 18%;
+  width:30%;
+  border-radius: 20px;
+  height: 2em;
+}
+
+.milestone>.fill{
+  border-radius: 20px;
+  padding-right: 8px;
+ }
+ .milestone .line1,.milestone .line2{
+     width: 1px;
+     height: 3em;
+     top:-8px;
+ }
+ 
+.milestone .amount_invested,.milestone .milestone_invested{
+  font-size: 17px;
+}
+.milestone .amount_invested{
+  top:-2em;
+  left:2px;
+}
+.milestone .milestone_invested{
+  top:-2em;
+  right: 2px;
+}
+.milestone .BTC1{
+  top:2em;
+  left:2px;
+}
+.milestone .BTC2{
+  top:2em;
+  left:15em;
+}
+.milestone .line1{
+
+left: 30%;
+}
+.milestone .line2{
+left: 70%;
+}
+
+
+/*====Animations for sun and clouds  */
+@keyframes cloud2{
+  from{
+    left:-2em;
+    top:-2em;
+ }
+ to{
+    left:50em;
+    top:10em;
+ }   
+}      
+@keyframes cloud{
+from{
+   left:0em;
+   top:10em;
+}
+to{
+   left:50em;
+   top:0em;
+} 
+}   
+@keyframes sun{
+from{
+   left:-10%;
+   top:5em;
+}
+to{
+   left:110%;
+   top:-2em;
+}
+
+}   
+/*====End of cloud Animation====*/
+
+ /* start of login form login form */
+ .nav_link { 
+  color: white;
+  text-align: right;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 15px;
+  margin-top: 13px;
+
+}
+ /* start of logo login */
+ .logo_img{
+  height: 4em;
+  width: 8em;
+  text-align: center;
+  margin-top: -1px;
+  margin-bottom: 10px;
+}
+  /* end of web logo */
+.center{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 40%;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: white;
+}
+.h1_style{
+  color: blue;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 0px 0px 10px 0px;
+  
+}
+.icon {
+  text-align: left;
+  text-decoration: none;
+  margin-bottom: 5px;
+  padding-right: 10px;
+  color: orange;
+  font-size: 12px;
+}
+.login1 {
+  border-radius: 6px;
+  width: 100%;
+  height: 2em;
+  margin-bottom: 20px;
+  border-color: blue;
+
+}
+.check {
+  text-align: left;
+  margin-left: 2em;
+}
+.subbtn {
+  color: white;
+  background-color: blue;
+  width: 9em;
+  border-radius: 4px;
+  margin-left: 50%;
+}
+.link_reg{
+  color: blue;
+  margin-left: 3em;
+  font-size: small;
+}
+.link_reg a{
+  color: blue;
+  font-size: small;
+}
+/* end of login form */
+
+/* start of registration form */
+
+.nav_link2 a{
+  font-size: 22px;
+}
+.header_2 { 
+  background-color: white;
+  height: 5em;
+  text-transform: uppercase;
+  padding-left:  40px;
+  
+}
+.icon2 {
+  color: orange;
+  margin-left: 1em;
+  padding-bottom: 8px;
+  font-size: 12px;
+}
+div.box_header {
+  font-weight: bold;
+  height: 2em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+.center_2 {
+  position: absolute;
+  border: 3px solid grey;
+  height: 77%;
+  width: 97%;
+  margin-left: 1em;
+  padding-right: 2em;
+  margin-bottom: 2em;
+
+}
+.box2 {
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  padding-left: 1em;
+ 
+}
+.box2_style {
+  position: relative;
+  width: 20em;
+  height: 2em;
+  margin-bottom: 6px;
+  border-color: none;
+  margin-right: 6em;
+
+
+}
+.fileupload {
+  width: 11em;
+  height: 2em;
+  color: grey;
+}
+.reg_btn {
+  color: white;
+  background-color: blue;
+  width: 9em;
+  height: 2em;
+  border-radius: 4px;
+  margin-top: 2em;
+  margin-left: 50%;
+}
+
+
+/* end of registration form for desktop */
+
+
+
+.loginn{
+  display: none;
+  }
+
+/* end of registration form for desktop */
+
+/* invest in bitcoin*/
+.investt{
+  position: absolute;
+  top: 30em;
+  right: 10%;
+  width:12em ;
+  text-align: center;
+  z-index: 1001;
+}
+.investt div{
+  padding: 0px 0px 6px 0px;
+  border-radius: 4px;
+}
+
+.investt .iconss{
+  font-weight: bold;
+  color: rgb(245, 245, 243);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;font-size: 24px;
+
+}
+/* end of invest in bitcoin*/
+/* login and regiser*/
+
+
+
+
+/*style for logo on top left */
+header .logo{
+  position: absolute;
+  top:-8px;
+  left: -8px; 
+}
+header .logo img{
+  width:10em;
+  height: 5em;
+}
+/*  ====== end of logo style==== */
+
+
+/*==== Start of About section */
+
+.About{
+  flex-direction:row;
+  padding-top: 5em;
+}
+.About>div{
+  width: 47%;
+  margin-left:5px;
+  margin-right:5px;
+}
+.About .img_network img{
+  width:90%;
+  height:auto;
+}
+
+.card{
+  font-size: 17px;
+  margin-top: 1em;
+  
+}
+
+/*===End of About us section ==== */
+
+/*==== Video for dummines */
+.y_video{
+  padding-top:2em ;
+  width:80%;
+}
+.y_video>iframe{
+  margin-left: auto;
+  margin-right: auto;
+  width:768px;
+  height:480px;
+}
+
+/*===End of video ===  */
+
+/*animated text sliding */
+
+.text-animate #text1,#text2,#text3,#text4,#text5{
+  font-size: 25px;
+  padding: 0px 5px 0px 5px;
+}
+
+/*end of style */
+
+/* start of dashboard */
+
+.header_dash {
+  background-color: rgb(42, 42, 241);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 3em;}
+
+  .dash {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       list-style: none;
+       margin-right: 10px;
+       margin-left: 10px;
+  }
+  li {
+      list-style: none;
+  }
+  .style {
+      display: flex;
+      flex-direction: row;
+      padding: 1em;
+  }
+  .change1:hover {
+      color: blue;
+  }
+  .change::before {
+      display: inline-block;
+      padding-right: 0.5em;
+      color: #6c757d;
+      content: "/";
+  }
+  /* start of dash_contant */
+  .dash_content {
+      margin-right: 1em;
+      margin-left: 1em;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .box_balance {
+      display: flex;
+      flex-direction: row;
+      color: white;
+      background-color: #007bff;
+      width: 30%;
+      height: 5em;
+      border-radius: 3px;
+      margin-right: 1em;
+      margin-bottom: 1em;
+  }
+  .box_balance2 {
+      display: flex;
+      flex-direction: row;
+      color: white;
+      background-color: #dc3545;
+      width: 30%;
+      height: 5em;
+      border-radius: 3px;
+      margin-right: 1em;
+      margin-bottom: 1em;
+
+  }
+  .box_balance3 {
+      display: flex;
+      flex-direction: row;
+      color: white;
+      background-color: #20c997;
+      width: 30%;
+      height: 5em;
+      border-radius: 3px;
+      margin-right: 1em;
+      margin-bottom: 1em;
+  }
+  .box_balance4 {
+      display: flex;
+      flex-direction: row;
+      color: white;
+      background-color: #ffc107;
+      width: 30%;
+      height: 5em;
+      border-radius: 3px;
+      margin-right: 1em;
+      margin-bottom: 1em;
+  }
+  .box_balance5 {
+      display: flex;
+      flex-direction: row;
+      color: white;
+      background-color: #28a745;
+      width: 30%;
+      height: 5em;
+      border-radius: 3px;
+      margin-right: 1em;
+      margin-bottom: 1em;
+  }
+  .box_balance6 {
+      display: flex;
+      flex-direction: row;
+      color: white;
+      background-color:#001f3f;
+      width: 30%;
+      height: 5em;
+      border-radius: 3px;
+      margin-right: 1em;
+      margin-bottom: 1em;
+  }
+  .box_balance7 {
+      display: flex;
+      flex-direction: row;
+      color: white;
+      background-color: #17a2b8;
+      width: 30%;
+      height: 5em;
+      border-radius: 3px;
+      margin-right: 1em;
+      margin-bottom: 1em;
+  }
+  .box_balance8 {
+      display: flex;
+      flex-direction: row;
+      color: white;
+      background-color:  #6c757d;
+      width: 30%;
+      height: 5em;
+      border-radius: 3px;
+      margin-bottom: 1em;
+      margin-right: 1em;
+  }
+  .box_balance9{
+      display: flex;
+      flex-direction: row;
+      color: white;
+      background-color: #17a2b8;
+      width: 30%;
+      height: 5em;
+      border-radius: 3px;
+      margin-right: 1em;
+      margin-right: 1em;
+  }
+  .fa {
+      color: white;
+      margin-top: 18px;
+      display: inline-block;
+      box-sizing: border-box;
+      box-shadow: 2px solid gray;
+  }
+  .fa-money::before {
+      content: \f0d6;
+  }
+  .info_icon {
+      text-align: center;
+      width: 25%;
+      font: 14px;
+  
+  }
+  a.elevation-1 {
+      width: 2em;
+      height: 2em;
+      box-shadow: 2px solid rgb(14, 13, 13);
+  }
+  .infom {
+      display: flex;
+      flex-direction: column;
+
+  }
+  /* start of live trading inputs */
+  .container_box {
+      margin-left: 1em;
+      margin-right: 1em;
+      background-color: white;
+      border: 1px solid gray;
+      border-radius: 3px;
+      padding-left: 1em;
+      padding-right: 1em;
+
+  }
+  .header_for {
+      border-bottom: 1px solid gray;
+
+
+  }
+  #cryptoforex {
+      width: 100%;
+  }
+  .trading {
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+
+  }
+  .control {
+      padding-left: 8px;
+  }
+  .controlmin_1{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+  }
+  .controlmin_1 input {
+      width: 28em;
+      margin-right: 20px;
+  }
+  .controlmin_2 {
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .controlmin_2 input {
+      margin-right: 18px;
+      width: 18.5em;
+  }
+  #execute {
+      width: 100%;
+  }
+  .btnsub {
+      width: 98%;
+      background-color: #28a745;
+      border-color: #28a745;
+      border-radius: 3px;
+      margin-top: 1em;
+  }
+
+
+  /* end of live trading inputs */
+
+
+/* end of dashboard */
+
+
+
+
+
+
+
+
+
+}

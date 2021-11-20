@@ -74,7 +74,7 @@
             </li>
             <li>
               <a href="#"><i class="fa fa-exchange"></i>
-                Withdrawal</a>
+                Withdrawal   hfdrfhgch</a>
             </li>
             <li>
               <a href="">
@@ -256,28 +256,28 @@
               <span>INVESTING PLAN</span>
             </div>
             <div class="control-plan"> 
-             <div>
-              <div class="selectionplan">
-                <select name="selectplans" id="selectplans">
-                  <option value="">Choose Investment plan</option>
-                  <option value="Bronze">Bronze</option>
-                  <option value="Titanium">Titanium</option>
-                  <option value="Gold">Gold</option>
-                  <option value="Diamond">Diamond</option>
-                </select>
-              </div>
-              <div>
-                <input type="text" name="invest" id="invest" placeholder="Amount to Invest">
-              </div>
-              <div>
-                <select name="selectperiod" id="selectperiod">
-                  <option value="">Choose Investment period</option>
+              <div class="invest-inputs">
+                <div class="selectionplan">
+                  <select name="selectplans" id="selectplans">
+                    <option value="">Choose Investment plan</option>
+                    <option value="Bronze">Bronze</option>
+                    <option value="Titanium">Titanium</option>
+                    <option value="Gold">Gold</option>
+                    <option value="Diamond">Diamond</option>
+                  </select>
+                </div>
+                <div >
+                  <input type="text" name="invest" id="invest" placeholder="Amount to Invest">
+                </div>
+                <div>
+                  <select name="selectperiod" id="selectperiod">
+                    <option value="">Choose Investment period</option>
 
-                </select>
-              </div>
-              <div>
-                <input type="submit" id="btnexecute" value="Execute">
-              </div>
+                  </select>
+                </div>
+                <div>
+                  <input type="submit" id="btnexecute" value="Execute">
+                </div>
 
              </div>
              <div>
@@ -287,6 +287,10 @@
           </form>
         </div>
         <!-- end of investing plan -->
+
+        <div>
+          <span>im here</span>
+        </div>
 
         <!-- start of wedge side -->
         <div>

@@ -47,7 +47,7 @@
         position: absolute;
         top:-10px;
         right:-4px;
-        height: 50em;
+        height: 40em;
         z-index: 1001;
         animation: slide 1s linear;
         display: none;
@@ -147,7 +147,7 @@ animation: fadeup 1s linear;
 
 /*background theme*/
 #background-theme{
-height: 50em;
+height: 100%;
 }
 
 /* line-chART*/
@@ -544,23 +544,27 @@ height: 50em;
   margin-left: auto;
   margin-right: auto;
 font-size: 22px;
-width: 24em;
-height: 24em;
+width: 25em;
+height: 25em;
 border-radius: 50%;
 }
 .smart_investor .text_smart{
   position: relative;
-  top: 2em;
+  top: 4.4em;
+  font-size: 1em;
+  left: 1%;
+
+  
 }
 
 .text_welcome{
-  top:85%;
-  left: 24%;
+  bottom: 0;
+  left: 14%;
 }
 .milestone{
-  top: 30em;
+  top: 12em;
   left: 26%;
-  width:51%;
+  width:46%;
   border-radius: 20px;
   height: 2em;
 }
@@ -588,11 +592,11 @@ border-radius: 50%;
 }
 .milestone .BTC1{
   top:2em;
-  left:2px;
+  left:0;
 }
 .milestone .BTC2{
   top:2em;
-  left:15em;
+  left:65%;
 }
 .milestone .line1{
 
@@ -803,7 +807,7 @@ div.box_header {
 
 .loginn{
 position: absolute;
-right: 15%;
+right: 10%;
 top: 9px;
 }
 
@@ -812,10 +816,12 @@ top: 9px;
 .loginn div{ 
   margin-left: 4px;
   padding: 3px;
+  border-radius: 4px;
   }
   
 .loginn div a{ 
   font-size: 23px;
+ 
   }
 
 
@@ -875,11 +881,20 @@ header .logo img{
 /* invest in bitcoin*/
 .investt{
   position: absolute;
-  top: 40%;
-  right: 37%;
+  top: 63%;
+  left: 37%;
   width:12em ;
 
   
+}
+
+.invest_btn{
+  border-radius: 3px;
+  margin: 10px;
+  padding: 4px;
+  font-size: 17px;
+  font-weight: bold;
+
 }
 
 .investt .iconss{
@@ -892,29 +907,134 @@ header .logo img{
   text-align: center;
 }
 
-/*animated text sliding */
-
-.text-animate #text2{
+  
+/*animation for text */
+.text-animate{
+ 
+  top:30.4em;
+  right: 23%;
+}
+.text-animate #text1,#text2,#text3,#text4,#text5{
   font-size: 22px;
   padding: 0px 5px 0px 5px;
 }
+/* end- animation text*/
 
-.text-animate #text1{
-  font-size: 22px;
-  padding: 0px 5px 0px 5px;
+/*three steps*/
+
+.three-steps>div{
+  top: 2em;
+  width: 95%;
+  margin-left:auto;
+  margin-right:auto;
+
 }
-/*end of style */
+.steps{
+  display: flex;
+  flex-direction: row;
+
+}
+.steps>div{
+  margin: 1em;
+}
+
+
+.threestep-text .h11{
+  top: 2em;
+}
+/*end-threesteps*/
+
+/*why chose  us*/
+
+.security{
+display: flex;
+flex-direction: row;
+}
+
+.security>div{
+  margin: 1em;
+}
+/*end-why chose  us*/
+
+/*investment plans*/
+  
+.invest-text{
+  text-align: center;
+  color: white;
+}
+
+.planns-cards{
+  display: flex;
+  flex-direction:row;
+}
+.planns-cards>div{
+  margin: 1em;
+  text-align: center;
+}
+
+/*end-investment plans*/
+
+/*statistics*/
+
+.stat-text{
+  text-align: center;
+  color: white;
+}
+
+.peoplee{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.peoplee>div{
+  margin: 1em;
+  text-align: center;
+ 
+}
+
+.imagess>i{
+  font-size: 4em;
+}
+/*end-statistics*/
+
+/*FAQ*/
+
+.questions{
+  display: flex;
+  flex-direction:column;
+}
+.questions>div{
+ margin: 1em;
+  
+}
+/*end-FAQ*/
 
 
 
+/*about*/
+
+.aboutbitcoin .about-head{
+  text-align: center;
+  color: white;
+}
+
+.about-content{
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+.about-content>div{
+  margin: 1em;
+}
+.picc>img{
+  border-radius: 6px;
+  padding-top: 3%;
+  padding-left: 3%;
+}
 
 
-
-
-
-
-
-
+/*end-about*/
 
 
 

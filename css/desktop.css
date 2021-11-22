@@ -935,6 +935,7 @@ flex-direction: row;
 .imagess{
   margin: 0.5em;
 }
+
 .imgg>img{
   border-radius: 4px;
 }
@@ -975,10 +976,15 @@ flex-direction: row;
   padding-top: 3%;
   
 }
-
-
 /*end-about*/
 
 
-}
+/* leave a message form*/
 
+
+
+
+
+/*end- leave a message form*/
+
+}

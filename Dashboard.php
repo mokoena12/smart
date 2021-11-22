@@ -106,7 +106,7 @@
             </div>
             <div>
               <ol class="style">
-                <li class="change1"><a href="/" style="text-decoration: none; color: black;">Home</a></li>
+                <li class="change1"><a href="index.html" style="text-decoration: none; color: black;">Home</a></li>
                 <li class="change active">Dashboard</li>
               </ol>
             </div>

@@ -204,8 +204,8 @@ button{
     top :0em;
     background: linear-gradient(rgb(13, 13, 14),rgb(90, 88, 88), rgb(19, 18, 18)) ;
     z-index: 0;
-    overflow: hidden;
     margin: 0;
+    overflow: hidden;
 }
 /* end of background theme*/
 

@@ -139,7 +139,7 @@
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Profit Return</span>
-                  <span class="money balance">$</span>
+                  <span class="money_balance">$</span>
                 </div>
               </div>
               <!-- end of profit box -->
@@ -153,7 +153,7 @@
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Bonus</span>
-                  <span class="money balance">$</span>
+                  <span class="money_balance">$</span>
                 </div>
               </div>
               <!-- end of bonus box -->
@@ -167,7 +167,7 @@
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Total deposit</span>
-                  <span class="money balance">$</span>
+                  <span class="money_balance">$</span>
                 </div>
       
               </div>
@@ -182,7 +182,7 @@
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Total withdrawal</span>
-                  <span class="money balance">$</span>
+                  <span class="money_balance">$</span>
                 </div>
               </div>
               <!-- end of total withdraw box -->
@@ -196,7 +196,7 @@
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Deposit</span>
-                  <span class="money balance">$</span>
+                  <span class="money_balance">$</span>
                 </div>
               </div>
               <!-- end of deposit box -->
@@ -211,7 +211,7 @@
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Withdrawal</span>
-                  <span class="money balance">$</span>
+                  <span class="money_balance">$</span>
                 </div>
       
               </div>
@@ -226,7 +226,7 @@
                     </div>
                     <div class="infom">
                       <span class="personal_balance">Subscription</span>
-                      <span class="money balance">$</span>
+                      <span class="money_balance">$</span>
                     </div>
               </div>
               <!-- end of subscription -->
@@ -241,7 +241,7 @@
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Notifications</span>
-                  <span class="money balance">$</span>
+                  <span class="money_balance">$</span>
                 </div>
               </div>
               <!-- end of the notification -->

@@ -596,30 +596,31 @@
     overflow: visible;
 }
  .smart_investor{
-    top:6em;
-    left: 10%;
+    top:8em;
+    position:absolute;
+    left: 8%;
   font-size: 30px;
-  width: 24em;
+  width: 26em;
   height: 24em;
   border-radius: 50%;
   }
   .smart_investor .text_smart{
     position: relative;
-    top: 5em;
-    right: 10em;
-    font-size: 22px;
+    top: 2em;
+    right:8em;
+    font-size: 24px;
   }
   
   .text_welcome{
-    top:30em;
-    left: 4em;
+    top:37em;
+    left: 2em;
     width:90%;
-  
+    height: 5em;
   }
   .milestone{
-    top: 10em;
-    left: 8%;
-    width:80%;
+    top: 12em;
+    left: 11%;
+    width:75%;
     border-radius: 20px;
     height: 2em;
   }
@@ -635,7 +636,7 @@
    }
    
   .milestone .amount_invested,.milestone .milestone_invested{
-    font-size: 17px;
+    font-size: 14px;
   }
   .milestone .amount_invested{
     top:-2em;
@@ -651,7 +652,7 @@
   }
   .milestone .BTC2{
     top:2em;
-    left:15em;
+    left:20em;
   }
   .milestone .line1{
   
@@ -682,6 +683,7 @@ to{
    left:13em;
    top:0em;
 } 
+
 }   
 @keyframes sun{
 from{
@@ -779,31 +781,38 @@ margin-left: 30%;
 
 .loginn{
 position: absolute;
-right: 15%;
+right: 11%;
 top: 5px;
 }
 
-
-
 .loginn div{ 
-  margin-left: 4px;
+  margin-left: 6px;
   padding: 3px;
+  border-radius: 4px;
   }
   
 .loginn div a{ 
   font-size: 17px;
   }
 
-
 /* invest in bitcoin*/
 .investt{
 position: absolute;
-top: 40%;
-left:13%;
-width:12em ;
-
+top: 34em;
+left:30%;
+width:12em;
 
 }
+
+.invest_btn{
+border-radius: 3px;
+margin: 10px;
+padding: 4px;
+font-size: 17px;
+font-weight: bold;
+
+}
+
 .investt .iconss{
 font-weight: bold;
 font-size: 1.5em;
@@ -867,239 +876,140 @@ header .logo img{
 
 /*===End of video ===  */
 
-/*animated text sliding */
 
-.text-animate #text2{
+
+/*animation for text */
+.text-animate{
+  top:27.4em;
+  left: 10%;
+}
+
+
+.text-animate #text1,#text2,#text3,#text4,#text5{
   font-size: 17px;
   padding: 0px 5px 0px 5px;
 }
+/* end- animation text*/
+     
+/*three steps*/
 
-.text-animate #text1{
-  font-size: 17px;
-  padding: 0px 5px 0px 5px;
-}
-/*end of style */
-
-
-/* start of phone dashboard */
-.header_dash {
-  background-color: rgb(42, 42, 241);
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  height: 3em;}
-
-  .dash {
-       margin-right: 10px;
-       margin-left: 10px;
-  }
-  .dash h1 {
-      margin-left: 10px;
-  }
-  .dash li {
-      list-style: none;
-  }
-  .style {
-      display: flex;
-      flex-direction: row;
-      padding: 1em;
-  }
-  .change1:hover {
-      color: blue;
-  }
-  .change::before {
-      display: inline-block;
-      padding-right: 0.5em;
-      color: #6c757d;
-      content: "/";
-  }
-
-.dash_content {
-  margin-right: 1em;
-  margin-left: 1.5em;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-}
-.box_balance {
-  display: flex;
-  flex-direction: row;
-  color: white;
-  background-color: #007bff;
-  width: 45%;
-  height: 5em;
-  border-radius: 3px;
-  margin-right: 1em;
-  margin-bottom: 1em;
-}
-.box_balance2 {
-  display: flex;
-  flex-direction: row;
-  color: white;
-  background-color: #dc3545;
-  width: 45%;
-  height: 5em;
-  border-radius: 3px;
-  margin-right: 1em;
-  margin-bottom: 1em;
+.three-steps>div{
+  top: 2em;
+  width: 95%;
+  margin-left:auto;
+  margin-right:auto;
 
 }
-.box_balance3 {
-  display: flex;
-  flex-direction: row;
-  color: white;
-  background-color: #20c997;
-  width: 45%;
-  height: 5em;
-  border-radius: 3px;
-  margin-right: 1em;
-  margin-bottom: 1em;
-}
-.box_balance4 {
-  display: flex;
-  flex-direction: row;
-  color: white;
-  background-color: #ffc107;
-  width: 45%;
-  height: 5em;
-  border-radius: 3px;
-  margin-right: 1em;
-  margin-bottom: 1em;
-}
-.box_balance5 {
-  display: flex;
-  flex-direction: row;
-  color: white;
-  background-color: #28a745;
-  width: 45%;
-  height: 5em;
-  border-radius: 3px;
-  margin-right: 1em;
-  margin-bottom: 1em;
-}
-.box_balance6 {
-  display: flex;
-  flex-direction: row;
-  color: white;
-  background-color:#001f3f;
-  width: 45%;
-  height: 5em;
-  border-radius: 3px;
-  margin-right: 1em;
-  margin-bottom: 1em;
-}
-.box_balance7 {
-  display: flex;
-  flex-direction: row;
-  color: white;
-  background-color: #17a2b8;
-  width: 45%;
-  height: 5em;
-  border-radius: 3px;
-  margin-right: 1em;
-  margin-bottom: 1em;
-}
-.box_balance8 {
-  display: flex;
-  flex-direction: row;
-  color: white;
-  background-color:  #6c757d;
-  width: 45%;
-  height: 5em;
-  border-radius: 3px;
-  margin-bottom: 1em;
-  margin-right: 1em;
-}
-.box_balance9{
-  display: flex;
-  flex-direction: row;
-  color: white;
-  background-color: #17a2b8;
-  width: 98%;
-  height: 5em;
-  border-radius: 3px;
-  margin-right: 1em;
-  margin-bottom: 1em;
-}
-.fa {
-  color: white;
-  margin-top: 18px;
-  display: inline-block;
-  box-sizing: border-box;
-  box-shadow: 2px solid gray;
-}
-.fa-money::before {
-  content: \f0d6;
-}
-.info_icon {
-  text-align: center;
-  width: 25%;
-  font: 14px;
-
-}
-a.elevation-1 {
-  width: 2em;
-  height: 2em;
-  box-shadow: 2px solid rgb(14, 13, 13);
-}
-.infom {
+.steps{
   display: flex;
   flex-direction: column;
 
 }
-/* start of live trading inputs */
-.container_box {
-  margin-left: 1em;
-  margin-right: 1em;
-  background-color: white;
-  border: 1px solid gray;
-  border-radius: 3px;
-  padding-left: 1em;
-  padding-right: 1em;
-
-}
-.header_for {
-  border-bottom: 1px solid gray;
-}
-#cryptoforex {
-  width: 100%;
-  margin: 1em 0px 1em 0px;
-}
-.trading {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-}
-.control {
-  padding-left: 8px;
-}
-.controlmin_1{
-  width: 100%;
-}
-.controlmin_1 input {
-  width: 100%;
-  margin-right: 20px;
-  border-radius: 2px;
-  margin: 1em 0px 1em 0px;
-}
-.controlmin_2 input {
-  margin-right: 18px;
-  width: 100%;
-  border-radius: 2px;
-  margin: 1em 0px 1em 0px;
-}
-#execute {
-  width: 100%;
-}
-.btnsub {
-  width: 98%;
-  background-color: #28a745;
-  border-color: #28a745;
-  border-radius: 3px;
-  margin-top: 1em;
+.steps>div{
+  margin: 1em;
 }
 
 
+.threestep-text .h11{
+  top: 2em;
+}
+/*end-threesteps*/
 
+/*why chose  us*/
+
+.security{
+display: flex;
+flex-direction: column;
+}
+
+.security>div{
+  margin: 1em;
+}
+/*end-why chose  us*/
+
+/*investment plans*/
+  
+.invest-text{
+  text-align: center;
+  color: white;
+}
+
+.planns-cards{
+  display: flex;
+  flex-direction:column;
+}
+.planns-cards>div{
+  margin: 1em;
+  text-align: center;
+}
+.planns-cards>div>p{
+  color: white;
+}
+/*end-investment plans*/
+
+/*statistics*/
+
+.stat-text{
+  text-align: center;
+  color: white;
+}
+
+.peoplee{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.peoplee>div{
+  margin: 1em;
+  text-align: center;
+ 
+}
+
+.imagess>i{
+  font-size: 4em;
+}
+.imagess>div{
+  height: 100%;
+}
+/*end-statistics*/
+
+/*FAQ*/
+
+.questions{
+  display: flex;
+  flex-direction:column;
+}
+.questions>div{
+ margin: 1em;
+  
+}
+
+/*end-FAQ*/
+
+/*about*/
+
+.aboutbitcoin .about-head{
+  text-align: center;
+  color: white;
+}
+
+.about-content{
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+.about-content>div{
+  
+}
+.picc>img{
+  border-radius: 6px;
+  left: -5%;
+
+}
+
+
+/*end-about*/
 
 
 

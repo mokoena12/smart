@@ -140,7 +140,7 @@ $conn->close();
                 <p style="color:red"><?php echo $pasword_username_err ?></p>
             </div>
             <div class="link_reg">
-                <a href="#">Forget password</a><br>
+                <a href="forgot.php">Forget password</a><br>
                 Don't have an account? <a href="#">Sigh up</a>
             </div>
         

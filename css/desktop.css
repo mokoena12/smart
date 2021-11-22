@@ -1082,9 +1082,22 @@ li .fa {
 
     }
     .header_for {
-        border-bottom: 1px solid gray;
+border-bottom: 1px solid gray;}
 
 
+.about-content{
+  display: flex;
+  flex-direction: row;
+  margin: 1em;
+}
+.about-content>div{
+  margin: 1em;
+}
+.picc>img{
+  border-radius: 4px;
+  padding-top: 3%;
+  
+}
     }
     #cryptoforex {
         width: 100%;
@@ -1124,6 +1137,7 @@ li .fa {
         border-radius: 3px;
         margin-top: 1em;
     }
+
 
 
     /* end of live trading inputs */

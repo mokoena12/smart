@@ -8,7 +8,7 @@
     <!-- End of meta tags -->
     
     <!-- SITE TITLE -->
-    <title>Deposit now</title>
+    <title>Deposit</title>
     <!-- Latest Bootstrap min CSS -->
     <link rel="stylesheet" type="text/css" href="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css">

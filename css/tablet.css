@@ -1,0 +1,386 @@
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+    /* start of login form for tablet */
+    .nav_link { 
+        color: white;
+        text-align: right;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 15px;
+        margin-top: 13px;
+
+    }
+    /* start of logo login */
+    .logo_img{
+    height: 3em;
+    width: 6em;
+    text-align: center;
+    margin-top: -1px;
+
+    /* end of web logo */
+
+    }
+    .center{
+        position:absolute;
+        margin-left: auto;
+        margin-right: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 65%;
+        padding: 40px;
+        border-radius: 20px;
+        background-color: white;
+    }
+     .h1_style{
+        color: blue;
+        text-align: center;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 0px 0px 10px 0px;
+        
+    }
+    .icon {
+        text-align: left;
+        text-decoration: none;
+        margin-bottom: 5px;
+        font-size: 11px;
+        padding-right: 10px;
+        color: orange;
+    }
+    .login1 {
+        border-radius: 6px;
+        width: 100%;
+        height: 2em;
+        margin-bottom: 20px;
+        border-color: blue;
+
+    }
+    .check {
+        text-align: left;
+        margin-left: 2em;
+    }
+    .subbtn {
+        color: white;
+        background-color: blue;
+        width: 9em;
+        border-radius: 4px;
+        margin-left: 40%;
+    }
+    .link_reg{
+        color: blue;
+        margin-left: 3em;
+        font-size: small;
+    }
+    .link_reg a{
+        color: blue;
+        font-size: small;
+    }
+  
+
+
+
+
+
+
+
+    /* start of registration form for tablet */
+   
+    .header_2 { 
+        background-color: white;
+        height: 5em;
+        width: 100%;
+        text-transform: uppercase;
+        padding-left:  40px;
+        
+    }
+        /* start of web logo */
+  .logo_2 {
+    height: 4em;
+    width: 8em;
+    margin-bottom: 10px;
+
+    }
+    /* end of logo reg */
+    
+    .icon2 {
+        color: orange;
+        margin-left: 1em;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        font-size: 11px;
+    }
+    div.box_header {
+        font-weight: 700;
+        height: 2em;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+    .center_2 {
+        position: absolute;
+        box-sizing: border-box;
+        border: 3px solid grey;
+        height: auto;
+        width: 95%;
+        margin-left: 1em;
+        padding-right: 2em;
+
+    }
+    .box2 {
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 1em;
+
+    }
+    .box2_style {
+        position: relative;
+        width: 18em;
+        height: 2em;
+        margin-bottom: 10px;
+        border-color: none;
+        margin-right: 30px;
+    }
+    .shift_upl {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .fileupload {
+        width: 11em;
+        height: 2em;
+        color: rgb(110, 110, 110);
+    }
+    .reg_btn {
+        color: white;
+        background-color: blue;
+        width: 9em;
+        height: 2em;
+        border-radius: 4px;
+        margin-top: 2em;
+        margin-left: 28em;
+    }
+/* end of registration form for tablet */
+
+}
+
+
+
+/*  <div></div>
+ 
+    <header class="header_dash">
+      
+    </header>
+    <section>
+      <div class="dash">
+        <div>
+          <h1>Dashboard</h1>
+        </div>
+        <div>
+          <ol class="style">
+            <li class="change1"><a href="/" style="text-decoration: none; color: black;">Home</a></li>
+            <li class="change active">Dashboard</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+    <section>
+      <div class="dash_content">
+        <!-- start of balance box -->
+        <div class="box_balance">
+          <div class="info_icon">
+            <a href="#" class="elevation-1">
+              <i class="fa fa-money"></i>
+            </a>
+          </div>
+          <div class="infom">
+            <span class="personal_balance">Balance</span>
+            <span class="money_balance">$</span>
+          </div>
+
+        </div>
+        <!-- end of the balance box  -->
+
+        <!-- start of profit box money -->
+        <div class="box_balance2">
+          <div class="info_icon">
+            <a href="#" class="elevation-1">
+              <i class="fa fa-money"></i>
+            </a>
+          </div>
+          <div class="infom">
+            <span class="personal_balance">Profit Return</span>
+            <span class="money balance">$</span>
+          </div>
+
+        </div>
+        <!-- end of profit box -->
+
+        <!-- start of bonus box -->
+        <div class="box_balance3">
+          <div class="info_icon">
+            <a href="#" >
+              <i class="fa fa-money"></i>
+            </a>
+          </div>
+          <div class="infom">
+            <span class="personal_balance">Bonus</span>
+            <span class="money balance">$</span>
+          </div>
+
+        </div>
+        <!-- end of bonus box -->
+
+        <!-- start of total deposit box -->
+        <div  class="box_balance4">
+          <div class="info_icon">
+            <a href="#" >
+              <i class="fa fa-money"></i>
+            </a>
+          </div>
+          <div class="infom">
+            <span class="personal_balance">Total deposit</span>
+            <span class="money balance">$</span>
+          </div>
+
+        </div>
+        <!-- end of deposit box -->
+
+        <!-- start of total withdraw box -->
+        <div  class="box_balance5">
+          <div class="info_icon">
+            <a href="#" >
+              <i class="fa fa-money"></i>
+            </a>
+          </div>
+          <div class="infom">
+            <span class="personal_balance">Total withdrawal</span>
+            <span class="money balance">$</span>
+          </div>
+
+        </div>
+         <!-- end of total withdraw box -->
+
+         <!-- start of deposit box -->
+        <div  class="box_balance6">
+          <div class="info_icon">
+            <a href="#" >
+              <i class="fa fa-money"></i>
+            </a>
+          </div>
+          <div class="infom">
+            <span class="personal_balance">Deposit</span>
+            <span class="money balance">$</span>
+          </div>
+
+        </div>
+         <!-- end of deposit box -->
+
+
+        <!-- start of withdrawal -->
+        <div  class="box_balance7">
+          <div class="info_icon">
+            <a href="#" >
+              <i class="fa fa-money"></i>
+            </a>
+          </div>
+          <div class="infom">
+            <span class="personal_balance">Withdrawal</span>
+            <span class="money balance">$</span>
+          </div>
+
+        </div>
+        <!-- end of withdrawal -->
+
+        <!-- start of subscription -->
+        <div  class="box_balance8">
+          <div class="info_icon">
+            <a href="#" >
+              <i class="fa fa-money"></i>
+            </a>
+          </div>
+          <div class="infom">
+            <span class="personal_balance">Subscription</span>
+            <span class="money balance">$</span>
+          </div>
+
+        </div>
+        <!-- end of subscription -->
+
+        <div  class="box_balance9">
+          <div class="info_icon">
+            <a href="#" >
+              <i class="fa fa-money"></i>
+            </a>
+          </div>
+          <div class="infom">
+            <span class="personal_balance">Notifications</span>
+            <span class="money balance">$</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- start of wedge -->
+    <section>
+      <div>
+
+      </div>
+    </section>
+    <!-- end of wedge -->
+
+    <!-- start of live box -->
+    <section>
+      <div class="container_box">
+        <form class="trading" action="#" method="post">
+          <div class="header_for">
+            <span>Live Trading</span>
+          </div>
+          <div class="control"> 
+            <div>
+              <select name="live" id="cryptoforex">
+                <option value="Cryptocurrency">Cryptocurrency</option>
+                <option value="Forex">Forex</option>
+              </select>
+            </div>
+            <div class="controlmin_1">
+              <div>
+                <label for="currency">Currency pair</label><br>
+                <input type="text" name="currency_pair" id="currency" placeholder="Enter currency pair for example:BTC/ETH">
+              </div>
+              <div>
+                <label for="lotsize">Lot size</label><br>
+                <input type="text" name="lot" id="lotsize" placeholder="Enter lotsize">
+              </div>
+            </div>
+            <div class="controlmin_2">
+              <div>
+                <label for="entry">Entry Price</label><br>
+                <input type="text" name="entry" id="entry" placeholder="Enter price entry">
+              </div>
+              <div>
+                <label for="stoploss">Stop loss</label><br>
+                <input type="text" name="stop" id="stoploss" placeholder="Enter stop loss">
+              </div>
+              <div>
+                <label for="takeprofit">Take profit</label><br>
+                <input type="text" name="take" id="takeprofit" placeholder="Enter TP">
+              </div>
+            </div>
+            <div>
+              <label for="input">Select Action</label><br>
+              <select name="buyORsell" id="execute">
+                <option value="Buy">Buy</option>
+                <option value="Sell">Sell</option>
+              </select>
+            </div>
+            <div>
+              <input type="submit" class="btnsub" value="execute">
+            </div>
+            
+          </div>
+        </form>
+      </div>
+    </section> */

@@ -70,11 +70,11 @@
             </li>
             <li>
               <a href="#"><i class="fa fa-exchange"></i>
-                Deposit gfchjgfh</a>
+                Deposit</a>
             </li>
             <li>
               <a href="#"><i class="fa fa-exchange"></i>
-                Withdrawal   hfdrfhgch</a>
+                Withdrawal</a>
             </li>
             <li>
               <a href="">
@@ -258,8 +258,8 @@
             <div class="control-plan"> 
               <div class="invest-inputs">
                 <div class="selectionplan">
-                  <select name="selectplans" id="selectplans">
-                    <option value="">Choose Investment plan</option>
+                  <select name="selectplans" id="selectplans-period">
+                    <option value="">--Choose Investment plan--</option>
                     <option value="Bronze">Bronze</option>
                     <option value="Titanium">Titanium</option>
                     <option value="Gold">Gold</option>
@@ -267,22 +267,32 @@
                   </select>
                 </div>
                 <div >
-                  <input type="text" name="invest" id="invest" placeholder="Amount to Invest">
+                  <input type="text" name="invest" id="invest" class="selectionplan2" placeholder="Amount to Invest">
                 </div>
                 <div>
-                  <select name="selectperiod" id="selectperiod">
-                    <option value="">Choose Investment period</option>
+                  <select name="selectperiod" id="selectplans-period">
+                    <option value="">--Choose Investment period--</option>
 
                   </select>
                 </div>
-                <div>
+                <div class="btnex">
                   <input type="submit" id="btnexecute" value="Execute">
                 </div>
-
              </div>
-             <div>
-              
+             <div class="invest-cards">
+                <h3>Bronze</h3>
+                <h5>Minimun Amount: $30 <br>
+                Interest rate: 3% daily</h5>
+                <p>This investment is commpounded daily <br>
+                  meaning your investment will increase by 3% <br>
+                  every day. Investment period is the time you <br>
+                  wand this investment to last before you can <br>
+                   withdraw your money. 
+                </p>
              </div>            
+            </div>
+            <div class="highlight-terms">
+              <p>By executing this investment, You agree to our terms and conditions (visit <a href="#">Terms</a>) to read more</p>
             </div>
           </form>
         </div>

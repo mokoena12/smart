@@ -1,0 +1,54 @@
+a{
+    font-size: 15px;
+    color:rgb(16, 45, 173);
+
+}
+a:hover{
+    color:rgb(16, 45, 173);
+    
+}
+a:link{
+    color:blue;
+    
+}
+a:visited{
+   
+    color:maroon;
+}
+a:active{
+    color:rgb(16, 45, 173);
+
+}
+/* start of body */
+.body_style{
+    background-color: rgb(26, 25, 25);
+}
+/* end of body */
+
+/*start of center box*/
+.nav_link2{
+    position: absolute;
+    top:10px;
+    right: 1em;
+}    
+.nav_link2 a:link{
+    text-align: right;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.nav_link2 a:visited{
+color: white;
+text-decoration: none;
+}
+
+.nav_link2 a:hover{
+    color: blue;
+    text-decoration: underline;
+    opacity: 0.8;
+    }
+/* end of center box */
+
+/* start of dash boxes */
+
+/* end of dash boxes */

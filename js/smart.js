@@ -172,13 +172,13 @@ $(window).scroll(function() {
       // the element is visible, do something || (top_of_screen < bottom_of_element)
      $(".card").addClass("fadeup");
      $("#header").css("background-color", "black");
-     document.getElementById("header").style.backgroundColor="black";
+     
 
    
   } 
   else {
     $(".card").removeClass("fadeup");
-    $("#header").css("background-color", "transparent");
+   
    
   }
 });
@@ -199,12 +199,15 @@ $(window).scroll(function() {
 $(window).scroll(function() {
   var top_of_element = $(".img_network").offset().top;
   var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+ 
 
   if ((bottom_of_screen > top_of_element) ){
     $(".img_network").addClass("fadeup");
+    document.getElementById("header").style.backgroundColor="black";
   } 
   else {
     $(".img_network").removeClass("fadeup");
+    $("#header").css("background-color", "transparent");
   }
 });
 

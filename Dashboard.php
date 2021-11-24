@@ -1,18 +1,16 @@
-<?
+<?php
+
 session_start();
 
-if(isset($_POST["person_id_name1"])){
-$error = "Please login before accessing Dashboard";
-  header("Location:login.php?user2=$error");
+if (isset($_SESSION["investa_user"])){
+
+  $user = $_SESSION["investa_user"];
 }
 else{
-  
-  header("Location:login.php?user2=$error");
-  $test = "I'm New";
+  $err = "Please login before you access dashboard";
+  header("Location:login.php?user2=$err");
+
 }
-
-
-
 
 ?>
 
@@ -72,8 +70,8 @@ else{
             <div class="sidebar-flex" >
               <img class="Pcontrol" src="img/BITCOIN.png" alt="profile">
               <span><?php 
-              session_start();
-              echo $_SESSION["investa_user"]; echo $test?></span>
+              
+              echo $user?></span>
             </div>
           </div>
           <div class="sidebar-manus">

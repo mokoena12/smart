@@ -903,10 +903,11 @@ header .logo img{
 .steps{
   display: flex;
   flex-direction: column;
-
+ 
 }
 .steps>div{
   margin: 1em;
+ 
 }
 
 
@@ -941,10 +942,16 @@ flex-direction: column;
 .planns-cards>div{
   margin: 1em;
   text-align: center;
+  width: 55%;
+  left: 20%;
 }
 .planns-cards>div>p{
   color: white;
 }
+.planns-cards>div>a{
+  font-size: 1.5em;
+}
+
 /*end-investment plans*/
 
 /*statistics*/
@@ -963,6 +970,8 @@ flex-direction: column;
 .peoplee>div{
   margin: 1em;
   text-align: center;
+  width: 60%;
+  left: 17%;
  
 }
 
@@ -970,8 +979,13 @@ flex-direction: column;
   font-size: 4em;
 }
 .imagess>div{
-  height: 100%;
+ margin: 1em;
 }
+.imgg>img{
+  border-radius: 6px;
+  width: 95%;
+}
+
 /*end-statistics*/
 
 /*FAQ*/
@@ -1000,6 +1014,7 @@ flex-direction: column;
   margin: 5px;
 }
 .about-content>div{
+  width:95% ;
   
 }
 .picc>img{
@@ -1010,6 +1025,52 @@ flex-direction: column;
 
 
 /*end-about*/
+
+/*leave a mesage form*/
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px;  
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box;
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
+}
+
+input[type=submit] {
+  background-color: #042baa;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+  background-color: #207691;
+}
+
+
+.formmm{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  margin: 0.5em;
+}
+.formmm>div{
+  text-align: center;
+  padding: 8px;
+}
+.containerr{
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+.containerr>div{
+  padding: 1em;
+}
+/*end-leave a mesage form*/
 
 
 

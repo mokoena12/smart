@@ -933,7 +933,7 @@ flex-direction: row;
 }
 
 .imagess{
-  margin: 0.5em;
+  margin: 1em;
 }
 
 .imgg>img{
@@ -1870,44 +1870,52 @@ text-align: center;
 
 /* end of the profile */
 
-
-/* Style inputs with type="text", select elements and textareas */
+/*leave a mesage form*/
 input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  width: 100%; 
+  padding: 12px;  
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box;
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
 }
 
-/* Style the submit button with a specific background color etc */
 input[type=submit] {
-  background-color: #0430aa;
-  color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-  background-color: #e0960c;
-}
 
-/* Add a background color and some padding around the form */
-.container {
+
+.formmm{
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
+  margin: 1em;
 }
-
+.formmm>div{
+  text-align: center;
+  padding: 8px;
+}
 .containerr{
   display: flex;
   flex-direction: row;
   margin: 1em;
 }
+.containerr>div{
+  padding: 1em;
+}
+/*end-leave a mesage form*/
+
+/*smart invetsa last block*/
+.lastblock>div{
+  display: flex;
+  flex-direction: row;
+}
+/*end-smart invetsa last block*/
+
+
+
 }

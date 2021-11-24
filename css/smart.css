@@ -162,20 +162,22 @@ body{
     font-weight: bold;
     border-radius: 4px;
 }
-.button:hover{
-    background-image: linear-gradient(to bottom right,white, rgb(245, 239, 239), rgb(184, 187, 186));
-    color: blue;
-    text-decoration: underline;
-}
 .button a:link{
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
+
 .button a:hover{
     text-decoration: underline;
 
 }
+.button:hover{
+    background-image: linear-gradient(to bottom right,white, rgb(245, 239, 239), rgb(184, 187, 186));
+    color: blue;
+    text-decoration: underline;
+}
+
 button{
     background-image: linear-gradient(to bottom right,white, rgb(0, 183, 255), rgb(32, 85, 230));
 }
@@ -184,12 +186,14 @@ button{
     text-decoration: none;
     color: white;
   }
-  .log_reg div a:visited{
+ .log_reg div a:visited{
     color:white;
-  }
-  .log_reg div a :hover{
+  } 
+.log_reg div a :hover{
     color: blue;
   }
+
+ 
 
   
 /* icons opacity*/
@@ -530,8 +534,8 @@ margin: 0;
 
 .aboutbitcoin{
     background: linear-gradient(to bottom,rgb(32, 32, 32),white);
-
 }
+
 
 
 /*end-about bitcoin*/
@@ -539,10 +543,12 @@ margin: 0;
 /* leave a message form*/
 
 .form-div{
-    background: linear-gradient(to bottom,rgb(32, 32, 32),white);
-  
+    background: linear-gradient(to bottom,rgb(32, 32, 32),white);  
+}
+/*end- leave a message form*/
+ /* smart investa last block*/
+.lastblock{
+    background: linear-gradient(to bottom,rgb(32, 32, 32),white);   
 }
 
-
-
-/*end- leave a message form*/
+ /* end-smart investa last block*/

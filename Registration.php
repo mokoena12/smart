@@ -27,12 +27,11 @@ if(empty($_POST["name2"])){
   }else{
     $middle_name = test_input($_POST["name2"]);
   }
-	$Raps ="";
 	
  if(empty($_POST["name3"])){
     $lastnameErr = "lastname is required";
   }else{
-    $lastname = (test_input($_POST["name3"]);
+    $lastname = (test_input($_POST["name3"]));
   }
   if(empty($_POST["country"])){
     $countryErr = "country is required";

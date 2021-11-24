@@ -1,3 +1,4 @@
+
 <?php
 
 session_start();
@@ -69,9 +70,10 @@ else{
           <div class="sidebar_profile">
             <div class="sidebar-flex" >
               <img class="Pcontrol" src="img/BITCOIN.png" alt="profile">
-              <span><?php 
-              
-              echo $user?></span>
+
+              <span><?php echo $user; ?></span>
+
+             
             </div>
           </div>
           <div class="sidebar-manus">
@@ -101,6 +103,9 @@ else{
                   Subscription
                 </a>
                 
+              </li>
+              <li>
+                <a href="logout.php"><i class="fa fa-user"></i>Log out</a>
               </li>
   
             </ul>

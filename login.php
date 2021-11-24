@@ -1,3 +1,4 @@
+
 <?php
 require_once "connect.php";
 
@@ -11,6 +12,7 @@ function sanitize($value){
     $s_value = htmlspecialchars($s_value);
 	
 	return $s_value;
+  
 	
 }
 //------------------------------------------------
@@ -40,7 +42,7 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
             $row = $result->fetch_assoc(); 
             if($row["username"]===$param_username){
                 session_start();
-                $_SESSION["investa_user"] = ucfirst(strtolower($_POST["username"]));
+                $_SESSION["investa_user"] = ucfirst(strtolower($_POST["name"]));
                 $user = ucfirst($_SESSION["investa_user"]);
                 setcookie('username',$user,time() + 60*60*24*7,'/');
 
@@ -110,7 +112,7 @@ $conn->close();
  <?php echo $login_err?>
     <!--start of header -->
     <div class="nav_link2">
-        <a href="index.html">Home1</a>
+        <a href="index.html">Home</a>
     </div>
     <!-- end of header -->
     <!-- start of logo -->

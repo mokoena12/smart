@@ -104,7 +104,7 @@
                         </div>
                         <div>
                             <ol class="style">
-                                <li class="change1"><a href="/" style="text-decoration: none; color: rgb(66, 164, 243);">Home</a></li>
+                                <li class="change1"><a href="/" style="text-decoration: none; color: rgb(66, 164, 243); padding-right: 5px;">Home</a></li>
                                 <li class="change active">Deposit Transaction</li>
                             </ol>
                         </div>
@@ -205,13 +205,30 @@
                                 </thead>
                                 <tbody class="tbody">
                                     <tr>
-                                        <td>No data availeble in the table</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                 </tbody>
                             </table>
-
                         </div>
+                        <div class="end-part">
+                            <div class="end-shift">
+                                Showing 0 to 0 0f 0 entries 
+                            </div>
+                            <div class="prev-next">
+                                <ul>
+                                    <li>
+                                        <a href="#">Previous</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Next</a>
+                                    </li>
+                                </ul>
 
+                            </div>
+                        </div>
                     </div>
 
                 </section>
@@ -234,9 +251,6 @@
         
                 
             </div>
-        </div>
-       
-         
-        
+        </div>   
     </body>
     </html>

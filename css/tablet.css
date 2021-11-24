@@ -878,48 +878,6 @@ header .logo img{
 
 
 
-/* invest in bitcoin*/
-.investt{
-  position: absolute;
-  top: 63%;
-  left: 37%;
-  width:12em ;
-
-  
-}
-
-.invest_btn{
-  border-radius: 3px;
-  margin: 10px;
-  padding: 4px;
-  font-size: 17px;
-  font-weight: bold;
-
-}
-
-.investt .iconss{
-  font-weight: bold;
-  font-size: 1.5em;
-  color: rgb(232, 231, 236);
-  width:80%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-  
-/*animation for text */
-.text-animate{
- 
-  top:30.4em;
-  right: 23%;
-}
-.text-animate #text1,#text2,#text3,#text4,#text5{
-  font-size: 22px;
-  padding: 0px 5px 0px 5px;
-}
-/* end- animation text*/
-
 /*three steps*/
 
 .three-steps>div{
@@ -931,11 +889,12 @@ header .logo img{
 }
 .steps{
   display: flex;
-  flex-direction: row;
-
+  flex-direction: column;
+ 
 }
 .steps>div{
   margin: 1em;
+ 
 }
 
 
@@ -948,7 +907,7 @@ header .logo img{
 
 .security{
 display: flex;
-flex-direction: row;
+flex-direction: column;
 }
 
 .security>div{
@@ -965,11 +924,19 @@ flex-direction: row;
 
 .planns-cards{
   display: flex;
-  flex-direction:row;
+  flex-direction:column;
 }
 .planns-cards>div{
   margin: 1em;
   text-align: center;
+  width: 55%;
+  left: 20%;
+}
+.planns-cards>div>p{
+  color: white;
+}
+.planns-cards>div>a{
+  font-size: 1.5em;
 }
 
 /*end-investment plans*/
@@ -983,19 +950,29 @@ flex-direction: row;
 
 .peoplee{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-content: center;
 }
 
 .peoplee>div{
   margin: 1em;
   text-align: center;
+  width: 60%;
+  left: 17%;
  
 }
 
 .imagess>i{
   font-size: 4em;
 }
+.imagess>div{
+ margin: 1em;
+}
+.imgg>img{
+  border-radius: 6px;
+  width: 95%;
+}
+
 /*end-statistics*/
 
 /*FAQ*/
@@ -1008,34 +985,665 @@ flex-direction: row;
  margin: 1em;
   
 }
+
 /*end-FAQ*/
 
-
-
 /*about*/
-
-.aboutbitcoin .about-head{
-  text-align: center;
+.about-head{
   color: white;
+  text-align: center;
+}
+.about-content{
+  margin: 2em;
+  align-content: center;
+}
+.about-content .picc{
+  padding-left: 17%;
+ 
+}
+.picc>img{
+  border-radius: 7px;
+}
+.para>p{
+  left: -2%;
+}
+/*end-about*/
+
+/*leave a mesage form*/
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px;  
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box;
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
 }
 
-.about-content{
+input[type=submit] {
+  background-color: #042baa;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+  background-color: #207691;
+}
+
+
+
+/* start of the dashboard page */
+
+.sidebar {
+  display: none;
+}
+.turning {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+.wrapper-box {
+  display: inline;
+  width: 100%;
+  height: 100%;
+}
+.w-box {
+  width: 100%;
+  height: 100%;
+}
+
+.header-dash {
+  width: 100%;
+  position: relative;
+  background-color: rgb(42, 42, 241);
+  color: white;
+  height: 4em;
+
+}
+.logo_1 { 
+  width: 6em;
+  height: 4em;
+  text-align: left;
+  margin-left: 0.10em;
+  margin-bottom: -1em;
+
+}
+.search {
+  text-align: right;
+  margin-right: 1em;
+  line-height: 30px;
+  padding-top: 15px;
+  border-radius: 6px;
+  margin-top: -3em;
+  height: fit-content;
+
+}
+.dash {
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  margin-right: 27px;
+  margin-left: 27px;
+}
+.dash div h1 {
+  color: black;
+  height: fit-content;
+  margin-top: 10px;
+}
+.dash div ol li {
+  list-style: none;
+}
+.style {
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+  color: black;
+}
+.change::before {
+  display: inline-block;
+  padding-right: 0.5em;
+  color: #6c757d;
+  content: "/";
+}
+/* start of dash_contant */
+.dash_content {
+  margin-right: 2em;
+  margin-left: 4.5em;
+  position: relative;
+  display: flex;
+  flex: 0 0 100%;
+  flex-wrap: wrap;
+  width: 96%;
+}
+.box_balance {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #007bff;
+  width: 41%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance2 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #dc3545;
+  width: 41%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+
+}
+.box_balance3 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #20c997;
+  width: 41%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance4 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #ffc107;
+  width: 41%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance5 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #28a745;
+  width: 41%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance6 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color:#001f3f;
+  width: 41%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance7 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #17a2b8;
+  width: 41%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance8 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color:  #6c757d;
+  width: 41%;
+  height: 5em;
+  border-radius: 3px;
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+.box_balance9{
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #17a2b8;
+  width: 84%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-right: 1em;
+}
+.money_balance { 
+  font-size: 1.25em;
+  font-weight: 700;
+}
+.fa {
+  color: white;
+  margin-top: 18px;
+  display: inline-block;
+  box-sizing: border-box;
+  box-shadow: 2px solid gray;
+}
+.info_icon {
+  text-align: center;
+  width: 25%;
+  margin-top: 0.7em;
+}
+.info_icon a {
+  width: 50%;
+  height: 50%;
+  padding: 1em;
+  margin-left: 0.70em;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)!important;
+}
+.info_icon i {
+  font-weight: bold;
+}
+a.elevation-1 {
+  width: 2em;
+  height: 2em;
+  box-shadow: 2px solid rgb(14, 13, 13);
+}
+.infom {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+  line-height: 30px;
+
+}
+/* start of investing plan */
+.investing-BOX {
+  width: 94.1%;
+  border: 1px solid gray;
+  margin-right: 1em;
+  margin-left: 1em;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  border-radius: 3px;
+}
+.header_TO {
+  height: fit-content;
+  border-bottom: 1px solid grey;
+  padding: 10px;
+  color: black;
+}
+.control-plan {
+  display: flex;
+  flex-direction: column;
+}
+.invest-inputs {
+  position: relative;
+  margin-left: 1em;
+}
+.selectionplan {
+  width: 100%;
+  height: fit-content;
+  margin-top: 1em;
+  border-radius: 3px;
+}
+.selectionplan2 {
+  width: 97.5%;
+  height: 2em;
+  height: fit-content;
+  margin-top: 1em;
+  padding-left: 1em;
+  border-radius: 6px;
+
+}
+#selectplans-period {
+  margin-top: 1em;
+  height: fit-content;
+  height: 2em;
+  width: 97.5%;
+  padding-left: 1em;
+  border-radius: 6px;
+
+}
+
+/* stary of the investing cards */
+.invest-cards {
+  display: block;
+  width: 90%;
+  height: 90%;
+  border-radius: 6px;
+  color: white;
+  margin-left: auto;
+  background-color:#17a2b8;
+  margin-top: 2em;
+  margin-right: auto;
+  padding: 2em;
+  color: white;
+}
+.invest-cards2 {
+  display: none;
+  width: 90%;
+  height: 90%;
+  border-radius: 6px;
+  color: white;
+  margin-left: auto;
+  background-color:#17a2b8;
+  margin-top: 2em;
+  margin-right: auto;
+  padding: 2em;
+  color: white;
+}
+.invest-cards3 {
+  display: none;
+  width: 90%;
+  height: 90%;
+  border-radius: 6px;
+  color: white;
+  margin-left: auto;
+  background-color:#17a2b8;
+  margin-top: 2em;
+  margin-right: auto;
+  padding: 2em;
+  color: white;
+
+
+}
+.invest-cards4 {
+  display: none;
+  width: 90%;
+  height: 90%;
+  border-radius: 6px;
+  color: white;
+  margin-left: auto;
+  background-color:#17a2b8;
+  margin-top: 2em;
+  margin-right: auto;
+  padding: 2em;
+  color: white;
+
+}
+
+
+
+
+/* stary of the investing cards */
+.btnex {
+  display: none;
+  margin-left: 30%;
+  margin-top: 3em;
+
+}
+
+#btnexecute {
+  height: 2em;
+  width: 10em;
+  margin-top: 1em;
+  border-radius: 6px;
+  background-color: #17a2b8;
+  color: white;
+}
+.btnex2 {
+  margin-left: 30%;
+  margin-top: 3em;
+}
+#btnexecute2 {
+  height: 2em;
+  width: 10em;
+  margin-top: 1em;
+  border-radius: 6px;
+  background-color: #17a2b8;
+  color: white;
+}
+.highlight-terms p {
+  color: orange;
+  margin-left: 3em;
+  margin-top: 1em;
+  margin-right: 3em;
+
+}
+.highlight-terms p a {
+  color: blue;
+}
+
+/* end of investing plan */
+
+
+
+/* start of wedges */
+.wedges {
+  margin-left: 0.84em;
+  width: 95.5%;
+  height: 4.5em;
+  border-radius: 2px;
+  margin-bottom: -0.60em;
+}
+/* end of the wedge */
+
+/* start of the Btc CHart */
+.chart {
+  width: 95%;
+  height: 80%;
+  position: relative;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-radius: 1px;
+  padding-right: -5em;
+}
+.div-chart {
+  padding: 10px 2px 10px 0px;
+  border: 1px solid grey;
+  width: 99.7%;
+  border-radius: 3px;
+}
+.chart span {
+  margin-left: 1em;
+  color: black;
+ 
+}
+.btc-chart {
+  width: 100%;
+  height: 95%;
+  margin-left: -0.1em;
+  margin-top: -0.1em;
+}
+
+/* end of the btc chart */
+
+/* start of live trading inputs */
+
+.container_box {
+  width: 95%;
+  border: 1px solid gray;
+  margin-right: 1em;
+  margin-left: 1em;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  border-radius: 3px;
+
+}
+.header_for {
+  height: fit-content;
+  border-bottom: 1px solid grey;
+  padding: 10px;
+  color: black;
+
+
+}
+.trading1 {
+  margin-top: 10px;
+}
+
+#cryptoforex {
+  width: 100%;
+}
+.trading {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+
+}
+.control {
+  padding-left: 20px;
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-right: 20px;
+}
+.controlmin_1{
+  width: 100%;
+  margin-top: 18px;
+}
+.controlmin_1 input {
+  width: 100%;
+  margin-right: 20px;
+  padding-right: 8px;
+}
+#currency {
+  margin-bottom: 18px;
+}
+.controlmin_2 {
+  margin-top: 18px;
+}
+.controlmin_2 input {
+  margin-right: 18px;
+  padding-right: 25px;
+  width: 100%;
+}
+#entry {
+  margin-bottom: 18px;
+}
+#stoploss {
+  margin-bottom: 18px;
+}
+#takeprofit {
+  margin-bottom: 18px;
+}
+.select-input {
+  margin-bottom: 18px;
+}
+#execute {
+  width: 100%;
+}
+.btnsub {
+  width: 98%;
+  background-color: #28a745;
+  border-color: #28a745;
+  border-radius: 3px;
+  margin-top: 1em;
+  text-align: center;
+}
+/* end of the live trading */
+
+/* start of recent trading history */
+.h5 {
+  color: blue;
+  font-size: 1em;
+  text-align: center;
+  margin-top: 3em;
+}
+/* start of the table history */
+.table {
+  display: table block;
+  width: 100%;
+  margin-bottom: 1em;
+  background-color: rgb(161, 208, 252);
+  border-top-color: grey;
+  border-bottom-color: grey;
+  border-right-color: grey;
+  border-left-color: grey;
+  border-radius: 3px;
+}
+.tablehead {
+  display: table-header-group;
+  vertical-align: middle;
+}
+.tablehead tr {
+  display: table-row;
+}
+.tablehead tr th {
+  display: table-cell;
+}
+.table td {
+  vertical-align: top;
+}
+.scoll-table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+
+}
+
+/* end of the table history */
+
+/* start of the forex crossrate chart */
+.crossrate {
+  position: relative;
+  width: 97.5%;
+  height: 60%;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 3em;
+  display: block;
+  overflow-x: auto;
+
+}
+.FOREX {
+  border: 1px solid grey;
+  width: 97%;
+  height: 2em;
+  padding: 10px;
+  border-radius: 3px;
+  height: fit-content;
+}
+.FOREX span {
+  color: black;
+}
+.cross-chart {
+  width: 97%;
+}
+
+
+/* end of the forex crossrate chart */
+
+/* start of footer */
+.footer {
+  background: #fff;
+border-top: 1px solid #dee2e6;
+color: #869099;
+padding: 1em;
+text-align: center;
+}
+.footer strong a {
+  text-decoration: none;
+  color: blue;
+}
+
+/* end of footer */
+
+
+/* end of dash_contant */
+
+.formmm{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  margin: 0.5em;
+}
+.formmm>div{
+  text-align: center;
+  padding: 8px;
+}
+.containerr{
   display: flex;
   flex-direction: column;
   margin: 1em;
 }
-.about-content>div{
-  margin: 1em;
+.containerr>div{
+  padding: 1em;
 }
-.picc>img{
-  border-radius: 6px;
-  padding-top: 3%;
-  padding-left: 3%;
-}
-
-
-/*end-about*/
-
+/*end-leave a mesage form*/
 
 
 }

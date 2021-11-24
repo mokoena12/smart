@@ -40,11 +40,11 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
             $row = $result->fetch_assoc(); 
             if($row["username"]===$param_username){
                 session_start();
-                $_SESSION["investa_user"] = ucfirst(strtolower($_POST["username"])); $bel= "BELMIRO";
+                $_SESSION["investa_user"] = ucfirst(strtolower($_POST["username"]));
                 $user = ucfirst($_SESSION["investa_user"]);
                 setcookie('username',$user,time() + 60*60*24*7,'/');
 
-                header("location:Dashboard.php");
+                header("location:Dashboard.php?user=$user");
             }
             else{
                 $pasword_username_err="<strong>Your Pasword/Username combination is wrong</strong>";
@@ -122,7 +122,11 @@ $conn->close();
     <div class="center">
         <form class="box" action="#" method="post">
             <div>
-                <h1 class="h1_style">Login  </h1>
+                <h1 class="h1_style">Login</h1>
+                <div style="color:green"><?php if(isset($_GET["user2"])){
+                        echo $_GET["user2"];
+                } ?>
+                </div>
             </div>
             <div class="icon">
                 <i class="fas fa-lightbulb">Login to your dashboard and start investing</i>

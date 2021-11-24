@@ -1,3 +1,22 @@
+<?
+session_start();
+
+if(isset($_POST["person_id_name1"])){
+$error = "Please login before accessing Dashboard";
+  header("Location:login.php?user2=$error");
+}
+else{
+  
+  header("Location:login.php?user2=$error");
+  $test = "I'm New";
+}
+
+
+
+
+?>
+
+
 <Doctype html>
   <html lang="en" class="body-style">
   <head>
@@ -52,7 +71,9 @@
           <div class="sidebar_profile">
             <div class="sidebar-flex" >
               <img class="Pcontrol" src="img/BITCOIN.png" alt="profile">
-              <span>belmiro</span>
+              <span><?php 
+              session_start();
+              echo $_SESSION["investa_user"]; echo $test?></span>
             </div>
           </div>
           <div class="sidebar-manus">
@@ -106,7 +127,7 @@
               </div>
               <div>
                 <ol class="style">
-                  <li class="change1"><a href="/" style="text-decoration: none; color: black;">Home</a></li>
+                  <li class="change1"><a href="index.html" style="text-decoration: none; color: black;">Home</a></li>
                   <li class="change active">Dashboard</li>
                 </ol>
               </div>

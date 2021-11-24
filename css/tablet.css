@@ -878,48 +878,6 @@ header .logo img{
 
 
 
-/* invest in bitcoin*/
-.investt{
-  position: absolute;
-  top: 63%;
-  left: 37%;
-  width:12em ;
-
-  
-}
-
-.invest_btn{
-  border-radius: 3px;
-  margin: 10px;
-  padding: 4px;
-  font-size: 17px;
-  font-weight: bold;
-
-}
-
-.investt .iconss{
-  font-weight: bold;
-  font-size: 1.5em;
-  color: rgb(232, 231, 236);
-  width:80%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-  
-/*animation for text */
-.text-animate{
- 
-  top:30.4em;
-  right: 23%;
-}
-.text-animate #text1,#text2,#text3,#text4,#text5{
-  font-size: 22px;
-  padding: 0px 5px 0px 5px;
-}
-/* end- animation text*/
-
 /*three steps*/
 
 .three-steps>div{
@@ -931,11 +889,12 @@ header .logo img{
 }
 .steps{
   display: flex;
-  flex-direction: row;
-
+  flex-direction: column;
+ 
 }
 .steps>div{
   margin: 1em;
+ 
 }
 
 
@@ -948,7 +907,7 @@ header .logo img{
 
 .security{
 display: flex;
-flex-direction: row;
+flex-direction: column;
 }
 
 .security>div{
@@ -965,11 +924,19 @@ flex-direction: row;
 
 .planns-cards{
   display: flex;
-  flex-direction:row;
+  flex-direction:column;
 }
 .planns-cards>div{
   margin: 1em;
   text-align: center;
+  width: 55%;
+  left: 20%;
+}
+.planns-cards>div>p{
+  color: white;
+}
+.planns-cards>div>a{
+  font-size: 1.5em;
 }
 
 /*end-investment plans*/
@@ -983,19 +950,29 @@ flex-direction: row;
 
 .peoplee{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-content: center;
 }
 
 .peoplee>div{
   margin: 1em;
   text-align: center;
+  width: 60%;
+  left: 17%;
  
 }
 
 .imagess>i{
   font-size: 4em;
 }
+.imagess>div{
+ margin: 1em;
+}
+.imgg>img{
+  border-radius: 6px;
+  width: 95%;
+}
+
 /*end-statistics*/
 
 /*FAQ*/
@@ -1008,34 +985,75 @@ flex-direction: row;
  margin: 1em;
   
 }
+
 /*end-FAQ*/
 
-
-
 /*about*/
-
-.aboutbitcoin .about-head{
-  text-align: center;
+.about-head{
   color: white;
+  text-align: center;
+}
+.about-content{
+  margin: 2em;
+  align-content: center;
+}
+.about-content .picc{
+  padding-left: 17%;
+ 
+}
+.picc>img{
+  border-radius: 7px;
+}
+.para>p{
+  left: -2%;
+}
+/*end-about*/
+
+/*leave a mesage form*/
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px;  
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box;
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
 }
 
-.about-content{
+input[type=submit] {
+  background-color: #042baa;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+  background-color: #207691;
+}
+
+
+.formmm{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  margin: 0.5em;
+}
+.formmm>div{
+  text-align: center;
+  padding: 8px;
+}
+.containerr{
   display: flex;
   flex-direction: column;
   margin: 1em;
 }
-.about-content>div{
-  margin: 1em;
+.containerr>div{
+  padding: 1em;
 }
-.picc>img{
-  border-radius: 6px;
-  padding-top: 3%;
-  padding-left: 3%;
-}
-
-
-/*end-about*/
-
+/*end-leave a mesage form*/
 
 
 }

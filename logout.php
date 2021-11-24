@@ -44,7 +44,7 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
                 $user = ucfirst($_SESSION["investa_user"]);
                 setcookie('username',$user,time() + 60*60*24*7,'/');
 
-                header("location:Dashboard.php");
+                header("location:dashboard.php");
             }
             else{
                 $pasword_username_err="<strong>Your Pasword/Username combination is wrong</strong>";

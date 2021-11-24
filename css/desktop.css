@@ -933,7 +933,7 @@ flex-direction: row;
 }
 
 .imagess{
-  margin: 0.5em;
+  margin: 1em;
 }
 
 .imgg>img{
@@ -1137,9 +1137,10 @@ div.box_header {
 /* end of registration form for desktop */
 
 /* start of dashboard */
-body {
+.turning {
 height: 100%;
 width: 100%;
+overflow-x: hidden;
 }
 .body-style {
 height: 100%;
@@ -1410,6 +1411,11 @@ li {
   margin-right: 1em;
   margin-right: 1em;
 }
+.money_balance { 
+  font-size: 1.25em;
+  font-weight: 700;
+
+}
 .fa {
   color: white;
   margin-top: 18px;
@@ -1444,6 +1450,7 @@ a.elevation-1 {
 .infom {
   display: flex;
   flex-direction: column;
+  line-height: 30px;
 
 }
 /* end of dash contents */
@@ -1462,7 +1469,6 @@ a.elevation-1 {
   height: fit-content;
   border-bottom: 1px solid grey;
   padding: 10px;
-  font-weight: bold;
   color: black;
 }
 .control-plan {
@@ -1513,7 +1519,16 @@ a.elevation-1 {
 
 
 }
+
+.btnex2 {
+  display: none;
+  margin-left: 30%;
+  margin-top: 3em;
+}
+ 
+/* start of the investing cards */
 .invest-cards {
+  display: block;
   width: 100%;
   height: 90%;
   border-radius: 6px;
@@ -1523,6 +1538,46 @@ a.elevation-1 {
   margin-top: 1em;
   margin-right: 3em;
   padding: 2em;
+}
+.invest-cards2 {
+  display: none;
+  width: 100%;
+  height: 90%;
+  border-radius: 6px;
+  color: white;
+  margin-left: 8em;
+  background-color:#17a2b8;
+  margin-top: 1em;
+  margin-right: 3em;
+  padding: 2em;
+
+}
+.invest-cards3 {
+  display: none;
+  width: 100%;
+  height: 90%;
+  border-radius: 6px;
+  color: white;
+  margin-left: 8em;
+  background-color:#17a2b8;
+  margin-top: 1em;
+  margin-right: 3em;
+  padding: 2em;
+
+}
+.invest-cards4 {
+  display: none;
+  width: 100%;
+  height: 90%;
+  border-radius: 6px;
+  color: white;
+  margin-left: 8em;
+  background-color:#17a2b8;
+  margin-top: 1em;
+  margin-right: 3em;
+  padding: 2em;
+
+/* end of the investing cards */
 }
 .highlight-terms {
   color: orange;
@@ -1731,7 +1786,7 @@ text-align: center;
 /* end of footer */
 
 
-/* start of the profile */
+/* start of deposit page*/
 
 .transact-flex {
   display: flex;
@@ -1851,10 +1906,12 @@ text-align: center;
   border-right-color: grey;
   border-left-color: grey;
   border-radius: 3px;
+  height: 2em;
 }
 .tablehead2{
   display: table-header-group;
   vertical-align: middle;
+  height: 2em;
 }
 .tablehead2 tr {
   display: table-row;
@@ -1862,19 +1919,58 @@ text-align: center;
 .tablehead2 th {
   display: table-cell;
 }
-.tbody td {
-  display: table-cell;
+.tbody {
+  border-collapse: collapse;
+  height: 3em;
+  background-color: rgba(0,0,0,.05);
+}
+.tbody tr td{
+  border-collapse: collapse !important;
+  text-align: center;
+  border: 0;
+  box-sizing: content-box;
+}
+
+.end-part {
+  display: flex;
+  flex: 0 0 100%;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.end-shift {
+  width: 50%;
+}
+.prev-next {
+  width: 50%;
+  justify-content: right;
+}
+.prev-next ul {
+  display: flex;
+  flex: 0 0 50%;
+  justify-content: end;
+}
+.prev-next ul li {
+  border: 1px solid grey;
+  height: 2em;
+  border-radius: 3px;
+
+}
+.prev-next ul li a {
+  text-decoration: none;
+  padding: 5px;
+  color: black;
 }
 /* end - depossit table */
 
 
+
 /* end of the profile */
 
-
+/*leave a mesage form*/
 input[type=text], select, textarea {
   width: 100%; 
-  padding: 12px;
-  border: 1px solid #ccc;
+  padding: 12px;  
+  border: 1px solid #ccc; 
   border-radius: 4px; 
   box-sizing: border-box;
   margin-top: 6px; 
@@ -1882,27 +1978,37 @@ input[type=text], select, textarea {
   resize: vertical 
 }
 
-
 input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
 }
 
 
-input[type=submit]:hover {
-  background-color: #eff5ef;
-}
 
-
-.container {
+.formmm{
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
+  margin: 1em;
 }
+.formmm>div{
+  text-align: center;
+  padding: 8px;
+}
+.containerr{
+  display: flex;
+  flex-direction: row;
+  margin: 1em;
+}
+.containerr>div{
+  padding: 1em;
+}
+/*end-leave a mesage form*/
 
-
+/*smart invetsa last block*/
+.lastblock>div{
+  display: flex;
+  flex-direction: row;
+}
+/*end-smart invetsa last block*/
 }

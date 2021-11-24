@@ -110,7 +110,7 @@ $conn->close();
  <?php echo $login_err?>
     <!--start of header -->
     <div class="nav_link2">
-        <a href="index.html">Home</a>
+        <a href="index.html">Home1</a>
     </div>
     <!-- end of header -->
     <!-- start of logo -->

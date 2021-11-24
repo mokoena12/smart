@@ -126,10 +126,10 @@ else{
                 <h1>Dashboard</h1>
               </div>
               <div>
-                <ol class="style">
-                  <li class="change1"><a href="index.html" style="text-decoration: none; color: black;">Home</a></li>
+                <ul class="style">
+                  <li class="change1"><a href="index.html" style="text-decoration: none; color: rgb(73, 123, 163); padding-right: 5px;">Home</a></li>
                   <li class="change active">Dashboard</li>
-                </ol>
+                </ul>
               </div>
             </div>
           </section>
@@ -146,7 +146,7 @@ else{
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Balance</span>
-                  <span class="money_balance">$</span>
+                  <span class="money_balance">$1200</span>
                 </div>
               </div>
               <!-- end of the balance box  -->
@@ -160,7 +160,7 @@ else{
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Profit Return</span>
-                  <span class="money_balance">$</span>
+                  <span class="money_balance">$111</span>
                 </div>
               </div>
               <!-- end of profit box -->
@@ -174,7 +174,7 @@ else{
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Bonus</span>
-                  <span class="money_balance">$</span>
+                  <span class="money_balance">$5000</span>
                 </div>
               </div>
               <!-- end of bonus box -->
@@ -188,7 +188,7 @@ else{
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Total deposit</span>
-                  <span class="money_balance">$</span>
+                  <span class="money_balance">$800</span>
                 </div>
       
               </div>
@@ -203,7 +203,7 @@ else{
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Total withdrawal</span>
-                  <span class="money_balance">$</span>
+                  <span class="money_balance">$10000000</span>
                 </div>
               </div>
               <!-- end of total withdraw box -->
@@ -217,7 +217,7 @@ else{
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Deposit</span>
-                  <span class="money_balance">$</span>
+                  <span class="money_balance">$90000</span>
                 </div>
               </div>
               <!-- end of deposit box -->
@@ -232,7 +232,7 @@ else{
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Withdrawal</span>
-                  <span class="money_balance">$</span>
+                  <span class="money_balance">$300</span>
                 </div>
       
               </div>
@@ -247,7 +247,7 @@ else{
                     </div>
                     <div class="infom">
                       <span class="personal_balance">Subscription</span>
-                      <span class="money_balance">$</span>
+                      <span class="money_balance">Not Subscribed</span>
                     </div>
               </div>
               <!-- end of subscription -->
@@ -262,7 +262,7 @@ else{
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Notifications</span>
-                  <span class="money_balance">$</span>
+                  <span class="money_balance">Account is Active</span>
                 </div>
               </div>
               <!-- end of the notification -->
@@ -293,28 +293,80 @@ else{
                   <div>
                     <select name="selectperiod" id="selectplans-period">
                       <option value="">--Choose Investment period--</option>
-  
+                      <option value="1 week">1 week</option>
+                      <option value="2 weeks">2 weeks</option>
+                      <option value="3 weeks">3 weeks</option>
+                      <option value="1 month">1 month</option>
+                      <option value="2 months">2 months</option>
+                      <option value="3 months">3 months</option>
+                      <option value="4 months">4 months</option>
+                      <option value="5 months">5 months</option>
+                      <option value="6 months">6 months</option>
+                      <option value="1 year">1 year</option>
+                      <option value="2 years">2 years</option>
+
                     </select>
                   </div>
                   <div class="btnex">
-                    <input type="submit" id="btnexecute" value="Execute">
+                    <input type="submit" id="btnexecute" value="Invest">
                   </div>
                </div>
                <div class="invest-cards">
                   <h3>Bronze</h3>
                   <h5>Minimun Amount: $30 <br>
+                    Maximum Amount: $1000 <br>
                   Interest rate: 3% daily</h5>
                   <p>This investment is commpounded daily <br>
                     meaning your investment will increase by 3% <br>
                     every day. Investment period is the time you <br>
                     wand this investment to last before you can <br>
-                     withdraw your money. 
+                    withdraw your money. 
                   </p>
-               </div>            
+               </div>
+               <div class="invest-cards2">
+                  <h3>Titanium</h3>
+                  <h5>Minimun Amount: $50 <br>
+                    Maximum Amount: $1500 <br>
+                  Interest rate: 5% daily</h5>
+                  <p>This investment is commpounded daily <br>
+                    meaning your investment will increase by 3% <br>
+                    every day. Investment period is the time you <br>
+                    wand this investment to last before you can <br>
+                    withdraw your money. 
+                  </p>
+                </div> 
+                <div class="invest-cards3">
+                  <h3>Gold</h3>
+                  <h5>Minimun Amount: $100 <br>
+                    Maximum Amount: $5000 <br>
+                  Interest rate: 10% daily</h5>
+                  <p>This investment is commpounded daily <br>
+                    meaning your investment will increase by 3% <br>
+                    every day. Investment period is the time you <br>
+                    wand this investment to last before you can <br>
+                    withdraw your money. 
+                  </p>
+               </div>
+               <div class="invest-cards4">
+                  <h3>Diamond</h3>
+                  <h5>Minimun Amount: $200 <br>
+                    Maximum Amount: $10000 <br>
+                  Interest rate: 20% daily</h5>
+                  <p>This investment is commpounded daily <br>
+                    meaning your investment will increase by 3% <br>
+                    every day. Investment period is the time you <br>
+                    wand this investment to last before you can <br>
+                    withdraw your money. 
+                  </p>
+                </div>                                               
               </div>
               <div class="highlight-terms">
                 <p>By executing this investment, You agree to our terms and conditions (visit <a href="#">Terms</a>) to read more</p>
               </div>
+              <div class="btnex2">
+                <input type="submit" id="btnexecute2" value="Invest">
+              </div>
+              
             </form>
           </div>
           <!-- end of investing plan -->
@@ -390,32 +442,34 @@ else{
             <div class="h5">
               <h5>Rencent Trading History</h5>
             </div>
-            <table class="table">
-              <thead class="tablehead">
-                <tr>
-                  <th>Trading Type</th>
-                  <th>Currency Pair</th>
-                  <th>Trading Action</th>
-                  <th>Entry Price</th>
-                  <th>Stop Loss</th>
-                  <th>Take Profit</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>FOREX</td>
-                  <td>USDJPY</td>
-                  <td></td>
-                  <td>125.25</td>
-                  <td>105.25</td>
-                  <td>135.25</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="scoll-table">
+              <table class="table">
+                <thead class="tablehead">
+                  <tr>
+                    <th>Trading Type</th>
+                    <th>Currency Pair</th>
+                    <th>Trading Action</th>
+                    <th>Entry Price</th>
+                    <th>Stop Loss</th>
+                    <th>Take Profit</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>FOREX</td>
+                    <td>USDJPY</td>
+                    <td></td>
+                    <td>125.25</td>
+                    <td>105.25</td>
+                    <td>135.25</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
            <!-- end of table -->
   
@@ -424,7 +478,7 @@ else{
             <div class="FOREX">
               <span>fOREX-cross Rate chart</span>
             </div>
-            <div>
+            <div class="scoll-table">
               <img class="cross-chart" src="img/crossrate.png" alt="forex crossrate chart">
             </div>
   
@@ -445,11 +499,5 @@ else{
   
         </div>
     </div>
-  
-  
-  
-  
-  
-    
   </body>
   </html>    

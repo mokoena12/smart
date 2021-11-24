@@ -1966,7 +1966,7 @@ text-align: center;
 
 /* end of the profile */
 
-/*leave a mesage form*/
+/*leave a mesage form
 input[type=text], select, textarea {
   width: 100%; 
   padding: 12px;  
@@ -1982,7 +1982,8 @@ input[type=submit] {
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
-}
+}*/
+
 
 
 

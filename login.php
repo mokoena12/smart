@@ -17,13 +17,11 @@ function sanitize($value){
 }
 //------------------------------------------------
 
-//====Check if the user already loggen in  ///
-/*
+
 session_start();
 if(isset($_SESSION["investa_user"])){
     header("location:dashboard.php");
-}*/
-///======End========//
+}
 
 if($_SERVER["REQUEST_METHOD"]== "POST"){
 	
@@ -46,7 +44,7 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
                 $user = ucfirst($_SESSION["investa_user"]);
                 setcookie('username',$user,time() + 60*60*24*7,'/');
 
-                header("location:Dashboard.php?user=$user");
+                header("location:Dashboard.php");
             }
             else{
                 $pasword_username_err="<strong>Your Pasword/Username combination is wrong</strong>";

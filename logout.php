@@ -1,13 +1,17 @@
 
+
 <?php 
-
+//session_destroy();
 if(isset($_POST["Yes"])){
-   session_destroy();
-   $out = "THANK YOU USING INVESTA platform";
+    session_start();
+  session_destroy();
+ $out = "THANK YOU USING INVESTA platform";
+ unset($_SESSION["investa_user"]);
    header("location:index.html");
+   
 
-}elseif(isset($_POST["No"])){
-    header("location:Dashboard.php");
+//}elseif(isset($_POST["No"])){
+//    header("location:Dashboard.php");
 }
 ?>
 

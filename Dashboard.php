@@ -1,11 +1,18 @@
 
+
 <?php
+//Create table 
+//create functions for balance and profit
+// profit = balance - deposit
+// A = P(1  + i)^n 
+// investment table (user, type,period) 
 
 session_start();
 
 if (isset($_SESSION["investa_user"])){
 
   $user = $_SESSION["investa_user"];
+ 
 }
 else{
   $err = "Please login before you access dashboard";
@@ -71,7 +78,7 @@ else{
             <div class="sidebar-flex" >
               <img class="Pcontrol" src="img/BITCOIN.png" alt="profile">
 
-              <span><?php echo $user; ?></span>
+              <span><?php echo "Hi ".$user; ?></span>
 
              
             </div>

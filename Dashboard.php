@@ -1,3 +1,5 @@
+ 
+
 <Doctype html>
   <html lang="en" class="body-style">
   <head>
@@ -52,7 +54,7 @@
           <div class="sidebar_profile">
             <div class="sidebar-flex" >
               <img class="Pcontrol" src="img/BITCOIN.png" alt="profile">
-              <span>belmiro</span>
+              <span><?php echo $user; ?></span>
             </div>
           </div>
           <div class="sidebar-manus">
@@ -82,6 +84,9 @@
                   Subscription
                 </a>
                 
+              </li>
+              <li>
+                <a href="logout.php"><i class="fa fa-user"></i>Log out</a>
               </li>
   
             </ul>

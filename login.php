@@ -40,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
             $row = $result->fetch_assoc(); 
             if($row["username"]===$param_username){
                 session_start();
-                $_SESSION["investa_user"] = ucfirst(strtolower($_POST["username"])); $bel= "BELMIRO";
+                $_SESSION["investa_user"] = ucfirst(strtolower($_POST["username"]));
                 $user = ucfirst($_SESSION["investa_user"]);
                 setcookie('username',$user,time() + 60*60*24*7,'/');
 

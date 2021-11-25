@@ -1010,7 +1010,7 @@ flex-direction: column;
 /*end-about*/
 
 /*leave a mesage form*/
-input[type=text], select, textarea {
+.formmmm>input[type=text], select, textarea {
   width: 100%; 
   padding: 12px;  
   border: 1px solid #ccc; 
@@ -1019,20 +1019,6 @@ input[type=text], select, textarea {
   margin-top: 6px; 
   margin-bottom: 16px; 
   resize: vertical 
-}
-
-input[type=submit] {
-  background-color: #042baa;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-
-input[type=submit]:hover {
-  background-color: #207691;
 }
 
 
@@ -1049,12 +1035,51 @@ input[type=submit]:hover {
   display: flex;
   flex-direction: column;
   margin: 1em;
+  
 }
 .containerr>div{
   padding: 1em;
 }
 /*end-leave a mesage form*/
+/* smart investa lastblock */
+.lastblock>h2{
+  text-align: center;
+  color: white;
+  padding:0.5em;
+}
+.last-blockdiv{
+  display: flex;
+  flex-direction: row;
+  margin: 0.5em;
+  padding-left: 6%;
+}
 
+.last-blockdiv>div{
+  margin: 1em;
+  font-size: 1.3em;
+}
+.quick-links h5{
+  font-size: 1em;
+}
+.quick-links a:link{
+  text-decoration: none;
+  color: #062a52;
+}
+.quick-links a:hover{
+  color: #eca31b;
+}
+
+.services h5{
+  font-size: 1em;
+}
+.services a:link{
+  text-decoration: none;
+  color: #062a52;
+}
+.services a:hover{
+  color: #eca31b;
+}  
+/* end-smart investa lastblock */
 
 }
 

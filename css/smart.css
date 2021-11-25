@@ -536,8 +536,6 @@ margin: 0;
     background: linear-gradient(to bottom,rgb(32, 32, 32),white);
 }
 
-
-
 /*end-about bitcoin*/
 
 /* leave a message form*/
@@ -546,9 +544,9 @@ margin: 0;
     background: linear-gradient(to bottom,rgb(32, 32, 32),white);  
 }
 /*end- leave a message form*/
+
  /* smart investa last block*/
 .lastblock{
     background: linear-gradient(to bottom,rgb(32, 32, 32),white);   
 }
-
  /* end-smart investa last block*/

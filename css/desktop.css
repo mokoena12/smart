@@ -1870,8 +1870,9 @@ text-align: center;
 
 /* end of the profile */
 
+
 /*leave a mesage form*/
-input[type=text], select, textarea {
+.formmmm>input[type=text], select, textarea {
   width: 100%; 
   padding: 12px;  
   border: 1px solid #ccc; 
@@ -1882,18 +1883,11 @@ input[type=text], select, textarea {
   resize: vertical 
 }
 
-input[type=submit] {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-}
-
-
 
 .formmm{
   border-radius: 5px;
   background-color: #f2f2f2;
-  margin: 1em;
+  margin: 0.5em;
 }
 .formmm>div{
   text-align: center;
@@ -1901,20 +1895,57 @@ input[type=submit] {
 }
 .containerr{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 1em;
+  
 }
 .containerr>div{
   padding: 1em;
 }
 /*end-leave a mesage form*/
-
-/*smart invetsa last block*/
-.lastblock>div{
+/* smart investa last blocka*/
+.lastblock>h2{
+  text-align: center;
+  color: white;
+  padding:0.5em;
+}
+.last-blockdiv{
   display: flex;
   flex-direction: row;
+  margin: 0.5em;
+  padding-left: 6%;
+  align-content: center;
 }
-/*end-smart invetsa last block*/
+
+.last-blockdiv>div{
+  margin: 2em;
+  font-size: 2em;
+}
+.quick-links h5{
+  font-size: 1em;
+}
+.quick-links a:link{
+  text-decoration: none;
+  color: #062a52;
+}
+.quick-links a:hover{
+  color: #eca31b;
+}
+
+.services h5{
+  font-size: 1em;
+}
+.services a:link{
+  text-decoration: none;
+  color: #062a52;
+}
+.services a:hover{
+  color: #eca31b;
+}  
+
+
+/* end-smart investa last blocka*/
+
 
 
 

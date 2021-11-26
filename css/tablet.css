@@ -537,6 +537,39 @@ height: 100%;
   }
   /*end of widget style*/
 
+  /* invest in bitcoin*/
+.investt{
+  position: absolute;
+  top: 65%;
+  left:30%;
+  width: 30%;
+  height: 25%;
+  font-size: 1em;
+  
+  }
+  
+  .investt .invest_btn{
+  border-radius: 3px;
+  padding: 4px;
+  padding-left: 20px;
+  font-size: 17px;
+  font-weight: bold;
+  
+  }
+  
+  .investt .iconss{
+  font-weight: bold;
+  font-size: 1.5em;
+  color: rgb(232, 231, 236);
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  }
+  
+  /* end of invest in bitcoin*/
+  
+
 
 /*==== Smart investor text======*/
 .smart_investor{
@@ -924,19 +957,17 @@ flex-direction: column;
 
 .planns-cards{
   display: flex;
-  flex-direction:column;
+  flex-direction:row;
+  padding-left: 10.5%;
+  margin: 1em;
 }
 .planns-cards>div{
-  margin: 1em;
+  margin: 0.5em;
   text-align: center;
-  width: 55%;
-  left: 20%;
+  padding: 5px;
 }
-.planns-cards>div>p{
-  color: white;
-}
-.planns-cards>div>a{
-  font-size: 1.5em;
+.planns-cards>div a{
+  padding: 8px;
 }
 
 /*end-investment plans*/
@@ -1041,8 +1072,9 @@ flex-direction: column;
   padding: 1em;
 }
 /*end-leave a mesage form*/
+
 /* smart investa lastblock */
-.lastblock>h2{
+.lastblock>h1{
   text-align: center;
   color: white;
   padding:0.5em;

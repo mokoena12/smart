@@ -928,6 +928,7 @@ flex-direction: column;
 }
 /*end-why chose  us*/
 
+
 /*investment plans*/
   
 .invest-text{
@@ -938,22 +939,21 @@ flex-direction: column;
 .planns-cards{
   display: flex;
   flex-direction:column;
+  padding-left: 8%;
+  margin: 0.5em;
 }
 .planns-cards>div{
-  margin: 1em;
+  
   text-align: center;
-  width: 55%;
-  left: 20%;
+  padding: 5px;
+  width: 80%;
+  font-size: 2em;
 }
-.planns-cards>div>p{
-  color: white;
-}
-.planns-cards>div>a{
-  font-size: 1.5em;
+.planns-cards>div a{
+  padding: 8px;
 }
 
 /*end-investment plans*/
-
 /*statistics*/
 
 .stat-text{
@@ -1060,8 +1060,9 @@ flex-direction: column;
 }
 /*end-leave a mesage form*/
 
+
 /* smart investa last blocka*/
-.lastblock>h2{
+.lastblock>h1{
   text-align: center;
   color: white;
   padding:0.5em;

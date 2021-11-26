@@ -477,10 +477,11 @@ margin: 0;
     margin: 3%;
     margin-left: 0%;
 }
+.steps>div h4{
+    text-align: center;
+    padding-top: 7px;
+  }
 
-/*end-three steps*/
-
-/*three steps*/
 .threestep-text{
     align-content: center;
     text-align: center;
@@ -547,6 +548,6 @@ margin: 0;
 
  /* smart investa last block*/
 .lastblock{
-    background: linear-gradient(to bottom,rgb(32, 32, 32),white);   
+    background: linear-gradient(to bottom left,rgb(32, 32, 32),white);   
 }
  /* end-smart investa last block*/

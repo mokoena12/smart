@@ -862,16 +862,22 @@ header .logo img{
 /*three steps*/
 
 .three-steps>div{
-  top: 2em;
+  margin: 2em;
   width: 95%;
-  margin-left:auto;
-  margin-right:auto;
-
+  align-content: center;
 }
 .steps{
   display: flex;
   flex-direction: row;
 
+}
+.steps>div h4{
+  text-align: center;
+  padding-top: 7px;
+}
+.steps>div p{
+  text-align: center;
+  
 }
 .steps>div{
   margin: 1em;
@@ -905,10 +911,16 @@ flex-direction: row;
 .planns-cards{
   display: flex;
   flex-direction:row;
+  padding-left: 15.6%;
 }
 .planns-cards>div{
-  margin: 1em;
+  margin: 2em;
   text-align: center;
+  font-size: 1.3em;
+  padding: 10px;
+}
+.planns-cards>div a{
+  padding: 10px;
 }
 
 /*end-investment plans*/
@@ -1888,6 +1900,7 @@ text-align: center;
   border-radius: 5px;
   background-color: #f2f2f2;
   margin: 0.5em;
+  width: 60%;
 }
 .formmm>div{
   text-align: center;
@@ -1895,7 +1908,7 @@ text-align: center;
 }
 .containerr{
   display: flex;
-  flex-direction: column;
+  flex-direction:row;
   margin: 1em;
   
 }
@@ -1903,8 +1916,9 @@ text-align: center;
   padding: 1em;
 }
 /*end-leave a mesage form*/
+
 /* smart investa last blocka*/
-.lastblock>h2{
+.lastblock>h1{
   text-align: center;
   color: white;
   padding:0.5em;

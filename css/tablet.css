@@ -895,6 +895,22 @@ header .logo img{
 
 /*===End of About us section ==== */
 
+/*animation for text */
+
+/*animated text sliding */
+
+.text-animate{
+  position: absolute;
+  left: 30%;
+  top: 30em;
+}
+
+.text-animate #text1,#text2,#text3,#text4,#text5{
+  font-size: 18px;
+  padding: 0px 5px 0px 5px;
+}
+/*end of style */
+
 /*==== Video for dummines */
 .y_video{
   padding-top:1em ;

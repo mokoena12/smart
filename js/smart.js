@@ -159,7 +159,7 @@ function view1(target1){
     var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
     if ((bottom_of_screen > top_of_element) ){
        $(target1).addClass("fadeup");
-       setTimeout(opas(target1),1000);
+       setTimeout(opas(target1),2000);
       
     } 
     else {

@@ -1,68 +1,20 @@
-<?php
-require_once "connect.php";
 
-$pasword_username_err=$login_err="";
 
-//Sanitizing All input variables
+<?php 
+//session_destroy();
+if(isset($_POST["Yes"])){
+    session_start();
+  session_destroy();
+ $out = "THANK YOU USING INVESTA platform";
+ unset($_SESSION["investa_user"]);
+   header("location:index.html");
+   
 
-function sanitize($value){
-	
-	$s_value = filter_var($value,FILTER_SANITIZE_STRING);
-    $s_value = htmlspecialchars($s_value);
-	
-	return $s_value;
-	
+//}elseif(isset($_POST["No"])){
+//    header("location:Dashboard.php");
 }
-//------------------------------------------------
-
-//====Check if the user already loggen in  ///
-/*
-session_start();
-if(isset($_SESSION["investa_user"])){
-    header("location:dashboard.php");
-}*/
-///======End========//
-
-if($_SERVER["REQUEST_METHOD"]== "POST"){
-	
-	
-	
-	if(isset($_POST["name"])){
-
-		$param_pasword = sanitize($_POST["Password"]);
-        $param_username = sanitize($_POST["name"]);
-	    $sql="SELECT username,passwords FROM registration WHERE  passwords='$param_pasword' ";
-        $result = $conn->query($sql);
-		//$param_pasword = hash('ripemd128',"$salt1$password$salt2");
-       
-		 
-		if($result->num_rows > 0){
-            $row = $result->fetch_assoc(); 
-            if($row["username"]===$param_username){
-                session_start();
-                $_SESSION["investa_user"] = ucfirst(strtolower($_POST["username"])); $bel= "BELMIRO";
-                $user = ucfirst($_SESSION["investa_user"]);
-                setcookie('username',$user,time() + 60*60*24*7,'/');
-
-                header("location:dashboard.php");
-            }
-            else{
-                $pasword_username_err="<strong>Your Pasword/Username combination is wrong</strong>";
-                                
-                }		
-			
-		}
-		else{
-			$login_err="<script>alert('You don't have smart investa account')</script>";
-            $pasword_username_err="<strong>Your Pasword/Username combination is wrong</strong>";
-		}
-	}
-
-}
-
-$conn->close();
-
 ?>
+
 <Doctype html>
 <html lang="en">
 <head>
@@ -107,10 +59,9 @@ $conn->close();
 </head>
 <!-- start of body -->
  <body class="body_style">
- <?php echo $login_err?>
     <!--start of header -->
     <div class="nav_link2">
-        <a href="index.html">Home1</a>
+        <a href="index.html">Home</a>
     </div>
     <!-- end of header -->
     <!-- start of logo -->
@@ -118,31 +69,25 @@ $conn->close();
         <img src="img/smart.investa.logo2.png" class="logo_img" alt="logo">
     </div>
     <!-- end of logo -->
+    </div>
+            <script> function thanks(){
+                    alert("Thank You for using Investa platform");
+                }
+                 </script>
     <!-- start of form -->
-    <div class="center">
+    <div class="center" >
         <form class="box" action="#" method="post">
             <div>
-                <h1 class="h1_style">Login  </h1>
+                <h1 class="h1_style">Log out?  </h1>
+           
+            <div class="credentials" >
+              
+                <input type="submit"  name="Yes" value="Yes" class="subbtn button" onclick="thanks()">
+                <p style="color:red"><?php $out; ?></p>
+                <input type="submit"  name="No" value="No" class="subbtn button">
+                <p style="color:red"></p>
             </div>
-            <div class="icon">
-                <i class="fas fa-lightbulb">Login to your dashboard and start investing</i>
-            </div>
-
-            <div class="credentials">
-                <div>
-                    <input type="text" name="name" placeholder="Enter Username or Email" class="login1" required><br>
-                    <input type="password" name="Password" placeholder="Enter Password" class="login1" required>
-                </div>
-               <div class="check">
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </div>
-                <input type="submit"  name="Signin" value="Sign in" class="subbtn button">
-                <p style="color:red"><?php echo $pasword_username_err ?></p>
-            </div>
-            <div class="link_reg">
-                <a href="forgot.php">Forget password</a><br>
-                Don't have an account? <a href="#">Sigh up</a>
-            </div>
+            
         
         
         </form>

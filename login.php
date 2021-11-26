@@ -1,5 +1,70 @@
-<!DOCTYPE html>
-<html>
+<?php
+require_once "connect.php";
+
+$pasword_username_err=$login_err="";
+
+//Sanitizing All input variables
+
+function sanitize($value){
+	
+	$s_value = filter_var($value,FILTER_SANITIZE_STRING);
+    $s_value = htmlspecialchars($s_value);
+	
+	return $s_value;
+  
+	
+}
+//------------------------------------------------
+
+
+session_start();
+if(isset($_SESSION["investa_user"])){
+    header("location:dashboard.php");
+}
+
+if($_SERVER["REQUEST_METHOD"]== "POST"){
+	
+	
+	
+	if(isset($_POST["name"])){
+
+		$param_pasword = sanitize($_POST["Password"]);
+        $param_username = sanitize($_POST["name"]);
+	    $sql="SELECT username,passwords FROM registration WHERE  passwords='$param_pasword' ";
+        $result = $conn->query($sql);
+		//$param_pasword = hash('ripemd128',"$salt1$password$salt2");
+       
+		 
+		if($result->num_rows > 0){
+            $row = $result->fetch_assoc(); 
+            if($row["username"]===$param_username){
+                session_start();
+                $_SESSION["investa_user"] = ucfirst(strtolower($_POST["name"]));
+                $user = ucfirst($_SESSION["investa_user"]);
+                setcookie('username',$user,time() + 60*60*24*7,'/');
+
+                header("location:Dashboard.php");
+            }
+            else{
+                $pasword_username_err="<strong>Your Pasword/Username combination is wrong</strong>";
+                                
+                }		
+			
+		}
+		else{
+			$login_err="<script>alert('You don't have smart investa account')</script>";
+            $pasword_username_err="<strong>Your Pasword/Username combination is wrong</strong>";
+		}
+	}
+
+}
+
+$conn->close();
+
+?>
+<Doctype html>
+<html lang="en">
+
 <head>
     <!--start meta-->
     <meta http-equiv="content-type" content="text/html"; charset="utf-8" />
@@ -53,13 +118,14 @@
 <!--end styles.-->
 
 </head>
-<!--start body section-->
-<body onload="Loading()" onscroll="swipe()">
 
-    <!--Start of Loader-->
-    <div class="Loading" id="Loading">
-        <div id="slide1"></div>
-        <div id="slide2"></div>
+
+<!-- start of body -->
+ <body class="body_style">
+ <?php echo $login_err?>
+    <!--start of header -->
+    <div class="nav_link2">
+        <a href="index.html">Home</a>
     </div>
     <div class="rotation" id="rotation">
         <span>Loading...</span>
@@ -68,6 +134,7 @@
         <div  id="rot3"></div>
         <div  id="rot4" ></div>
     </div>
+
     <!--End of loader-->
 
     <div class="web_content">
@@ -180,6 +247,22 @@
                    <div class="money opa">
                        <i class="fa fa-money"aria-hidden="true"></i>
                    </div>
+
+    <!-- end of logo -->
+    <!-- start of form -->
+    <div class="center">
+        <form class="box" action="#" method="post">
+            <div>
+                <h1 class="h1_style">Login</h1>
+                <div style="color:green"><?php if(isset($_GET["user2"])){
+                        echo $_GET["user2"];
+                } ?>
+                </div>
+            </div>
+            <div class="icon">
+                <i class="fas fa-lightbulb">Login to your dashboard and start investing</i>
+            </div>
+
 
                    <div class="industry opa">
                     <i class="fa fa-industry"aria-hidden="true"></i>

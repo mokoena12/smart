@@ -20,6 +20,31 @@ else{
 
 }
 
+require_once "connect.php";
+
+function balance(int $p=2,$i=0.03,$n=1) {
+   $Bal = $p * pow((1 + $i), $n);
+  return $Bal;
+}
+
+function profit($Bal=2.06,$p=2){
+  $Proft = $Bal - $p ;
+  return $proft;
+}
+
+$sql="SELECT balance, deposit FROM dashboard WHERE  username='$user' ";
+$result = $conn->query($sql);
+
+if($result->num_rows > 0){
+  $row = $result->fetch_assoc(); 
+  if($row["username"]===$user){
+
+  echo " ".balance($p,$i=0.03,$n=1);
+  echo " ".proft($Bal,$p);
+  }
+}
+
+
 ?>
 
 
@@ -156,7 +181,7 @@ else{
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Balance</span>
-                  <span class="money_balance">$1200</span>
+                  <span class="money_balance"><?php echo " ".balance($p=2,$i=0.03,$n=1);?></span>
                 </div>
               </div>
               <!-- end of the balance box  -->
@@ -170,7 +195,7 @@ else{
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Profit Return</span>
-                  <span class="money_balance">$111</span>
+                  <span class="money_balance"><?php ?></span>
                 </div>
               </div>
               <!-- end of profit box -->

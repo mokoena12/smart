@@ -1094,6 +1094,7 @@ to{
    top:-1em;
 
 }
+}
 
 @keyframes  loading_left {
     from{
@@ -1653,7 +1654,7 @@ margin: 0;
     background: linear-gradient(to bottom,rgb(32, 32, 32),white);  
 }
 /*end- leave a message form*/
-=======
+
 /* start of the dashboard page */
 
 .sidebar {

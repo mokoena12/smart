@@ -158,9 +158,8 @@ function view1(target1){
     var top_of_element = $(target1).offset().top;
     var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
     if ((bottom_of_screen > top_of_element) ){
-       $(target1).addClass("fadeup"); 
-       $(target1).attr("style","opacity:0");
-       setTimeout(opas(target1),100);
+       $(target1).addClass("fadeup");
+       setTimeout(opas(target1),1000);
       
     } 
     else {
@@ -179,8 +178,7 @@ function view2(target1){
     var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
     if ((bottom_of_screen > top_of_element) ){
        $(target1).addClass("faderight"); 
-       $(target1).attr("style","opacity:0");
-       setTimeout(opas(target1),100);
+       setTimeout(opas(target1),1000);
     } 
     else {
     
@@ -197,8 +195,7 @@ function view3(target1){
     var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
     if ((bottom_of_screen > top_of_element) ){
        $(target1).addClass("fadeout"); 
-       $(target1).attr("style","opacity:0");
-       setTimeout(opas(target1),100);
+       setTimeout(opas(target1),1000);
     } 
     else {
       $(target1).removeClass("fadeout");

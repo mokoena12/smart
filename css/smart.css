@@ -6,8 +6,7 @@ body{
     position: fixed;
     top: 0;
     width: 100%;
-    text-abody{
-    height: 100%;
+   
 }
 .header{
     background-color: transparent;
@@ -208,6 +207,11 @@ button{
 .opa{
     opacity: 0.2;
 }
+.opas{
+    opacity: 0;
+}
+/* Opacity for elements */
+
   /* background theme*/
 .background-theme{
     width: 100%;
@@ -380,6 +384,27 @@ text-decoration: none;
     
   }
   /*===End of animation  */
+
+  /*Animations for Faderight */
+.faderight{
+    animation:faderight 1s linear ;
+}
+@keyframes faderight{
+    from{
+        position: relative;
+      opacity: 0;
+      left:2em;
+      
+    }
+    to{
+        position: relative;
+      opacity: 1;
+      left:0em;
+      
+    }
+    
+  }
+  /*===End of animation faderight */
   
 /*Animations for Fadeout */
 .fadeout{
@@ -559,11 +584,6 @@ margin: 0;
     background: linear-gradient(to bottom,rgb(32, 32, 32),white);   
 }
 
- /* end-smart investa last block*/
-lign: center;
-    color: white;
-    z-index: 1;
-}
 
 /* Style for animations    */
 
@@ -876,7 +896,7 @@ text-decoration: none;
     display:flex;
 }
 .About .img_network img{
-    animation: fadeup 1s linear;
+   animation: fadeup 1s linear;
 }
 
 .card{

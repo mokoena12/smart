@@ -3,12 +3,7 @@
     h1{
         font-size: 26px;
     }
-    h2{
-        font-si@media only screen and (max-width: 600px) {
-
-    h1{
-        font-size: 26px;
-    }
+   
     h2{
         font-size: 23px;
     }
@@ -1079,8 +1074,8 @@ input[type=submit]:hover {
 
 
 
-}
-ze: 23px;
+h1{
+font-size: 23px;
     }
     
     h3{

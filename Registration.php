@@ -123,17 +123,6 @@ if(empty($_POST["name2"])){
 
     $stmt->close();
 
-   $sql = 'SELECT firstname, middle_name, lastname, country, email, cellphone, username, passwords, re_enter_pass FROM registration ';
-   $result = $conn->query($sql);
-
-if($result->num_rows> 0){
-    //output data of each row
-    while($row = $result->fetch_assoc()){
-        echo "firstname: " . $row["firstname"]. " lastname:" . $row["lastname"]. " email" .$row["email"]. "<br>";
-    }
-}else{
-    echo "0 results";
-}
 
     $conn->close();
 } 

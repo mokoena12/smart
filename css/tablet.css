@@ -537,7 +537,7 @@ height: 100%;
   }
   /*end of widget style*/
 
-  /* invest in bitcoin*/
+  /* invest iin bitcoin*/
 .investt{
   position: absolute;
   top: 65%;
@@ -551,7 +551,7 @@ height: 100%;
   .investt .invest_btn{
   border-radius: 3px;
   padding: 4px;
-  padding-left: 20px;
+  padding-left: 20p;
   font-size: 17px;
   font-weight: bold;
   
@@ -567,7 +567,7 @@ height: 100%;
   text-align: center;
   }
   
-  /* end of invest in bitcoin*/
+  /* end of invest iin bitcoin*/
   
 
 
@@ -968,7 +968,13 @@ flex-direction: column;
 }
 .planns-cards>div a{
   padding: 8px;
+  width: 55%;
+  left: 20%;
 }
+.planns-cards>div>p{
+  color: white;
+}
+
 
 /*end-investment plans*/
 
@@ -1073,6 +1079,22 @@ flex-direction: column;
 }
 /*end-leave a mesage form*/
 
+
+/* smart investa lastblock */
+.lastblock>h2{
+  text-align: center;
+  color: white;
+  padding:0.5em;
+}
+.last-blockdiv{
+  display: flex;
+  flex-direction: row;
+  margin: 0.5em;
+  padding-left: 6%;
+
+}
+
+
 /* smart investa lastblock */
 .lastblock>h1{
   text-align: center;
@@ -1100,7 +1122,6 @@ flex-direction: column;
 .quick-links a:hover{
   color: #eca31b;
 }
-
 .services h5{
   font-size: 1em;
 }

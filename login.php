@@ -15,7 +15,7 @@ function sanitize($value){
 	
 }
 //------------------------------------------------
-
+//New thing
 
 session_start();
 if(isset($_SESSION["investa_user"])){

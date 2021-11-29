@@ -750,35 +750,32 @@ div.box_header {
 /* invest iin bitcoin*/
 .investt{
   position: absolute;
-  top: 30em;
-  right: 10%;
-  width:12em ;
-  text-align: center;
-}
-.investt div a:link{
-  font-size: 17px;
+  top: 75%;
+  left:75%;
+  font-size: 90%;
+  
+  }
+  
+  .investt .invest_btn{
+  border-radius: 3px;
+  padding-bottom: 10px;
 
-}
-.investt div{
-  padding: 10px;
-  border-radius: 4px;
-}
-
-.investt .iconss{
+  font-size: 20px;
   font-weight: bold;
-  color: rgb(245, 245, 243);
+  
+  }
+  
+  .investt .iconss{
+  font-weight: bold;
+  font-size: 1.9em;
+  color: rgb(232, 231, 236);
   margin-left: auto;
   margin-right: auto;
-  text-align: center;font-size: 24px;
-
-}
-
-.investt div a{
-  text-decoration: none;
-}
-
+  text-align: center;
+  }
 /* end of invest iin bitcoin*/
-/* login and regiser*/
+
+/* login and register*/
 
 
 
@@ -906,44 +903,33 @@ flex-direction: row;
 .invest-text{
   text-align: center;
   color: white;
+  width: 100%;
 }
 
 .planns-cards{
   display: flex;
   flex-direction:row;
-  padding-left: 15.6%;
+  width: 100%;
+  align-content: center;
 }
 .planns-cards>div{
-  margin: 2em;
+  margin: 5%;
   text-align: center;
-  font-size: 1.3em;
-  padding: 10px;
+  width: 95%;
 }
 .planns-cards>div a{
-  padding: 10px;
+ padding: 3px;
 }
 
 /*end-investment plans*/
 
 /*statistics*/
 
-.stat-text{
-  text-align: center;
-  color: white;
-}
 
 .peoplee{
   display: flex;
   flex-direction: row;
-  align-content: center;
 }
-
-.peoplee>div{
-  margin: 1em;
-  text-align: center;
-  left: 19%
-}
-
 .imagess{
   margin: 1em;
 }

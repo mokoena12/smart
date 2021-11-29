@@ -542,16 +542,14 @@ height: 100%;
   position: absolute;
   top: 65%;
   left:30%;
-  width: 30%;
-  height: 25%;
-  font-size: 1em;
+  font-size: 90%;
   
   }
   
   .investt .invest_btn{
   border-radius: 3px;
   padding: 4px;
-  padding-left: 20p;
+  padding-left: 10px;
   font-size: 17px;
   font-weight: bold;
   
@@ -952,7 +950,7 @@ header .logo img{
 }
 /*end-threesteps*/
 
-/*why chose  us*/
+/*why choose  us*/
 
 .security{
 display: flex;
@@ -962,7 +960,7 @@ flex-direction: column;
 .security>div{
   margin: 1em;
 }
-/*end-why chose  us*/
+/*end-why choose  us*/
 
 /*investment plans*/
   
@@ -974,18 +972,16 @@ flex-direction: column;
 .planns-cards{
   display: flex;
   flex-direction:row;
-  padding-left: 10.5%;
-  margin: 1em;
+  width: 100%;
 }
 .planns-cards>div{
-  margin: 0.5em;
+  margin: 3%;
   text-align: center;
-  padding: 5px;
+  padding: 2px;
+  width: 95%;
 }
 .planns-cards>div a{
-  padding: 8px;
-  width: 55%;
-  left: 20%;
+  padding: 3px;
 }
 .planns-cards>div>p{
   color: white;
@@ -1003,27 +999,25 @@ flex-direction: column;
 
 .peoplee{
   display: flex;
-  flex-direction: column;
-  align-content: center;
+  flex-direction: row;
+  width: 100%;
 }
 
 .peoplee>div{
-  margin: 1em;
   text-align: center;
-  width: 60%;
-  left: 17%;
- 
+  width:95%;
+  margin: 5%;
 }
 
-.imagess>i{
-  font-size: 4em;
-}
-.imagess>div{
- margin: 1em;
-}
-.imgg>img{
-  border-radius: 6px;
+.imgg{
   width: 95%;
+  margin: 5%;
+}
+
+.imgg>img{
+  border-radius: 4px;
+  width: 90%;
+  
 }
 
 /*end-statistics*/
@@ -1051,11 +1045,13 @@ flex-direction: column;
   align-content: center;
 }
 .about-content .picc{
-  padding-left: 17%;
+  width: 95%;
  
 }
 .picc>img{
   border-radius: 7px;
+  width: 100%;
+  height: 70%;
 }
 .para>p{
   left: -2%;
@@ -1063,6 +1059,12 @@ flex-direction: column;
 /*end-about*/
 
 /*leave a mesage form*/
+
+.widgett>img{
+  height: 80%;
+  width: 80%;
+}
+
 .formmmm>input[type=text], select, textarea {
   width: 100%; 
   padding: 12px;  

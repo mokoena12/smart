@@ -480,9 +480,17 @@ header .logo img{
 .investmentss{
     width: 100%;
     position: relative;
-    background: linear-gradient(to bottom,rgb(32, 32, 32),white);
-    
-}   
+    background: linear-gradient(to bottom,rgb(32, 32, 32),white); 
+} 
+
+.peoplee{
+    width: 100%;
+}
+.peoplee>div{
+    width: 95%;
+    margin: 5%;
+}
+
 /*end-investment plans*/
 
 

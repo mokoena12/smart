@@ -1,10 +1,10 @@
 @media only screen and (max-width: 600px) {
-
-
     h1{
         font-size: 26px;
     }
-   
+    h1{
+        font-size: 26px;
+  }
     h2{
         font-size: 23px;
     }
@@ -349,59 +349,40 @@ flex-direction: column;
 
 
 /*end-about*/
-
 /*leave a mesage form*/
-input[type=text], select, textarea {
-  width: 100%; 
-  padding: 12px;  
-  border: 1px solid #ccc; 
-  border-radius: 4px; 
-  box-sizing: border-box;
-  margin-top: 6px; 
-  margin-bottom: 16px; 
-  resize: vertical 
-}
-
-input[type=submit] {
-  background-color: #042baa;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-
-input[type=submit]:hover {
-  background-color: #207691;
-}
-
 
 .formmm{
   border-radius: 5px;
   background-color: #f2f2f2;
-  margin: 0.5em;
+  margin-top: 1em;
+  padding: 1em;
+ 
 }
 .formmm>div{
   text-align: center;
   padding: 8px;
 }
 .containerr{
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 1em;
+  margin: 10px;
 }
-.containerr>div{
-  padding: 1em;
+
+.containerr .widgett{
+  width: 95%;
+  height:20em;
+  margin: auto;
+  background-image: white;
+  background-color: white;
 }
 /*end-leave a mesage form*/
-
-
 
 h1{
 font-size: 23px;
     }
-    
+
+ 
     h3{
         font-size: 20px;
     }
@@ -414,7 +395,6 @@ font-size: 23px;
         font-size:15px;
     }
     span{
-        font-style:italic;
         font-size:14px;
     }
     strong{
@@ -1527,25 +1507,6 @@ header .logo img{
   resize: vertical 
 }
 
-
-.formmm{
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  margin: 0.5em;
-}
-.formmm>div{
-  text-align: center;
-  padding: 8px;
-}
-.containerr{
-  display: flex;
-  flex-direction: column;
-  margin: 1em;
-  
-}
-.containerr>div{
-  padding: 1em;
-}
 /*end-leave a mesage form*/
 
 
@@ -1585,9 +1546,6 @@ header .logo img{
 }
 .services a:hover{
   color: #eca31b;
-}
-.form-div{
-    background: linear-gradient(to bottom,rgb(32, 32, 32),white);  
 }
 /*end- leave a message form*/
 
@@ -1651,7 +1609,7 @@ header .logo img{
   height: fit-content;
   margin-top: 10px;
 }
-.dash div ol li {
+.dash div ul li {
   list-style: none;
 }
 .style {
@@ -1668,20 +1626,20 @@ header .logo img{
 }
 /* start of dash_contant */
 .dash_content {
-  margin-right: 2em;
-  margin-left: 2.5em;
   position: relative;
   display: flex;
-  flex: 0 0 100%;
   flex-wrap: wrap;
-  width: 96%;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 .box_balance {
   display: flex;
   flex-direction: row;
   color: white;
   background-color: #007bff;
-  width: 41%;
+  width: 46%;
   height: 5em;
   border-radius: 3px;
   margin-right: 1em;
@@ -1692,7 +1650,7 @@ header .logo img{
   flex-direction: row;
   color: white;
   background-color: #dc3545;
-  width: 41%;
+  width: 46%;
   height: 5em;
   border-radius: 3px;
   margin-right: 1em;
@@ -1704,7 +1662,7 @@ header .logo img{
   flex-direction: row;
   color: white;
   background-color: #20c997;
-  width: 41%;
+  width: 46%;
   height: 5em;
   border-radius: 3px;
   margin-right: 1em;
@@ -1715,7 +1673,7 @@ header .logo img{
   flex-direction: row;
   color: white;
   background-color: #ffc107;
-  width: 41%;
+  width: 46%;
   height: 5em;
   border-radius: 3px;
   margin-right: 1em;
@@ -1726,7 +1684,7 @@ header .logo img{
   flex-direction: row;
   color: white;
   background-color: #28a745;
-  width: 41%;
+  width: 45%;
   height: 5em;
   border-radius: 3px;
   margin-right: 1em;
@@ -1737,7 +1695,7 @@ header .logo img{
   flex-direction: row;
   color: white;
   background-color:#001f3f;
-  width: 41%;
+  width: 46%;
   height: 5em;
   border-radius: 3px;
   margin-right: 1em;
@@ -1748,7 +1706,7 @@ header .logo img{
   flex-direction: row;
   color: white;
   background-color: #17a2b8;
-  width: 41%;
+  width: 46%;
   height: 5em;
   border-radius: 3px;
   margin-right: 1em;
@@ -1759,7 +1717,7 @@ header .logo img{
   flex-direction: row;
   color: white;
   background-color:  #6c757d;
-  width: 41%;
+  width: 46%;
   height: 5em;
   border-radius: 3px;
   margin-bottom: 1em;
@@ -1770,7 +1728,7 @@ header .logo img{
   flex-direction: row;
   color: white;
   background-color: #17a2b8;
-  width: 85%;
+  width: 100%;
   height: 5em;
   border-radius: 3px;
   margin-right: 1em;
@@ -1967,46 +1925,27 @@ a.elevation-1 {
 /* end of investing plan */
 
 
-
 /* start of wedges */
 .wedges {
-  margin-left: 0.84em;
-  width: 95.5%;
-  height: 4.5em;
-  border-radius: 2px;
-  margin-bottom: -0.60em;
+  height: 2em;
+}
+
+.wedges  iframe{
+  height: 3.5em;
 }
 /* end of the wedge */
 
 /* start of the Btc CHart */
 .chart {
-  width: 95%;
-  height: 80%;
-  position: relative;
-  margin-left: 1em;
-  margin-right: 1em;
-  border-radius: 1px;
-  padding-right: -5em;
-}
-.div-chart {
-  padding: 10px 2px 10px 0px;
-  border: 1px solid grey;
-  width: 99.7%;
-  border-radius: 3px;
-}
-.chart span {
-  margin-left: 1em;
-  color: black;
- 
-}
-.btc-chart {
-  width: 100%;
-  height: 95%;
-  margin-left: -0.1em;
-  margin-top: -0.1em;
+  height: 20em;
 }
 
+.chart iframe{
+  height:inherit;
+}
 /* end of the btc chart */
+
+/*==End of Chart */
 
 /* start of live trading inputs */
 
@@ -2157,7 +2096,7 @@ a.elevation-1 {
   color: black;
 }
 .cross-chart {
-  width: 97%;
+  height: 20em;
 }
 
 
@@ -2181,6 +2120,450 @@ text-align: center;
 
 /* end of dash_contant */
 
+
+/* start of deposit page*/
+
+.transact-flex {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+.payment {
+  border: 1px solid gray;
+  height: 40%;
+  width: 95%;
+  padding: 1em;
+  border-radius: 3px;
+  margin: 1em;
+}
+.span-payment {
+  color: black;
+}
+.payment-wallet {
+  border: 1px solid gray;
+  padding-left: 1em;
+  padding-top: 0.50em;
+  border-radius: 3px;
+  margin-bottom: 1em;
+
+}
+.payment-wallet h5 {
+  height: fit-content;
+  color: blue;
+}
+
+.notify-deposit {
+  border-radius: 3px;
+  border: 1px solid grey;
+  width: 95%;
+  margin: 1em;
+}
+.h5change {
+  color: black;
+}
+.h5change h5 {
+  text-align: center;
+  padding: 1em;
+}
+.text-deposit {
+  color: blue;
+}
+.text-deposit strong p {
+  padding: 0 1em;
+  font-style: italic;
+}
+.form-deposit {
+  margin-left: 1em;
+  color: black;
+  font-weight: bold;
+}
+.form-deposit label {
+  margin-bottom: 0.50em;
+}
+#method-payment {
+  width: 95%;
+  margin-bottom: 0.50em;
+  line-height: 50px;
+  height: 2em;
+  border-radius: 3px;
+
+}
+.method-payment {
+  width: 97.5%;
+  margin-bottom: 0.50em;
+  border-radius: 3px;
+  line-height: 30px;
+}
+.btn-deposit {
+  color: white;
+  background-color: blue;
+  width: 96%;
+  height: 2em fit-content;
+  line-height: 30px;
+  border-radius: 4px;
+
+}
+
+/* start of the table of deposit */
+.history-deposit {
+  padding: 1em;
+  border: 1px solid #ccc;
+  width: 100%;
+  border-radius: 4px;
+}
+.history-head h4 {
+  color: black;
+  text-align: center;
+}
+.select-entry {
+  width: 50%;
+}
+.entry-search {
+  color: black;
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: row;
+  width: 100%;
+}
+.search-btn{
+  text-align: right;
+  margin-left: 20%;
+  border-radius: 5px;
+  border: none;
+}
+.search-btn label {
+  text-align: left;
+}
+.search-btn label input {
+  border-radius: 2px;
+}
+.table-ta {
+  color: black;
+  display: table;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-top-color: grey;
+  border-bottom-color: grey;
+  border-right-color: grey;
+  border-left-color: grey;
+  border-radius: 3px;
+  height: 2em;
+}
+.tablehead2{
+  display: table-header-group;
+  vertical-align: middle;
+  height: 2em;
+}
+.tablehead2 tr {
+  display: table-row;
+}
+.tablehead2 th {
+  display: table-cell;
+}
+.tbody {
+  border-collapse: collapse;
+  height: 3em;
+  background-color: rgba(0,0,0,.05);
+}
+.tbody tr td{
+  border-collapse: collapse !important;
+  text-align: center;
+  border: 0;
+  box-sizing: content-box;
+}
+
+.end-part {
+  display: flex;
+  flex: 0 0 100%;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.end-shift {
+  width: 50%;
+}
+.prev-next {
+  width: 50%;
+  justify-content: right;
+}
+.prev-next ul {
+  display: flex;
+  flex: 0 0 50%;
+  justify-content: end;
+}
+.prev-next ul li {
+  border: 1px solid grey;
+  height: 2em;
+  border-radius: 3px;
+  list-style: none;
+
+}
+.prev-next ul li a {
+  text-decoration: none;
+  padding: 5px;
+  color: black;
+}
+/* end - depossit table */
+
+
+/* start of the withdrawal section */
+.withdrawal-fullbody {
+  width: 100%;
+  padding: 2em;
+  margin: 1em;
+}
+.flexdive {
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: column;
+}
+.withdraw-box {
+  width: 100%;
+  border :1px solid #ccc;
+  border-radius: 4px;
+  height: 100%;
+  margin-right: 1em;
+  margin-bottom: 3em;
+}
+.h5withdraw {
+  border-bottom: 1px solid #ccc;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.2;
+  padding: 1em;
+}
+.content-bances {
+  padding: 1em;
+}
+.pfloater {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.float-right {
+  float: right;
+  font-size: 1em;
+  font-weight: bold;
+}
+.withdrawal-bonus {
+  width: 100%;
+  border :1px solid #ccc;
+  border-radius: 4px;
+  height: 100%;
+  margin-bottom: 3em;
+}
+.method2 {
+  border: 1px solid #ccc;
+  padding: 1em;
+  border-radius: 4px;
+  margin-top: 2em;
+}
+.h4changing h4 {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+#payment-options {
+  width: 100%;
+  height: 2em;
+  border-radius: 4px;
+}
+.input-withdraw {
+  width: 100%;
+  height: 2em;
+  border-radius: 4px;
+}
+.btn-withdraw {
+  text-align: center;
+}
+#subbtn-withdrawal {
+  width: 30%;
+  height: 2em;
+  color: white;
+  background-color: blue;
+  margin-top: 3em;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/* end of the withdrawal section */
+
+/* start of the profile */
+.profile-content {
+  width: 100%;
+  padding: 1em;
+
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  width: 100%;
+}
+.profile-avater {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1em;
+  width: 100%;
+
+}
+.profile-pic {
+  width: 6em;
+  height: 6em;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  
+}
+.users-control {
+  margin-top: 3em;
+}
+.users-control2 {
+  margin-bottom: 2em;
+}
+.filebtn {
+  background-color: #6c757d;
+  color: white;
+  height: 2.5em;
+  width: 80%;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-radius: 4px;
+  padding-top: 6px;
+}
+.btn-none {
+  display: none;
+  padding: 1em;
+}
+.profile-details {
+  border: 1px solid #ccc;
+  padding: 1em;
+  width: 100%;
+  margin-left: 1em;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+.profile-header {
+  border-bottom: 1px solid #ccc;
+  line-height: 30px;
+}
+.profile-header ul {
+  display: flex;
+  flex: 0 0 100%;
+  flex-wrap: wrap;
+
+}
+.profile-header ul li{
+  list-style: none;
+  margin-right: 6px;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; 
+}
+.profile-header ul li a {
+  text-decoration: none;
+  padding: 0.50em 1em;
+  background-color: blue;
+  color: white;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.profile-header ul li a:active {
+  background-color: white;
+  color: black;
+}
+.profile-content2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  color: black;
+  height: 60%;
+  margin-top: 1em;
+}
+.name-inputs {
+  width: 95%;
+  height: 2.5em;
+  border-radius: 4px;
+  padding: 0.50em;
+  margin-bottom: 0.50em;
+}
+.diveform {
+  width: 50%;
+}
+.diveform label {
+  font-weight: bold;
+  padding-bottom: 0.25em;
+}
+#status {
+  width: 95%;
+  height: 2.5em;
+  background-color: #e9ecef;
+}
+#countri {
+  width: 95%;
+  height: 2.5em;
+  border-radius: 4px;
+}
+#profile-btn {
+  height: 2.5em;
+  width: 15em;
+  background-color: blue;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.p-btnsub {
+  margin-top: 25px;
+  margin-left: 30%;
+}
+.displayers {
+  display: none;
+}
+/* start of the login details */
+.displayers2 {
+  display: none;
+}
+/* end of the login details */
+
+/* start of banking details */
+.displayers3 {
+  display: block;
+}
+
+.profile-content3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: black;
+  height: 60%;
+  margin-top: 1em;
+}
+.name-inputs3 {
+  width: 100%;
+  height: 2.5em;
+  border-radius: 4px;
+  padding: 0.50em;
+  margin-bottom: 0.50em;
+}
+.diveform3 {
+  width: 100%;
+}
+.diveform3 label {
+  font-weight: bold;
+  padding-bottom: 0.25em;
+}
+.p-btnsub3 {
+  margin-top: 50px;
+  margin-left: 20%;
+}
+/* end of banking details */
+/* end of the profile */
 /* invest iin bitcoin*/
 .investt{
   position: absolute;
@@ -2213,8 +2596,7 @@ text-align: center;
   }
     
     /* end of invest iin bitcoin*/
-    
-
+ 
  /* smart investa last block*/
 .lastblock{
     background: linear-gradient(to bottom,rgb(32, 32, 32),white);   

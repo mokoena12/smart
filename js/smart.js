@@ -125,7 +125,7 @@ function fade(){
 
 //Scroll Event function
 function swipe(){ 
-  view1(".faq-text"); view1(".stat-text");view1(".stats1"); view1(".imgg");view1(".card_animate3"); //invest-text
+  view1(".faq-text");view1(".stats1"); view1(".imgg");view1(".card_animate3"); //invest-text
   view1(".threestep-text"); view1(".invest-text");view3(".img_network"); view1("iframe"); view1(".chose-text");view1(".card_animate1");
   view2(".stat-text");view2(".card_animate2"); view2(".card_animate4");
 
@@ -159,7 +159,7 @@ function view1(target1){
     var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
     if ((bottom_of_screen > top_of_element) ){
        $(target1).addClass("fadeup");
-       setTimeout(opas(target1),2000);
+       setTimeout(opas(target1),1000);
       
     } 
     else {

@@ -1,4 +1,3 @@
-
 <?php
 require_once "connect.php";
 
@@ -16,7 +15,7 @@ function sanitize($value){
 	
 }
 //------------------------------------------------
-
+//New thing
 
 session_start();
 if(isset($_SESSION["investa_user"])){
@@ -156,4 +155,3 @@ $conn->close();
 </body>
 <!-- end of body -->
 </html>
-

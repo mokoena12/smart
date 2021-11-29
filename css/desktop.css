@@ -747,7 +747,7 @@ div.box_header {
 
 /* end of registration form for desktop */
 
-/* invest in bitcoin*/
+/* invest iin bitcoin*/
 .investt{
   position: absolute;
   top: 30em;
@@ -777,7 +777,7 @@ div.box_header {
   text-decoration: none;
 }
 
-/* end of invest in bitcoin*/
+/* end of invest iin bitcoin*/
 /* login and regiser*/
 
 
@@ -862,16 +862,22 @@ header .logo img{
 /*three steps*/
 
 .three-steps>div{
-  top: 2em;
+  margin: 2em;
   width: 95%;
-  margin-left:auto;
-  margin-right:auto;
-
+  align-content: center;
 }
 .steps{
   display: flex;
   flex-direction: row;
 
+}
+.steps>div h4{
+  text-align: center;
+  padding-top: 7px;
+}
+.steps>div p{
+  text-align: center;
+  
 }
 .steps>div{
   margin: 1em;
@@ -905,10 +911,16 @@ flex-direction: row;
 .planns-cards{
   display: flex;
   flex-direction:row;
+  padding-left: 15.6%;
 }
 .planns-cards>div{
-  margin: 1em;
+  margin: 2em;
   text-align: center;
+  font-size: 1.3em;
+  padding: 10px;
+}
+.planns-cards>div a{
+  padding: 10px;
 }
 
 /*end-investment plans*/
@@ -1055,6 +1067,7 @@ margin-bottom: 10px;
   font-size: small;
 }
 /* end of login form */
+
 
 /* start of registration form */
 
@@ -1569,57 +1582,18 @@ a.elevation-1 {
 
 
 
-/* start of wedges */
-.wedges {
-  margin-left: 0.84em;
-  width: 97.2%;
-  height: 3.5em;
-  border-radius: 2px;
-  margin-bottom: -0.50em;
-}
-/* end of the wedge */
 
 /* start of the Btc CHart */
 .chart {
-  width: 97%;
-  height: 80%;
-  position: relative;
-  margin-left: 1em;
-  margin-right: 1em;
-  border-radius: 1px;
-  padding-right: -5em;
+  height: 30em;
 }
-.div-chart {
-  padding: 10px 2px 10px 0px;
-  border: 1px solid grey;
-  width: 99.7%;
-  border-radius: 3px;
+.chart iframe{
+  height:inherit;
 }
-.chart span {
-  margin-left: 1em;
-  color: black;
- 
-}
-.btc-chart {
-  width: 100%;
-  height: 95%;
-  margin-left: -0.1em;
-  margin-top: -0.1em;
-}
+/*==End of Chart */
 
-/* end of the btc chart */
 /* start of live trading inputs */
 
-.container_box {
-  width: 96.5%;
-  border: 1px solid gray;
-  margin-right: 1em;
-  margin-left: 1em;
-  margin-bottom: 2em;
-  margin-top: 2em;
-  border-radius: 3px;
-
-}
 .header_for {
   height: fit-content;
   border-bottom: 1px solid grey;
@@ -1635,11 +1609,15 @@ a.elevation-1 {
 #cryptoforex {
   width: 100%;
 }
-.trading {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+
+/* start of live trading inputs */
+
+.container_box {
+  top: 7%;
 
 }
+
+/*====End === */
 .control {
   padding-left: 20px;
   position: relative;
@@ -1722,24 +1700,20 @@ a.elevation-1 {
 .crossrate {
   position: relative;
   width: 100%;
-  height: 80%;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-top: 3em;
+  height: 30em;
 }
 .FOREX {
   border: 1px solid grey;
-  width: 97%;
+  width: 100%;
   height: 2em;
   padding: 10px;
   border-radius: 3px;
-  height: fit-content;
 }
 .FOREX span {
   color: black;
 }
 .cross-chart {
-  width: 97%;
+  height: 30em;
 }
 
 /* end of the forex crossrate chart */
@@ -1938,36 +1912,131 @@ text-align: center;
 }
 /* end - depossit table */
 
-
-
 /* end of the profile */
 
-
-
-
-.formmm{
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  margin: 1em;
+/* start of registration form */
+.nav_link2 a{
+  font-size: 22px;
 }
-.formmm>div{
-  text-align: center;
-  padding: 8px;
+/* start of web logo */
+.logo_2 {
+height: 4em;
+width: 8em;
+margin-bottom: 20px;
+
 }
-.containerr{
+/* end of logo reg */
+.header_2 { 
+  background-color: white;
+  height: 5em;
+  text-transform: uppercase;
+  padding-left:  40px;
+  
+}
+.icon2 {
+  color: orange;
+  margin-left: 1em;
+  padding-bottom: 8px;
+  font-size: 12px;
+
+}
+div.box_header {
+  font-weight: bold;
+  height: 2em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+.center_2 {
+  position: absolute;
+  border: 3px solid grey;
+  height: 77%;
+  width: 97%;
+  margin-left: 1em;
+  padding-right: 2em;
+  margin-bottom: 2em;
+
+}
+.box2 {
+  position: relative;
+  color: white;
   display: flex;
   flex-direction: row;
-  margin: 1em;
+  padding-left: 1em;
+ 
 }
-.containerr>div{
-  padding: 1em;
-}
-/*end-leave a mesage form*/
+.box2_style {
+  position: relative;
+  width: 20em;
+  height: 2em;
+  margin-bottom: 6px;
+  border-color: none;
+  margin-right: 6em;
 
-/*smart invetsa last block*/
-.lastblock>div{
-  display: flex;
-  flex-direction: row;
+}
+
+.fileupload {
+  width: 11em;
+  height: 2em;
+  color: grey;
+}
+.reg_btn {
+  color: white;
+  background-color: blue;
+  width: 9em;
+  height: 2em;
+  border-radius: 4px;
+  margin-top: 2em;
+  margin-left: 50%;
+}
+
+
+
+/* end of registration form for desktop */
+
+/* start of dashboard */
+body {
+height: 100%;
+width: 100%;
+}
+.body-style {
+height: 100%;
+}
+.sidebar li { 
+list-style: none;
+text-decoration: none;
+
+}
+.sidebar {
+background-color: white;
+color: black;
+width: 17%;
+height: 100%;
+box-shadow: 10px 2px 8px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)!important;
+overflow-y: hidden;
+z-index: 1038;
+}
+.sidebar-flex {
+display: flex;
+flex-direction: column;
+position: relative;
+text-align: center;
+}
+.Pcontrol {
+width: 5em;
+height: 5em;
+margin-left: auto;
+margin-right: auto;
+border-radius: 50%;
+
+}
+
+
+div.sidebar_profile {
+border-bottom: 1px solid grey;
+text-align: center;
+margin: 2em 0px 2em 10px;
+padding: 1em 0px 1em 0px;
+width: 90%;
 }
 /*end-smart invetsa last block*/
 
@@ -2227,7 +2296,711 @@ text-align: center;
 /* end of the profile */
 
 
+.sidebar-manus {
+position: relative;
+font-weight: bold;
+padding-left: 1em;
+padding-right: 1em;
+margin-top: 1em;
+color: white;
 
+}
+.sidebar-manus ul li a {
+text-decoration: none;
+color: black;
+height: 1em;
+width: 5em;
+align-items: center;
+
+}
+.sidebar-manus ul li a:hover {
+background-color: blue;
+}
+.sidebar-manus ul li a i {
+height: 1em;
+min-width: 50px;
+border-radius: 12px;
+line-height: 50px;
+}
+/* start of sidebar icon spassing */
+.sidebarspace  {
+padding-right: 1em;
+}
+li .fa {
+margin-left: 4px;
+color: black;
+}
+.fa-user {
+padding-right: 1em;
+}
+.fa-tasks {
+padding-right: 1em;
+}
+.fa-exchange {
+padding-right: 1em;
+}
+.fa-credit-card {
+padding-right: 1em;
+}
+/* end of sidebar icon spassing */
+
+
+
+/* start of dash logo */
+.logo_1 {
+width: 8em;
+height: 4em;
+text-align: left;
+margin-left: 0.10em;
+margin-bottom: -1em;
+}
+/* end of dash logo */
+
+.wrapper-box  {
+display: flex;
+flex-direction: row;
+width: 100%;
+height: 100%;
+}
+.w-box {
+width: 83%;
+height: 100%;
+}
+
+
+.header-dash {
+position: relative;
+background-color: rgb(42, 42, 241);
+color: white;
+height: 4em;
+width: 100%;
+margin-bottom: 1em;
+}
+.search {
+text-align: right;
+margin-right: 1em;
+line-height: 30px;
+padding-top: 15px;
+border-radius: 6px;
+margin-top: -3em;
+
+}
+
+.dash {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   list-style: none;
+   margin-right: 27px;
+   margin-left: 27px;
+}
+.dash div h1 {
+  color: black;
+}
+
+.style {
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+  color: black;
+}
+.change1 :hover {
+  color: blue;
+}
+.change::before {
+  display: inline-block;
+  padding-right: 0.5em;
+  color: #6c757d;
+  content: "/";
+}
+/* start of dash_contant */
+.dash_content {
+  margin-right: 2em;
+  margin-left: 2.5em;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 96%;
+}
+.box_balance {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #007bff;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance2 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #dc3545;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+
+}
+.box_balance3 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #20c997;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance4 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #ffc107;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance5 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #28a745;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance6 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color:#001f3f;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance7 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #17a2b8;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance8 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color:  #6c757d;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+.box_balance9{
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #17a2b8;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-right: 1em;
+}
+.fa {
+  color: white;
+  margin-top: 18px;
+  display: inline-block;
+  box-sizing: border-box;
+  box-shadow: 2px solid gray;
+}
+.fa-money::before {
+  content: \f0d6;
+}
+.info_icon {
+  text-align: center;
+  width: 25%;
+  margin-top: 0.7em;
+}
+.info_icon a {
+  width: 50%;
+  height: 50%;
+  padding: 1em;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)!important;
+}
+.info_icon i {
+  font-weight: bold;
+
+}
+a.elevation-1 {
+  width: 2em;
+  height: 2em;
+  box-shadow: 2px solid rgb(14, 13, 13);
+}
+.infom {
+  display: flex;
+  flex-direction: column;
+
+}
+/* end of dash contents */
+
+/* start of investing plan */
+.investing-BOX {
+  width: 96.5%;
+  border: 1px solid gray;
+  margin-right: 1em;
+  margin-left: 1em;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  border-radius: 3px;
+}
+.header_TO {
+  height: fit-content;
+  border-bottom: 1px solid grey;
+  padding: 10px;
+  font-weight: bold;
+  color: black;
+}
+.control-plan {
+  display: flex;
+  flex-direction: row;
+}
+.invest-inputs {
+  position: relative;
+  margin-left: 1em;
+}
+.selectionplan {
+  width: 25em;
+  height: fit-content;
+  margin-top: 1em;
+  border-radius: 3px;
+
+  
+}
+.selectionplan2 {
+  width: 25em;
+  height: 2em;
+  height: fit-content;
+  margin-top: 1em;
+  padding-left: 1em;
+  border-radius: 6px;
+
+}
+#selectplans-period {
+  margin-top: 1em;
+  height: fit-content;
+  height: 2em;
+  width: 100%;
+  padding-left: 1em;
+  border-radius: 6px;
+
+}
+.btnex {
+  margin-left: 30%;
+  margin-top: 4em;
+}
+#btnexecute {
+  height: 2em;
+  width: 10em;
+  margin-top: 1em;
+  border-radius: 6px;
+  background-color: #17a2b8;
+  color: white;
+
+
+}
+.invest-cards {
+  width: 100%;
+  height: 90%;
+  border-radius: 6px;
+  color: white;
+  margin-left: 8em;
+  background-color:#17a2b8;
+  margin-top: 1em;
+  margin-right: 3em;
+  padding: 2em;
+}
+.highlight-terms {
+  color: orange;
+  margin-left: 3em;
+  margin-top: 1em;
+
+}
+.highlight-terms p a {
+  color: blue;
+}
+
+
+/* end of investing plan */
+
+
+
+/* start of wedges */
+.wedges {
+  height: 3.5em;
+}
+.wedges  iframe{
+  height: 3.5em;
+}
+/* end of the wedge */
+
+/* start of live trading inputs */
+
+.header_for {
+  height: fit-content;
+  border-bottom: 1px solid grey;
+  padding: 10px;
+  color: black;
+
+
+}
+.trading1 {
+  margin-top: 10px;
+}
+
+#cryptoforex {
+  width: 100%;
+}
+.trading {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+
+}
+.control {
+  padding-left: 20px;
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-right: 20px;
+}
+.controlmin_1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 18px;
+}
+.controlmin_1 input {
+  width: 30.1em;
+  margin-right: 20px;
+  padding-right: 8px;
+}
+.controlmin_2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+.controlmin_2 input {
+  margin-right: 18px;
+  padding-right: 25px;
+  width: 20.8em;
+}
+.select-input {
+  margin-top: 18px;
+}
+#execute {
+  width: 100%;
+}
+.btnsub {
+  width: 98%;
+  background-color: #28a745;
+  border-color: #28a745;
+  border-radius: 3px;
+  margin-top: 1em;
+  text-align: center;
+}
+
+/* start of recent trading history */
+.h5 {
+  color: blue;
+  font-size: 1em;
+  text-align: center;
+  margin-top: 3em;
+}
+/* start of the table history */
+.table {
+  display: table;
+  width: 100%;
+  margin-bottom: 1em;
+  background-color: rgb(161, 208, 252);
+  border-top-color: grey;
+  border-bottom-color: grey;
+  border-right-color: grey;
+  border-left-color: grey;
+  border-radius: 3px;
+
+}
+.tablehead {
+  display: table-header-group;
+  vertical-align: middle;
+}
+.tablehead tr {
+  display: table-row;
+}
+.table td {
+  vertical-align: top;
+}
+
+/* end of the table history */
+
+
+
+/* start of footer */
+.footer {
+  background: #fff;
+border-top: 1px solid #dee2e6;
+color: #869099;
+padding: 1em;
+text-align: center;
+}
+.footer strong a {
+  text-decoration: none;
+  color: blue;
+}
+
+/* end of footer */
+
+
+/* start of the profile */
+
+.transact-flex {
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: row;
+  margin: 1em;
+}
+.payment {
+  border: 1px solid gray;
+  height: 40%;
+  width: 50%;
+  padding: 1em;
+  border-radius: 3px;
+  margin: 1em;
+}
+.span-payment {
+  color: black;
+}
+.payment-wallet {
+  border: 1px solid gray;
+  padding-left: 1em;
+  padding-top: 0.50em;
+  border-radius: 3px;
+
+}
+.payment-wallet h5 {
+  height: fit-content;
+  color: blue;
+}
+
+.notify-deposit {
+  border-radius: 3px;
+  border: 1px solid grey;
+  width: 50%;
+  margin: 1em;
+}
+.h5change {
+  color: black;
+}
+.h5change h5 {
+  text-align: center;
+  padding: 1em;
+}
+.text-deposit {
+  color: blue;
+}
+.text-deposit strong p {
+  padding: 0 1em;
+  font-style: italic;
+}
+.form-deposit {
+  margin-left: 1em;
+  color: black;
+  font-weight: bold;
+}
+.form-deposit label {
+  margin-bottom: 0.50em;
+}
+#method-payment {
+  width: 95%;
+  margin-bottom: 0.50em;
+  line-height: 50px;
+  height: 2em;
+  border-radius: 3px;
+
+}
+.method-payment {
+  width: 97.5%;
+  margin-bottom: 0.50em;
+  border-radius: 3px;
+  line-height: 30px;
+}
+.btn-deposit {
+  color: white;
+  background-color: blue;
+  width: 96%;
+  height: 2em fit-content;
+  line-height: 30px;
+  border-radius: 4px;
+
+}
+
+/* start of the table of deposit */
+.history-deposit {
+  padding: 1em;
+  border: 1px solid grey;
+  width: 95%;
+  margin: 1.5em;
+  border-radius: 4px;
+}
+.history-head h4 {
+  color: black;
+  text-align: center;
+}
+.select-entry {
+  width: 50%;
+}
+.entry-search {
+  color: black;
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: row;
+  width: 100%;
+}
+.search-btn{
+  text-align: right;
+  margin-left: 20%;
+}
+.table-ta {
+  color: black;
+  display: table;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-top-color: grey;
+  border-bottom-color: grey;
+  border-right-color: grey;
+  border-left-color: grey;
+  border-radius: 3px;
+}
+.tablehead2{
+  display: table-header-group;
+  vertical-align: middle;
+}
+.tablehead2 tr {
+  display: table-row;
+}
+.tablehead2 th {
+  display: table-cell;
+}
+.tbody td {
+  display: table-cell;
+}
+/* end - depossit table */
+
+
+/* end of the profile */
+
+
+/*leave a mesage form*/
+.formmmm>input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px;  
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box;
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
+}
+
+
+.formmm{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  margin: 0.5em;
+  width: 60%;
+  padding: 1em;
+}
+.formmm>div{
+  text-align: center;
+  padding: 8px;
+}
+.containerr{
+  display: flex;
+  flex-direction:row;
+  margin: 1em;
+  
+}
+.containerr .widgett{
+  width: 45%;
+  height:20em;
+  position:relative;
+  top:1em;
+  background-image: white;
+  background-color: white;
+  border-radius:5px;
+}
+/*end-leave a mesage form*/
+
+/* smart investa last blocka*/
+.lastblock>h1{
+  text-align: center;
+  color: white;
+  padding:0.5em;
+}
+.last-blockdiv{
+  display: flex;
+  flex-direction: row;
+  margin: 0.5em;
+  padding-left: 6%;
+  align-content: center;
+}
+
+.last-blockdiv>div{
+  margin: 2em;
+  font-size: 2em;
+}
+.quick-links h5{
+  font-size: 1em;
+}
+.quick-links a:link{
+  text-decoration: none;
+  color: #062a52;
+}
+.quick-links a:hover{
+  color: #eca31b;
+}
+
+.services h5{
+  font-size: 1em;
+}
+.services a:link{
+  text-decoration: none;
+  color: #062a52;
+}
+.services a:hover{
+  color: #eca31b;
+}  
+
+
+/* end-smart investa last blocka*/
 
 
 

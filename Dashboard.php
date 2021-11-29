@@ -20,6 +20,31 @@ else{
 
 }
 
+require_once "connect.php";
+
+function balance(int $p=2,$i=0.03,$n=1) {
+   $Bal = $p * pow((1 + $i), $n);
+  return $Bal;
+}
+
+function profit($Bal=2.06,$p=2){
+  $Proft = $Bal - $p ;
+  return $proft;
+}
+
+$sql="SELECT balance, deposit FROM dashboard WHERE  username='$user' ";
+$result = $conn->query($sql);
+
+if($result->num_rows > 0){
+  $row = $result->fetch_assoc(); 
+  if($row["username"]===$user){
+
+  echo " ".balance($p,$i=0.03,$n=1);
+  echo " ".proft($Bal,$p);
+  }
+}
+
+
 ?>
 
 
@@ -62,14 +87,23 @@ else{
   <!--end of link styling-->
   
   <!-- javascript -->
-  <script type="text/javascript"> src="js/smart.js"</script>
+  
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.js"</script>
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"</script>
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"</script>
+  <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="js/dash.js"></script>
+
+  
+<!--Widget scripts for loading price-->
+<script type="text/javascript" src="js/widget.js"></script>
+<script type="text/javascript" src="js/coingecko-coin-compare-chart-widget.js"></script>
+<script type="text/javascript" src="js/coingecko-coin-price-marquee-widget.js"></script>
+<!--end scripts -->
   
   
   </head>
-  <body class="turning">
+  <body class="turning" >
     <div class="wrapper-box">
         <!-- start of the sidemanu -->
            <!-- start of the sidebar -->
@@ -156,7 +190,7 @@ else{
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Balance</span>
-                  <span class="money_balance">$1200</span>
+                  <span class="money_balance"><?php echo " ".balance($p=2,$i=0.03,$n=1);?></span>
                 </div>
               </div>
               <!-- end of the balance box  -->
@@ -170,7 +204,7 @@ else{
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Profit Return</span>
-                  <span class="money_balance">$111</span>
+                  <span class="money_balance"><?php ?></span>
                 </div>
               </div>
               <!-- end of profit box -->
@@ -289,7 +323,7 @@ else{
               <div class="control-plan"> 
                 <div class="invest-inputs">
                   <div class="selectionplan">
-                    <select name="selectplans" id="selectplans-period">
+                    <select name="selectplans" id="selectplans-period" onclick="swipe()">
                       <option value="">--Choose Investment plan--</option>
                       <option value="Bronze">Bronze</option>
                       <option value="Titanium">Titanium</option>
@@ -382,18 +416,21 @@ else{
           <!-- end of investing plan -->
   
           <!-- start of wedge side -->
-          <div>
-            <img class="wedges" src="img/wedge.png.png" alt="wedge">
+          <div class="wedges">
+              <iframe scrolling="no" allowtransparency="true" frameborder="0" src="https://s.tradingview.com/embed-widget/ticker-tape/?locale=en#%7B%22symbols%22%3A%5B%7B%22proName%22%3A%22FOREXCOM%3ASPXUSD%22%2C%22title%22%3A%22S%26P%20500%22%7D%2C%7B%22proName%22%3A%22FOREXCOM%3ANSXUSD%22%2C%22title%22%3A%22Nasdaq%20100%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AEURUSD%22%2C%22title%22%3A%22EUR%2FUSD%22%7D%2C%7B%22proName%22%3A%22BITSTAMP%3ABTCUSD%22%2C%22title%22%3A%22BTC%2FUSD%22%7D%2C%7B%22proName%22%3A%22BITSTAMP%3AETHUSD%22%2C%22title%22%3A%22ETH%2FUSD%22%7D%2C%7B%22description%22%3A%22LTC%2FUSD%22%2C%22proName%22%3A%22LITECOIN%22%7D%2C%7B%22description%22%3A%22XRP%2FUSD%22%2C%22proName%22%3A%22BITSTAMP%3AXRPUSD%22%7D%2C%7B%22description%22%3A%22ETH%2FXBT%22%2C%22proName%22%3A%22KRAKEN%3AETHXBT%22%7D%5D%2C%22colorTheme%22%3A%22dark%22%2C%22isTransparent%22%3Afalse%2C%22largeChartUrl%22%3A%22%22%2C%22displayMode%22%3A%22adaptive%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A46%2C%22utm_source%22%3A%22user.primefxtradeline.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22ticker-tape%22%7D" style="box-sizing: border-box;  width: 100%;"></iframe>
           </div>
           <!-- end of wedge side -->
           <div class="chart">
             <div class="div-chart">
               <span>BTC/USD Chart</span>
             </div>
-            <div>
-              <img class="btc-chart" src="img/BITCOIN.png" alt="btc/usdchart">
+             <!-- TradingView Widget BEGIN -->
+
+            <div class="btc-chart"> 
+                  <iframe  src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_5a3ca&amp;symbol=COINBASE%3ABTCUSD&amp;interval=D&amp;hidesidetoolbar=0&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=f1f3f6&amp;studies=%5B%5D&amp;theme=dark&amp;style=1&amp;timezone=Etc%2FUTC&amp;withdateranges=1&amp;showpopupbutton=1&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;showpopupbutton=1&amp;locale=en&amp;utm_source=user.primefxtradeline.com&amp;utm_medium=widget&amp;utm_campaign=chart&amp;utm_term=COINBASE%3ABTCUSD" style="width: 100%; height: 100%; margin: 0 !important; padding: 0 !important;" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen=""></iframe>
             </div>
-  
+
+              <!-- TradingView Widget END -->
           </div>
   
           <!-- start of the live tradings -->
@@ -488,9 +525,11 @@ else{
             <div class="FOREX">
               <span>fOREX-cross Rate chart</span>
             </div>
-            <div class="scoll-table">
-              <img class="cross-chart" src="img/crossrate.png" alt="forex crossrate chart">
+               <!-- TradingView Widget BEGIN -->
+            <div  class="cross-chart">
+                  <iframe scrolling="no" allowtransparency="true" frameborder="0" src="https://s.tradingview.com/embed-widget/forex-cross-rates/?locale=en#%7B%22width%22%3A%22100%25%22%2C%22height%22%3A%22400%22%2C%22currencies%22%3A%5B%22BTC%22%2C%22EUR%22%2C%22USD%22%2C%22JPY%22%2C%22GBP%22%2C%22CHF%22%2C%22AUD%22%2C%22CAD%22%2C%22NZD%22%2C%22CNY%22%2C%22TRY%22%2C%22SEK%22%2C%22NOK%22%5D%2C%22isTransparent%22%3Afalse%2C%22colorTheme%22%3A%22dark%22%2C%22utm_source%22%3A%22user.primefxtradeline.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22forex-cross-rates%22%7D" style="box-sizing: border-box; width: 100%;"></iframe>            
             </div>
+            <!-- TradingView Widget END -->
   
           </div>
           <!-- end of crossrate chart -->

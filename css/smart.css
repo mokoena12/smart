@@ -6,14 +6,6 @@ body{
     position: fixed;
     top: 0;
     width: 100%;
-    text-abody{
-    height: 100%;
-}
-.header{
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    width: 100%;
     text-align: center;
     color: white;
     z-index: 1;
@@ -176,10 +168,12 @@ body{
     font-weight: bold;
 }
 
-.button a:hover{
-    text-decoration: underline;
-
+.button a:visited{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
+
 .button:hover{
     background-image: linear-gradient(to bottom right,white, rgb(245, 239, 239), rgb(184, 187, 186));
     color: blue;
@@ -208,6 +202,11 @@ button{
 .opa{
     opacity: 0.2;
 }
+.opas{
+    opacity: 0;
+}
+/* Opacity for elements */
+
   /* background theme*/
 .background-theme{
     width: 100%;
@@ -380,6 +379,27 @@ text-decoration: none;
     
   }
   /*===End of animation  */
+
+  /*Animations for Faderight */
+.faderight{
+    animation:faderight 1s linear ;
+}
+@keyframes faderight{
+    from{
+        position: relative;
+      opacity: 0;
+      left:2em;
+      
+    }
+    to{
+        position: relative;
+      opacity: 1;
+      left:0em;
+      
+    }
+    
+  }
+  /*===End of animation faderight */
   
 /*Animations for Fadeout */
 .fadeout{
@@ -426,57 +446,7 @@ header .logo img{
 }
 /*end of pop for file uploads*/
 
-/*animation for text */
-.text-animate{
-    position: absolute;
-    background-color: white;
-    z-index: 100;
-    border-radius: 3px;
-    box-shadow: 4px 4px 1px rgb(17, 16, 16);}
 
-    .text-animate #text1,#text3,#text5{
-        color: rgb(38, 76, 102);
-        font-weight: bold;
-        text-shadow: 2px 2px 2px rgb(207, 205, 205);
-        animation: fadeout 1s linear;
-    
-    }
-    #text2,#text3,#text4,#text5{
-        display: none;
-    }
-    
-    .text-animate #text2,#text4{
-        color: rgb(8, 8, 8);
-        font-weight: bold;
-        display: none;
-        text-shadow: 2px 3px 3px rgb(187, 187, 187);
-        animation: fadeup 1s linear;
-    
-    
-    }
-.text-animate #back {
-    background-color: rgb(64, 124, 23);
-    position: absolute;
-    width: 0%;
-    height: 100%;
-    margin: 0;
-    z-index: 10;
-    border-radius: 3px;
-    background-image: linear-gradient(to bottom right,white, rgb(0, 183, 255), rgb(32, 85, 230));
-   
-}
-
-.text-animate #forward {
-    background-color: rgb(170, 119, 24);
-    position: absolute;
-    width: 100%;
-    border-radius: 3px;
-    height: 100%;
-margin: 0;
-    z-index: 9;
-    display: none;
-    background: linear-gradient(rgb(255, 255, 255),rgb(90, 88, 88), rgb(19, 18, 18)) ;
-}
 /*three steps*/
 
 .three-steps{
@@ -485,10 +455,11 @@ margin: 0;
     margin: 3%;
     margin-left: 0%;
 }
+.steps>div h4{
+    text-align: center;
+    padding-top: 7px;
+  }
 
-/*end-three steps*/
-
-/*three steps*/
 .threestep-text{
     align-content: center;
     text-align: center;
@@ -544,8 +515,6 @@ margin: 0;
     background: linear-gradient(to bottom,rgb(32, 32, 32),white);
 }
 
-
-
 /*end-about bitcoin*/
 
 /* leave a message form*/
@@ -554,16 +523,15 @@ margin: 0;
     background: linear-gradient(to bottom,rgb(32, 32, 32),white);  
 }
 /*end- leave a message form*/
+
  /* smart investa last block*/
 .lastblock{
-    background: linear-gradient(to bottom,rgb(32, 32, 32),white);   
+    background: linear-gradient(to bottom left,rgb(32, 32, 32),white);   
 }
 
  /* end-smart investa last block*/
-lign: center;
-    color: white;
-    z-index: 1;
-}
+
+
 
 /* Style for animations    */
 
@@ -728,7 +696,14 @@ lign: center;
 }
 .button a:hover{
     text-decoration: underline;
+    color: blue;
+    text-decoration: underline;
+}
 
+.button a:active{
+    text-decoration: underline;
+    color: blue;
+    text-decoration: underline;
 }
 button{
     background-image: linear-gradient(to bottom right,white, rgb(0, 183, 255), rgb(32, 85, 230));
@@ -743,6 +718,7 @@ button{
   }
   .log_reg div a :hover{
     color: blue;
+    text-decoration: underline;
   }
 
   
@@ -876,7 +852,7 @@ text-decoration: none;
     display:flex;
 }
 .About .img_network img{
-    animation: fadeup 1s linear;
+   animation: fadeup 1s linear;
 }
 
 .card{
@@ -1088,4 +1064,63 @@ margin: 0;
 }
 
 
+/* start of wedges */
+.wedges {
+    width: 100%;
+  }
+  /* end of the wedge */
+
+
 /*end-about bitcoin*/
+
+
+/* start of live trading inputs */
+
+.container_box {
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 3px;
+    position: relative;
+    top: 7%;
+  
+  }
+
+  /*====End === */
+  
+/* start of the forex crossrate chart */
+.crossrate {
+   top:7%;
+  }
+  
+.cross-chart {
+    width: 100%;
+  }
+  .cross-chart iframe{
+      height:inherit;
+  }
+  /*===Endof forex Crossrate */
+
+/* start of the Btc CHart */
+.chart {
+    width: 100%;
+    margin: 0em;
+  }
+  .div-chart {
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 3px;
+    padding:1%;
+  }
+  .chart span {
+    margin-left: 1em;
+    color: black;
+   
+  }
+  .btc-chart {
+    width: 100%;
+    height: inherit;
+    margin: 0;
+    border: 1px solid black;
+  }
+  /* end of the btc chart */
+

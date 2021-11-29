@@ -1,7 +1,6 @@
-
   //Text animation ==== //
   var text_w = 0;
-var  slide_num = 0;
+  var  slide_num = 0;
   function text(){
   if(text_w<100 && slide_num <5){
     text_w = text_w + 10;
@@ -17,18 +16,14 @@ var  slide_num = 0;
     document.getElementsByClassName("text_an")[slide_num].style.display="block";
     document.getElementById("back").setAttribute('style',wids1);
     document.getElementById("forward").style.display="none";
-
-    //document.getElementById("text2").style.display="none";
     setTimeout(text,50);
   }
   else if(slide_num>=5){
     slide_num =0;    
     setTimeout(text1,50);
-   // alert("I'm called");
   }
   else{
     setTimeout(text1,50);
-   // alert("I'm called1");
   }
     
     
@@ -45,7 +40,6 @@ var  slide_num = 0;
       setTimeout(text1,50);
       if(slide_num >=5){
         slide_num =0;
-        alert("I'm inside");
       }
 
     }
@@ -129,11 +123,11 @@ function fade(){
 }
 //=====End of Loader Function====//
 
-//Change header backgroung color when scrolling
-
-function swipe(){
-   
-  //document.getElementById("header").style.backgroundColor="black";
+//Scroll Event function
+function swipe(){ 
+  view1(".faq-text");view1(".stats1"); view1(".imgg");view1(".card_animate3"); //invest-text
+  view1(".threestep-text"); view1(".invest-text");view3(".img_network"); view1("iframe"); view1(".chose-text");view1(".card_animate1");
+  view2(".stat-text");view2(".card_animate2"); view2(".card_animate4");
 
 }
 
@@ -142,7 +136,6 @@ function swipe(){
 var count1 = 100;
 var count2 = 0.01;
 var count3 = 100000;
-
 function Count(){
   
       if(count1<56144.93){
@@ -157,62 +150,75 @@ function Count(){
       }
       else{
         clearInterval(setInterval(Count,50));
-      }
-    
+      }    
+}
+// Functions to Animate elements when in viewport
+function view1(target1){
+  $(window).scroll(function() {
+    var top_of_element = $(target1).offset().top;
+    var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+    if ((bottom_of_screen > top_of_element) ){
+       $(target1).addClass("fadeup");
+       setTimeout(opas(target1),1000);
       
+    } 
+    else {
+      $(target1).removeClass("fadeup");
+      $(target1).attr("style","opacity:0");
+    }
+  });
+}
+function opas(target1){
+  $(target1).attr("style","opacity:1");
 }
 
-//Animate elements when in viewport
-
-$(window).scroll(function() {
-  var top_of_element = $(".card").offset().top;
-  var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
-
-  if ((bottom_of_screen > top_of_element) ){
-      // the element is visible, do something || (top_of_screen < bottom_of_element)
-     $(".card").addClass("fadeup");
-     $("#header").css("background-color", "black");
+function view2(target1){
+  $(window).scroll(function() {
+    var top_of_element = $(target1).offset().top;
+    var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+    if ((bottom_of_screen > top_of_element) ){
+       $(target1).addClass("faderight"); 
+       setTimeout(opas(target1),1000);
+    } 
+    else {
+    
+      $(target1).removeClass("faderight");
+      $(target1).attr("style","opacity:0");
      
+    }
+  });
+}
 
-   
-  } 
-  else {
-    $(".card").removeClass("fadeup");
-   
-   
-  }
-});
+function view3(target1){
+  $(window).scroll(function() {
+    var top_of_element = $(target1).offset().top;
+    var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+    if ((bottom_of_screen > top_of_element) ){
+       $(target1).addClass("fadeout"); 
+       setTimeout(opas(target1),1000);
+    } 
+    else {
+      $(target1).removeClass("fadeout");
+      $(target1).attr("style","opacity:0");
+    }
+  });
+}
+//=====End=======//
 
-$(window).scroll(function() {
-  var top_of_element = $("iframe").offset().top;
-  var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
-
-  if ((bottom_of_screen > top_of_element) ){
-     $("iframe").addClass("fadeup");
-  } 
-  else {
-    $("iframe").removeClass("fadeup");
-  }
-});
-
-
+//For changing background of Header Bar
 $(window).scroll(function() {
   var top_of_element = $(".img_network").offset().top;
   var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
- 
-
   if ((bottom_of_screen > top_of_element) ){
-    $(".img_network").addClass("fadeup");
     document.getElementById("header").style.backgroundColor="black";
   } 
   else {
-    $(".img_network").removeClass("fadeup");
     $("#header").css("background-color", "transparent");
   }
 });
+//=====End====//
 
 ///====Style to change color of drop list
-
 $(document).ready(function(){
   $(".drop_list").click(function(){
     $(".drop_list").attr("id","list1_hover1");
@@ -220,3 +226,4 @@ $(document).ready(function(){
    // $(".response").hide();
   });
 });
+//====End=====//

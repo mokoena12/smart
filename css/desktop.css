@@ -1170,7 +1170,6 @@ width: 17%;
 height: 100%;
 box-shadow: 10px 2px 8px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)!important;
 overflow-y: hidden;
-z-index: 1038;
 }
 .sidebar-flex {
 display: flex;
@@ -1197,8 +1196,6 @@ width: 90%;
 .sidebar-manus {
 position: relative;
 font-weight: bold;
-padding-left: 1em;
-padding-right: 1em;
 margin-top: 1em;
 color: white;
 
@@ -1206,39 +1203,40 @@ color: white;
 .sidebar-manus ul li a {
 text-decoration: none;
 color: black;
-height: 1em;
-width: 5em;
+height: 5em;
+width: 10em;
 align-items: center;
 
 }
-.sidebar-manus ul li a:hover {
+.sidebar-manus ul li:hover {
 background-color: blue;
+border-radius: 6px;
 }
 .sidebar-manus ul li a i {
 height: 1em;
 min-width: 50px;
 border-radius: 12px;
-line-height: 50px;
+line-height: 35px;
 }
 /* start of sidebar icon spassing */
 .sidebarspace  {
-padding-right: 1em;
+padding-right: 1.2em;
 }
 li .fa {
-margin-left: 4px;
+margin-left: 2px;
 color: black;
 }
 .fa-user {
-padding-right: 1em;
+padding-right: 0.50em;
 }
 .fa-tasks {
-padding-right: 1em;
+padding-right: 0.50em;
 }
 .fa-exchange {
-padding-right: 1em;
+padding-right: 0.50em;
 }
 .fa-credit-card {
-padding-right: 1em;
+padding-right: 0.50em;
 }
 /* end of sidebar icon spassing */
 
@@ -1552,43 +1550,20 @@ a.elevation-1 {
   margin-right: 3em;
   padding: 2em;
 }
-.invest-cards2 {
+#invest-cards1 {
+  display: block;
+}
+#invest-cards2 {
   display: none;
-  width: 100%;
-  height: 90%;
-  border-radius: 6px;
-  color: white;
-  margin-left: 8em;
-  background-color:#17a2b8;
-  margin-top: 1em;
-  margin-right: 3em;
-  padding: 2em;
 
 }
-.invest-cards3 {
+#invest-cards3 {
   display: none;
-  width: 100%;
-  height: 90%;
-  border-radius: 6px;
-  color: white;
-  margin-left: 8em;
-  background-color:#17a2b8;
-  margin-top: 1em;
-  margin-right: 3em;
-  padding: 2em;
-
+ 
 }
-.invest-cards4 {
+#invest-cards4 {
   display: none;
-  width: 100%;
-  height: 90%;
-  border-radius: 6px;
-  color: white;
-  margin-left: 8em;
-  background-color:#17a2b8;
-  margin-top: 1em;
-  margin-right: 3em;
-  padding: 2em;
+ 
 
 /* end of the investing cards */
 }
@@ -1784,6 +1759,7 @@ text-align: center;
   padding-left: 1em;
   padding-top: 0.50em;
   border-radius: 3px;
+  margin-bottom: 1em;
 
 }
 .payment-wallet h5 {
@@ -1846,7 +1822,7 @@ text-align: center;
 /* start of the table of deposit */
 .history-deposit {
   padding: 1em;
-  border: 1px solid grey;
+  border: 1px solid #ccc;
   width: 95%;
   margin: 1.5em;
   border-radius: 4px;
@@ -1924,7 +1900,7 @@ text-align: center;
   justify-content: end;
 }
 .prev-next ul li {
-  border: 1px solid grey;
+  border: 1px solid #ccc;
   height: 2em;
   border-radius: 3px;
 
@@ -1936,14 +1912,9 @@ text-align: center;
 }
 /* end - depossit table */
 
-
-
 /* end of the profile */
 
-
-
 /* start of registration form */
-
 .nav_link2 a{
   font-size: 22px;
 }
@@ -2067,6 +2038,264 @@ margin: 2em 0px 2em 10px;
 padding: 1em 0px 1em 0px;
 width: 90%;
 }
+/*end-smart invetsa last block*/
+
+/* start of the withdrawal section */
+.withdrawal-fullbody {
+  width: 100%;
+  padding: 1em;
+}
+.flexdive {
+  display: flex;
+  flex: 0 0 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.withdraw-box {
+  width: 48%;
+  border :1px solid #ccc;
+  border-radius: 4px;
+  height: 100%;
+  margin-right: 1em;
+}
+.h5withdraw {
+  border-bottom: 1px solid #ccc;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.2;
+  padding: 1em;
+}
+.content-bances {
+  padding: 1em;
+}
+.pfloater {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.float-right {
+  float: right;
+  font-size: 1em;
+  font-weight: bold;
+}
+.withdrawal-bonus {
+  width: 48%;
+  border :1px solid #ccc;
+  border-radius: 4px;
+  height: 100%;
+  margin-left: 1em;
+}
+.method2 {
+  border: 1px solid #ccc;
+  padding: 1em;
+  border-radius: 4px;
+  margin-top: 2em;
+}
+.h4changing h4 {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+#payment-options {
+  width: 100%;
+  height: 2em;
+  border-radius: 4px;
+}
+.input-withdraw {
+  width: 100%;
+  height: 2em;
+  border-radius: 4px;
+}
+.btn-withdraw {
+  text-align: center;
+}
+#subbtn-withdrawal {
+  width: 30%;
+  height: 2em;
+  color: white;
+  background-color: blue;
+  margin-top: 3em;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/* end of the withdrawal section */
+
+
+/* start of the profile */
+.profile-content {
+  width: 100%;
+  padding: 1em;
+
+}
+.profile-container {
+  display: flex;
+  flex: 0 0 100%;
+  width: 100%;
+}
+.profile-avater {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1em;
+  width: 35%;
+
+}
+.profile-pic {
+  width: 6em;
+  height: 6em;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  
+}
+.users-control {
+  margin-top: 3em;
+}
+.users-control2 {
+  margin-bottom: 2em;
+}
+.filebtn {
+  background-color: #6c757d;
+  color: white;
+  height: 2.5em;
+  width: 80%;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-radius: 4px;
+  padding-top: 6px;
+}
+.btn-none {
+  display: none;
+  padding: 1em;
+}
+
+.profile-details {
+  border: 1px solid #ccc;
+  padding: 1em;
+  width: 65%;
+  margin-left: 1em;
+  border-radius: 4px;
+}
+.profile-header {
+  border-bottom: 1px solid #ccc;
+  line-height: 30px;
+}
+.profile-header ul {
+  display: flex;
+  flex: 0 0 100%;
+  flex-wrap: wrap;
+
+}
+.profile-header ul li{
+  list-style: none;
+  margin-right: 6px;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; 
+}
+.profile-header ul li a {
+  text-decoration: none;
+  padding: 0.50em 1em;
+  background-color: blue;
+  color: white;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.profile-header ul li a:active {
+  background-color: white;
+  color: black;
+}
+.profile-content2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  color: black;
+  height: 60%;
+  margin-top: 1em;
+}
+.name-inputs {
+  width: 95%;
+  height: 2.5em;
+  border-radius: 4px;
+  padding: 0.50em;
+  margin-bottom: 0.50em;
+}
+.diveform {
+  width: 50%;
+}
+.diveform label {
+  font-weight: bold;
+  padding-bottom: 0.25em;
+}
+#status {
+  width: 95%;
+  height: 2.5em;
+  background-color: #e9ecef;
+}
+#countri {
+  width: 95%;
+  height: 2.5em;
+  border-radius: 4px;
+}
+#profile-btn {
+  height: 2.5em;
+  width: 15em;
+  background-color: blue;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.p-btnsub {
+  margin-top: 25px;
+  margin-left: 30%;
+}
+.displayers {
+  display: none;
+}
+/* start of the login details */
+.displayers2 {
+  display: none;
+}
+/* end of the login details */
+
+/* start of banking details */
+.displayers3 {
+  display: block;
+}
+
+.profile-content3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: black;
+  height: 60%;
+  margin-top: 1em;
+}
+.name-inputs3 {
+  width: 100%;
+  height: 2.5em;
+  border-radius: 4px;
+  padding: 0.50em;
+  margin-bottom: 0.50em;
+}
+.diveform3 {
+  width: 100%;
+}
+.diveform3 label {
+  font-weight: bold;
+  padding-bottom: 0.25em;
+}
+.p-btnsub3 {
+  margin-top: 50px;
+  margin-left: 30%;
+}
+/* end of banking details */
+/* end of the profile */
+
+
 .sidebar-manus {
 position: relative;
 font-weight: bold;
@@ -2124,7 +2353,6 @@ height: 4em;
 text-align: left;
 margin-left: 0.10em;
 margin-bottom: -1em;
-
 }
 /* end of dash logo */
 

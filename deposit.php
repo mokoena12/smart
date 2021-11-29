@@ -46,40 +46,42 @@
     </head>
     <body class="turning">
         <div class="wrapper-box">
-              <!-- start of the sidemanu -->
-                <!-- start of the sidebar -->
+            <!-- start of the sidebar -->
             <div class="sidebar">
                 <div class="sidebar_profile">
                     <div class="sidebar-flex" >
                         <img class="Pcontrol" src="img/BITCOIN.png" alt="profile">
                         <span>belmiro</span>
                     </div>
-                </div>
+                </div>             
                 <div class="sidebar-manus">
                     <ul>
                         <li>
-                            <a href="#"><img  class="sidebarspace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>
+                            <a href="Dashboard.php"><img  class="sidebarspace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>
                             Dashboard</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-user"></i>Profile</a>
+                            <a href="profile.php"><i class="fa fa-user"></i>Profile</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-tasks"></i>
                             Active Logs</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-exchange"></i>
+                            <a href="deposit.php"><i class="fa fa-exchange"></i>
                             Deposit</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-exchange"></i>
+                            <a href=""><i class="fa fa-exchange"></i>
                             Withdrawal</a>
                         </li>
                         <li>
                             <a href="">
                             <i class="fa fa-credit-card"></i>
                             Subscription</a>
+                        </li>
+                        <li>
+                            <a href="logout.php"><i class="fa fa-sign-out"></i>Log out</a>
                         </li>
                     </ul>
                 </div>
@@ -93,7 +95,7 @@
                         <a href="#"><img src="img/smart.investa.logo2.png" class="logo_1" alt="logo"></a>
                     </div>
                     <div class="search">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUJJREFUSEu9le0xBEEURc9GQAhEgAzIgAjIABmQARmQgQwQARnYEIiAOlWv1avR3TO7NWOq9sdOd9/z+r6PWbHws1pYnx5gD7gEjoHDCOQdeAHugfWU4FqAuxDvabjnegxSAxjlQRx8BBTynY83uQLO042OepAhoET+FdYU4aGGIK3aCbuEVp8M0POP2GVULfEiJOQt/uy3cpIBJXoT2IxoEOZD2NU8kwHF+ynRD2/h2WouMuA7Tm3aG91zcwEsit1aluey6DWq7g/jX5O8bZlqjyVbHR2tRvsETjq9oOBz+H4L3ExptLInjwrr3BrPo8IBeJEEXTMYg+rmIC+ODTttcc9pzK0mZGxc29GOa4efogr5U1zPLU1nkutVyKZNVXOhC5kDIDRDzoCnEslcgALRzl9xX84JGP0e9D5MW68tfoMfCXxMGRHr0pcAAAAASUVORK5CYII="/>
+                        <i class="fas fa-search"></i>
                         <input type="search" placeholder="Search...">
                     </div>
                 </header>
@@ -103,10 +105,10 @@
                             <h1>Deposit Transaction</h1>
                         </div>
                         <div>
-                            <ol class="style">
-                                <li class="change1"><a href="/" style="text-decoration: none; color: rgb(66, 164, 243); padding-right: 5px;">Home</a></li>
+                            <ul class="style">
+                                <li class="change1"><a href="/" style="text-decoration: none; color: blue; padding-right: 5px;">Home</a></li>
                                 <li class="change active">Deposit Transaction</li>
-                            </ol>
+                            </ul>
                         </div>
                     </div>
                 </section>
@@ -121,6 +123,10 @@
                             </div>
                             <div class="payment-wallet">
                                 <h5>BITCOIN</h5>
+                                <div></div>
+                            </div>
+                            <div class="payment-wallet">
+                                <h5>Bank</h5>
                                 <div></div>
                             </div>
         

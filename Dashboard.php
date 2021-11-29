@@ -146,7 +146,7 @@ if($result->num_rows > 0){
                 
               </li>
               <li>
-                <a href="logout.php"><i class="fa fa-user"></i>Log out</a>
+                <a href="logout.php"><i class="fa fa-sign-out"></i>Log out</a>
               </li>
   
             </ul>
@@ -160,7 +160,7 @@ if($result->num_rows > 0){
               <a href="#"><img src="img/smart.investa.logo2.png" class="logo_1" alt="logo"></a>
             </div>
             <div class="search">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUJJREFUSEu9le0xBEEURc9GQAhEgAzIgAjIABmQARmQgQwQARnYEIiAOlWv1avR3TO7NWOq9sdOd9/z+r6PWbHws1pYnx5gD7gEjoHDCOQdeAHugfWU4FqAuxDvabjnegxSAxjlQRx8BBTynY83uQLO042OepAhoET+FdYU4aGGIK3aCbuEVp8M0POP2GVULfEiJOQt/uy3cpIBJXoT2IxoEOZD2NU8kwHF+ynRD2/h2WouMuA7Tm3aG91zcwEsit1aluey6DWq7g/jX5O8bZlqjyVbHR2tRvsETjq9oOBz+H4L3ExptLInjwrr3BrPo8IBeJEEXTMYg+rmIC+ODTttcc9pzK0mZGxc29GOa4efogr5U1zPLU1nkutVyKZNVXOhC5kDIDRDzoCnEslcgALRzl9xX84JGP0e9D5MW68tfoMfCXxMGRHr0pcAAAAASUVORK5CYII="/>
+              <i class="fas fa-search"></i>
               <input type="search" placeholder="Search...">
             </div>
           </header>
@@ -171,7 +171,7 @@ if($result->num_rows > 0){
               </div>
               <div>
                 <ul class="style">
-                  <li class="change1"><a href="index.html" style="text-decoration: none; color: rgb(73, 123, 163); padding-right: 5px;">Home</a></li>
+                  <li class="change1"><a href="index.html" style="text-decoration: none; color: blue; padding-right: 5px;">Home</a></li>
                   <li class="change active">Dashboard</li>
                 </ul>
               </div>
@@ -355,7 +355,7 @@ if($result->num_rows > 0){
                     <input type="submit" id="btnexecute" value="Invest">
                   </div>
                </div>
-               <div class="invest-cards">
+               <div class="invest-cards" id="invest-cards1">
                   <h3>Bronze</h3>
                   <h5>Minimun Amount: $30 <br>
                     Maximum Amount: $1000 <br>
@@ -367,37 +367,37 @@ if($result->num_rows > 0){
                     withdraw your money. 
                   </p>
                </div>
-               <div class="invest-cards2">
+               <div class="invest-cards" id="invest-cards2">
                   <h3>Titanium</h3>
                   <h5>Minimun Amount: $50 <br>
                     Maximum Amount: $1500 <br>
                   Interest rate: 5% daily</h5>
                   <p>This investment is commpounded daily <br>
-                    meaning your investment will increase by 3% <br>
+                    meaning your investment will increase by 5% <br>
                     every day. Investment period is the time you <br>
                     wand this investment to last before you can <br>
                     withdraw your money. 
                   </p>
                 </div> 
-                <div class="invest-cards3">
+                <div class="invest-cards" id="invest-cards3">
                   <h3>Gold</h3>
                   <h5>Minimun Amount: $100 <br>
                     Maximum Amount: $5000 <br>
                   Interest rate: 10% daily</h5>
                   <p>This investment is commpounded daily <br>
-                    meaning your investment will increase by 3% <br>
+                    meaning your investment will increase by 10% <br>
                     every day. Investment period is the time you <br>
                     wand this investment to last before you can <br>
                     withdraw your money. 
                   </p>
                </div>
-               <div class="invest-cards4">
+               <div class="invest-cards" id="invest-cards4">
                   <h3>Diamond</h3>
                   <h5>Minimun Amount: $200 <br>
                     Maximum Amount: $10000 <br>
                   Interest rate: 20% daily</h5>
                   <p>This investment is commpounded daily <br>
-                    meaning your investment will increase by 3% <br>
+                    meaning your investment will increase by 20% <br>
                     every day. Investment period is the time you <br>
                     wand this investment to last before you can <br>
                     withdraw your money. 

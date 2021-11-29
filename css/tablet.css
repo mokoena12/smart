@@ -728,13 +728,6 @@ to{
   text-align: left;
   margin-left: 2em;
 }
-input[type="submit"]{
-  color: white;
-  background-color: blue;
-  width: 9em;
-  border-radius: 4px;
-  margin-left: 40%;
-}
 .link_reg{
   color: blue;
   margin-left: 3em;
@@ -744,6 +737,26 @@ input[type="submit"]{
 }
 
 
+/* start of wedges */
+.wedges {
+  height: 3em;
+}
+
+.wedges  iframe{
+  height: 3.5em;
+}
+/* end of the wedge */
+
+/* start of the Btc CHart */
+.chart {
+  height: 20em;
+ 
+}
+
+.chart iframe{
+  height:inherit;
+}
+/*==End of Chart */
 
 /* start of registration form for tablet */
 
@@ -1079,6 +1092,7 @@ flex-direction: column;
   border-radius: 5px;
   background-color: #f2f2f2;
   margin: 0.5em;
+  padding: 1em;
 }
 .formmm>div{
   text-align: center;
@@ -1090,8 +1104,19 @@ flex-direction: column;
   margin: 1em;
   
 }
-.containerr>div{
-  padding: 1em;
+
+.containerr {
+  width: 80%;
+  height:20em;
+  margin: auto;
+}
+
+.containerr .widgett{
+  width: 80%;
+  height:20em;
+  margin: auto;
+  background-image: white;
+  background-color: white;
 }
 /*end-leave a mesage form*/
 

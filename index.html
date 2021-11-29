@@ -40,11 +40,13 @@
 <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.js"></script>
 <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="js/smart.js"></script>
+
 <!--Widget scripts for loading price-->
 <script type="text/javascript" src="js/widget.js"></script>
 <script type="text/javascript" src="js/coingecko-coin-compare-chart-widget.js"></script>
 <script type="text/javascript" src="js/coingecko-coin-price-marquee-widget.js"></script>
-<!--end scripts https://widgets.coingecko.com-->
+<!--end scripts -->
+
 <!--styles-->
 <link rel="stylesheet" href="css/desktop.css" >
 <link rel="stylesheet" href="css/phone.css" >
@@ -706,7 +708,8 @@
                                            <div class="containerr">
 
                                             <div class="widgett">
-                    <img src="img/bitcoinimage.png" alt="">
+                                                        <coingecko-coin-compare-chart-widget coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" locale="en" vce-ready=""></coingecko-coin-compare-chart-widget>
+                                        
                                             </div>
 
                                             <div class="formmm">

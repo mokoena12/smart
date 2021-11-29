@@ -1607,57 +1607,18 @@ a.elevation-1 {
 
 
 
-/* start of wedges */
-.wedges {
-  margin-left: 0.84em;
-  width: 97.2%;
-  height: 3.5em;
-  border-radius: 2px;
-  margin-bottom: -0.50em;
-}
-/* end of the wedge */
 
 /* start of the Btc CHart */
 .chart {
-  width: 97%;
-  height: 80%;
-  position: relative;
-  margin-left: 1em;
-  margin-right: 1em;
-  border-radius: 1px;
-  padding-right: -5em;
+  height: 30em;
 }
-.div-chart {
-  padding: 10px 2px 10px 0px;
-  border: 1px solid grey;
-  width: 99.7%;
-  border-radius: 3px;
+.chart iframe{
+  height:inherit;
 }
-.chart span {
-  margin-left: 1em;
-  color: black;
- 
-}
-.btc-chart {
-  width: 100%;
-  height: 95%;
-  margin-left: -0.1em;
-  margin-top: -0.1em;
-}
+/*==End of Chart */
 
-/* end of the btc chart */
 /* start of live trading inputs */
 
-.container_box {
-  width: 96.5%;
-  border: 1px solid gray;
-  margin-right: 1em;
-  margin-left: 1em;
-  margin-bottom: 2em;
-  margin-top: 2em;
-  border-radius: 3px;
-
-}
 .header_for {
   height: fit-content;
   border-bottom: 1px solid grey;
@@ -1673,11 +1634,15 @@ a.elevation-1 {
 #cryptoforex {
   width: 100%;
 }
-.trading {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+
+/* start of live trading inputs */
+
+.container_box {
+  top: 7%;
 
 }
+
+/*====End === */
 .control {
   padding-left: 20px;
   position: relative;
@@ -1760,24 +1725,20 @@ a.elevation-1 {
 .crossrate {
   position: relative;
   width: 100%;
-  height: 80%;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-top: 3em;
+  height: 30em;
 }
 .FOREX {
   border: 1px solid grey;
-  width: 97%;
+  width: 100%;
   height: 2em;
   padding: 10px;
   border-radius: 3px;
-  height: fit-content;
 }
 .FOREX span {
   color: black;
 }
 .cross-chart {
-  width: 97%;
+  height: 30em;
 }
 
 /* end of the forex crossrate chart */
@@ -2464,55 +2425,15 @@ a.elevation-1 {
 
 /* start of wedges */
 .wedges {
-  margin-left: 0.84em;
-  width: 97.2%;
   height: 3.5em;
-  border-radius: 2px;
-  margin-bottom: -0.50em;
+}
+.wedges  iframe{
+  height: 3.5em;
 }
 /* end of the wedge */
 
-/* start of the Btc CHart */
-.chart {
-  width: 97%;
-  height: 80%;
-  position: relative;
-  margin-left: 1em;
-  margin-right: 1em;
-  border-radius: 1px;
-  padding-right: -5em;
-}
-.div-chart {
-  padding: 10px 2px 10px 0px;
-  border: 1px solid grey;
-  width: 99.7%;
-  border-radius: 3px;
-}
-.chart span {
-  margin-left: 1em;
-  color: black;
- 
-}
-.btc-chart {
-  width: 100%;
-  height: 95%;
-  margin-left: -0.1em;
-  margin-top: -0.1em;
-}
-
-/* end of the btc chart */
 /* start of live trading inputs */
 
-.container_box {
-  width: 96.5%;
-  border: 1px solid gray;
-  margin-right: 1em;
-  margin-left: 1em;
-  margin-bottom: 2em;
-  margin-top: 2em;
-  border-radius: 3px;
-
-}
 .header_for {
   height: fit-content;
   border-bottom: 1px solid grey;
@@ -2611,31 +2532,6 @@ a.elevation-1 {
 
 /* end of the table history */
 
-/* start of the forex crossrate chart */
-.crossrate {
-  position: relative;
-  width: 100%;
-  height: 80%;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-top: 3em;
-}
-.FOREX {
-  border: 1px solid grey;
-  width: 97%;
-  height: 2em;
-  padding: 10px;
-  border-radius: 3px;
-  height: fit-content;
-}
-.FOREX span {
-  color: black;
-}
-.cross-chart {
-  width: 97%;
-}
-
-/* end of the forex crossrate chart */
 
 
 /* start of footer */
@@ -2812,6 +2708,7 @@ text-align: center;
   background-color: #f2f2f2;
   margin: 0.5em;
   width: 60%;
+  padding: 1em;
 }
 .formmm>div{
   text-align: center;
@@ -2823,8 +2720,14 @@ text-align: center;
   margin: 1em;
   
 }
-.containerr>div{
-  padding: 1em;
+.containerr .widgett{
+  width: 45%;
+  height:20em;
+  position:relative;
+  top:1em;
+  background-image: white;
+  background-color: white;
+  border-radius:5px;
 }
 /*end-leave a mesage form*/
 

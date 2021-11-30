@@ -1,11 +1,4 @@
-
-
 <?php
-//Create table 
-//create functions for balance and profit
-// profit = balance - deposit
-// A = P(1  + i)^n 
-// investment table (user, type,period) 
 
 session_start();
 
@@ -24,16 +17,7 @@ require_once "connect.php";
 
 $balance = $profit_return = $bonus = $total_deposit = $total_withdrawal = $deposit = $withdrawal = "";
 $typeOfInv= "";
-
-function balance($deposit,int $i,int $n) {
-   $Bal = $deposit * (1 + $i);
-  return $Bal;
-}
-
-function profit( $Bal, $deposit){
-  $Proft = $Bal - $deposit ;
-  return $proft;
-}
+ 
 
 $sql="SELECT balance, profit_return, bonus, total_deposit, total_withdrawal, deposit, withdrawal FROM dashboard WHERE  username='$user' ";
 $result = $conn->query($sql);
@@ -41,50 +25,15 @@ if($result->num_rows> 0){
   $row = $result->fetch_assoc(); 
  $balance = $row["balance"];
  $profit_return = $row["profit_return"];
-
+ 
  $bonus = $row["bonus"];
  $total_deposit = $row["total_deposit"];
  $total_withdrawal = $row["total_withdrawal"];
  $deposit = $row["deposit"];
  $withdrawal = $row["withdrawal"];
-
 }
-
-$sql="SELECT typeOfInv,periods FROM investment WHERE  username='$user' ";
-$result1 = $conn->query($sql);
-if($result1 !==false && $result1->num_rows> 0){
- $type = $result1->fetch_assoc(); 
- $typeOfinv = $type["typeOfInv"];
-
-if($typeOfinv=="Bronze"){
-  $i = 0.03;
-  $n=1;
-  $proft = profit($deposit,$bal);
-}elseif($typeOfinv=="Titanium"){
-  $i = 0.03;
-  $n=1;
-  $proft = profit($deposit,$bal);
-}elseif($typeOfinv=="Gold"){
-  $i = 0.03;
-  $n=1;
-  $proft = profit($deposit,$bal);
-}elseif($typeOfinv=="Diamond"){
-  $i = 0.03;
-  $n=1;
-  $proft = profit($deposit,$bal);
-}
-
-}
-
-
-/*if($type=="Bronze"){
-  $i = 0.03;
-  $n = 1;
-  $proft = profit($deposit,$bal);
-}*/
 
 ?>
-
 
 <Doctype html>
   <html lang="en" class="body-style">

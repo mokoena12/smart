@@ -136,7 +136,27 @@ function swipe(){
   view2(".stat-text");view2(".card_animate2"); view2(".card_animate4");
 
 }
+function invest(){
+  alert("I'm Working");//selectplans-period
+  /*let avr = document.getElementById("selectplans-period").value;
+ let value1 = document.getElementsByClassName("invest-cards");
+ for (let i=0; i<4; i++){
+  value1[i].style.display = "none";
+}
+ if(avr == "Bronze"){
+  value1[0].style.display = "block";
+ }
+ else if(avr == "Titanium"){
+  value1[1].style.display = "block";
+ }
+ else if(avr == "Gold"){
+  value1[2].style.display = "block";
+}
+else{
+  value1[3].style.display = "block";
+}*/
 
+}
 
 //=====Count the Invested Amount=====//
 var count1 = 100;

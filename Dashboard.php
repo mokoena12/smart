@@ -1,52 +1,37 @@
-
-
 <?php
-//Create table 
-//create functions for balance and profit
-// profit = balance - deposit
-// A = P(1  + i)^n 
-// investment table (user, type,period) 
 
 session_start();
 
 if (isset($_SESSION["investa_user"])){
 
   $user = $_SESSION["investa_user"];
- 
 }
 else{
   $err = "Please login before you access dashboard";
   header("Location:login.php?user2=$err");
-
 }
 
 require_once "connect.php";
 
-function balance(int $p=2,$i=0.03,$n=1) {
-   $Bal = $p * pow((1 + $i), $n);
-  return $Bal;
-}
+$balance = $profit_return = $bonus = $total_deposit = $total_withdrawal = $deposit = $withdrawal = "";
+$typeOfInv=  $invest_plan_err= $invest_period_err= $invest_results="";
 
-function profit($Bal=2.06,$p=2){
-  $Proft = $Bal - $p ;
-  return $proft;
-}
 
-$sql="SELECT balance, deposit FROM dashboard WHERE  username='$user' ";
+$sql="SELECT balance, profit_return, bonus, total_deposit, total_withdrawal, deposit, withdrawal FROM dashboard WHERE  username='$user' ";
 $result = $conn->query($sql);
-
-if($result->num_rows > 0){
+if($result->num_rows> 0){
   $row = $result->fetch_assoc(); 
-  if($row["username"]===$user){
-
-  echo " ".balance($p,$i=0.03,$n=1);
-  echo " ".proft($Bal,$p);
-  }
+$balance =  $row["balance"];
+ $profit_return = $row["profit_return"];
+ 
+ $bonus = $row["bonus"];
+ $total_deposit = $row["total_deposit"];
+ $total_withdrawal = $row["total_withdrawal"];
+ $deposit = $row["deposit"];
+ $withdrawal = $row["withdrawal"];
 }
-
 
 ?>
-
 
 <Doctype html>
   <html lang="en" class="body-style">
@@ -92,6 +77,9 @@ if($result->num_rows > 0){
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"</script>
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"</script>
   <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript"> src="js/smart.js"</script>
+  </head>
+  <body class="turning">
   <script type="text/javascript" src="js/dash.js"></script>
 
   
@@ -100,8 +88,6 @@ if($result->num_rows > 0){
 <script type="text/javascript" src="js/coingecko-coin-compare-chart-widget.js"></script>
 <script type="text/javascript" src="js/coingecko-coin-price-marquee-widget.js"></script>
 <!--end scripts -->
-  
-  
   </head>
   <body class="turning" >
     <div class="wrapper-box">
@@ -160,8 +146,8 @@ if($result->num_rows > 0){
               <a href="#"><img src="img/smart.investa.logo2.png" class="logo_1" alt="logo"></a>
             </div>
             <div class="search">
-              <i class="fas fa-search"></i>
-              <input type="search" placeholder="Search...">
+              <i class="fas fa-search" onclick="search()"></i>
+              <input type="search" name="search_d" id="search_d" placeholder="Search...">
             </div>
           </header>
           <section>
@@ -190,7 +176,9 @@ if($result->num_rows > 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Balance</span>
-                  <span class="money_balance"><?php echo " ".balance($p=2,$i=0.03,$n=1);?></span>
+                  <span class="money_balance"></span>
+                  <span class="money_balance">$ <?php echo $balance;?></span>
+
                 </div>
               </div>
               <!-- end of the balance box  -->
@@ -204,7 +192,7 @@ if($result->num_rows > 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Profit Return</span>
-                  <span class="money_balance"><?php ?></span>
+                  <span class="money_balance">$ <?php echo $profit_return;?></span>
                 </div>
               </div>
               <!-- end of profit box -->
@@ -218,7 +206,7 @@ if($result->num_rows > 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Bonus</span>
-                  <span class="money_balance">$5000</span>
+                  <span class="money_balance">$ <?php echo $bonus;?></span>
                 </div>
               </div>
               <!-- end of bonus box -->
@@ -232,7 +220,7 @@ if($result->num_rows > 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Total deposit</span>
-                  <span class="money_balance">$800</span>
+                  <span class="money_balance">$ <?php echo $total_deposit;?></span>
                 </div>
       
               </div>
@@ -247,7 +235,7 @@ if($result->num_rows > 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Total withdrawal</span>
-                  <span class="money_balance">$10000000</span>
+                  <span class="money_balance">$ <?php echo $total_withdrawal;?></span>
                 </div>
               </div>
               <!-- end of total withdraw box -->
@@ -261,7 +249,7 @@ if($result->num_rows > 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Deposit</span>
-                  <span class="money_balance">$90000</span>
+                  <span class="money_balance">$ <?php echo $deposit;?></span>
                 </div>
               </div>
               <!-- end of deposit box -->
@@ -276,7 +264,7 @@ if($result->num_rows > 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Withdrawal</span>
-                  <span class="money_balance">$300</span>
+                  <span class="money_balance" id="prices2">$ <?php echo $withdrawal?></span>
                 </div>
       
               </div>
@@ -312,31 +300,33 @@ if($result->num_rows > 0){
               <!-- end of the notification -->
             </div>
           <!-- end of a new section for boxes -->
-  
-  
-          <!-- start of investing plan -->
           <div class="investing-BOX">
-            <form class="trading1" action="#" method="post">
+            <form class="trading1" action="processor.php" onsubmit="return invest_valid(<?php echo $balance; ?>)" method="POST">
               <div class="header_TO">
                 <span>INVESTING PLAN</span>
               </div>
+              <span style="color:green"><?php if(isset($_GET["results"])){
+                echo $_GET["results"];
+              } ?></span>
               <div class="control-plan"> 
                 <div class="invest-inputs">
                   <div class="selectionplan">
+
                     <select name="selectplans" id="selectplans-period" onclick="swipe()">
-                      <option value="">--Choose Investment plan--</option>
+                      <option value="invalid">--Choose Investment plan--</option>
                       <option value="Bronze">Bronze</option>
                       <option value="Titanium">Titanium</option>
                       <option value="Gold">Gold</option>
                       <option value="Diamond">Diamond</option>
                     </select>
+                    <span style="color:red;" ><?php echo $invest_plan_err; ?></span>
                   </div>
                   <div >
-                    <input type="text" name="invest" id="invest" class="selectionplan2" placeholder="Amount to Invest">
+                    <input type="number" min="0"  name="invest" id="invest1" class="selectionplan2" placeholder="Amount to Invest" required>
                   </div>
                   <div>
-                    <select name="selectperiod" id="selectplans-period">
-                      <option value="">--Choose Investment period--</option>
+                    <select name="selectperiod" id="selectplans-period1">
+                      <option value="invalid">--Choose Investment period--</option>
                       <option value="1 week">1 week</option>
                       <option value="2 weeks">2 weeks</option>
                       <option value="3 weeks">3 weeks</option>
@@ -350,6 +340,7 @@ if($result->num_rows > 0){
                       <option value="2 years">2 years</option>
 
                     </select>
+                    <span style="color:red;" ><?php echo $invest_period_err; ?></span>
                   </div>
                   <div class="btnex">
                     <input type="submit" id="btnexecute" value="Invest">

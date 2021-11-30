@@ -131,34 +131,13 @@ function fade(){
 
 //Scroll Event function
 function swipe(){ 
-  view1(".faq-text");view1(".stats1"); view1(".imgg");view1(".card_animate3"); //invest-text
-  view1(".threestep-text"); view1(".invest-text");view3(".img_network"); view1("iframe"); view1(".chose-text");view1(".card_animate1");
-  view2(".stat-text");view2(".card_animate2"); view2(".card_animate4");
-
-}
-function invest(){
-  alert("I'm Working");//selectplans-period
-  /*let avr = document.getElementById("selectplans-period").value;
- let value1 = document.getElementsByClassName("invest-cards");
- for (let i=0; i<4; i++){
-  value1[i].style.display = "none";
-}
- if(avr == "Bronze"){
-  value1[0].style.display = "block";
- }
- else if(avr == "Titanium"){
-  value1[1].style.display = "block";
- }
- else if(avr == "Gold"){
-  value1[2].style.display = "block";
-}
-else{
-  value1[3].style.display = "block";
-}*/
+  view1(".faq-text");view1(".widgett");view1(".services");view1(".quick-links");view1(".formmm");view3(".block-para");view1(".freq_q");view1(".stats1"); view1(".imgg");view1(".card_animate3"); //invest-text
+  view1(".threestep-text");view1(".about-head"); view1(".invest-text");view3(".img_network"); view1("iframe"); view1(".chose-text");view1(".card_animate1");
+  view2(".stat-text");view2(".picc");view2(".para");view2(".card_animate2"); view2(".card_animate4");
 
 }
 
-//=====Count the Invested Amount=====//
+//=====Count the Invested Amount=====// 
 var count1 = 100;
 var count2 = 0.01;
 var count3 = 100000;

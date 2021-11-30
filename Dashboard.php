@@ -14,7 +14,7 @@ else{
 require_once "connect.php";
 
 $balance = $profit_return = $bonus = $total_deposit = $total_withdrawal = $deposit = $withdrawal = "";
-$typeOfInv=  $invest_plan_err= $invest_period_err= "";
+$typeOfInv=  $invest_plan_err= $invest_period_err= $invest_results="";
 
 
 $sql="SELECT balance, profit_return, bonus, total_deposit, total_withdrawal, deposit, withdrawal FROM dashboard WHERE  username='$user' ";
@@ -79,7 +79,7 @@ $balance =  $row["balance"];
   <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
   <script type="text/javascript"> src="js/smart.js"</script>
   </head>
-  <body class="turning"  onscroll="test2()">
+  <body class="turning">
   <script type="text/javascript" src="js/dash.js"></script>
 
   
@@ -300,40 +300,14 @@ $balance =  $row["balance"];
               <!-- end of the notification -->
             </div>
           <!-- end of a new section for boxes -->
-          <!-- Start of PHP for executing Investment -->
-          <?php
-          if(isset($_POST["selectplans"])){
-
-            $type = $_POST["selectplans"];
-            $period = $_POST["selectperiod"];
-            $validate = 1;
-
-            if( $type == "invalid"){
-              $invest_plan_err = "Please choose valid investment Plan";
-              $validate = 0;
-            }
-            if( $period == "invalid"){
-              $invest_period_err = "Please choose valid investment Period";
-              $validate = 0;
-            }
-
-            if($validate == 1){
-              $invest = "INSERT INTO investment(typeOfInv,periods,user) VALUES('$type','$period','$user')";
-            }
-
-           
-          }
-          
-          
-          ?>
-        
-  
-          <!-- start of investing plan -->
           <div class="investing-BOX">
-            <form class="trading1" action="#" onsubmit="return invest_valid(<?php echo $balance; ?>)" method="POST">
+            <form class="trading1" action="processor.php" onsubmit="return invest_valid(<?php echo $balance; ?>)" method="POST">
               <div class="header_TO">
                 <span>INVESTING PLAN</span>
               </div>
+              <span style="color:green"><?php if(isset($_GET["results"])){
+                echo $_GET["results"];
+              } ?></span>
               <div class="control-plan"> 
                 <div class="invest-inputs">
                   <div class="selectionplan">

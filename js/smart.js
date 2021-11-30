@@ -1,7 +1,3 @@
-
-function test2(){
-  alert("I'm working");
-}
   
   //Text animation ==== //
   var text_w = 0;

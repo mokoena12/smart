@@ -319,7 +319,7 @@ $balance =  $row["balance"];
                       <option value="Gold">Gold</option>
                       <option value="Diamond">Diamond</option>
                     </select>
-                    <span style="color:red;" ><?php echo $invest_plan_err; ?></span>
+                   
                   </div>
                   <div >
                     <input type="number" min="0"  name="invest" id="invest1" class="selectionplan2" placeholder="Amount to Invest" required>
@@ -340,7 +340,7 @@ $balance =  $row["balance"];
                       <option value="2 years">2 years</option>
 
                     </select>
-                    <span style="color:red;" ><?php echo $invest_period_err; ?></span>
+                    
                   </div>
                   <div class="btnex">
                     <input type="submit" id="btnexecute" value="Invest">
@@ -495,6 +495,8 @@ $balance =  $row["balance"];
                   </tr>
                 </thead>
                 <tbody>
+                  <!-- This is the only part to be  changed-->
+                  
                   <tr>
                     <td>FOREX</td>
                     <td>USDJPY</td>
@@ -505,6 +507,8 @@ $balance =  $row["balance"];
                     <td></td>
                     <td></td>
                   </tr>
+                  <!-- This is the only part to be  changed-->
+
                 </tbody>
               </table>
             </div>

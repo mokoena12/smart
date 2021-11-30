@@ -1,3 +1,8 @@
+
+function test2(){
+  alert("I'm working");
+}
+  
   //Text animation ==== //
   var text_w = 0;
   var  slide_num = 0;
@@ -118,6 +123,7 @@ function Loading(){
 
 function fade(){
     document.getElementById("rotation").style.display="none";
+    document.getElementById("rotation").value;
     document.getElementById("Loading").style.display="none";
    
 }
@@ -247,3 +253,7 @@ $(document).ready(function(){
   });
 });
 //====End=====//
+
+
+
+

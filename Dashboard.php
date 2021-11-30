@@ -17,7 +17,7 @@ require_once "connect.php";
 
 $balance = $profit_return = $bonus = $total_deposit = $total_withdrawal = $deposit = $withdrawal = "";
 $typeOfInv= "";
-
+ 
 
 $sql="SELECT balance, profit_return, bonus, total_deposit, total_withdrawal, deposit, withdrawal FROM dashboard WHERE  username='$user' ";
 $result = $conn->query($sql);
@@ -25,6 +25,7 @@ if($result->num_rows> 0){
   $row = $result->fetch_assoc(); 
  $balance = $row["balance"];
  $profit_return = $row["profit_return"];
+ 
  $bonus = $row["bonus"];
  $total_deposit = $row["total_deposit"];
  $total_withdrawal = $row["total_withdrawal"];
@@ -78,6 +79,9 @@ if($result->num_rows> 0){
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"</script>
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"</script>
   <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript"> src="js/smart.js"</script>
+  </head>
+  <body class="turning"  onscroll="test2()">
   <script type="text/javascript" src="js/dash.js"></script>
 
   
@@ -86,8 +90,6 @@ if($result->num_rows> 0){
 <script type="text/javascript" src="js/coingecko-coin-compare-chart-widget.js"></script>
 <script type="text/javascript" src="js/coingecko-coin-price-marquee-widget.js"></script>
 <!--end scripts -->
-  
-  
   </head>
   <body class="turning" >
     <div class="wrapper-box">
@@ -176,7 +178,7 @@ if($result->num_rows> 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Balance</span>
-                  <span class="money_balance"><?php echo " ".balance($p=2,$i=0.03,$n=1);?></span>
+                  <span class="money_balance">$ <?php echo $balance;?></span>
                 </div>
               </div>
               <!-- end of the balance box  -->
@@ -190,7 +192,7 @@ if($result->num_rows> 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Profit Return</span>
-                  <span class="money_balance"><?php ?></span>
+                  <span class="money_balance">$ <?php echo $profit_return;?></span>
                 </div>
               </div>
               <!-- end of profit box -->
@@ -204,7 +206,7 @@ if($result->num_rows> 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Bonus</span>
-                  <span class="money_balance">$5000</span>
+                  <span class="money_balance">$ <?php echo $bonus;?></span>
                 </div>
               </div>
               <!-- end of bonus box -->
@@ -218,7 +220,7 @@ if($result->num_rows> 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Total deposit</span>
-                  <span class="money_balance">$800</span>
+                  <span class="money_balance">$ <?php echo $total_deposit;?></span>
                 </div>
       
               </div>
@@ -233,7 +235,7 @@ if($result->num_rows> 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Total withdrawal</span>
-                  <span class="money_balance">$10000000</span>
+                  <span class="money_balance">$ <?php echo $total_withdrawal;?></span>
                 </div>
               </div>
               <!-- end of total withdraw box -->
@@ -247,7 +249,7 @@ if($result->num_rows> 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Deposit</span>
-                  <span class="money_balance">$90000</span>
+                  <span class="money_balance">$ <?php echo $deposit;?></span>
                 </div>
               </div>
               <!-- end of deposit box -->
@@ -262,7 +264,7 @@ if($result->num_rows> 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Withdrawal</span>
-                  <span class="money_balance">$300</span>
+                  <span class="money_balance" id="prices2">$ <?php echo $withdrawal?></span>
                 </div>
       
               </div>
@@ -309,8 +311,10 @@ if($result->num_rows> 0){
               <div class="control-plan"> 
                 <div class="invest-inputs">
                   <div class="selectionplan">
+
                     <select name="selectplans" id="selectplans-period" onclick="swipe()">
                       <option value="">--Choose Investment plan--</option>
+
                       <option value="Bronze">Bronze</option>
                       <option value="Titanium">Titanium</option>
                       <option value="Gold">Gold</option>

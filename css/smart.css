@@ -1064,5 +1064,63 @@ margin: 0;
 }
 
 
+/* start of wedges */
+.wedges {
+    width: 100%;
+  }
+  /* end of the wedge */
+
+
 /*end-about bitcoin*/
+
+
+/* start of live trading inputs */
+
+.container_box {
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 3px;
+    position: relative;
+    top: 7%;
+  
+  }
+
+  /*====End === */
+  
+/* start of the forex crossrate chart */
+.crossrate {
+   top:7%;
+  }
+  
+.cross-chart {
+    width: 100%;
+  }
+  .cross-chart iframe{
+      height:inherit;
+  }
+  /*===Endof forex Crossrate */
+
+/* start of the Btc CHart */
+.chart {
+    width: 100%;
+    margin: 0em;
+  }
+  .div-chart {
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 3px;
+    padding:1%;
+  }
+  .chart span {
+    margin-left: 1em;
+    color: black;
+   
+  }
+  .btc-chart {
+    width: 100%;
+    height: inherit;
+    margin: 0;
+    border: 1px solid black;
+  }
+  /* end of the btc chart */
 

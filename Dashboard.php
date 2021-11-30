@@ -87,14 +87,23 @@ if($result->num_rows > 0){
   <!--end of link styling-->
   
   <!-- javascript -->
-  <script type="text/javascript"> src="js/smart.js"</script>
+  
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.js"</script>
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"</script>
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"</script>
+  <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="js/dash.js"></script>
+
+  
+<!--Widget scripts for loading price-->
+<script type="text/javascript" src="js/widget.js"></script>
+<script type="text/javascript" src="js/coingecko-coin-compare-chart-widget.js"></script>
+<script type="text/javascript" src="js/coingecko-coin-price-marquee-widget.js"></script>
+<!--end scripts -->
   
   
   </head>
-  <body class="turning">
+  <body class="turning" >
     <div class="wrapper-box">
         <!-- start of the sidemanu -->
            <!-- start of the sidebar -->
@@ -137,7 +146,7 @@ if($result->num_rows > 0){
                 
               </li>
               <li>
-                <a href="logout.php"><i class="fa fa-user"></i>Log out</a>
+                <a href="logout.php"><i class="fa fa-sign-out"></i>Log out</a>
               </li>
   
             </ul>
@@ -151,7 +160,7 @@ if($result->num_rows > 0){
               <a href="#"><img src="img/smart.investa.logo2.png" class="logo_1" alt="logo"></a>
             </div>
             <div class="search">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUJJREFUSEu9le0xBEEURc9GQAhEgAzIgAjIABmQARmQgQwQARnYEIiAOlWv1avR3TO7NWOq9sdOd9/z+r6PWbHws1pYnx5gD7gEjoHDCOQdeAHugfWU4FqAuxDvabjnegxSAxjlQRx8BBTynY83uQLO042OepAhoET+FdYU4aGGIK3aCbuEVp8M0POP2GVULfEiJOQt/uy3cpIBJXoT2IxoEOZD2NU8kwHF+ynRD2/h2WouMuA7Tm3aG91zcwEsit1aluey6DWq7g/jX5O8bZlqjyVbHR2tRvsETjq9oOBz+H4L3ExptLInjwrr3BrPo8IBeJEEXTMYg+rmIC+ODTttcc9pzK0mZGxc29GOa4efogr5U1zPLU1nkutVyKZNVXOhC5kDIDRDzoCnEslcgALRzl9xX84JGP0e9D5MW68tfoMfCXxMGRHr0pcAAAAASUVORK5CYII="/>
+              <i class="fas fa-search"></i>
               <input type="search" placeholder="Search...">
             </div>
           </header>
@@ -162,7 +171,7 @@ if($result->num_rows > 0){
               </div>
               <div>
                 <ul class="style">
-                  <li class="change1"><a href="index.html" style="text-decoration: none; color: rgb(73, 123, 163); padding-right: 5px;">Home</a></li>
+                  <li class="change1"><a href="index.html" style="text-decoration: none; color: blue; padding-right: 5px;">Home</a></li>
                   <li class="change active">Dashboard</li>
                 </ul>
               </div>
@@ -314,7 +323,7 @@ if($result->num_rows > 0){
               <div class="control-plan"> 
                 <div class="invest-inputs">
                   <div class="selectionplan">
-                    <select name="selectplans" id="selectplans-period">
+                    <select name="selectplans" id="selectplans-period" onclick="swipe()">
                       <option value="">--Choose Investment plan--</option>
                       <option value="Bronze">Bronze</option>
                       <option value="Titanium">Titanium</option>
@@ -346,7 +355,7 @@ if($result->num_rows > 0){
                     <input type="submit" id="btnexecute" value="Invest">
                   </div>
                </div>
-               <div class="invest-cards">
+               <div class="invest-cards" id="invest-cards1">
                   <h3>Bronze</h3>
                   <h5>Minimun Amount: $30 <br>
                     Maximum Amount: $1000 <br>
@@ -358,37 +367,37 @@ if($result->num_rows > 0){
                     withdraw your money. 
                   </p>
                </div>
-               <div class="invest-cards2">
+               <div class="invest-cards" id="invest-cards2">
                   <h3>Titanium</h3>
                   <h5>Minimun Amount: $50 <br>
                     Maximum Amount: $1500 <br>
                   Interest rate: 5% daily</h5>
                   <p>This investment is commpounded daily <br>
-                    meaning your investment will increase by 3% <br>
+                    meaning your investment will increase by 5% <br>
                     every day. Investment period is the time you <br>
                     wand this investment to last before you can <br>
                     withdraw your money. 
                   </p>
                 </div> 
-                <div class="invest-cards3">
+                <div class="invest-cards" id="invest-cards3">
                   <h3>Gold</h3>
                   <h5>Minimun Amount: $100 <br>
                     Maximum Amount: $5000 <br>
                   Interest rate: 10% daily</h5>
                   <p>This investment is commpounded daily <br>
-                    meaning your investment will increase by 3% <br>
+                    meaning your investment will increase by 10% <br>
                     every day. Investment period is the time you <br>
                     wand this investment to last before you can <br>
                     withdraw your money. 
                   </p>
                </div>
-               <div class="invest-cards4">
+               <div class="invest-cards" id="invest-cards4">
                   <h3>Diamond</h3>
                   <h5>Minimun Amount: $200 <br>
                     Maximum Amount: $10000 <br>
                   Interest rate: 20% daily</h5>
                   <p>This investment is commpounded daily <br>
-                    meaning your investment will increase by 3% <br>
+                    meaning your investment will increase by 20% <br>
                     every day. Investment period is the time you <br>
                     wand this investment to last before you can <br>
                     withdraw your money. 
@@ -407,18 +416,21 @@ if($result->num_rows > 0){
           <!-- end of investing plan -->
   
           <!-- start of wedge side -->
-          <div>
-            <img class="wedges" src="img/wedge.png.png" alt="wedge">
+          <div class="wedges">
+              <iframe scrolling="no" allowtransparency="true" frameborder="0" src="https://s.tradingview.com/embed-widget/ticker-tape/?locale=en#%7B%22symbols%22%3A%5B%7B%22proName%22%3A%22FOREXCOM%3ASPXUSD%22%2C%22title%22%3A%22S%26P%20500%22%7D%2C%7B%22proName%22%3A%22FOREXCOM%3ANSXUSD%22%2C%22title%22%3A%22Nasdaq%20100%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AEURUSD%22%2C%22title%22%3A%22EUR%2FUSD%22%7D%2C%7B%22proName%22%3A%22BITSTAMP%3ABTCUSD%22%2C%22title%22%3A%22BTC%2FUSD%22%7D%2C%7B%22proName%22%3A%22BITSTAMP%3AETHUSD%22%2C%22title%22%3A%22ETH%2FUSD%22%7D%2C%7B%22description%22%3A%22LTC%2FUSD%22%2C%22proName%22%3A%22LITECOIN%22%7D%2C%7B%22description%22%3A%22XRP%2FUSD%22%2C%22proName%22%3A%22BITSTAMP%3AXRPUSD%22%7D%2C%7B%22description%22%3A%22ETH%2FXBT%22%2C%22proName%22%3A%22KRAKEN%3AETHXBT%22%7D%5D%2C%22colorTheme%22%3A%22dark%22%2C%22isTransparent%22%3Afalse%2C%22largeChartUrl%22%3A%22%22%2C%22displayMode%22%3A%22adaptive%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A46%2C%22utm_source%22%3A%22user.primefxtradeline.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22ticker-tape%22%7D" style="box-sizing: border-box;  width: 100%;"></iframe>
           </div>
           <!-- end of wedge side -->
           <div class="chart">
             <div class="div-chart">
               <span>BTC/USD Chart</span>
             </div>
-            <div>
-              <img class="btc-chart" src="img/BITCOIN.png" alt="btc/usdchart">
+             <!-- TradingView Widget BEGIN -->
+
+            <div class="btc-chart"> 
+                  <iframe  src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_5a3ca&amp;symbol=COINBASE%3ABTCUSD&amp;interval=D&amp;hidesidetoolbar=0&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=f1f3f6&amp;studies=%5B%5D&amp;theme=dark&amp;style=1&amp;timezone=Etc%2FUTC&amp;withdateranges=1&amp;showpopupbutton=1&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;showpopupbutton=1&amp;locale=en&amp;utm_source=user.primefxtradeline.com&amp;utm_medium=widget&amp;utm_campaign=chart&amp;utm_term=COINBASE%3ABTCUSD" style="width: 100%; height: 100%; margin: 0 !important; padding: 0 !important;" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen=""></iframe>
             </div>
-  
+
+              <!-- TradingView Widget END -->
           </div>
   
           <!-- start of the live tradings -->
@@ -513,9 +525,11 @@ if($result->num_rows > 0){
             <div class="FOREX">
               <span>fOREX-cross Rate chart</span>
             </div>
-            <div class="scoll-table">
-              <img class="cross-chart" src="img/crossrate.png" alt="forex crossrate chart">
+               <!-- TradingView Widget BEGIN -->
+            <div  class="cross-chart">
+                  <iframe scrolling="no" allowtransparency="true" frameborder="0" src="https://s.tradingview.com/embed-widget/forex-cross-rates/?locale=en#%7B%22width%22%3A%22100%25%22%2C%22height%22%3A%22400%22%2C%22currencies%22%3A%5B%22BTC%22%2C%22EUR%22%2C%22USD%22%2C%22JPY%22%2C%22GBP%22%2C%22CHF%22%2C%22AUD%22%2C%22CAD%22%2C%22NZD%22%2C%22CNY%22%2C%22TRY%22%2C%22SEK%22%2C%22NOK%22%5D%2C%22isTransparent%22%3Afalse%2C%22colorTheme%22%3A%22dark%22%2C%22utm_source%22%3A%22user.primefxtradeline.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22forex-cross-rates%22%7D" style="box-sizing: border-box; width: 100%;"></iframe>            
             </div>
+            <!-- TradingView Widget END -->
   
           </div>
           <!-- end of crossrate chart -->

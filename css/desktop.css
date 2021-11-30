@@ -913,9 +913,9 @@ flex-direction: row;
   align-content: center;
 }
 .planns-cards>div{
-  margin: 5%;
+  margin: 4%;
   text-align: center;
-  width: 95%;
+  width: 90%;
 }
 .planns-cards>div a{
  padding: 3px;
@@ -929,6 +929,13 @@ flex-direction: row;
 .peoplee{
   display: flex;
   flex-direction: row;
+  width: 100%;
+}
+.stat-text{
+  color: white;
+  text-align: center;
+  width: 95%;
+  margin: 3%;
 }
 .imagess{
   margin: 1em;
@@ -2024,7 +2031,6 @@ margin: 2em 0px 2em 10px;
 padding: 1em 0px 1em 0px;
 width: 90%;
 }
-/*end-smart invetsa last block*/
 
 /* start of the withdrawal section */
 .withdrawal-fullbody {
@@ -2966,26 +2972,6 @@ text-align: center;
 .quick-links h5{
   font-size: 1em;
 }
-.quick-links a:link{
-  text-decoration: none;
-  color: #062a52;
-}
-.quick-links a:hover{
-  color: #eca31b;
-}
-
-.services h5{
-  font-size: 1em;
-}
-.services a:link{
-  text-decoration: none;
-  color: #062a52;
-}
-.services a:hover{
-  color: #eca31b;
-}   
-
-
 /* end-smart investa last blocka*/
 
 

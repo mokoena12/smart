@@ -522,6 +522,11 @@ header .logo img{
 .aboutbitcoin{
     background: linear-gradient(to bottom,rgb(32, 32, 32),white);
 }
+.para i{
+    color: black;
+    font-size: 2em;
+    margin: 2%;
+  }
 
 /*end-about bitcoin*/
 
@@ -529,17 +534,54 @@ header .logo img{
 
 .form-div{
     background: linear-gradient(to bottom,rgb(32, 32, 32),white);  
+    width: 100%;
 }
 /*end- leave a message form*/
 
  /* smart investa last block*/
 .lastblock{
-    background: linear-gradient(to bottom left,rgb(32, 32, 32),white);   
+    background: linear-gradient(to bottom left,rgb(7, 7, 7),rgb(3, 3, 3));   
 }
+.lastblock h1{
+    color: white;
+}
+.block-para p{
+    color: white;
+}
+.block-para i:link{
+    text-decoration: none;
+}
+.quick-links{
+    color: white;
+}
+.quick-links a{
+    color: #664406;
+ 
+}
+.services{
+    color: white;
+}
+.services a{
+    color: #664406;
+}
+.quick-links a:link{
+    text-decoration: underline;
+  }
+  .quick-links a:hover{
+    color: #062a52;
+    
+  }
+  .services h5{
+    font-size: 1em;
+  }
+  .services a:link{
+    text-decoration: underline;
 
+  }
+  .services a:hover{
+    color: #062a52;
+  }  
  /* end-smart investa last block*/
-
-
 
 /* Style for animations    */
 

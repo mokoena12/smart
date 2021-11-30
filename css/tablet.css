@@ -1018,13 +1018,15 @@ flex-direction: column;
 
 .peoplee>div{
   text-align: center;
-  width:95%;
-  margin: 5%;
+  width:98%;
+  margin: 4px;
 }
-
+.peoplee>div p{
+  padding-top: 10%;
+}
 .imgg{
   width: 95%;
-  margin: 5%;
+  margin: 1%;
 }
 
 .imgg>img{
@@ -1052,7 +1054,7 @@ flex-direction: column;
   color: white;
   text-align: center;
 }
-.about-content{
+.about-cotent{
   margin: 2em;
   align-content: center;
 }
@@ -1060,10 +1062,14 @@ flex-direction: column;
   width: 95%;
  
 }
+.picc{
+  left: 4%;
+}
 .picc>img{
   border-radius: 7px;
-  width: 100%;
+  width: 98%;
   height: 70%;
+  margin: 3%;
 }
 .para>p{
   left: -2%;
@@ -1093,7 +1099,7 @@ flex-direction: column;
   width: 100%;
   position: relative;
   background-color: rgb(42, 42, 241);
-  color: white;
+  color:white;
   height: 4em;
 
 }
@@ -1137,12 +1143,6 @@ flex-direction: column;
   flex-direction: row;
   }
 /*leave a mesage form*/
-
-.widgett>img{
-  height: 80%;
-  width: 80%;
-}
-
 .formmmm>input[type=text], select, textarea {
   width: 100%; 
   padding: 12px;  
@@ -1153,8 +1153,10 @@ flex-direction: column;
   margin-bottom: 16px; 
   resize: vertical 
 }
-
-
+.widgett>img{
+  height: 80%;
+  width: 80%;
+}
 .formmm{
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -1172,36 +1174,14 @@ flex-direction: column;
   
 }
 
-.containerr {
-  width: 80%;
-  height:20em;
-  margin: auto;
-}
-
 .containerr .widgett{
-  width: 80%;
-  height:20em;
-  margin: auto;
-  background-image: white;
+  width: 96%;
+  height:27em;
+  margin: 1%;
+  background-image: rgb(253, 253, 253);
   background-color: white;
 }
 /*end-leave a mesage form*/
-
-
-/* smart investa lastblock */
-.lastblock>h2{
-  text-align: center;
-  color: white;
-  padding:0.5em;
-}
-.last-blockdiv{
-  display: flex;
-  flex-direction: row;
-  margin: 0.5em;
-  padding-left: 6%;
-
-}
-
 
 /* smart investa lastblock */
 .lastblock>h1{
@@ -1215,7 +1195,9 @@ flex-direction: column;
   margin: 0.5em;
   padding-left: 6%;
 }
-
+.block-para i{
+  color: white;
+}
 .last-blockdiv>div{
   margin: 1em;
   font-size: 1.3em;
@@ -1223,23 +1205,7 @@ flex-direction: column;
 .quick-links h5{
   font-size: 1em;
 }
-.quick-links a:link{
-  text-decoration: none;
-  color: #062a52;
-}
-.quick-links a:hover{
-  color: #eca31b;
-}
-.services h5{
-  font-size: 1em;
-}
-.services a:link{
-  text-decoration: none;
-  color: #062a52;
-}
-.services a:hover{
-  color: #eca31b;
-}  
+
 /* end-smart investa lastblock */
 
 /* start of the withdrawal section */

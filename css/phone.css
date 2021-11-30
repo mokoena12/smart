@@ -255,20 +255,21 @@ flex-direction: column;
 .planns-cards{
   display: flex;
   flex-wrap: wrap;
-  margin: 1em;
-  width: 90%;
+  width: 95%;
 }
 .planns-cards>div{
-  margin: 1em;
   text-align: center;
-  width: 55%;
-  left: 20%;
+  width: 45%;
+  margin:2%;
+  left: 3%;
+
 }
 .planns-cards>div>p{
   color: white;
 }
-.planns-cards>div>a{
-  font-size: 1.5em;
+.planns-cards>div a{
+ padding: 5px;
+ width: 15px;  
 }
 
 /*end-investment plans*/
@@ -279,17 +280,17 @@ flex-direction: column;
   text-align: center;
   color: white;
 }
-
+.stat-text p{
+ color: white;
+}
 .peoplee{
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 90%;
 }
 
 .peoplee>div{
-  margin: 4px 5px 4px 5px;
-  text-align: center;
-  width: 45%;
+  width: 40%;
  
 }
 
@@ -308,6 +309,17 @@ flex-direction: column;
 
 /*FAQ*/
 
+.faq-text{
+  width: 95%;
+  margin: 2%;
+  padding: 1%;
+}
+.faq-text h3{
+  color: white;
+}
+.faq-text p{
+  color: white;
+}
 .questions{
   display: flex;
   flex-direction:column;
@@ -321,7 +333,7 @@ flex-direction: column;
 
 /*about*/
 
-.aboutbitcoin .about-head{
+.about-head{
   text-align: center;
   color: white;
 }
@@ -329,10 +341,11 @@ flex-direction: column;
 .about-content{
   display: flex;
   flex-direction: column;
-  margin: 5px;
+  width: 95%;
 }
 .about-content>div{
-  width:95% ;
+  width:90% ;
+  margin: 5px;
   
 }
 
@@ -343,7 +356,7 @@ flex-direction: column;
 .picc>img{
   border-radius: 6px;
   width:95%;
-  margin: auto;
+  margin: 1%;
 
 }
 
@@ -354,26 +367,35 @@ flex-direction: column;
 .formmm{
   border-radius: 5px;
   background-color: #f2f2f2;
-  margin-top: 1em;
-  padding: 1em;
- 
+  width: 95%;
+  margin: 1%;
+  padding: 4px;
+}
+.formmmm>input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px;  
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box;
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
 }
 .formmm>div{
   text-align: center;
-  padding: 8px;
 }
 .containerr{
-  width: 100%;
+  width: 97%;
   display: flex;
   flex-direction: column;
   margin: 10px;
 }
 
 .containerr .widgett{
-  width: 95%;
-  height:20em;
-  margin: auto;
-  background-image: white;
+  width: 96%;
+  height:29em;
+  margin: 1%;
+  background-image: rgb(253, 253, 253);
   background-color: white;
 }
 /*end-leave a mesage form*/
@@ -1488,28 +1510,6 @@ header .logo img{
 
 /*end-about bitcoin*/
 
-/*leave a mesage form*/
-
-
-.widgett>img{
-  height: 80%;
-  width: 80%;
-}
-
-.formmmm>input[type=text], select, textarea {
-  width: 100%; 
-  padding: 12px;  
-  border: 1px solid #ccc; 
-  border-radius: 4px; 
-  box-sizing: border-box;
-  margin-top: 6px; 
-  margin-bottom: 16px; 
-  resize: vertical 
-}
-
-/*end-leave a mesage form*/
-
-
 /* smart investa last blocka*/
 .lastblock>h1{
   text-align: center;
@@ -1530,24 +1530,9 @@ header .logo img{
 .quick-links h5{
   font-size: 1em;
 }
-.quick-links a:link{
-  text-decoration: none;
-  color: #062a52;
-}
-.quick-links a:hover{
-  color: #eca31b;
-}
 .services h5{
   font-size: 1em;
 }
-.services a:link{
-  text-decoration: none;
-  color: #062a52;
-}
-.services a:hover{
-  color: #eca31b;
-}
-/*end- leave a message form*/
 
 /* start of the dashboard page */
 

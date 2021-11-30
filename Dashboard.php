@@ -22,28 +22,66 @@ else{
 
 require_once "connect.php";
 
-function balance(int $p=2,$i=0.03,$n=1) {
-   $Bal = $p * pow((1 + $i), $n);
+$balance = $profit_return = $bonus = $total_deposit = $total_withdrawal = $deposit = $withdrawal = "";
+$typeOfInv= "";
+
+function balance($deposit,int $i,int $n) {
+   $Bal = $deposit * (1 + $i);
   return $Bal;
 }
 
-function profit($Bal=2.06,$p=2){
-  $Proft = $Bal - $p ;
+function profit( $Bal, $deposit){
+  $Proft = $Bal - $deposit ;
   return $proft;
 }
 
-$sql="SELECT balance, deposit FROM dashboard WHERE  username='$user' ";
+$sql="SELECT balance, profit_return, bonus, total_deposit, total_withdrawal, deposit, withdrawal FROM dashboard WHERE  username='$user' ";
 $result = $conn->query($sql);
-
-if($result->num_rows > 0){
+if($result->num_rows> 0){
   $row = $result->fetch_assoc(); 
-  if($row["username"]===$user){
+ $balance = $row["balance"];
+ $profit_return = $row["profit_return"];
+ 
+ $bonus = $row["bonus"];
+ $total_deposit = $row["total_deposit"];
+ $total_withdrawal = $row["total_withdrawal"];
+ $deposit = $row["deposit"];
+ $withdrawal = $row["withdrawal"];
 
-  echo " ".balance($p,$i=0.03,$n=1);
-  echo " ".proft($Bal,$p);
-  }
 }
 
+$sql="SELECT typeOfInv,periods FROM investment WHERE  username='$user' ";
+$result1 = $conn->query($sql);
+if($result1 !==false && $result1->num_rows> 0){
+ $type = $result1->fetch_assoc(); 
+ $typeOfinv = $type["typeOfInv"];
+
+if($typeOfinv=="Bronze"){
+  $i = 0.03;
+  $n=1;
+  $proft = profit($deposit,$bal);
+}elseif($typeOfinv=="Titanium"){
+  $i = 0.03;
+  $n=1;
+  $proft = profit($deposit,$bal);
+}elseif($typeOfinv=="Gold"){
+  $i = 0.03;
+  $n=1;
+  $proft = profit($deposit,$bal);
+}elseif($typeOfinv=="Diamond"){
+  $i = 0.03;
+  $n=1;
+  $proft = profit($deposit,$bal);
+}
+
+}
+
+
+/*if($type=="Bronze"){
+  $i = 0.03;
+  $n = 1;
+  $proft = profit($deposit,$bal);
+}*/
 
 ?>
 
@@ -87,14 +125,43 @@ if($result->num_rows > 0){
   <!--end of link styling-->
   
   <!-- javascript -->
-  <script type="text/javascript"> src="js/smart.js"</script>
+  
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.js"</script>
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"</script>
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"</script>
+  <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript"> src="js/smart.js"</script>
+  <script>
+   //Testing dom
+/*function test2(){
+  let avr3 = document.getElementById("selectplans-period1").value;
+  if(avr3=="Bronze"){
+    document.getElementsByClassName("invest-cards")[0].style.display= "none";
+    document.getElementsByClassName("invest-cards")[0].style.display= "block";
+    document.getElementsByClassName("invest-cards")[0].style.display= "none";
+    document.getElementsByClassName("invest-cards")[0].style.display= "none";
+    
+  }
+  else if(avr3=="Diamond"){
+
+  }
+  else if(avr=="Titanium"){
+
+  }
+  else{
+
+  }
+  document.getElementsByClassName("money_balance")[1].innerHTML=avr3;
+  //alert("I'm working");
+}*\
+
+    </script>
+
+
   
   
   </head>
-  <body class="turning">
+  <body class="turning"  onscroll="test2()">
     <div class="wrapper-box">
         <!-- start of the sidemanu -->
            <!-- start of the sidebar -->
@@ -181,7 +248,7 @@ if($result->num_rows > 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Balance</span>
-                  <span class="money_balance"><?php echo " ".balance($p=2,$i=0.03,$n=1);?></span>
+                  <span class="money_balance">$ <?php echo $balance;?></span>
                 </div>
               </div>
               <!-- end of the balance box  -->
@@ -195,7 +262,7 @@ if($result->num_rows > 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Profit Return</span>
-                  <span class="money_balance"><?php ?></span>
+                  <span class="money_balance">$ <?php echo $profit_return;?></span>
                 </div>
               </div>
               <!-- end of profit box -->
@@ -209,7 +276,7 @@ if($result->num_rows > 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Bonus</span>
-                  <span class="money_balance">$5000</span>
+                  <span class="money_balance">$ <?php echo $bonus;?></span>
                 </div>
               </div>
               <!-- end of bonus box -->
@@ -223,7 +290,7 @@ if($result->num_rows > 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Total deposit</span>
-                  <span class="money_balance">$800</span>
+                  <span class="money_balance">$ <?php echo $total_deposit;?></span>
                 </div>
       
               </div>
@@ -238,7 +305,7 @@ if($result->num_rows > 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Total withdrawal</span>
-                  <span class="money_balance">$10000000</span>
+                  <span class="money_balance">$ <?php echo $total_withdrawal;?></span>
                 </div>
               </div>
               <!-- end of total withdraw box -->
@@ -252,7 +319,7 @@ if($result->num_rows > 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Deposit</span>
-                  <span class="money_balance">$90000</span>
+                  <span class="money_balance">$ <?php echo $deposit;?></span>
                 </div>
               </div>
               <!-- end of deposit box -->
@@ -267,7 +334,7 @@ if($result->num_rows > 0){
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Withdrawal</span>
-                  <span class="money_balance">$300</span>
+                  <span class="money_balance" id="prices2">$ <?php echo $withdrawal?></span>
                 </div>
       
               </div>
@@ -314,8 +381,8 @@ if($result->num_rows > 0){
               <div class="control-plan"> 
                 <div class="invest-inputs">
                   <div class="selectionplan">
-                    <select name="selectplans" id="selectplans-period">
-                      <option value="">--Choose Investment plan--</option>
+                    <select name="selectplans" id="selectplans-period1">
+                      <option value="3">--Choose Investment plan--</option>
                       <option value="Bronze">Bronze</option>
                       <option value="Titanium">Titanium</option>
                       <option value="Gold">Gold</option>
@@ -346,7 +413,7 @@ if($result->num_rows > 0){
                     <input type="submit" id="btnexecute" value="Invest">
                   </div>
                </div>
-               <div class="invest-cards">
+               <div class="invest-cards" id="invest-cards1">
                   <h3>Bronze</h3>
                   <h5>Minimun Amount: $30 <br>
                     Maximum Amount: $1000 <br>

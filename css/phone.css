@@ -287,6 +287,7 @@ flex-direction: column;
   display: flex;
   flex-wrap: wrap;
   width: 90%;
+  margin: auto;
 }
 
 .peoplee>div{

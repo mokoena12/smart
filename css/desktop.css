@@ -931,6 +931,14 @@ flex-direction: row;
   flex-direction: row;
   width: 100%;
 }
+
+.peoplee{
+  width: 100%;
+}
+.peoplee>div{
+  width: 95%;
+  margin: 5%;
+}
 .stat-text{
   color: white;
   text-align: center;

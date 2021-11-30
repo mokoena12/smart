@@ -1,11 +1,4 @@
-
-
 <?php
-//Create table 
-//create functions for balance and profit
-// profit = balance - deposit
-// A = P(1  + i)^n 
-// investment table (user, type,period) 
 
 session_start();
 
@@ -22,31 +15,24 @@ else{
 
 require_once "connect.php";
 
-function balance(int $p=2,$i=0.03,$n=1) {
-   $Bal = $p * pow((1 + $i), $n);
-  return $Bal;
-}
+$balance = $profit_return = $bonus = $total_deposit = $total_withdrawal = $deposit = $withdrawal = "";
+$typeOfInv= "";
 
-function profit($Bal=2.06,$p=2){
-  $Proft = $Bal - $p ;
-  return $proft;
-}
 
-$sql="SELECT balance, deposit FROM dashboard WHERE  username='$user' ";
+$sql="SELECT balance, profit_return, bonus, total_deposit, total_withdrawal, deposit, withdrawal FROM dashboard WHERE  username='$user' ";
 $result = $conn->query($sql);
-
-if($result->num_rows > 0){
+if($result->num_rows> 0){
   $row = $result->fetch_assoc(); 
-  if($row["username"]===$user){
-
-  echo " ".balance($p,$i=0.03,$n=1);
-  echo " ".proft($Bal,$p);
-  }
+ $balance = $row["balance"];
+ $profit_return = $row["profit_return"];
+ $bonus = $row["bonus"];
+ $total_deposit = $row["total_deposit"];
+ $total_withdrawal = $row["total_withdrawal"];
+ $deposit = $row["deposit"];
+ $withdrawal = $row["withdrawal"];
 }
-
 
 ?>
-
 
 <Doctype html>
   <html lang="en" class="body-style">

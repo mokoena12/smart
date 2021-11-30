@@ -40,6 +40,7 @@ function search(){
 
 function invest_valid(num){
 let avr = document.getElementById("selectplans-period").value;
+let period = document.getElementById("selectplans-period1").value;
 let Amount = document.getElementById("invest1").value;
 let min =0;
 
@@ -57,7 +58,12 @@ else if(avr == "Diamond"){
       min = 200;
     }
 else{
-    min = 0;
+    alert("Please select valid plan");
+    return false;
+  }
+  if(period=="invalid"){
+    alert("Please select valid period");
+    return false;
   }
 
 if(num<Amount){

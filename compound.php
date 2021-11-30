@@ -1,4 +1,14 @@
 <?php
+//Tasks to be Completed
+
+// Must create table for live trading with following columns : username, currency_type, currency_pair, lot_size, 
+//take_profit, stop_loss, entry_price and action_select(be careful of datatypes)-- User Evidence
+//Extend table of investment(Amount)
+//Select Bal and deposit
+
+// Create table for Recent trading history -- user Evidence
+// Create php functions for live trading -- user Belmiro
+
 session_start();
 if (isset($_SESSION["investa_user"])){
 
@@ -11,9 +21,11 @@ else{
   header("Location:login.php?user2=$err");
   
 }
+if($_SESSION["investa_user"] != "Admin"){
+  header("Location:index.html");
+}
 require_once "connect.php";
-$deposit = 10;
-$bal = 10.6;
+//select 
 
 //Fix this function, remember how compounds works, take the current bal
 function balance($deposit,int $i,int $n) {

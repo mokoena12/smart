@@ -19,4 +19,5 @@ let value1 = document.getElementsByClassName("invest-cards");
 else{
   value1[3].style.display = "block";
 }
+
 }

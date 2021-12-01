@@ -1,13 +1,20 @@
 <?php
 //Tasks to be Completed
+//=== The following tasks must be done by Evidence
 
 // Must create table for live trading with following columns : username, currency_type, currency_pair, lot_size, 
 //take_profit, stop_loss, entry_price and action_select(be careful of datatypes)-- User Evidence
-//Extend table of investment(Amount)
+//Extend table of investment(Amount) 
 //Select Bal and deposit
-
+//Fix live trading table datatypes, the column in trading history for clue
 // Create table for Recent trading history -- user Evidence
-// Create php functions for live trading -- user Belmiro
+//Update Dashboard table accordingly 
+//Create table for referrals with following columns (Username and Date_reg) 
+//Please fix the registration form, we lost some data when moving to Git also make sure it adds the user when registering
+//Create table for deposit history, got to deposit page to see it, the table must have these columns Amount,status,credited_at and action
+//Add date column to registration table 
+
+//The following tasks must be done by Belmiro
 
 session_start();
 if (isset($_SESSION["investa_user"])){
@@ -21,9 +28,10 @@ else{
   header("Location:login.php?user2=$err");
   
 }
+/*
 if($_SESSION["investa_user"] != "Admin"){
   header("Location:index.html");
-}
+}*/
 require_once "connect.php";
  
 

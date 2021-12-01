@@ -232,7 +232,7 @@ else{
                             <div>
                                 <label for="filebtn" class="filebtn">
                                     Update Avatar
-                                    <input class="btn-none" type="file" name="file-upload" id="filebtn" >
+                                    <input class="btn-none" type="file" name="btnFileUpload" id="filebtn" >
                                 </label>
                             </div>
                         </div>

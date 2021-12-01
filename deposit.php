@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="fonts/css/svg-with-js.min.css">
     <link rel="stylesheet" href="fonts/css/v4-shims.css">
     <link rel="stylesheet" href="fonts/css/v4-shims.min.css">
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <!-- end of fonts -->
     
     <!-- start of links styling-->
@@ -36,12 +35,13 @@
     <link rel="stylesheet" href="css/smart.css">
     <!--end of link styling-->
     
-    <!-- javascript -->
-    <script type="text/javascript"> src="js/smart.js"</script>
-    <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.js"</script>
-    <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"</script>
-    <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"</script>
     
+  <!-- javascript -->
+  <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.js"></script>
+  <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"></script>
+  <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="js/dash.js"></script>
     
     </head>
     <body class="turning">
@@ -137,7 +137,7 @@
                         </div>
                         <div class="notify-deposit">
                             <div class="h5change">
-                                <h5>Submit Notification for Deposit</h5>
+                                <h5>Instructions for Deposit</h5>
                             </div>
                             <form action="#" method="post">
                                 <div class="text-deposit">
@@ -147,29 +147,19 @@
                                             Payment Methods panel and make the payment.
                                         </p>
                                         <p>
-                                            After completing the payment come back here and fill the deposit notification form.
+                                            If you choose Bitcoin then you will have to by using Bitcoin wallet like Luno
                                           </p>
+                                          <p>
+                                            If you choose Bank card please be adviced we only accept Visa/mastercard payment mathods
+                                          </p>
+                                          <p>
+                                            If you choose Bank EFT then you must have online banking account and banking app
+                                          </p>
+
                                     </strong>
                                 </div>
-                                <div class="form-deposit">
-                                    <label for="method-payment">Select Method of Mayment</label>
-                                    <select name="method-payment" id="method-payment">
-                                        <option value="">--select method of paymend--</option>
-                                        <option value="Bitcoin">Bitcoin</option>
-                                    </select>
-                                    <div class="method-payment">
-                                        <label for="amount-deposit">Amount in Dollar ($)</label><br>
-                                        <input type="text" name="amount" id="amount-deposit" class="method-payment" placeholder="Enter Amount">
-                                    </div>
-                                    <div class="method-payment">
-                                        <label for="file-upload">Upload Payment Reciept</label>
-                                        <input type="file" name="file-upload" id="file-upload" class="method-payment">
-                                    </div>
-                                    <div>
-                                        <button type="submit" class="btn-deposit" value="Notify for Deposit">Notify for Deposit</button>
-                                    </div>
-
-                                </div>
+                              
+                               
                                 
 
                             </form>
@@ -214,10 +204,10 @@
                                 </thead>
                                 <tbody class="tbody">
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>$100</td>
+                                        <td>Approved</td>
+                                        <td>12-oct-2021</td>
+                                        <td>deposit</td>
                                     </tr>
                                 </tbody>
                             </table>

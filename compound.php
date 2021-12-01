@@ -25,11 +25,11 @@ if($_SESSION["investa_user"] != "Admin"){
   header("Location:index.html");
 }
 require_once "connect.php";
-//select 
+ 
 
 //Fix this function, remember how compounds works, take the current bal
-function balance($deposit,int $i,int $n) {
-    $Bal = $deposit * (1 + $i);
+function balance($balance,int $i,int $n) {
+    $Bal = $balance * (1 + $i);
    return $Bal;
 }
 
@@ -53,26 +53,34 @@ if($result1->num_rows> 0){
             $i = 0.03;
             $n=1;
             echo "Hi I'm $user and my investment type is $typeOfinv";
-            $proft = profit($deposit,$bal);
+            $Proft = profit($deposit,$Bal);
             //Then go the dashboard table and update profit and Balance
+            $sql ="UPDATE dashboard SET balance = '$Bal' , profit_return = '$Proft'
+            WHERE username = '$user'";
             }
             elseif($typeOfinv=="Titanium"){
             $i = 0.03;
             $n=1;
-            $proft = profit($deposit,$bal);
+            $Proft = profit($deposit,$Bal);
             echo "Hi I'm $user and my investment type is $typeOfinv";
+            $sql ="UPDATE dashboard SET balance = '$Bal' , profit_return = '$Proft'
+            WHERE username = '$user'";
             }
             elseif($typeOfinv=="Gold"){
             $i = 0.03;
             $n=1;
-            $proft = profit($deposit,$bal);
+            $Proft = profit($deposit,$Bal);
             echo "Hi I'm $user and my investment type is $typeOfinv";
+            $sql ="UPDATE dashboard SET balance = '$Bal' , profit_return = '$Proft'
+            WHERE username = '$user'";
             }
             elseif($typeOfinv=="Diamond"){
             $i = 0.03;
             $n=1;
-            $proft = profit($deposit,$bal);
+            $Proft = profit($deposit,$Bal);
             echo "Hi I'm $user and my investment type is $typeOfinv";
+            $sql ="UPDATE dashboard SET balance = '$Bal' , profit_return = '$Proft'
+            WHERE username = '$user'";
             }
 
     }

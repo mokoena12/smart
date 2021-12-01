@@ -69,7 +69,7 @@ if($result1->num_rows> 0){
             $nwBal = Nwbalance($Bal,$balance);
             $Proft = profit($Bal,$deposit);
             
-            $sql ="UPDATE dashboard SET balance = $Bal , profit_return = $Proft
+            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
             WHERE username = '$user'";
 
          }else if($typeOfinv=="Titanium"){
@@ -78,7 +78,7 @@ if($result1->num_rows> 0){
             $Bal = balance($amount,0.05,1);
             $nwBal = Nwbalance($Bal,$balance);
             $Proft = profit($Bal,$deposit);
-            $sql ="UPDATE dashboard SET balance = $Bal , profit_return = $Proft
+            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
             WHERE username = '$user'";
             
           }else if($typeOfinv=="Gold"){
@@ -87,7 +87,7 @@ if($result1->num_rows> 0){
             $Bal = balance($amount,0.10,1);
             $nwBal = Nwbalance($Bal,$balance);
             $Proft = profit($Bal,$deposit);
-            $sql ="UPDATE dashboard SET balance = $Bal , profit_return = $Proft
+            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
             WHERE username = '$user'";
             
           }elseif($typeOfinv=="Diamond"){
@@ -96,7 +96,7 @@ if($result1->num_rows> 0){
             $Bal = balance($amount,0.20,1);
             $nwBal = Nwbalance($Bal,$balance);
             $Proft = profit($Bal,$deposit);
-            $sql ="UPDATE dashboard SET balance = $Bal , profit_return = $Proft
+            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
             WHERE username = '$user'";
           }
 

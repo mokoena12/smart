@@ -426,7 +426,7 @@ $balance =  $row["balance"];
   
           <!-- start of the live tradings -->
           <div class="container_box">
-            <form class="trading" action="#" method="post">
+            <form class="trading" action="processor.php" method="post">
               <div class="header_for">
                 <span>Live Trading</span>
               </div>
@@ -439,30 +439,30 @@ $balance =  $row["balance"];
                 </div>
                 <div class="controlmin_1">
                   <div>
-                    <label for="currency">Currency pair</label><br>
-                    <input type="text" name="currency_pair" id="currency" placeholder="Enter currency pair for example:BTC/ETH">
+                    <label for="currency">Currency pair*</label><br>
+                    <input type="text" name="currency_pair" id="currency" placeholder="Enter currency pair for example:BTC/ETH" required>
                   </div>
                   <div>
-                    <label for="lotsize">Lot size</label><br>
-                    <input type="text" name="lot" id="lotsize" placeholder="Enter lotsize">
+                    <label for="lotsize">Lot size*</label><br>
+                    <input type="number" min="0" name="lot" id="lotsize" placeholder="Enter lotsize" required>
                   </div>
                 </div>
                 <div class="controlmin_2">
                   <div>
-                    <label for="entry">Entry Price</label><br>
-                    <input type="text" name="entry" id="entry" placeholder="Enter price entry">
+                    <label for="entry">Entry Price*</label><br>
+                    <input type="number" min="0" name="entry" id="entry" placeholder="Enter price entry" required>
                   </div>
                   <div>
-                    <label for="stoploss">Stop loss</label><br>
-                    <input type="text" name="stop" id="stoploss" placeholder="Enter stop loss">
+                    <label for="stoploss">Stop loss(optional)</label><br>
+                    <input type="number" min="0" name="stop" id="stoploss" placeholder="Enter stop loss" >
                   </div>
                   <div>
-                    <label for="takeprofit">Take profit</label><br>
-                    <input type="text" name="take" id="takeprofit" placeholder="Enter TP">
+                    <label for="takeprofit">Take profit(optional)</label><br>
+                    <input type="number" min="0" name="take" id="takeprofit" placeholder="Enter TP" required>
                   </div>
                 </div>
                 <div class="select-input">
-                  <label for="input">Select Action</label><br>
+                  <label for="input">Select Action*</label><br>
                   <select name="buyORsell" id="execute">
                     <option value="Buy">Buy</option>
                     <option value="Sell">Sell</option>

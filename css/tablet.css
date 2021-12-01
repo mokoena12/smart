@@ -1601,19 +1601,6 @@ flex-direction: column;
   margin-top: 25px;
   margin-left: 30%;
 }
-.displayers {
-  display: none;
-}
-/* start of the login details */
-.displayers2 {
-  display: none;
-}
-/* end of the login details */
-
-/* start of banking details */
-.displayers3 {
-  display: block;
-}
 
 .profile-content3 {
   display: flex;

@@ -1521,7 +1521,6 @@ header .logo img{
   display: flex;
   flex-direction: row;
   margin: 0.5em;
-  padding-left: 6%;
 }
 
 .last-blockdiv>div{
@@ -1534,6 +1533,7 @@ header .logo img{
 .services h5{
   font-size: 1em;
 }
+
 
 /* start of the dashboard page */
 
@@ -2550,42 +2550,34 @@ text-align: center;
 }
 /* end of banking details */
 /* end of the profile */
-/* invest iin bitcoin*/
-.investt{
-  position: absolute;
-  bottom: 15%;
-  left:35%;
-  font-size: 100%;
-  }
-
-  .investt>div{
-    padding: 8px;
-  }
-  
-  .investt .invest_btn{
-  border-radius: 3px;
-  padding: 2px;
-  padding-bottom: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  
-  }
-  
-  .investt .iconss{
-  font-weight: bold;
-  font-size: 1.5em;
-  color: rgb(232, 231, 236);
-  width:80%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  }
+  /* invest in bitcoin*/
+  .investt{
+    position: absolute;
+    top: 75%;
+    left:30%;
+    font-size: 90%;
+    padding-bottom: 9px;
+    }
+    
+    .investt .invest_btn{
+    border-radius: 3px;
+    padding: 4px;
+    font-size: 17px;
+    text-align: center;
+    
+    }
+    
+    .investt .iconss{
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgb(232, 231, 236);
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    }
     
     /* end of invest iin bitcoin*/
+
  
- /* smart investa last block*/
-.lastblock{
-    background: linear-gradient(to bottom,rgb(32, 32, 32),white);   
-}
- /* end-smart investa last block*/ 
-}
+  }

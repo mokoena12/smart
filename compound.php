@@ -62,7 +62,6 @@ if($result1->num_rows> 0){
            $typeOfinv = $type["typeOfInv"];
             $user = $type["user"];
            
-  
           if($typeOfinv=="Bronze"){
             $i = 0.04;
             $n=1; 

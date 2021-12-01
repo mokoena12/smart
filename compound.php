@@ -64,9 +64,9 @@ if($result1->num_rows> 0){
            
   
           if($typeOfinv=="Bronze"){
-            $i = 0.03;
+            $i = 0.04;
             $n=1; 
-            $Bal = balance($amount,0.03,1);
+            $Bal = balance($amount,0.04,1);
             $nwBal = Nwbalance($Bal,$balance);
             $Proft = profit($Bal,$deposit);
             

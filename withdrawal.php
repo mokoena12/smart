@@ -90,7 +90,7 @@ else{
                 <a href="profile.php"><i class="fa fa-user"></i>Profile</a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-tasks"></i>
+                <a href="activity log.php"><i class="fa fa-tasks"></i>
                   Active Logs</a>
               </li>
               <li>
@@ -102,7 +102,10 @@ else{
                   Withdrawal</a>
               </li>
               <li>
-                <a href="#">
+                    <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
+                </li>
+              <li>
+                <a href="subscription.php">
                   <i class="fa fa-credit-card"></i>
                   Subscription
                 </a>

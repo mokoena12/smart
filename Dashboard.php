@@ -120,26 +120,29 @@ if($result->num_rows > 0){
           <div class="sidebar-manus">
             <ul>
               <li>
-                <a href="#"><img  class="sidebarspace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>
+                <a href="Dashboard.php"><img  class="sidebarspace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>
                 Dashboard</a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-user"></i>Profile</a>
+                <a href="profile.php"><i class="fa fa-user"></i>Profile</a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-tasks"></i>
+                <a href="activity log.php"><i class="fa fa-tasks"></i>
                   Active Logs</a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-exchange"></i>
+                <a href="deposit.php"><i class="fa fa-exchange"></i>
                   Deposit</a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-exchange"></i>
+                <a href="withdrawal.php"><i class="fa fa-exchange"></i>
                   Withdrawal</a>
               </li>
               <li>
-                <a href="">
+                <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
+                </li>
+              <li>
+                <a href="subscription.php">
                   <i class="fa fa-credit-card"></i>
                   Subscription
                 </a>

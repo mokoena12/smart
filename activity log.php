@@ -102,6 +102,9 @@ else{
                     Withdrawal</a>
                 </li>
                 <li>
+                    <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
+                </li>
+                <li>
                     <a href="subscription.php">
                     <i class="fa fa-credit-card"></i>
                     Subscription

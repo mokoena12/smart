@@ -542,16 +542,14 @@ height: 100%;
   position: absolute;
   top: 65%;
   left:30%;
-  width: 30%;
-  height: 25%;
-  font-size: 1em;
+  font-size: 90%;
   
   }
   
   .investt .invest_btn{
   border-radius: 3px;
   padding: 4px;
-  padding-left: 20p;
+  padding-left: 10px;
   font-size: 17px;
   font-weight: bold;
   
@@ -965,7 +963,7 @@ header .logo img{
 }
 /*end-threesteps*/
 
-/*why chose  us*/
+/*why choose  us*/
 
 .security{
 display: flex;
@@ -975,7 +973,7 @@ flex-direction: column;
 .security>div{
   margin: 1em;
 }
-/*end-why chose  us*/
+/*end-why choose  us*/
 
 /*investment plans*/
   
@@ -987,18 +985,16 @@ flex-direction: column;
 .planns-cards{
   display: flex;
   flex-direction:row;
-  padding-left: 10.5%;
-  margin: 1em;
+  width: 100%;
 }
 .planns-cards>div{
-  margin: 0.5em;
+  margin: 3%;
   text-align: center;
-  padding: 5px;
+  padding: 2px;
+  width: 95%;
 }
 .planns-cards>div a{
-  padding: 8px;
-  width: 55%;
-  left: 20%;
+  padding: 3px;
 }
 .planns-cards>div>p{
   color: white;
@@ -1016,33 +1012,32 @@ flex-direction: column;
 
 .peoplee{
   display: flex;
-  flex-direction: column;
-  align-content: center;
+  flex-direction: row;
+  width: 100%;
 }
 
 .peoplee>div{
-  margin: 1em;
   text-align: center;
-  width: 60%;
-  left: 17%;
- 
+  width:98%;
+  margin: 4px;
+}
+.peoplee>div p{
+  padding-top: 10%;
+}
+.imgg{
+  width: 95%;
+  margin: 1%;
 }
 
-.imagess>i{
-  font-size: 4em;
-}
-.imagess>div{
- margin: 1em;
-}
 .imgg>img{
-  border-radius: 6px;
-  width: 95%;
+  border-radius: 4px;
+  width: 90%;
+
 }
 
 /*end-statistics*/
 
 /*FAQ*/
-
 .questions{
   display: flex;
   flex-direction:column;
@@ -1059,16 +1054,22 @@ flex-direction: column;
   color: white;
   text-align: center;
 }
-.about-content{
+.about-cotent{
   margin: 2em;
   align-content: center;
 }
 .about-content .picc{
-  padding-left: 17%;
+  width: 95%;
  
+}
+.picc{
+  left: 4%;
 }
 .picc>img{
   border-radius: 7px;
+  width: 98%;
+  height: 70%;
+  margin: 3%;
 }
 .para>p{
   left: -2%;
@@ -1143,7 +1144,20 @@ flex-direction: column;
   }
 /*leave a mesage form*/
 
-
+.formmmm>input[type=text], .formmmm>select, .formmmm>textarea {
+  width: 100%; 
+  padding: 12px;  
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box;
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
+}
+.widgett>img{
+  height: 80%;
+  width: 80%;
+}
 .formmm{
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -1161,36 +1175,14 @@ flex-direction: column;
   
 }
 
-.containerr {
-  width: 80%;
-  height:20em;
-  margin: auto;
-}
-
 .containerr .widgett{
-  width: 80%;
-  height:20em;
-  margin: auto;
-  background-image: white;
+  width: 96%;
+  height:27em;
+  margin: 1%;
+  background-image: rgb(253, 253, 253);
   background-color: white;
 }
 /*end-leave a mesage form*/
-
-
-/* smart investa lastblock */
-.lastblock>h2{
-  text-align: center;
-  color: white;
-  padding:0.5em;
-}
-.last-blockdiv{
-  display: flex;
-  flex-direction: row;
-  margin: 0.5em;
-  padding-left: 6%;
-
-}
-
 
 /* smart investa lastblock */
 .lastblock>h1{
@@ -1204,7 +1196,9 @@ flex-direction: column;
   margin: 0.5em;
   padding-left: 6%;
 }
-
+.block-para i{
+  color: white;
+}
 .last-blockdiv>div{
   margin: 1em;
   font-size: 1.3em;
@@ -1212,23 +1206,7 @@ flex-direction: column;
 .quick-links h5{
   font-size: 1em;
 }
-.quick-links a:link{
-  text-decoration: none;
-  color: #062a52;
-}
-.quick-links a:hover{
-  color: #eca31b;
-}
-.services h5{
-  font-size: 1em;
-}
-.services a:link{
-  text-decoration: none;
-  color: #062a52;
-}
-.services a:hover{
-  color: #eca31b;
-}  
+
 /* end-smart investa lastblock */
 
 /* start of the withdrawal section */
@@ -1624,19 +1602,6 @@ flex-direction: column;
 .p-btnsub {
   margin-top: 25px;
   margin-left: 30%;
-}
-.displayers {
-  display: none;
-}
-/* start of the login details */
-.displayers2 {
-  display: none;
-}
-/* end of the login details */
-
-/* start of banking details */
-.displayers3 {
-  display: block;
 }
 
 .profile-content3 {

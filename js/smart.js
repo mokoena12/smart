@@ -1,3 +1,4 @@
+  
   //Text animation ==== //
   var text_w = 0;
   var  slide_num = 0;
@@ -118,6 +119,7 @@ function Loading(){
 
 function fade(){
     document.getElementById("rotation").style.display="none";
+    document.getElementById("rotation").value;
     document.getElementById("Loading").style.display="none";
    
 }
@@ -125,14 +127,13 @@ function fade(){
 
 //Scroll Event function
 function swipe(){ 
-  view1(".faq-text");view1(".stats1"); view1(".imgg");view1(".card_animate3"); //invest-text
-  view1(".threestep-text"); view1(".invest-text");view3(".img_network"); view1("iframe"); view1(".chose-text");view1(".card_animate1");
-  view2(".stat-text");view2(".card_animate2"); view2(".card_animate4");
+  view1(".faq-text");view1(".widgett");view1(".services");view1(".quick-links");view1(".formmm");view3(".block-para");view1(".freq_q");view1(".stats1"); view1(".imgg");view1(".card_animate3"); //invest-text
+  view1(".threestep-text");view1(".about-head"); view1(".invest-text");view3(".img_network"); view1("iframe"); view1(".chose-text");view1(".card_animate1");
+  view2(".stat-text");view2(".picc");view2(".para");view2(".card_animate2"); view2(".card_animate4");
 
 }
 
-
-//=====Count the Invested Amount=====//
+//=====Count the Invested Amount=====// 
 var count1 = 100;
 var count2 = 0.01;
 var count3 = 100000;
@@ -227,3 +228,7 @@ $(document).ready(function(){
   });
 });
 //====End=====//
+
+
+
+

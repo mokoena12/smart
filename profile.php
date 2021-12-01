@@ -1,9 +1,4 @@
 <?php
-//Create table 
-//create functions for balance and profit
-// profit = balance - deposit
-// A = P(1  + i)^n 
-// investment table (user, type,period) 
 
 session_start();
 
@@ -17,7 +12,68 @@ else{
   header("Location:login.php?user2=$err");
 
 }
+require_once "connect.php";
+$email = "";
+$sql_email = "SELECT email FROM registration WHERE username='$user' ";
+$results = $conn->query($sql_email);
+if($results->num_rows>0){
+  $row = $results->fetch_assoc(); 
+  $email = $row["email"];
+}
 
+?>
+
+<?php
+
+$submit_err =$submit_err1 =$submit=  $submit1= "";
+if( isset($_FILES["btnFileUpload"])){
+  $file_name = $user;
+$target_dir= "profiles/"; //specifies the directory where the file is going to be placed
+
+$target_file = $target_dir.basename($_FILES["btnFileUpload"]["name"]);  // specifies the path of uploaded file
+$uploadok=1;
+
+$FileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+
+//check the size of the file
+
+if($_FILES["btnFileUpload"]["size"]>1737418240){
+	
+	$submit_err1="sorry your photo is too large. upload files that are less then 10MB";
+	$uploadok=0;
+}
+//check the file type and limit it
+
+if($FileType != "jpg" && $FileType != "jpeg" && $FileType != "png" ){
+	$submit1="sorry, only JPG,JPEG and PNG files are allowed.";
+	$uploadok = 0;
+}
+
+//check if upload was set to zero by error
+
+if($uploadok==0){
+    // , 
+$submit="<div class='response'><span class='response_cancel'> &times </span>
+		
+		<p style='color:green;'><b><span style='color:red;'>Tip</span>: Take picture of yourself with  phone then upload it</b> </p></div>";
+        echo "<script type='text/javascript'>alert('Your photot is not uploaded, error(101) name:".$submit1." $submit_err1 . $submit_err ') </script>";
+
+}
+else{
+	if (move_uploaded_file($_FILES["btnFileUpload"]["tmp_name"],"profiles/{$file_name}.$FileType")){
+		$submit="<div class='response'><span class='response_cancel'> &times </span>
+		
+		<br><span style='color:green;'>Your profile is successfully updated</span>
+	</div>";
+	}
+	else{
+		echo "<script type='text/javascript' > alert('Error encoutered while uploading the picture please try again later')</script>";
+	}
+
+}
+
+}
 ?>
 
 <Doctype html>
@@ -58,15 +114,17 @@ else{
   <link rel="stylesheet" href="css/smart.css">
   <!--end of link styling-->
   
+  
   <!-- javascript -->
-  <script type="text/javascript"> src="js/smart.js"</script>
-  <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.js"</script>
-  <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"</script>
-  <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"</script>
+  <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.js"></script>
+  <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"></script>
+  <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="js/dash.js"></script>
   
   
   </head>
-  <body class="turning">
+  <body class="turning"  onload="init()">
     <div class="wrapper-box">
       <!-- start of the sidemanu -->
       <!-- start of the sidebar -->
@@ -141,48 +199,53 @@ else{
                 <li class="change active">Profile</li>
               </ul>
             </div>
-          </div>
-        </section>
-        <!-- end of the header part -->
 
-          <!-- start of the profile contant -->
-          <section>
-              <div class="profile-content">
-                  <div class="profile-container">
-                      <div class="profile-avater">
-                          <img class="profile-pic" src="img/BITCOIN.png" alt="profile">
-                          <h5>
-                              <b>Mokoena</b>
-                          </h5>
-                          <span>mokoenakgotlelelo596@gmail.com</span>
-                          <span class="users-control">
-                              <p>
-                                  <b>Role:</b>
-                                  users
-                              </p>
-                          </span>
-                          <span class="users-control2">
-                              <p>
-                                  <b>Joined:</b>
-                                  1 month ago
-                              </p>
-                          </span>
-                          <div>
-                              <label for="filebtn" class="filebtn">
-                                  Update Avatar
-                                  <input class="btn-none" type="file" name="file-upload" id="filebtn" >
-                              </label>
-                          </div>
-                      </div>
-                      <div class="profile-details">
-                          <div class="profile-header">
-                              <ul class="profile-flex">
-                                  <li><a href="#"> Account Details</a></li>
-                                  <li><a href="#">Login Details</a></li>
-                                  <li><a href="#">Banking Details</a></li>
-                              </ul>
-                          </div>
-                          <!-- end section for the avater -->
+          </div>
+       
+
+          </section>
+          <!-- end of the header part -->
+          
+
+            <!-- start of the profile contant -->
+            <section>
+                <div class="profile-content">
+                    <div class="profile-container">
+                        <div class="profile-avater">
+                            <img class="profile-pic" src="img/BITCOIN.png" alt="profile">
+                            <h5>
+                                <b>Mokoena</b>
+                            </h5>
+                            <span><?php echo $email;?></span>
+                            <span class="users-control">
+                                <p>
+                                    <b>Role:</b>
+                                    users
+                                </p>
+                            </span>
+                            <span class="users-control2">
+                                <p>
+                                    <b>Joined:</b>
+                                    1 month ago
+                                </p>
+                            </span>
+                            <div>
+                                <label for="filebtn" class="filebtn">
+                                    Update Avatar
+                                    <input class="btn-none" type="file" name="file-upload" id="filebtn" >
+                                </label>
+                            </div>
+                        </div>
+                        <div class="profile-details">
+                            <div class="profile-header">
+                                <ul class="profile-flex">
+                                    <li><a href="#account" onclick="profile(0)"> Account Details</a></li>
+                                    <li><a href="#login" onclick="profile(1)">Login Details</a></li>
+                                    <li><a href="#banking" onclick="profile(2)">Banking Details</a></li>
+                                </ul>
+                            </div>
+                            <!-- end section for the avater -->
+
 
                           <!-- start sectin fo the profile contents -->
                           <section class="displayers">
@@ -467,64 +530,70 @@ else{
                               </form>
                           </section>
 
-                          <!-- start of the login details -->
-                          <section class="displayers2">
-                              <form action="#" method="post">
-                                  <div class="profile-content2">
-                                      <div class="diveform" >
-                                          <label for="emall" >Email</label>
-                                          <input class="name-inputs" type="text"  name="role" id="Emails" placeholder="Email">
-                                      </div>
-                                      <div class="diveform">
-                                          <label for="userna">Username</label>
-                                          <input type="text" class="name-inputs" name="users" id="userna" placeholder="Username">
-                                              
-                                      </div>
-                                      <div class="diveform">
-                                          <label for="passwar">Password</label>
-                                              <input type="password" class="name-inputs" name="full" id="passwar" placeholder="Password">
-                                      </div>
-                                      <div class="diveform">
-                                          <label for="pass-comfirm">Confirm Password</label>
-                                          <input type="pass" class="name-inputs" name="passwar" id="passwar" placeholder="Password">
-                                      </div>
-                                  </div>
-                                  <div class="p-btnsub">
-                                      <input type="submit" id="profile-btn" value="Update Logins">
-                                  </div>
-                              </form>
-                          </section>
-                          <!-- end of the login details -->
-
-                          <!-- start of banking details -->
-                          <section class="displayers3">
-                              <form action="#" method="post">
-                                  <div class="profile-content3">
-                                      <div class="diveform3" >
-                                          <label for="Bankname" >Bank Name</label>
-                                          <input class="name-inputs" type="text"  name="bank" id="bankname" placeholder="Bank Name">
-                                      </div>
-                                      <div class="diveform3">
-                                          <label for="userna">Account Name</label>
-                                          <input type="text" class="name-inputs" name="Accountname" id="accountname" placeholder="Account Name">
-                                      </div>
-                                      <div class="diveform3">
-                                          <label for="Accountnumber">Account Number</label>
-                                              <input type="text" class="name-inputs" name="a-number" id="accountnumber" placeholder="Account Number">
-                                      </div>
-                                      <div class="diveform3">
-                                          <label for="BITCOIN">Bitcoin Address</label>
-                                          <input type="text" class="name-inputs" name="btc-adress" id="bitcoin-adress" placeholder="Bitcoin Address">
-                                      </div>
-                                  </div>
-                                  <div class="p-btnsub3">
-                                      <input type="submit" id="profile-btn" value="Update Banking Details">
-                                  </div>
-                              </form>
-                          </section>
+      
                   
-                          <!-- end of banking details -->
+                          
                       </div>
+
+                            <!-- start of the login details -->
+                            <section class="displayers" >
+                                <form action="#" method="post">
+                                    <div class="profile-content2">
+                                        <div class="diveform" >
+                                            <label for="emall" >Email</label>
+                                            <input class="name-inputs" type="text"  name="role" id="Emails" placeholder="Email">
+                                        </div>
+                                        <div class="diveform">
+                                            <label for="userna">Username</label>
+                                            <input type="text" class="name-inputs" name="users" id="userna" placeholder="Username">
+                                                
+                                        </div>
+                                        <div class="diveform">
+                                            <label for="passwar">Password</label>
+                                                <input type="password" class="name-inputs" name="full" id="passwar" placeholder="Password">
+                                        </div>
+                                        <div class="diveform">
+                                            <label for="pass-comfirm">Confirm Password</label>
+                                            <input type="pass" class="name-inputs" name="passwar" id="passwar" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="p-btnsub">
+                                        <input type="submit" id="profile-btn" value="Update Logins">
+                                    </div>
+                                </form>
+                            </section>
+                            <!-- end of the login details -->
+
+                            <!-- start of banking details -->
+                            <section class="displayers">
+                                <form action="#" method="post">
+                                    <div class="profile-content3">
+                                        <div class="diveform3" >
+                                            <label for="Bankname" >Bank Name</label>
+                                            <input class="name-inputs" type="text"  name="bank" id="bankname" placeholder="Bank Name">
+                                        </div>
+                                        <div class="diveform3">
+                                            <label for="userna">Account Name</label>
+                                            <input type="text" class="name-inputs" name="Accountname" id="accountname" placeholder="Account Name">
+                                        </div>
+                                        <div class="diveform3">
+                                            <label for="Accountnumber">Account Number</label>
+                                                <input type="text" class="name-inputs" name="a-number" id="accountnumber" placeholder="Account Number">
+                                        </div>
+                                        <div class="diveform3">
+                                            <label for="BITCOIN">Bitcoin Address</label>
+                                            <input type="text" class="name-inputs" name="btc-adress" id="bitcoin-adress" placeholder="Bitcoin Address">
+                                        </div>
+                                    </div>
+                                    <div class="p-btnsub3">
+                                        <input type="submit" id="profile-btn" value="Update Banking Details">
+                                    </div>
+                                </form>
+                            </section>
+                    
+                            <!-- end of banking details -->
+                        </div>
+
 
 
                   </div>
@@ -539,6 +608,7 @@ else{
                   <a href="#">SmartInvesta</a>
                   .All right reseved
 
+
                   </strong>
 
               </footer>
@@ -547,6 +617,10 @@ else{
               <!-- end section for the footer -->
       </div>
     </div>          
+
+
+  
+
   </body>
   </html>
 

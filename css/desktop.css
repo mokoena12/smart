@@ -1202,7 +1202,6 @@ color: white;
 .sidebar-manus ul li a {
 text-decoration: none;
 color: black;
-height: 5em;
 width: 10em;
 align-items: center;
 
@@ -1213,13 +1212,13 @@ border-radius: 6px;
 }
 .sidebar-manus ul li a i {
 height: 1em;
-min-width: 50px;
+min-width: 30px;
 border-radius: 12px;
-line-height: 35px;
+line-height: 10px;
 }
 /* start of sidebar icon spassing */
 .sidebarspace  {
-padding-right: 1.2em;
+padding-right: 1em;
 }
 li .fa {
 margin-left: 2px;
@@ -1262,11 +1261,9 @@ height: 100%;
 width: 83%;
 height: 100%;
 }
-
-
 .header-dash {
 position: relative;
-background-color: rgb(42, 42, 241);
+background-color: black !important;
 color: white;
 height: 4em;
 width: 100%;
@@ -2012,7 +2009,6 @@ width: 17%;
 height: 100%;
 box-shadow: 10px 2px 8px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)!important;
 overflow-y: hidden;
-z-index: 1038;
 }
 .sidebar-flex {
 display: flex;
@@ -2284,8 +2280,6 @@ width: 90%;
 .sidebar-manus {
 position: relative;
 font-weight: bold;
-padding-left: 1em;
-padding-right: 1em;
 margin-top: 1em;
 color: white;
 
@@ -2293,26 +2287,25 @@ color: white;
 .sidebar-manus ul li a {
 text-decoration: none;
 color: black;
-height: 1em;
 width: 5em;
 align-items: center;
 
 }
-.sidebar-manus ul li a:hover {
+.sidebar-manus ul li:hover {
 background-color: blue;
 }
 .sidebar-manus ul li a i {
 height: 1em;
-min-width: 50px;
+min-width: 30px;
 border-radius: 12px;
-line-height: 50px;
+line-height: 30px;
 }
 /* start of sidebar icon spassing */
 .sidebarspace  {
 padding-right: 1em;
 }
 li .fa {
-margin-left: 4px;
+margin-left: 1px;
 color: black;
 }
 .fa-user {
@@ -2904,18 +2897,6 @@ text-align: center;
 
 
 /*leave a mesage form*/
-.formmmm>input[type=text], select, textarea {
-  width: 100%; 
-  padding: 12px;  
-  border: 1px solid #ccc; 
-  border-radius: 4px; 
-  box-sizing: border-box;
-  margin-top: 6px; 
-  margin-bottom: 16px; 
-  resize: vertical 
-}
-
-
 .formmm{
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -2966,6 +2947,59 @@ text-align: center;
 }
 /* end-smart investa last blocka*/
 
+
+/* start of the referral */
+.refferal-body {
+  padding: 1em;
+  width: 100%;
+}
+.refferal-link {
+  padding: 1em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+ 
+}
+.refferal-link label {
+  font-weight: bold;
+}
+.refferal-link input {
+  width: 100%;
+  height: 2.5em;
+  border-radius: 4px;
+  padding: 1em;
+}
+.referral-members {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin-top: 2em;
+}
+.table2 {
+  display: table;
+  width: 100%;
+  margin-bottom: 1em;
+  background-color: rgb(161, 208, 252);
+  border-top-color: grey;
+  border-bottom-color: grey;
+  border-right-color: grey;
+  border-left-color: grey;
+  border-radius: 3px
+}
+.table2 thead {
+  display: table-header-group;
+  vertical-align: middle;
+}
+.table2 thead tr {
+  display: table-row
+}
+.history-deposit2 {
+  padding: 1em;
+  border: 1px solid #ccc;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 2em;
+}
+/* end of the referral */
 
 
 

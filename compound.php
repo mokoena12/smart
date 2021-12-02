@@ -7,7 +7,7 @@
 //Select Bal and deposit
 
 // Create table for Recent trading history -- user Evidence
-// Create php functions for live trading -- user Belmiro
+// Create php functions for live trading -- user Belmiro 
 
 session_start();
 if (isset($_SESSION["investa_user"])){
@@ -36,7 +36,7 @@ function balance(int $A,int $i,int $n) {
     $Bal = $A * (1 + $i);
    return $Bal;
 }
-function Nwbalance(int $Bal,int $rowB){
+function Nwbalance(int $Ba,int $rowB,int $n){
   $nwBal = $rowB + $Bal;
   return $nwBal;
 }
@@ -65,9 +65,10 @@ if($result1->num_rows> 0){
           if($typeOfinv=="Bronze"){
             $i = 0.04;
             $n=1; 
-            $Bal = balance($amount,0.04,1);
-            $nwBal = Nwbalance($Bal,$balance);
-            $Proft = profit($Bal,$deposit);
+            echo balance($amount,0.04,1);
+            
+            echo profit($Bal,$deposit);
+           
             
             $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
             WHERE username = '$user'";
@@ -75,9 +76,9 @@ if($result1->num_rows> 0){
          }else if($typeOfinv=="Titanium"){
             $i = 0.05;
             $n=1;
-            $Bal = balance($amount,0.05,1);
-            $nwBal = Nwbalance($Bal,$balance);
+            $balance = balance($amount,0.05,1);
             $Proft = profit($Bal,$deposit);
+
             $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
             WHERE username = '$user'";
             
@@ -85,7 +86,7 @@ if($result1->num_rows> 0){
             $i = 0.10;
             $n=1;
             $Bal = balance($amount,0.10,1);
-            $nwBal = Nwbalance($Bal,$balance);
+            
             $Proft = profit($Bal,$deposit);
             $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
             WHERE username = '$user'";
@@ -94,7 +95,7 @@ if($result1->num_rows> 0){
             $i = 0.20;
             $n=1;
             $Bal = balance($amount,0.20,1);
-            $nwBal = Nwbalance($Bal,$balance);
+            
             $Proft = profit($Bal,$deposit);
             $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
             WHERE username = '$user'";

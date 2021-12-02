@@ -61,51 +61,53 @@
                     </div>
                 </div>             
                 <div class="sidebar-manus">
-                    <ul>
-                        <li>
-                            <a href="Dashboard.php"><img  class="sidebarspace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>
-                            Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="profile.php"><i class="fa fa-user"></i>Profile</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-tasks"></i>
-                            Active Logs</a>
-                        </li>
-                        <li>
-                            <a href="deposit.php"><i class="fa fa-exchange"></i>
-                            Deposit</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fa fa-exchange"></i>
-                            Withdrawal</a>
-                        </li>
-                        <li>
-                            <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
-                        </li>
-                        <li>
-                            <a href="">
-                            <i class="fa fa-credit-card"></i>
-                            Subscription</a>
-                        </li>
-                        <li>
-                            <a href="logout.php"><i class="fa fa-sign-out"></i>Log out</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- end of the sidebar -->
-
-             <!-- start of the hearder part -->
+            <ul>
+              <li>
+                <a href="Dashboard.php"><img  class="sidebarspace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>
+                Dashboard</a>
+              </li>
+              <li>
+                <a href="profile.php"><i class="fa fa-user"></i>Profile</a>
+              </li>
+              <li>
+                <a href="activity log.php"><i class="fa fa-tasks"></i>
+                  Active Logs</a>
+              </li>
+              <li>
+                <a href="deposit.php"><i class="fa fa-exchange"></i>
+                  Deposit</a>
+              </li>
+              <li>
+                <a href="withdrawal.php"><i class="fa fa-exchange"></i>
+                  Withdrawal</a>
+              </li>
+              <li>
+                <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
+                </li>
+              <li>
+                <a href="subscription.php">
+                  <i class="fa fa-credit-card"></i>
+                  Subscription
+                </a>
+                
+              </li>
+              <li>
+                <a href="logout.php"><i class="fa fa-sign-out"></i>Log out</a>
+              </li>
+  
+            </ul>
+          </div>
+        </div>
+  
+        <!-- start of the hearder part -->
             <div class="w-box" >
                 <header class="header-dash">
                     <div>
-                        <a href="#"><img src="img/smart.investa.logo2.png" class="logo_1" alt="logo"></a>
+                    <a href="#"><img src="img/smart.investa.logo2.png" class="logo_1" alt="logo"></a>
                     </div>
                     <div class="search">
-                        <i class="fas fa-search"></i>
-                        <input type="search" placeholder="Search...">
+                    <i class="fas fa-search" onclick="search()"></i>
+                    <input type="search" name="search_d" id="search_d" placeholder="Search...">
                     </div>
                 </header>
                 <section>
@@ -115,7 +117,7 @@
                         </div>
                         <div>
                             <ul class="style">
-                                <li class="change1"><a href="/" style="text-decoration: none; color: blue; padding-right: 5px;">Home</a></li>
+                                <li class="change1"><a href="index.html" style="text-decoration: none; color: blue; padding-right: 5px;">Home</a></li>
                                 <li class="change active">Deposit Transaction</li>
                             </ul>
                         </div>
@@ -130,16 +132,23 @@
                             <div class="span-payment">
                                 <h5>Payment Methods</h5>
                             </div>
-                            <div class="payment-wallet">
-                                <h5>BITCOIN</h5>
-                                <div></div>
-                            </div>
-                            <div class="payment-wallet">
-                                <h5>Bank</h5>
-                                <div></div>
-                            </div>
-        
-        
+                            <form action="#" method="post" enctype="multipart/form-data"></form>
+                                <div class="payment-wallet">
+                                    <select name="depositing-methods" id="methods-fund">
+                                        <option value="BITCOIN">BITCOIN</option>
+                                        <option value="BANK">BANK</option>
+                                        <option value="Instant EFT">Instant EFT</option>
+                                    </select>
+                                </div>
+                                <div class="for-bitcoin payment-wallet">
+                                    <div>
+                                        <input type="text" name="amount-paybtc" id="btc-amount" placeholder="Enter Amount" required>
+                                    </div>
+                                    <div class="button-sub">
+                                        <input class="button" type="submit" name="btc-btn" id="depo-btc" value="Deposit">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                         <div class="notify-deposit">
                             <div class="h5change">

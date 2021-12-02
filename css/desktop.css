@@ -1005,8 +1005,8 @@ flex-direction: row;
 }
 /* start of logo login */
 .logo_img{
-height: 4em;
-width: 8em;
+height: 6em;
+width: 12em;
 text-align: center;
 margin-top: -1px;
 margin-bottom: 10px;
@@ -1132,6 +1132,18 @@ div.box_header {
   margin-right: 6em;
 
 
+}
+.credentials2-logout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.subbtn2 {
+  width: 35%;
+}
+.subbtn3 {
+  width: 35%;
 }
 
 .fileupload {
@@ -1598,6 +1610,7 @@ a.elevation-1 {
   border-bottom: 1px solid grey;
   padding: 10px;
   color: black;
+  font-weight: bold;
 
 
 }
@@ -1711,6 +1724,7 @@ a.elevation-1 {
 }
 .FOREX span {
   color: black;
+  font-weight: bold;
 }
 .cross-chart {
   height: 30em;
@@ -1755,12 +1769,30 @@ text-align: center;
   color: black;
 }
 .payment-wallet {
-  border: 1px solid gray;
-  padding-left: 1em;
   padding-top: 0.50em;
   border-radius: 3px;
   margin-bottom: 1em;
 
+}
+#btc-amount {
+ width: 100%;
+ border-radius: 3px;
+ height: 2.5em;
+}
+#depo-btc {
+  width: 45%;
+ border-radius: 4px;
+ height: 15%;
+}
+.button-sub {
+  margin-left: 40%;
+  margin-top: 5%;
+}
+
+
+.payment-wallet select {
+  height: 2.5em;
+  width: 100%;
 }
 .payment-wallet h5 {
   height: fit-content;
@@ -2782,17 +2814,7 @@ text-align: center;
 .span-payment {
   color: black;
 }
-.payment-wallet {
-  border: 1px solid gray;
-  padding-left: 1em;
-  padding-top: 0.50em;
-  border-radius: 3px;
 
-}
-.payment-wallet h5 {
-  height: fit-content;
-  color: blue;
-}
 
 .notify-deposit {
   border-radius: 3px;

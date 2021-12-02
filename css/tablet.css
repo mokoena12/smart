@@ -679,8 +679,9 @@ to{
 
 }
 .logo_img {
+  height: 5em;
+  width: 10em;
   text-align: center;
-  margin-top: 40px;
 
 }
 .center{
@@ -1582,6 +1583,7 @@ a.elevation-1 {
   border-bottom: 1px solid #ccc;
   padding: 10px;
   color: black;
+  font-weight: bold;
 
 
 }
@@ -1743,13 +1745,29 @@ text-align: center;
   color: black;
 }
 .payment-wallet {
-  border: 1px solid gray;
-  padding-left: 1em;
   padding-top: 0.50em;
   border-radius: 3px;
   margin-bottom: 1em;
 
 }
+.payment-wallet select {
+  height: 2.5em;
+  width: 100%;
+}
+#btc-amount {
+  width: 100%;
+  border-radius: 3px;
+  height: 2.5em;
+ }
+ #depo-btc {
+   width: 45%;
+  border-radius: 4px;
+  height: 15%;
+ }
+ .button-sub {
+   margin-left: 40%;
+   margin-top: 5%;
+ }
 .payment-wallet h5 {
   height: fit-content;
   color: blue;
@@ -2136,7 +2154,20 @@ margin-bottom: -20em;
 }
 /* end of the referral */
 
-
+/* logout styles */
+.credentials2-logout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.subbtn2 {
+  width: 35%;
+}
+.subbtn3 {
+  width: 35%;
+}
+/* end logout styles */
 
 
 

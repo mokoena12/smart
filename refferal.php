@@ -59,11 +59,11 @@ else{
   <!--end of link styling-->
   
   <!-- javascript -->
-  <script type="text/javascript"> src="js/smart.js"</script>
-  <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.js"</script>
-  <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"</script>
-  <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"</script>
-  
+  <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.js"></script>
+  <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"></script>
+  <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="js/dash.js"></script>
   
   </head>
   <body class="turning">
@@ -133,12 +133,12 @@ else{
           <section>
             <div class="dash">
               <div>
-                <h1>Refferal</h1>
+                <h1>Referral</h1>
               </div>
               <div>
                 <ul class="style">
                   <li class="change1"><a href="index.html" style="text-decoration: none; color: blue; padding-right: 5px;">Home</a></li>
-                  <li class="change active">Refferal</li>
+                  <li class="change active">Referral</li>
                 </ul>
               </div>
             </div>
@@ -151,7 +151,7 @@ else{
                     <div class="refferal-link">
                         <h5>To Referrer a User, Copy the referal link for registration</h5>
                         <label for="refferal link">Referral Link</label><br>
-                        <input type="text" name="referral_link" id="ref-link" value="http://user.Smartinvesta.co.za/register?ref=ref-numbers" disabled>
+                        <input type="text" name="referral_link" id="ref-link" value="https://www.smartinvesta.co.za/Registration.php?ref=<?php echo $user;?>" disabled>
                     </div>
                     <div class="referral-members">
                         <h5>Your referral members</h5>

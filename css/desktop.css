@@ -747,34 +747,32 @@ div.box_header {
 
 /* end of registration form for desktop */
 
-/* invest iin bitcoin*/
-.investt{
-  position: absolute;
-  top: 75%;
-  left:75%;
-  font-size: 90%;
-  
-  }
-  
-  .investt .invest_btn{
-  border-radius: 3px;
-  padding-bottom: 10px;
-
-  font-size: 20px;
-  font-weight: bold;
-  
-  }
-  
-  .investt .iconss{
-  font-weight: bold;
-  font-size: 1.9em;
-  color: rgb(232, 231, 236);
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  }
-/* end of invest iin bitcoin*/
-
+  /* invest iin bitcoin*/
+  .investt{
+    position: absolute;
+    top: 65%;
+    left:73%;
+    }
+    
+    .investt .invest_btn{
+    border-radius: 3px;
+    font-size: 24px;
+    padding: 4px;
+    margin: 6px;
+    text-align: center;
+    }
+    
+    .investt .iconss{
+    font-weight: bold;
+    font-size: 2em;
+    color: rgb(232, 231, 236);
+    width:85%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    }
+    
+    /* end of invest iin bitcoin*/
 /* login and register*/
 
 
@@ -2940,7 +2938,6 @@ text-align: center;
   display: flex;
   flex-direction: row;
   margin: 0.5em;
-  padding-left: 6%;
   align-content: center;
 }
 

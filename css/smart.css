@@ -574,6 +574,9 @@ header .logo img{
   .services a:hover{
     color: #062a52;
   }  
+  .last-blockdiv .block-para a:link{
+    text-decoration: none;
+  }
  /* end-smart investa last block*/
 
 /* Style for animations    */

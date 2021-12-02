@@ -537,36 +537,33 @@ height: 100%;
   }
   /*end of widget style*/
 
-  /* invest iin bitcoin*/
-.investt{
+
+   /* invest iin bitcoin*/
+ .investt{
   position: absolute;
-  top: 65%;
+  top: 78%;
   left:30%;
-  font-size: 90%;
-  
   }
   
   .investt .invest_btn{
   border-radius: 3px;
+  font-size: 18px;
   padding: 4px;
-  padding-left: 10px;
-  font-size: 17px;
-  font-weight: bold;
-  
+  margin: 2px;
+  text-align: center;
   }
   
   .investt .iconss{
   font-weight: bold;
   font-size: 1.5em;
   color: rgb(232, 231, 236);
-  width:80%;
+  width:90%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   }
   
   /* end of invest iin bitcoin*/
-  
 
 
 /*==== Smart investor text======*/
@@ -912,8 +909,8 @@ header .logo img{
 
 .text-animate{
   position: absolute;
-  left: 30%;
-  top: 30em;
+  left: 25%;
+  top: 65%;
 }
 
 .text-animate #text1,#text2,#text3,#text4,#text5{
@@ -1196,7 +1193,6 @@ flex-direction: column;
   display: flex;
   flex-direction: row;
   margin: 0.5em;
-  padding-left: 6%;
 }
 .block-para i{
   color: white;

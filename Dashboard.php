@@ -96,7 +96,13 @@ $balance =  $row["balance"];
         <div class="sidebar">
           <div class="sidebar_profile">
             <div class="sidebar-flex" >
-              <img class="Pcontrol" src="img/BITCOIN.png" alt="profile">
+            <?php 
+                        $avatar = "profiles/$user.png";
+                        if(!file_exists($avatar)){
+                            $avatar = "profiles/male.png";
+                        }
+                        ?>
+                        <img class="Pcontrol" src="<?php echo $avatar?>" alt="profile">
 
               <span><?php echo "Hi ".$user; ?></span>
 
@@ -156,7 +162,9 @@ $balance =  $row["balance"];
           <section>
             <div class="dash">
               <div>
-                <h1>Dashboard</h1>
+                <h1>Dashboard <span style="color:green"><?php if(isset($_GET["results"])){
+                echo $_GET["results"];
+              } ?></span></h1>
               </div>
               <div>
                 <ul class="style">
@@ -208,7 +216,7 @@ $balance =  $row["balance"];
                   </a>
                 </div>
                 <div class="infom">
-                  <span class="personal_balance">Referal Bonus</span>
+                  <span class="personal_balance">Referral Bonus</span>
                   <span class="money_balance">$ <?php echo $bonus;?></span>
                 </div>
               </div>
@@ -266,7 +274,7 @@ $balance =  $row["balance"];
                   </a>
                 </div>
                 <div class="infom">
-                  <span class="personal_balance">Withdrawal</span>
+                  <span class="personal_balance">Equity</span>
                   <span class="money_balance" id="prices2">$ <?php echo $withdrawal?></span>
                 </div>
       
@@ -308,9 +316,7 @@ $balance =  $row["balance"];
               <div class="header_TO">
                 <span>INVESTING PLAN</span>
               </div>
-              <span style="color:green"><?php if(isset($_GET["results"])){
-                echo $_GET["results"];
-              } ?></span>
+              
               <div class="control-plan"> 
                 <div class="invest-inputs">
                   <div class="selectionplan">

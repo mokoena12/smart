@@ -73,7 +73,13 @@ else{
         <div class="sidebar">
           <div class="sidebar_profile">
             <div class="sidebar-flex" >
-              <img class="Pcontrol" src="img/BITCOIN.png" alt="profile">
+            <?php 
+                        $avatar = "profiles/$user.png";
+                        if(!file_exists($avatar)){
+                            $avatar = "profiles/male.png";
+                        }
+                        ?>
+                        <img class="Pcontrol" src="<?php echo $avatar?>" alt="profile">
 
               <span><?php echo "Hi ".$user; ?></span>
 

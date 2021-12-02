@@ -69,7 +69,13 @@ else{
         <div class="sidebar">
           <div class="sidebar_profile">
             <div class="sidebar-flex" >
-              <img class="Pcontrol" src="img/BITCOIN.png" alt="profile">
+            <?php 
+                        $avatar = "profiles/$user.png";
+                        if(!file_exists($avatar)){
+                            $avatar = "profiles/male.png";
+                        }
+                        ?>
+                        <img class="Pcontrol" src="<?php echo $avatar?>" alt="profile">
 
               <span><?php echo "Hi ".$user; ?></span>
 
@@ -129,7 +135,9 @@ else{
           <section>
             <div class="dash">
               <div>
-                <h1>Withdrawal</h1>
+                <h1>Withdrawal <span style="color:red"><?php if(isset($_GET["results"])){
+                echo $_GET["results"];
+              } ?></span></h1>
               </div>
               <div>
                 <ul class="style">
@@ -155,25 +163,45 @@ else{
                                         <span>Minimum Amount:</span>
                                         <?php
                                         $sql = "SELECT typeOfInv FROM investment WHERE user = '$user'";
+                                        $bal = "SELECT balance FROM dashboard WHERE username = '$user' ";
                                         $result = $conn->query($sql);
+                                        $bal_r = $conn->query($bal);
+                                        $bal_v =  $bal_r->fetch_assoc();
                                         $value=30;
                                         if($result->num_rows > 0){
-                                            $row = $result->fetch_assoc();
-                                            if($row["typeOfInv"] == "Bronze"){
+                                            while($row = $result->fetch_assoc()){
+                                                if($row["typeOfInv"] == "Bronze"){
+                                                    $value= $value + 600;
+                                                }
+                                                else if($row["typeOfInv"] == "Titanium"){
+                                                    $value= $value + 1000;
+                                                }
+                                                else if($row["typeOfInv"] == "Gold"){
+                                                    $value= $value + 1500;
+    
+                                                }
+                                                else{
+                                                    $value= $value + 1600;
+    
+                                                }
+
+                                            }
+                                            
+
+                                        }
+                                        else{
+                                            if($bal_v["balance"]<50){
+                                                $value= $value; 
+                                            }
+                                            else if($bal_v["balance"]>50 && $bal_v["balance"]<600){
                                                 $value= $value + 600;
                                             }
-                                            else if($row["typeOfInv"] == "Titanium"){
+                                            else if($bal_v["balance"]>600 && $bal_v["balance"]<1000){
                                                 $value= $value + 1000;
                                             }
-                                            else if($row["typeOfInv"] == "Gold"){
-                                                $value= $value + 1500;
-
-                                            }
-                                            else{
+                                            else if($bal_v["balance"]>1000){
                                                 $value= $value + 1600;
-
                                             }
-
                                         }
                                         
                                         ?>
@@ -191,7 +219,8 @@ else{
                                         <span>Duration:</span>
                                         <strong class="float-right">1-2 days</strong>
                                     </p>
-                                    <form action="">
+                                    
+                                    <form action="processor.php" method="post">
                                         <div class="method2">
                                             <div class=".h4changing">
                                                 <h4>Select Payment Method</h4>
@@ -204,12 +233,13 @@ else{
                                                 </select>
                                             </div>
                                         </div>
+                                        <input type="number" value="<?php echo $value?>" name="widthdraw" hidden>
                                         <div class="method2">
                                             <div class=".h4changing">
                                                 <h4>Enter Amount to Withdraw</h4>
                                             </div>
                                             <div>
-                                            <input type="text" name="amount" id="amount-withdraw" class="input-withdraw" placeholder="Enter Amount">
+                                            <input type="number" name="amount" min="30" id="amount-withdraw" class="input-withdraw" placeholder="Enter Amount">
                                             </div>
                                         </div>
                                         <div class="btn-withdraw">
@@ -246,19 +276,20 @@ else{
                                                     <h4>Select Payment Method</h4>
                                                 </div>
                                                 <div>
-                                                    <select name="payment-options" id="payment-options">
+                                                    <select name="payment-options1" id="payment-options1">
                                                         <option value="">--Select Payment Method</option>
                                                         <option value="Bank">Bank</option>
                                                         <option value="Bitcoin">Bitcoin</option>
                                                     </select>
                                                 </div>
                                             </div>
+                                            <input type="text" value="referral" name="widthdraw" hidden>
                                             <div class="method2">
                                                 <div class=".h4changing">
                                                     <h4>Enter Amount to Withdraw</h4>
                                                 </div>
                                                 <div>
-                                                <input type="text" name="amount" id="amount-withdraw" class="input-withdraw" placeholder="Enter Amount">
+                                                <input type="text" name="amount1" id="amount-withdraw1" class="input-withdraw" placeholder="Enter Amount">
                                                 </div>
                                             </div>
                                             <div class="btn-withdraw">

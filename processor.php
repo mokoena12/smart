@@ -67,3 +67,97 @@ if($conn->query($trade)){
 
   //=====End====//
   ?>
+
+<?php 
+//widthdrawal process 
+if(isset($_POST["widthdraw"])){
+    $amount = $_POST["amount"];
+    $method =  $_POST["payment-options"];
+    $value = $_POST["widthdraw"];
+      /*
+  $to = $email;;
+  $subject ="Widthdrawal";
+
+  $message = "
+  <html>
+  <head>
+  <title>Widthdrawal</title>
+</head>
+<body >
+<p><strong>Hi $firstname </strong></p>
+<p>Your widthdrawal of  $amount using method $method is successfully placed. 
+It will be processed within 1-2 working days, it might take long that that depending on your local bank</p>
+
+<p><a href='https://www.smartinvesta.co.za' 
+style='background-color:red; color:white;border-radius:3px;font-weight:bold;font-size:12px;padding:5px;text-decoration:none;box-shadow:3px 3px 2px black;'>Visit Our site</a></p>
+<p>Kind Regards</p>
+<p> Smart Investa</p>
+</body>
+
+  </html>
+  ";
+  $headers = "MIME-version:1.0"."\r\n";
+  $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
+  $headers .= "From:info@smartinvesta.co.za"."\r\n";
+
+  mail($to,$subject,$message,$headers); */
+  if($amount<$value){
+    $invest_results = "unsuccessful, your amount ($amount) is less than min widthdrawal $value";
+    header("Location:withdrawal.php?results=$invest_results");
+  }
+  else{
+    $sql = "INSERT INTO withdrawal(username,amount,method) VALUES('$user',$amount,'$method')";
+    if($conn->query($sql)){
+      $invest_results = "Withdrawal Successfully of amount $amount and method of $method";
+      header("Location:Dashboard.php?results=$invest_results");
+    }
+   
+  }
+  
+
+  }
+
+
+
+
+  
+if(isset($_POST["referral"])){
+$amount = $_POST["amount1"];
+$method =  $_POST["payment-options1"];
+  /*
+  $to = $email;;
+  $subject ="Referral Widthdrawal";
+
+  $message = "
+  <html>
+  <head>
+  <title>Referral Widthdrawal</title>
+</head>
+<body >
+<p><strong>Hi $firstname </strong></p>
+<p>Your referral widthdrawal of  $amount  using method $method is successfully placed. 
+It will be processed within 1-2 working days, it might take long that that depending on your local bank</p>
+
+<p><a href='https://www.smartinvesta.co.za' 
+style='background-color:red; color:white;border-radius:3px;font-weight:bold;font-size:12px;padding:5px;text-decoration:none;box-shadow:3px 3px 2px black;'>Visit Our site</a></p>
+<p>Kind Regards</p>
+<p> Smart Investa</p>
+</body>
+
+  </html>
+  ";
+  $headers = "MIME-version:1.0"."\r\n";
+  $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
+  $headers .= "From:info@smartinvesta.co.za"."\r\n";
+
+  mail($to,$subject,$message,$headers); */
+  $sql = "INSERT INTO widthdrawal(username,amount,method) VALUES('$user',$amount,'$method')";
+    if($conn->query($sql)){
+      $invest_results = "Withdrawal Successfully of amount $amount and method of $method";
+      header("Location:Dashboard.php?results=$invest_results");
+    }
+
+}
+                                  
+                                    
+                                    ?>

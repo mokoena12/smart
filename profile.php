@@ -13,7 +13,7 @@ else{
 
 }
 require_once "connect.php";
-$email = "";
+$email =  $answer="";
 $sql_email = "SELECT email FROM registration WHERE username='$user' ";
 $results = $conn->query($sql_email);
 if($results->num_rows>0){
@@ -61,11 +61,12 @@ $submit="<div class='response'><span class='response_cancel'> &times </span>
 
 }
 else{
-	if (move_uploaded_file($_FILES["btnFileUpload"]["tmp_name"],"profiles/{$file_name}.$FileType")){
+	if (move_uploaded_file($_FILES["btnFileUpload"]["tmp_name"],"profiles/{$file_name}.png")){
 		$submit="<div class='response'><span class='response_cancel'> &times </span>
 		
 		<br><span style='color:green;'>Your profile is successfully updated</span>
 	</div>";
+    $answer = "Your profile is successfully updated";
 	}
 	else{
 		echo "<script type='text/javascript' > alert('Error encoutered while uploading the picture please try again later')</script>";
@@ -130,7 +131,13 @@ else{
             <div class="sidebar">
                 <div class="sidebar_profile">
                     <div class="sidebar-flex" >
-                        <img class="Pcontrol" src="img/BITCOIN.png" alt="profile">
+                        <?php 
+                        $avatar = "profiles/$user.png";
+                        if(!file_exists($avatar)){
+                            $avatar = "profiles/male.png";
+                        }
+                        ?>
+                        <img class="Pcontrol" src="<?php echo $avatar?>" alt="profile">
                         <span><?php echo "Hi ".$user; ?></span>
                     </div>
                 </div>
@@ -186,7 +193,7 @@ else{
                 <section>
                     <div class="dash">
                         <div>
-                            <h1>Profile</h1>
+                            <h1>Profile <span style="color:green"> <?php echo $answer ?></span></h1>
                         </div>
                         <div>
                             <ul class="style">
@@ -203,9 +210,10 @@ else{
                     <div class="profile-content">
                         <div class="profile-container">
                             <div class="profile-avater">
-                                <img class="profile-pic" src="img/BITCOIN.png" alt="profile">
+
+                            <img class="Pcontrol" src="<?php echo $avatar?>" alt="profile">
                                 <h5>
-                                    <b>Mokoena</b>
+                                    <b><?php echo $user?></b>
                                 </h5>
                                 <span><?php echo $email;?></span>
                                 <span class="users-control">
@@ -220,14 +228,11 @@ else{
                                         1 month ago
                                     </p>
                                 </span>
-                                <form action="#" method="post">
+                                <form action="#" method="post" enctype="multipart/form-data">
                                     <div>
-                                        <label for="filebtn" class="filebtn">
-                                            choose avater
-                                            <input class="btn-none" type="file" name="file-upload" id="filebtn" >
-                                        </label>
+                                        <input type="file" name="btnFileUpload" value="Choose file" id="filebtn" >
                                         <div class="avater-shift">
-                                            <input type="submit" id="avator-upload" value="update">
+                                            <input type="submit" id="avator-upload" value="Update">
                                         </div>
                                     </div>
                                 </form>

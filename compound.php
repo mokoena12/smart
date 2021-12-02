@@ -75,9 +75,7 @@ if($result1->num_rows> 0){
             $i = 0.04;
             $n=1; 
             echo balance($amount,0.04,1);
-            
             echo profit($Bal,$deposit);
-           
             
             $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
             WHERE username = '$user'";

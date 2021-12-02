@@ -25,8 +25,12 @@
   }
   
   .dropdown div a:hover{
-    color: rgb(165, 122, 42);
+    color: rgb(240, 157, 4);
     text-decoration: underline;
+    }
+    #list1_hover{
+      color: rgb(240, 157, 4);
+      text-decoration: underline;
     }
   .dropdown div{
     margin: 4px;

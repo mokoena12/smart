@@ -77,10 +77,10 @@ $balance =  $row["balance"];
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"</script>
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"</script>
   <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
-  <script type="text/javascript"> src="js/smart.js"</script>
+  <script type="text/javascript" src="js/dash.js"></script>
   </head>
   <body class="turning">
-  <script type="text/javascript" src="js/dash.js"></script>
+  
 
   
 <!--Widget scripts for loading price-->
@@ -208,7 +208,7 @@ $balance =  $row["balance"];
                   </a>
                 </div>
                 <div class="infom">
-                  <span class="personal_balance">Bonus</span>
+                  <span class="personal_balance">Referal Bonus</span>
                   <span class="money_balance">$ <?php echo $bonus;?></span>
                 </div>
               </div>
@@ -222,7 +222,7 @@ $balance =  $row["balance"];
                   </a>
                 </div>
                 <div class="infom">
-                  <span class="personal_balance">Total deposit</span>
+                  <span class="personal_balance">Invested Amount</span>
                   <span class="money_balance">$ <?php echo $total_deposit;?></span>
                 </div>
       

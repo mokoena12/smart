@@ -172,7 +172,6 @@ else{
                     </ul>
                 </div>
             </div>
-
             <!-- start of the hearder part -->
             <div class="w-box" >
                 <header class="header-dash">

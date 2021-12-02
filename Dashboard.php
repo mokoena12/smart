@@ -77,10 +77,10 @@ $balance =  $row["balance"];
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"</script>
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"</script>
   <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
-  <script type="text/javascript"> src="js/smart.js"</script>
+  <script type="text/javascript" src="js/dash.js"></script>
   </head>
   <body class="turning">
-  <script type="text/javascript" src="js/dash.js"></script>
+  
 
   
 <!--Widget scripts for loading price-->
@@ -106,26 +106,29 @@ $balance =  $row["balance"];
           <div class="sidebar-manus">
             <ul>
               <li>
-                <a href="#"><img  class="sidebarspace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>
+                <a href="Dashboard.php"><img  class="sidebarspace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>
                 Dashboard</a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-user"></i>Profile</a>
+                <a href="profile.php"><i class="fa fa-user"></i>Profile</a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-tasks"></i>
+                <a href="activity log.php"><i class="fa fa-tasks"></i>
                   Active Logs</a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-exchange"></i>
+                <a href="deposit.php"><i class="fa fa-exchange"></i>
                   Deposit</a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-exchange"></i>
+                <a href="withdrawal.php"><i class="fa fa-exchange"></i>
                   Withdrawal</a>
               </li>
               <li>
-                <a href="">
+                <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
+                </li>
+              <li>
+                <a href="subscription.php">
                   <i class="fa fa-credit-card"></i>
                   Subscription
                 </a>
@@ -205,7 +208,7 @@ $balance =  $row["balance"];
                   </a>
                 </div>
                 <div class="infom">
-                  <span class="personal_balance">Bonus</span>
+                  <span class="personal_balance">Referal Bonus</span>
                   <span class="money_balance">$ <?php echo $bonus;?></span>
                 </div>
               </div>
@@ -219,7 +222,7 @@ $balance =  $row["balance"];
                   </a>
                 </div>
                 <div class="infom">
-                  <span class="personal_balance">Total deposit</span>
+                  <span class="personal_balance">Invested Amount</span>
                   <span class="money_balance">$ <?php echo $total_deposit;?></span>
                 </div>
       
@@ -426,7 +429,7 @@ $balance =  $row["balance"];
   
           <!-- start of the live tradings -->
           <div class="container_box">
-            <form class="trading" action="#" method="post">
+            <form class="trading" action="processor.php" method="post">
               <div class="header_for">
                 <span>Live Trading</span>
               </div>
@@ -439,30 +442,30 @@ $balance =  $row["balance"];
                 </div>
                 <div class="controlmin_1">
                   <div>
-                    <label for="currency">Currency pair</label><br>
-                    <input type="text" name="currency_pair" id="currency" placeholder="Enter currency pair for example:BTC/ETH">
+                    <label for="currency">Currency pair*</label><br>
+                    <input type="text" name="currency_pair" id="currency" placeholder="Enter currency pair for example:BTC/ETH" required>
                   </div>
                   <div>
-                    <label for="lotsize">Lot size</label><br>
-                    <input type="text" name="lot" id="lotsize" placeholder="Enter lotsize">
+                    <label for="lotsize">Lot size*</label><br>
+                    <input type="number" min="0" name="lot" id="lotsize" placeholder="Enter lotsize" required>
                   </div>
                 </div>
                 <div class="controlmin_2">
                   <div>
-                    <label for="entry">Entry Price</label><br>
-                    <input type="text" name="entry" id="entry" placeholder="Enter price entry">
+                    <label for="entry">Entry Price*</label><br>
+                    <input type="number" min="0" name="entry" id="entry" placeholder="Enter price entry" required>
                   </div>
                   <div>
-                    <label for="stoploss">Stop loss</label><br>
-                    <input type="text" name="stop" id="stoploss" placeholder="Enter stop loss">
+                    <label for="stoploss">Stop loss(optional)</label><br>
+                    <input type="number" min="0" name="stop" id="stoploss" placeholder="Enter stop loss" >
                   </div>
                   <div>
-                    <label for="takeprofit">Take profit</label><br>
-                    <input type="text" name="take" id="takeprofit" placeholder="Enter TP">
+                    <label for="takeprofit">Take profit(optional)</label><br>
+                    <input type="number" min="0" name="take" id="takeprofit" placeholder="Enter TP" required>
                   </div>
                 </div>
                 <div class="select-input">
-                  <label for="input">Select Action</label><br>
+                  <label for="input">Select Action*</label><br>
                   <select name="buyORsell" id="execute">
                     <option value="Buy">Buy</option>
                     <option value="Sell">Sell</option>

@@ -1,4 +1,10 @@
 <?php
+
+function test_input($data) {
+  $data = trim($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
   
 require_once "connect.php"; //connection 
 
@@ -28,4 +34,36 @@ else{
       
   }
   //END of Investing 
+
+  //Start of live trading 
+
+  if(isset($_POST["currency_pair"])){
+    
+  $currency_type = $_POST["live"];
+  $currency_pair = test_input($_POST["currency_pair"]);
+  $lot_size = $_POST["lot"];
+  $entry = $_POST["entry"];
+  $stop =  $_POST["stop"];
+  $take =  $_POST["take"];
+  $action =  $_POST["buyORsell"];
+
+  if(empty($stop)){
+    $stop = "";
+  }
+
+  if(empty( $take)){
+    $take = "";
+  }
+  $trade = "INSERT INTO live_trading(username,currency_type,currency_pair,lot_size,entry_price,stop_loss,take_profit,action) 
+  VALUES('$user','$currency_type','$currency_pair', $lot_size,$entry,$stop,$take,'$action')";
+
+if($conn->query($trade)){
+  $invest_results = "Your trade is successfully placed";
+  header("Location:Dashboard.php?results=$invest_results");
+}
+
+  
+  }
+
+  //=====End====//
   ?>

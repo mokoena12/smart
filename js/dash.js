@@ -1,4 +1,22 @@
 
+
+  //Style for change profile
+  function init(){
+    let profile = document.getElementsByClassName("displayers");
+    for(let i =0; i<3 ; i++){
+      profile[i].style.display="none";
+    }
+    profile[0].style.display="block";
+  }
+  function profile(n){
+    let profile = document.getElementsByClassName("displayers");
+    for(let i =0; i<3 ; i++){
+      profile[i].style.display="none";
+    }
+    profile[n].style.display="block";
+    
+  }
+    
 function swipe(){
     var avr = document.getElementById("selectplans-period").value;
     var value1 = document.getElementsByClassName("invest-cards");
@@ -81,4 +99,3 @@ else{
     
    
   }
-    

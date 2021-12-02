@@ -14,6 +14,7 @@ function test_input($data) {
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
+    
   }
 
     if(empty($_POST["name"])){
@@ -58,7 +59,7 @@ if(empty($_POST["name2"])){
  if(empty($_POST["user"])){
     $usernameErr = "username is required";
   }else{
-    $username = test_input($_POST["user"]);
+    $username = ucfirst((strtolower(test_input($_POST["user"]))));
   }
  if(empty($_POST["password"])){
     $passwordErr = "password is required";

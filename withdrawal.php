@@ -1,9 +1,5 @@
 <?php
-//Create table 
-//create functions for balance and profit
-// profit = balance - deposit
-// A = P(1  + i)^n 
-// investment table (user, type,period) 
+require_once "connect.php";
 
 session_start();
 
@@ -59,11 +55,11 @@ else{
   <!--end of link styling-->
   
   <!-- javascript -->
-  <script type="text/javascript"> src="js/smart.js"</script>
-  <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.js"</script>
-  <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"</script>
-  <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"</script>
-  
+  <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.js"></script>
+  <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"></script>
+  <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="js/dash.js"></script>
   
   </head>
   <body class="turning">
@@ -90,7 +86,7 @@ else{
                 <a href="profile.php"><i class="fa fa-user"></i>Profile</a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-tasks"></i>
+                <a href="activity log.php"><i class="fa fa-tasks"></i>
                   Active Logs</a>
               </li>
               <li>
@@ -102,7 +98,10 @@ else{
                   Withdrawal</a>
               </li>
               <li>
-                <a href="#">
+                    <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
+                </li>
+              <li>
+                <a href="subscription.php">
                   <i class="fa fa-credit-card"></i>
                   Subscription
                 </a>
@@ -154,7 +153,31 @@ else{
                                 <div class="content-bances">
                                     <p class="pfloater">
                                         <span>Minimum Amount:</span>
-                                        <strong class="float-right">$30</strong>
+                                        <?php
+                                        $sql = "SELECT typeOfInv FROM investment WHERE user = '$user'";
+                                        $result = $conn->query($sql);
+                                        $value=30;
+                                        if($result->num_rows > 0){
+                                            $row = $result->fetch_assoc();
+                                            if($row["typeOfInv"] == "Bronze"){
+                                                $value= $value + 600;
+                                            }
+                                            else if($row["typeOfInv"] == "Titanium"){
+                                                $value= $value + 1000;
+                                            }
+                                            else if($row["typeOfInv"] == "Gold"){
+                                                $value= $value + 1500;
+
+                                            }
+                                            else{
+                                                $value= $value + 1600;
+
+                                            }
+
+                                        }
+                                        
+                                        ?>
+                                        <strong class="float-right">$<?php echo $value?></strong>
                                     </p>
                                     <p class="pfloater">
                                         <span>Maximun Amount:</span>
@@ -284,10 +307,10 @@ else{
                                         </thead>
                                         <tbody class="tbody">
                                             <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <td>$100</td>
+                                                <td>Approved</td>
+                                                <td>12-oct-2021</td>
+                                                <td>Bank card</td>
                                             </tr>
                                         </tbody>
                                     </table>

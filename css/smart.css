@@ -291,12 +291,6 @@ border-radius: 50%;
     width: 12em;
 
 }
-.logo_img{
-    height: 6em;
-    width: 12em;
-    text-align: center;
-    margin-top: 40px;
-}
     /* end of web logo */
 
 /*start of center box*/
@@ -732,7 +726,7 @@ header .logo img{
 }
 .button:hover{
     background-image: linear-gradient(to bottom right,white, rgb(245, 239, 239), rgb(184, 187, 186));
-    color: blue;
+    color: blue!important;
     text-decoration: underline;
 }
 .button a:link{
@@ -856,13 +850,7 @@ border-radius: 50%;
     width: 12em;
 
 }
-.logo_img{
-    height: 6em;
-    width: 12em;
-    text-align: center;
-    margin-top: 40px;
-}
-    /* end of web logo */
+
 
 /*start of center box*/
 .nav_link2{
@@ -1127,7 +1115,7 @@ margin: 0;
     border: 1px solid gray;
     border-radius: 3px;
     position: relative;
-    top: 7%;
+    top: 17%;
   
   }
 
@@ -1160,6 +1148,7 @@ margin: 0;
   .chart span {
     margin-left: 1em;
     color: black;
+    font-weight: bold;
    
   }
   .btc-chart {
@@ -1170,3 +1159,39 @@ margin: 0;
   }
   /* end of the btc chart */
 
+/* start of input btn */
+
+#profile-btn1 {
+    height: 2.5em;
+    width: 15em;
+    background-color: blue;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #profile-btn2 {
+    height: 2.5em;
+    width: 15em;
+    background-color: blue;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #profile-btn3 {
+    height: 2.5em;
+    width: 15em;
+    background-color: blue;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+/* end of input btn */

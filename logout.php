@@ -80,16 +80,13 @@ if(isset($_POST["Yes"])){
             <div>
                 <h1 class="h1_style">Log out?  </h1>
            
-            <div class="credentials" >
+            <div class="credentials2-logout" >
               
-                <input type="submit"  name="Yes" value="Yes" class="subbtn button" onclick="thanks()">
+                <input type="submit"  name="Yes" value="Yes" class="subbtn2 button" onclick="thanks()">
                 <p style="color:red"><?php $out; ?></p>
-                <input type="submit"  name="No" value="No" class="subbtn button">
+                <input type="submit"  name="No" value="No" class="subbtn3 button">
                 <p style="color:red"></p>
             </div>
-            
-        
-        
         </form>
         <!-- end of form -->
     </div>

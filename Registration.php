@@ -100,7 +100,7 @@ if(empty($_POST["name2"])){
       Your Login details are as follows: <br> <ul><li><b>Username</b>: $username </li> <li>Password:  $pass  </ul>
       You can go to <a href='http://wwww.weball.co.za/login.php'>Dashboard</a> and start Investing</p>
       
-      <p><a href='index.html?username' 
+      <p><a href='https://www.smartinvesta.co.za' 
       style='background-color:red; color:white;border-radius:3px;font-weight:bold;font-size:12px;padding:5px;text-decoration:none;box-shadow:3px 3px 2px black;'>Visit Our site</a></p>
       <p>Kind Regards</p>
       <p> Smart Investa</p>

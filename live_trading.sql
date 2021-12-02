@@ -1,21 +1,11 @@
 -- phpMyAdmin SQL Dump
-
--- version 5.1.1
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Dec 02, 2021 at 04:54 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
-
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2021 at 12:09 PM
+-- Generation Time: Dec 02, 2021 at 12:10 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
-
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,30 +24,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `investment`
+-- Table structure for table `live_trading`
 --
 
-CREATE TABLE `investment` (
-  `user` varchar(255) NOT NULL,
-  `typeOfInv` varchar(255) NOT NULL,
-
-  `periods` int(255) NOT NULL,
-  `amount` int(20) DEFAULT NULL
+CREATE TABLE `live_trading` (
+  `username` varchar(255) NOT NULL,
+  `currency_type` varchar(20) NOT NULL,
+  `currency_pair` varchar(20) NOT NULL,
+  `lot_size` int(20) NOT NULL,
+  `entry_price` int(20) NOT NULL,
+  `stop_loss` int(20) NOT NULL,
+  `take_profit` int(20) NOT NULL,
+  `action` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `investment`
+-- Dumping data for table `live_trading`
 --
 
-INSERT INTO `investment` (`user`, `typeOfInv`, `periods`, `amount`) VALUES
-('Raps', 'Bronze', 1, 100),
-('Raps', 'Titanium', 1, 100),
-('Raps', 'Gold', 1, 100),
-('Raps', 'Diamond', 1, 100);
-=======
-  `periods` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
+INSERT INTO `live_trading` (`username`, `currency_type`, `currency_pair`, `lot_size`, `entry_price`, `stop_loss`, `take_profit`, `action`) VALUES
+('bel', '', 'USDZAR', 12, 5, 3, 20, 'Buy'),
+('Raps', 'Forex', 'USDJPY', 25, 36, 58, 25, 'Sell');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

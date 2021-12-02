@@ -25,8 +25,12 @@
   }
   
   .dropdown div a:hover{
-    color: rgb(165, 122, 42);
+    color: rgb(240, 157, 4);
     text-decoration: underline;
+    }
+    #list1_hover{
+      color: rgb(240, 157, 4);
+      text-decoration: underline;
     }
   .dropdown div{
     margin: 4px;
@@ -1001,8 +1005,8 @@ flex-direction: row;
 }
 /* start of logo login */
 .logo_img{
-height: 4em;
-width: 8em;
+height: 6em;
+width: 12em;
 text-align: center;
 margin-top: -1px;
 margin-bottom: 10px;
@@ -1129,6 +1133,18 @@ div.box_header {
 
 
 }
+.credentials2-logout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.subbtn2 {
+  width: 35%;
+}
+.subbtn3 {
+  width: 35%;
+}
 
 .fileupload {
   width: 11em;
@@ -1209,12 +1225,11 @@ align-items: center;
 .sidebar-manus ul li:hover {
 background-color: blue;
 border-radius: 6px;
+
 }
 .sidebar-manus ul li a i {
 height: 1em;
-min-width: 30px;
 border-radius: 12px;
-line-height: 10px;
 }
 /* start of sidebar icon spassing */
 .sidebarspace  {
@@ -1503,7 +1518,7 @@ a.elevation-1 {
   border-radius: 6px;
 
 }
-#selectplans-period {
+#selectplans-period1 {
   margin-top: 1em;
   height: fit-content;
   height: 2em;
@@ -1595,6 +1610,7 @@ a.elevation-1 {
   border-bottom: 1px solid grey;
   padding: 10px;
   color: black;
+  font-weight: bold;
 
 
 }
@@ -1610,6 +1626,7 @@ a.elevation-1 {
 
 .container_box {
   top: 7%;
+
 
 }
 
@@ -1696,17 +1713,18 @@ a.elevation-1 {
 .crossrate {
   position: relative;
   width: 100%;
-  height: 30em;
+  height: 95%;
+  margin-top: 13%;
 }
 .FOREX {
-  border: 1px solid grey;
+  border: 1px solid #ccc;
   width: 100%;
-  height: 2em;
-  padding: 10px;
+  padding: 1%;
   border-radius: 3px;
 }
 .FOREX span {
   color: black;
+  font-weight: bold;
 }
 .cross-chart {
   height: 30em;
@@ -1751,12 +1769,30 @@ text-align: center;
   color: black;
 }
 .payment-wallet {
-  border: 1px solid gray;
-  padding-left: 1em;
   padding-top: 0.50em;
   border-radius: 3px;
   margin-bottom: 1em;
 
+}
+#btc-amount {
+ width: 100%;
+ border-radius: 3px;
+ height: 2.5em;
+}
+#depo-btc {
+  width: 45%;
+ border-radius: 4px;
+ height: 15%;
+}
+.button-sub {
+  margin-left: 40%;
+  margin-top: 5%;
+}
+
+
+.payment-wallet select {
+  height: 2.5em;
+  width: 100%;
 }
 .payment-wallet h5 {
   height: fit-content;
@@ -2164,6 +2200,19 @@ width: 90%;
   display: none;
   padding: 1em;
 }
+#avator-upload {
+  background-color: #6c757d;
+  color: white;
+  height: 2em;
+  width: 80%;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 4px;
+
+}
+.avater-shift input{
+  margin-top: 2%;
+}
 
 .profile-details {
   border: 1px solid #ccc;
@@ -2231,17 +2280,7 @@ width: 90%;
   height: 2.5em;
   border-radius: 4px;
 }
-#profile-btn {
-  height: 2.5em;
-  width: 15em;
-  background-color: blue;
-  color: white;
-  font-size: 1em;
-  font-weight: bold;
-  border-radius: 4px;
-  margin-right: auto;
-  margin-left: auto;
-}
+
 .p-btnsub {
   margin-top: 25px;
   margin-left: 30%;
@@ -2775,17 +2814,7 @@ text-align: center;
 .span-payment {
   color: black;
 }
-.payment-wallet {
-  border: 1px solid gray;
-  padding-left: 1em;
-  padding-top: 0.50em;
-  border-radius: 3px;
 
-}
-.payment-wallet h5 {
-  height: fit-content;
-  color: blue;
-}
 
 .notify-deposit {
   border-radius: 3px;
@@ -2897,6 +2926,17 @@ text-align: center;
 
 
 /*leave a mesage form*/
+
+.formmmm>input[type=text], .formmmm>select, .formmmm>textarea {
+  width: 100%; 
+  padding: 12px;  
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box;
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
+}
 .formmm{
   border-radius: 5px;
   background-color: #f2f2f2;

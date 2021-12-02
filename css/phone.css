@@ -17,7 +17,6 @@
         font-size: 17px;
     }
     p{
-        color:black;
         font-size:15px;
     }
     span{
@@ -380,8 +379,8 @@ flex-direction: column;
   box-sizing: border-box;
   margin-top: 6px; 
   margin-bottom: 16px; 
-  resize: vertical 
-}
+  resize: vertical;
+  }
 .formmm>div{
   text-align: center;
 }
@@ -414,7 +413,6 @@ font-size: 23px;
         font-size: 17px;
     }
     p{
-        color:black;
         font-size:15px;
     }
     span{
@@ -1277,10 +1275,9 @@ text-align: center;
 
 }
 .logo_img{
-    height: 6em;
-    width: 12em;
+    height: 3em;
+    width: 6em;
     text-align: center;
-    margin-top: 40px;
 }
     /* end of web logo */
 
@@ -1540,6 +1537,7 @@ header .logo img{
 .sidebar {
   display: none;
 }
+
 .turning {
   width: 100%;
   height: 100%;
@@ -1616,8 +1614,8 @@ header .logo img{
   display: flex;
   flex-wrap: wrap;
   width: 95%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 1.2em;
+  
 
 }
 .box_balance {
@@ -1625,7 +1623,7 @@ header .logo img{
   flex-direction: row;
   color: white;
   background-color: #007bff;
-  width: 46%;
+  width: 45%;
   height: 5em;
   border-radius: 3px;
   margin-right: 1em;
@@ -1636,7 +1634,7 @@ header .logo img{
   flex-direction: row;
   color: white;
   background-color: #dc3545;
-  width: 46%;
+  width: 45%;
   height: 5em;
   border-radius: 3px;
   margin-right: 1em;
@@ -1648,7 +1646,7 @@ header .logo img{
   flex-direction: row;
   color: white;
   background-color: #20c997;
-  width: 46%;
+  width: 45%;
   height: 5em;
   border-radius: 3px;
   margin-right: 1em;
@@ -1659,7 +1657,7 @@ header .logo img{
   flex-direction: row;
   color: white;
   background-color: #ffc107;
-  width: 46%;
+  width: 45%;
   height: 5em;
   border-radius: 3px;
   margin-right: 1em;
@@ -1681,7 +1679,7 @@ header .logo img{
   flex-direction: row;
   color: white;
   background-color:#001f3f;
-  width: 46%;
+  width: 45%;
   height: 5em;
   border-radius: 3px;
   margin-right: 1em;
@@ -1692,7 +1690,7 @@ header .logo img{
   flex-direction: row;
   color: white;
   background-color: #17a2b8;
-  width: 46%;
+  width: 45%;
   height: 5em;
   border-radius: 3px;
   margin-right: 1em;
@@ -1703,7 +1701,7 @@ header .logo img{
   flex-direction: row;
   color: white;
   background-color:  #6c757d;
-  width: 46%;
+  width: 45%;
   height: 5em;
   border-radius: 3px;
   margin-bottom: 1em;
@@ -1714,7 +1712,7 @@ header .logo img{
   flex-direction: row;
   color: white;
   background-color: #17a2b8;
-  width: 100%;
+  width: 94%;
   height: 5em;
   border-radius: 3px;
   margin-right: 1em;
@@ -1738,8 +1736,8 @@ header .logo img{
   margin-top: 0.7em;
 }
 .info_icon a {
-  width: 50%;
-  height: 50%;
+  width: 30%;
+  height: 30%;
   padding: 1em;
   margin-left: 0.70em;
   border-radius: 2px;
@@ -1749,14 +1747,14 @@ header .logo img{
   font-weight: bold;
 }
 a.elevation-1 {
-  width: 2em;
-  height: 2em;
+  width: 1em;
+  height: 1em;
   box-shadow: 2px solid rgb(14, 13, 13);
 }
 .infom {
   display: flex;
   flex-direction: column;
-  margin-left: 1em;
+  margin-left: 1.6em;
   line-height: 30px;
 
 }
@@ -1808,6 +1806,15 @@ a.elevation-1 {
   border-radius: 6px;
 
 }
+#selectplans-period1 {
+  margin-top: 1em;
+  height: fit-content;
+  height: 2em;
+  width: 97.5%;
+  padding-left: 1em;
+  border-radius: 6px;
+
+}
 
 /* stary of the investing cards */
 .invest-cards {
@@ -1823,7 +1830,10 @@ a.elevation-1 {
   padding: 2em;
   color: white;
 }
-.invest-cards2 {
+#invest-cards1 {
+  display: block;
+}
+#invest-cards2 {
   display: none;
   width: 90%;
   height: 90%;
@@ -1836,7 +1846,7 @@ a.elevation-1 {
   padding: 2em;
   color: white;
 }
-.invest-cards3 {
+#invest-cards3 {
   display: none;
   width: 90%;
   height: 90%;
@@ -1851,7 +1861,7 @@ a.elevation-1 {
 
 
 }
-.invest-cards4 {
+#invest-cards4 {
   display: none;
   width: 90%;
   height: 90%;
@@ -1936,21 +1946,15 @@ a.elevation-1 {
 /* start of live trading inputs */
 
 .container_box {
-  width: 95%;
-  border: 1px solid gray;
-  margin-right: 1em;
-  margin-left: 1em;
-  margin-bottom: 2em;
-  margin-top: 2em;
-  border-radius: 3px;
 
+  
 }
 .header_for {
   height: fit-content;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #ccc;
   padding: 10px;
   color: black;
-
+  font-weight: bold;
 
 }
 .trading1 {
@@ -1959,6 +1963,8 @@ a.elevation-1 {
 
 #cryptoforex {
   width: 100%;
+  border-radius: 3px;
+  height: 2.5em;
 }
 .trading {
   margin-top: 1em;
@@ -1980,6 +1986,8 @@ a.elevation-1 {
   width: 100%;
   margin-right: 20px;
   padding-right: 8px;
+  border-radius: 3px;
+  height: 2.5em;
 }
 #currency {
   margin-bottom: 18px;
@@ -1991,6 +1999,8 @@ a.elevation-1 {
   margin-right: 18px;
   padding-right: 25px;
   width: 100%;
+  border-radius: 3px;
+  height: 2.5em;
 }
 #entry {
   margin-bottom: 18px;
@@ -2006,6 +2016,8 @@ a.elevation-1 {
 }
 #execute {
   width: 100%;
+  border-radius: 3px;
+  height: 2.5em;
 }
 .btnsub {
   width: 98%;
@@ -2061,18 +2073,16 @@ a.elevation-1 {
 /* start of the forex crossrate chart */
 .crossrate {
   position: relative;
-  width: 97.5%;
-  height: 50%;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-top: 3em;
+  width: 100%;
+  height: 70%;
+  margin-top: 20%;
   display: block;
   overflow-x: auto;
 
 }
 .FOREX {
   border: 1px solid grey;
-  width: 97%;
+  width: 100%;
   height: 2em;
   padding: 10px;
   border-radius: 3px;
@@ -2126,13 +2136,29 @@ text-align: center;
   color: black;
 }
 .payment-wallet {
-  border: 1px solid gray;
-  padding-left: 1em;
   padding-top: 0.50em;
   border-radius: 3px;
   margin-bottom: 1em;
 
 }
+.payment-wallet select {
+  height: 2.5em;
+  width: 100%;
+}
+#btc-amount {
+  width: 100%;
+  border-radius: 3px;
+  height: 2.5em;
+ }
+ #depo-btc {
+   width: 45%;
+  border-radius: 4px;
+  height: 15%;
+ }
+ .button-sub {
+   margin-left: 40%;
+   margin-top: 5%;
+ }
 .payment-wallet h5 {
   height: fit-content;
   color: blue;
@@ -2426,6 +2452,19 @@ text-align: center;
   display: none;
   padding: 1em;
 }
+#avator-upload {
+  background-color: #6c757d;
+  color: white;
+  height: 2em;
+  width: 80%;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 4px;
+
+}
+.avater-shift input{
+  margin-top: 2%;
+}
 .profile-details {
   border: 1px solid #ccc;
   padding: 1em;
@@ -2496,17 +2535,7 @@ text-align: center;
   height: 2.5em;
   border-radius: 4px;
 }
-#profile-btn {
-  height: 2.5em;
-  width: 15em;
-  background-color: blue;
-  color: white;
-  font-size: 1em;
-  font-weight: bold;
-  border-radius: 4px;
-  margin-right: auto;
-  margin-left: auto;
-}
+
 .p-btnsub {
   margin-top: 25px;
   margin-left: 30%;
@@ -2628,9 +2657,69 @@ text-align: center;
 }
 /* end of the referral */
 
+/* center box */
+.center{
+  position:absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  padding: 1em;
+  border-radius: 20px;
+  background-color: white;
+}
+.h1_style{
+  color: blue;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 0px 0px 10px 0px;
+}
+.icon {
+  text-align: left;
+  text-decoration: none;
+  margin-bottom: 5px;
+  font-weight: 400;
+  padding-right: 10px;
+  color: orange;
+}
+.login1 {
+  border-radius: 6px;
+  width: 100%;
+  height: 2em;
+  margin-bottom: 20px;
+  border-color: blue;
+}
+.check {
+  text-align: left;
+  margin-left: 2em;
+}
+.link_reg{
+  color: blue;
+  margin-left: 1em;
+}
+.link_reg a{
+  color: blue;
+}
 
+/* end of center box */
 
-
+/* logout styles */
+.credentials2-logout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.subbtn2 {
+  width: 35%;
+}
+.subbtn3 {
+  width: 35%;
+}
+/* end logout styles */
 
 
 

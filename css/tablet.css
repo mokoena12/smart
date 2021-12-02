@@ -679,8 +679,9 @@ to{
 
 }
 .logo_img {
+  height: 5em;
+  width: 10em;
   text-align: center;
-  margin-top: 40px;
 
 }
 .center{
@@ -1138,6 +1139,8 @@ flex-direction: column;
 .style {
   display: flex;
   flex-direction: row;
+  padding: 1em;
+  color: black;
   }
 /*leave a mesage form*/
 
@@ -1287,6 +1290,441 @@ flex-direction: column;
 }
 
 
+/* start of dash_contant */
+.dash_content {
+  margin-left: 1.50em;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 96%;
+}
+.box_balance {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #007bff;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance2 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #dc3545;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+
+}
+.box_balance3 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #20c997;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance4 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #ffc107;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance5 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #28a745;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance6 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color:#001f3f;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance7 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #17a2b8;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.box_balance8 {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color:  #6c757d;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+.box_balance9{
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #17a2b8;
+  width: 31%;
+  height: 5em;
+  border-radius: 3px;
+  margin-right: 1em;
+  margin-right: 1em;
+}
+.money_balance { 
+  font-size: 1.25em;
+  font-weight: 700;
+
+}
+.fa {
+  color: white;
+  margin-top: 18px;
+  display: inline-block;
+  box-sizing: border-box;
+  box-shadow: 2px solid gray;
+}
+.fa-money::before {
+  content: \f0d6;
+}
+.info_icon {
+  text-align: center;
+  width: 25%;
+  margin-top: 0.7em;
+}
+.info_icon a {
+  width: 50%;
+  height: 50%;
+  padding: 1em;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)!important;
+}
+.info_icon i {
+  font-weight: bold;
+
+}
+a.elevation-1 {
+  width: 2em;
+  height: 2em;
+  box-shadow: 2px solid rgb(14, 13, 13);
+}
+.infom {
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+
+}
+/* end of dash contents */
+
+/* start of investing plan */
+.investing-BOX {
+  width: 96.5%;
+  border: 1px solid gray;
+  margin-right: 1em;
+  margin-left: 1em;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  border-radius: 3px;
+}
+.header_TO {
+  height: fit-content;
+  border-bottom: 1px solid grey;
+  padding: 10px;
+  color: black;
+}
+.control-plan {
+  display: flex;
+  flex-direction: row;
+}
+.invest-inputs {
+  position: relative;
+  margin-left: 1em;
+}
+.selectionplan {
+  width: 25em;
+  height: fit-content;
+  margin-top: 1em;
+  border-radius: 3px;
+
+  
+}
+.selectionplan2 {
+  width: 98%;
+  height: 2em;
+  height: fit-content;
+  margin-top: 1em;
+  padding-left: 1em;
+  border-radius: 6px;
+
+}
+#selectplans-period {
+  margin-top: 1em;
+  height: fit-content;
+  height: 2em;
+  width: 97.5%;
+  padding-left: 1em;
+  border-radius: 6px;
+}
+#selectplans-period1 {
+  margin-top: 1em;
+  height: fit-content;
+  height: 2em;
+  width: 97.5%;
+  padding-left: 1em;
+  border-radius: 6px;
+
+}
+.btnex {
+  margin-left: 30%;
+  margin-top: 4em;
+}
+#btnexecute {
+  height: 2em;
+  width: 10em;
+  margin-top: 1em;
+  border-radius: 6px;
+  background-color: #17a2b8;
+  color: white;
+
+
+}
+
+.btnex2 {
+  display: none;
+  margin-left: 30%;
+  margin-top: 3em;
+}
+ 
+/* start of the investing cards */
+.invest-cards {
+  display: block;
+  width: 100%;
+  height: 90%;
+  border-radius: 6px;
+  color: white;
+  margin-left: 2em;
+  background-color:#17a2b8;
+  margin-top: 1em;
+  margin-right: 3em;
+  padding: 2em;
+}
+#invest-cards1 {
+  display: block;
+}
+#invest-cards2 {
+  display: none;
+
+}
+#invest-cards3 {
+  display: none;
+ 
+}
+#invest-cards4 {
+  display: none;
+ 
+
+/* end of the investing cards */
+}
+.highlight-terms {
+  color: orange;
+  margin-left: 3em;
+  margin-top: 1em;
+
+}
+.highlight-terms p a {
+  color: blue;
+}
+
+
+/* end of investing plan */
+
+
+
+
+/* start of the Btc CHart */
+.chart {
+  height: 30em;
+}
+.chart iframe{
+  height:inherit;
+}
+/*==End of Chart */
+
+/* start of live trading inputs */
+
+.header_for {
+  height: fit-content;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  color: black;
+  font-weight: bold;
+
+
+}
+.trading1 {
+  margin-top: 10px;
+}
+
+#cryptoforex {
+  width: 98%;
+  border-radius: 3px;
+  height: 2.5em;
+}
+
+/* start of live trading inputs */
+
+.container_box {
+  top: 7%;
+
+
+}
+
+/*====End === */
+.control {
+  padding-left: 20px;
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-right: 20px;
+}
+.controlmin_1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 18px;
+}
+.controlmin_1 input {
+  width: 20em;
+  margin-right: 20px;
+  padding-right: 8px;
+}
+.controlmin_2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+.controlmin_2 input {
+  margin-right: 18px;
+  padding-right: 25px;
+  width: 220;
+}
+.select-input {
+  margin-top: 18px;
+}
+#execute {
+  width: 98%;
+  border-radius: 3px;
+  height: 2.5em;
+}
+.btnsub {
+  width: 98%;
+  background-color: #28a745;
+  border-color: #28a745;
+  border-radius: 3px;
+  margin-top: 1em;
+  text-align: center;
+}
+
+/* start of recent trading history */
+.h5 {
+  color: blue;
+  font-size: 1em;
+  text-align: center;
+  margin-top: 3em;
+}
+/* start of the table history */
+.table {
+  display: table;
+  width: 100%;
+  margin-bottom: 1em;
+  background-color: rgb(161, 208, 252);
+  border-top-color: grey;
+  border-bottom-color: grey;
+  border-right-color: grey;
+  border-left-color: grey;
+  border-radius: 3px;
+
+}
+.tablehead {
+  display: table-header-group;
+  vertical-align: middle;
+}
+.tablehead tr {
+  display: table-row;
+}
+.table td {
+  vertical-align: top;
+}
+
+/* end of the table history */
+
+/* start of the forex crossrate chart */
+.crossrate {
+  position: relative;
+  width: 100%;
+  height: 95%;
+  margin-top: 20%;
+}
+.FOREX {
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 1%;
+  border-radius: 3px;
+}
+.FOREX span {
+  color: black;
+}
+.cross-chart {
+  height: 30em;
+}
+
+/* end of the forex crossrate chart */
+
+
+/* start of footer */
+.footer {
+  background: #fff;
+border-top: 1px solid #dee2e6;
+color: #869099;
+padding: 1em;
+text-align: center;
+}
+.footer strong a {
+  text-decoration: none;
+  color: blue;
+}
+
+/* end of footer */
+
+
 /* start of deposit page*/
 
 .transact-flex {
@@ -1307,13 +1745,29 @@ flex-direction: column;
   color: black;
 }
 .payment-wallet {
-  border: 1px solid gray;
-  padding-left: 1em;
   padding-top: 0.50em;
   border-radius: 3px;
   margin-bottom: 1em;
 
 }
+.payment-wallet select {
+  height: 2.5em;
+  width: 100%;
+}
+#btc-amount {
+  width: 100%;
+  border-radius: 3px;
+  height: 2.5em;
+ }
+ #depo-btc {
+   width: 45%;
+  border-radius: 4px;
+  height: 15%;
+ }
+ .button-sub {
+   margin-left: 40%;
+   margin-top: 5%;
+ }
 .payment-wallet h5 {
   height: fit-content;
   color: blue;
@@ -1518,6 +1972,19 @@ flex-direction: column;
   display: none;
   padding: 1em;
 }
+#avator-upload {
+  background-color: #6c757d;
+  color: white;
+  height: 2em;
+  width: 80%;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 4px;
+
+}
+.avater-shift input{
+  margin-top: 2%;
+}
 .profile-details {
   border: 1px solid #ccc;
   padding: 1em;
@@ -1584,17 +2051,7 @@ flex-direction: column;
   height: 2.5em;
   border-radius: 4px;
 }
-#profile-btn {
-  height: 2.5em;
-  width: 15em;
-  background-color: blue;
-  color: white;
-  font-size: 1em;
-  font-weight: bold;
-  border-radius: 4px;
-  margin-right: auto;
-  margin-left: auto;
-}
+
 .p-btnsub {
   margin-top: 25px;
   margin-left: 30%;
@@ -1697,7 +2154,20 @@ margin-bottom: -20em;
 }
 /* end of the referral */
 
-
+/* logout styles */
+.credentials2-logout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.subbtn2 {
+  width: 35%;
+}
+.subbtn3 {
+  width: 35%;
+}
+/* end logout styles */
 
 
 

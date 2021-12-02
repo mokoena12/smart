@@ -96,7 +96,13 @@ $balance =  $row["balance"];
         <div class="sidebar">
           <div class="sidebar_profile">
             <div class="sidebar-flex" >
-              <img class="Pcontrol" src="img/BITCOIN.png" alt="profile">
+            <?php 
+                        $avatar = "profiles/$user.png";
+                        if(!file_exists($avatar)){
+                            $avatar = "profiles/male.png";
+                        }
+                        ?>
+                        <img class="Pcontrol" src="<?php echo $avatar?>" alt="profile">
 
               <span><?php echo "Hi ".$user; ?></span>
 
@@ -156,7 +162,9 @@ $balance =  $row["balance"];
           <section>
             <div class="dash">
               <div>
-                <h1>Dashboard</h1>
+                <h1>Dashboard <span style="color:green"><?php if(isset($_GET["results"])){
+                echo $_GET["results"];
+              } ?></span></h1>
               </div>
               <div>
                 <ul class="style">
@@ -208,7 +216,7 @@ $balance =  $row["balance"];
                   </a>
                 </div>
                 <div class="infom">
-                  <span class="personal_balance">Referal Bonus</span>
+                  <span class="personal_balance">Referral Bonus</span>
                   <span class="money_balance">$ <?php echo $bonus;?></span>
                 </div>
               </div>
@@ -266,7 +274,7 @@ $balance =  $row["balance"];
                   </a>
                 </div>
                 <div class="infom">
-                  <span class="personal_balance">Withdrawal</span>
+                  <span class="personal_balance">Equity</span>
                   <span class="money_balance" id="prices2">$ <?php echo $withdrawal?></span>
                 </div>
       
@@ -308,9 +316,7 @@ $balance =  $row["balance"];
               <div class="header_TO">
                 <span>INVESTING PLAN</span>
               </div>
-              <span style="color:green"><?php if(isset($_GET["results"])){
-                echo $_GET["results"];
-              } ?></span>
+              
               <div class="control-plan"> 
                 <div class="invest-inputs">
                   <div class="selectionplan">
@@ -346,10 +352,10 @@ $balance =  $row["balance"];
                     
                   </div>
                   <div class="btnex">
-                    <input type="submit" id="btnexecute" value="Invest">
+                    <input class="button" type="submit" id="btnexecute" value="Invest">
                   </div>
                </div>
-               <div class="invest-cards" id="invest-cards1">
+               <div class="invest-cards card" id="invest-cards1">
                   <h3>Bronze</h3>
                   <h5>Minimun Amount: $30 <br>
                     Maximum Amount: $1000 <br>
@@ -361,7 +367,7 @@ $balance =  $row["balance"];
                     withdraw your money. 
                   </p>
                </div>
-               <div class="invest-cards" id="invest-cards2">
+               <div class="invest-cards card" id="invest-cards2">
                   <h3>Titanium</h3>
                   <h5>Minimun Amount: $50 <br>
                     Maximum Amount: $1500 <br>
@@ -373,7 +379,7 @@ $balance =  $row["balance"];
                     withdraw your money. 
                   </p>
                 </div> 
-                <div class="invest-cards" id="invest-cards3">
+                <div class="invest-cards card" id="invest-cards3">
                   <h3>Gold</h3>
                   <h5>Minimun Amount: $100 <br>
                     Maximum Amount: $5000 <br>
@@ -385,7 +391,7 @@ $balance =  $row["balance"];
                     withdraw your money. 
                   </p>
                </div>
-               <div class="invest-cards" id="invest-cards4">
+               <div class="invest-cards card" id="invest-cards4">
                   <h3>Diamond</h3>
                   <h5>Minimun Amount: $200 <br>
                     Maximum Amount: $10000 <br>
@@ -521,7 +527,7 @@ $balance =  $row["balance"];
            <!-- start of crossrate table chart -->
           <div class="crossrate">
             <div class="FOREX">
-              <span>fOREX-cross Rate chart</span>
+              <span>FOREX-cross Rate chart</span>
             </div>
                <!-- TradingView Widget BEGIN -->
             <div  class="cross-chart">

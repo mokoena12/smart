@@ -94,15 +94,15 @@ else{
                   Active Logs</a>
               </li>
               <li>
-                <a href="deposit"><i class="fa fa-exchange"></i>
+                <a href="deposit.php"><i class="fa fa-exchange"></i>
                   Deposit</a>
               </li>
               <li>
-                <a href="Withdrawal.php"><i class="fa fa-exchange"></i>
+                <a href="withdrawal.php"><i class="fa fa-exchange"></i>
                   Withdrawal</a>
               </li>
               <li>
-                    <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
+                <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
                 </li>
               <li>
                 <a href="subscription.php">
@@ -126,8 +126,8 @@ else{
               <a href="#"><img src="img/smart.investa.logo2.png" class="logo_1" alt="logo"></a>
             </div>
             <div class="search">
-              <i class="fas fa-search"></i>
-              <input type="search" placeholder="Search...">
+              <i class="fas fa-search" onclick="search()"></i>
+              <input type="search" name="search_d" id="search_d" placeholder="Search...">
             </div>
           </header>
           <section>
@@ -193,7 +193,7 @@ else{
                                             </div>
                                         </div>
                                         <div class="btn-withdraw">
-                                            <input type="submit" id="subbtn-withdrawal" value="Withdraw">
+                                            <input class="button" type="submit" id="subbtn-withdrawal" value="Withdraw">
                                         </div>
                                     </form>
                                 </div>
@@ -242,7 +242,7 @@ else{
                                                 </div>
                                             </div>
                                             <div class="btn-withdraw">
-                                                <input type="submit" id="subbtn-withdrawal" value="Withdraw">
+                                                <input class="button" type="submit" id="subbtn-withdrawal" value="Withdraw">
                                             </div>
                                         </form>
                                     </div>

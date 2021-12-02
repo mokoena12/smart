@@ -291,12 +291,6 @@ border-radius: 50%;
     width: 12em;
 
 }
-.logo_img{
-    height: 6em;
-    width: 12em;
-    text-align: center;
-    margin-top: 40px;
-}
     /* end of web logo */
 
 /*start of center box*/
@@ -856,13 +850,7 @@ border-radius: 50%;
     width: 12em;
 
 }
-.logo_img{
-    height: 6em;
-    width: 12em;
-    text-align: center;
-    margin-top: 40px;
-}
-    /* end of web logo */
+
 
 /*start of center box*/
 .nav_link2{
@@ -1160,6 +1148,7 @@ margin: 0;
   .chart span {
     margin-left: 1em;
     color: black;
+    font-weight: bold;
    
   }
   .btc-chart {

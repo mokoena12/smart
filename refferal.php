@@ -94,11 +94,11 @@ else{
                   Active Logs</a>
               </li>
               <li>
-                <a href="deposit"><i class="fa fa-exchange"></i>
+                <a href="deposit.php"><i class="fa fa-exchange"></i>
                   Deposit</a>
               </li>
               <li>
-                <a href="Withdrawal.php"><i class="fa fa-exchange"></i>
+                <a href="withdrawal.php"><i class="fa fa-exchange"></i>
                   Withdrawal</a>
               </li>
               <li>
@@ -114,7 +114,6 @@ else{
               <li>
                 <a href="logout.php"><i class="fa fa-sign-out"></i>Log out</a>
               </li>
-              
   
             </ul>
           </div>
@@ -127,8 +126,8 @@ else{
               <a href="#"><img src="img/smart.investa.logo2.png" class="logo_1" alt="logo"></a>
             </div>
             <div class="search">
-              <i class="fas fa-search"></i>
-              <input type="search" placeholder="Search...">
+              <i class="fas fa-search" onclick="search()"></i>
+              <input type="search" name="search_d" id="search_d" placeholder="Search...">
             </div>
           </header>
           <section>

@@ -522,7 +522,7 @@ else{
                                             </div>
                                         </div>
                                         <div class="p-btnsub">
-                                            <input type="submit" id="profile-btn1" value="Update Accounts">
+                                            <input class="button" type="submit" id="profile-btn1" value="Update Accounts">
                                         </div>
                                     </form>
                                 </section>
@@ -550,7 +550,7 @@ else{
                                             </div>
                                         </div>
                                         <div class="p-btnsub">
-                                            <input type="submit" id="profile-btn2" value="Update Logins">
+                                            <input class="button" type="submit" id="profile-btn2" value="Update Logins">
                                         </div>
                                     </form>
                                 </section>
@@ -578,7 +578,7 @@ else{
                                             </div>
                                         </div>
                                         <div class="p-btnsub3">
-                                            <input type="submit" id="profile-btn3" value="Update Banking Details">
+                                            <input class="button" type="submit" id="profile-btn3" value="Update Banking Details">
                                         </div>
                                     </form>
                                 </section>
@@ -611,3 +611,8 @@ else{
   </body>
   </html>
 
+<!-- <div class="manu">
+                        <div class="bars"></div>
+                        <div class="bars"></div>
+                        <div class="bars"></div>
+                    </div> -->

@@ -1265,10 +1265,9 @@ text-align: center;
 
 }
 .logo_img{
-    height: 6em;
-    width: 12em;
+    height: 3em;
+    width: 6em;
     text-align: center;
-    margin-top: 40px;
 }
     /* end of web logo */
 
@@ -1528,6 +1527,7 @@ header .logo img{
 .sidebar {
   display: none;
 }
+
 .turning {
   width: 100%;
   height: 100%;
@@ -1944,7 +1944,7 @@ a.elevation-1 {
   border-bottom: 1px solid #ccc;
   padding: 10px;
   color: black;
-
+  font-weight: bold;
 
 }
 .trading1 {
@@ -2126,13 +2126,29 @@ text-align: center;
   color: black;
 }
 .payment-wallet {
-  border: 1px solid gray;
-  padding-left: 1em;
   padding-top: 0.50em;
   border-radius: 3px;
   margin-bottom: 1em;
 
 }
+.payment-wallet select {
+  height: 2.5em;
+  width: 100%;
+}
+#btc-amount {
+  width: 100%;
+  border-radius: 3px;
+  height: 2.5em;
+ }
+ #depo-btc {
+   width: 45%;
+  border-radius: 4px;
+  height: 15%;
+ }
+ .button-sub {
+   margin-left: 40%;
+   margin-top: 5%;
+ }
 .payment-wallet h5 {
   height: fit-content;
   color: blue;
@@ -2631,9 +2647,69 @@ text-align: center;
 }
 /* end of the referral */
 
+/* center box */
+.center{
+  position:absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  padding: 1em;
+  border-radius: 20px;
+  background-color: white;
+}
+.h1_style{
+  color: blue;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 0px 0px 10px 0px;
+}
+.icon {
+  text-align: left;
+  text-decoration: none;
+  margin-bottom: 5px;
+  font-weight: 400;
+  padding-right: 10px;
+  color: orange;
+}
+.login1 {
+  border-radius: 6px;
+  width: 100%;
+  height: 2em;
+  margin-bottom: 20px;
+  border-color: blue;
+}
+.check {
+  text-align: left;
+  margin-left: 2em;
+}
+.link_reg{
+  color: blue;
+  margin-left: 1em;
+}
+.link_reg a{
+  color: blue;
+}
 
+/* end of center box */
 
-
+/* logout styles */
+.credentials2-logout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.subbtn2 {
+  width: 35%;
+}
+.subbtn3 {
+  width: 35%;
+}
+/* end logout styles */
 
 
 

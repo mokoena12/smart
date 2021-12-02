@@ -66,6 +66,24 @@ if($conn->query($trade)){
   }
 
   //=====End====//
+  //Processing deposits depositing-methods
+
+  if(isset($_POST["depositing-methods"])){
+
+    $amount = $_POST["amount-paybtc"];
+    $method =  $_POST["depositing-methods"];
+    $sql = "INSERT INTO deposit(username,amount,method) VALUES('$user',$amount,'$method')";
+
+    if($conn->query($sql)){
+      $invest_results = "Deposit successfully of amount $amount and method of $method";
+      header("Location:Dashboard.php?results=$invest_results");
+    }
+    
+
+  }
+
+  //=====End======//
+  
   ?>
 
 <?php 

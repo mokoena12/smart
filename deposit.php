@@ -1,3 +1,19 @@
+<?php
+
+
+session_start();
+
+if (isset($_SESSION["investa_user"])){
+
+  $user = $_SESSION["investa_user"];
+}
+else{
+  $err = "Please login before you access dashboard";
+  header("Location:login.php?user2=$err");
+}
+
+?>
+
 <Doctype html>
     <html lang="en" class="body-style">
     <head>
@@ -132,7 +148,7 @@
                             <div class="span-payment">
                                 <h5>Payment Methods</h5>
                             </div>
-                            <form action="#" method="post" enctype="multipart/form-data"></form>
+                            <form action="processor.php" method="post" >
                                 <div class="payment-wallet">
                                     <select name="depositing-methods" id="methods-fund">
                                         <option value="BITCOIN">BITCOIN</option>
@@ -142,10 +158,10 @@
                                 </div>
                                 <div class="for-bitcoin payment-wallet">
                                     <div>
-                                        <input type="text" name="amount-paybtc" id="btc-amount" placeholder="Enter Amount" required>
+                                        <input type="number" min="30" name="amount-paybtc" id="btc-amount" placeholder="Enter Amount" required>
                                     </div>
                                     <div class="button-sub">
-                                        <input class="button" type="submit" name="btc-btn" id="depo-btc" value="Deposit">
+                                        <input class="button" type="submit"  id="depo-btc" value="Deposit">
                                     </div>
                                 </div>
                             </form>
@@ -154,9 +170,11 @@
                             <div class="h5change">
                                 <h5>Instructions for Deposit</h5>
                             </div>
-                            <form action="#" method="post">
+                            
                                 <div class="text-deposit">
                                     <strong>
+                                    <span style="color:red;">The minimun deposit is $30</span>
+
                                         <p>
                                             To deposit, please choose the payment method at the
                                             Payment Methods panel and make the payment.
@@ -177,7 +195,7 @@
                                
                                 
 
-                            </form>
+                        
                         </div>
                     </div>
         

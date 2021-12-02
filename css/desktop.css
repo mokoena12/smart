@@ -1209,12 +1209,11 @@ align-items: center;
 .sidebar-manus ul li:hover {
 background-color: blue;
 border-radius: 6px;
+
 }
 .sidebar-manus ul li a i {
 height: 1em;
-min-width: 30px;
 border-radius: 12px;
-line-height: 10px;
 }
 /* start of sidebar icon spassing */
 .sidebarspace  {
@@ -1503,7 +1502,7 @@ a.elevation-1 {
   border-radius: 6px;
 
 }
-#selectplans-period {
+#selectplans-period1 {
   margin-top: 1em;
   height: fit-content;
   height: 2em;
@@ -1611,6 +1610,7 @@ a.elevation-1 {
 .container_box {
   top: 7%;
 
+
 }
 
 /*====End === */
@@ -1696,13 +1696,13 @@ a.elevation-1 {
 .crossrate {
   position: relative;
   width: 100%;
-  height: 30em;
+  height: 95%;
+  margin-top: 13%;
 }
 .FOREX {
-  border: 1px solid grey;
+  border: 1px solid #ccc;
   width: 100%;
-  height: 2em;
-  padding: 10px;
+  padding: 1%;
   border-radius: 3px;
 }
 .FOREX span {
@@ -2164,6 +2164,19 @@ width: 90%;
   display: none;
   padding: 1em;
 }
+#avator-upload {
+  background-color: #6c757d;
+  color: white;
+  height: 2em;
+  width: 80%;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 4px;
+
+}
+.avater-shift input{
+  margin-top: 2%;
+}
 
 .profile-details {
   border: 1px solid #ccc;
@@ -2231,17 +2244,7 @@ width: 90%;
   height: 2.5em;
   border-radius: 4px;
 }
-#profile-btn {
-  height: 2.5em;
-  width: 15em;
-  background-color: blue;
-  color: white;
-  font-size: 1em;
-  font-weight: bold;
-  border-radius: 4px;
-  margin-right: auto;
-  margin-left: auto;
-}
+
 .p-btnsub {
   margin-top: 25px;
   margin-left: 30%;

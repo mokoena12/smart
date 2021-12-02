@@ -1124,7 +1124,7 @@ margin: 0;
     border: 1px solid gray;
     border-radius: 3px;
     position: relative;
-    top: 7%;
+    top: 17%;
   
   }
 
@@ -1167,3 +1167,39 @@ margin: 0;
   }
   /* end of the btc chart */
 
+/* start of input btn */
+
+#profile-btn1 {
+    height: 2.5em;
+    width: 15em;
+    background-color: blue;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #profile-btn2 {
+    height: 2.5em;
+    width: 15em;
+    background-color: blue;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #profile-btn3 {
+    height: 2.5em;
+    width: 15em;
+    background-color: blue;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+/* end of input btn */

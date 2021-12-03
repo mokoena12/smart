@@ -220,13 +220,13 @@ else{
                                         <strong class="float-right">1-2 days</strong>
                                     </p>
                                     
-                                    <form action="processor.php" method="post">
+                                    <form action="processor.php" method="post" onsubmit="return withdrawal(<?php echo $bal_v['balance'] ?>)">
                                         <div class="method2">
                                             <div class=".h4changing">
                                                 <h4>Select Payment Method</h4>
                                             </div>
                                             <div>
-                                                <select name="payment-options" id="payment-options">
+                                                <select name="payment-options" id="payment-options" >
                                                     <option value="">--Select Payment Method</option>
                                                     <option value="Bank">Bank</option>
                                                     <option value="Bitcoin">Bitcoin</option>
@@ -270,7 +270,7 @@ else{
                                             <span>Duration:</span>
                                             <strong class="float-right">1-2 days</strong>
                                         </p>
-                                        <form action="#" method="post">
+                                        <form action="#" method="post" >
                                             <div class="method2">
                                                 <div class=".h4changing">
                                                     <h4>Select Payment Method</h4>

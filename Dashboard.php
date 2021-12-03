@@ -2,7 +2,7 @@
 //Tasks to be completed by front-end
 
 //Fix the html tag for withdrawal(is not closed and it has class) check this for all other files in dashboard(deposit.php,profile.php, etc....)
-//Code investing History
+//Code investing History it should be below Live investing. The design is the as as trading history
 //Code notification pop_up
 //Change the deposit history in withdrawal it should be withdrawal history and also change it in activity logs it should be Activity logs History
 //change Account details form in profile it shoulb be account holder's Full name and also add Bank name and card number

@@ -191,7 +191,7 @@ else{
                                         }
                                         else{
                                             if($bal_v["balance"]<50){
-                                                $value= $value; 
+                                                $value= $value + 30; 
                                             }
                                             else if($bal_v["balance"]>50 && $bal_v["balance"]<600){
                                                 $value= $value + 600;

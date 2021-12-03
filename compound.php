@@ -9,14 +9,15 @@
 //Fix live trading table datatypes, the column in trading history for clue
 // Create table for Recent trading history -- user Evidence
 
-// Create php functions for live trading -- user Belmiro 
 //Update Dashboard table accordingly 
 //Create table for referrals with following columns (Username and Date_reg) 
 //Please fix the registration form, we lost some data when moving to Git also make sure it adds the user when registering
 //Create table for deposit history, got to deposit page to see it, the table must have these columns Amount,status,credited_at and action
 //Add date column to registration table 
-//The following tasks must be done by Belmiro  
+ 
 
+//How to do compound
+//step 1: create functions for compounding balance and profit
 
 session_start();
 if (isset($_SESSION["investa_user"])){
@@ -43,11 +44,11 @@ $amount = "";
 //Fix this function, remember how compounds works, take the current bal
 function balance(int $A,int $i,int $n) {
     $Bal = $A * (1 + $i);
-   return $Bal;
+   return $Bal; // this function is correct
 }
 function Nwbalance(int $Ba,int $rowB,int $n){
   $nwBal = $rowB + $Bal;
-  return $nwBal;
+  return $nwBal;//this is also correct
 }
 function profit(int $B, int $d){
    $Proft = $B - $d ;
@@ -74,11 +75,11 @@ if($result1->num_rows> 0){
           if($typeOfinv=="Bronze"){
             $i = 0.04;
             $n=1; 
-            echo balance($amount,0.04,1);
-            echo profit($Bal,$deposit);
+            echo balance($amount,0.04,1);// this is correct
+            echo profit($Bal,$deposit);//this is wrong first we don't know what is $Bal
             
             $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
-            WHERE username = '$user'";
+            WHERE username = '$user'"; //this is wrong we don't know   $nwBal and $Proft
 
          }else if($typeOfinv=="Titanium"){
             $i = 0.05;

@@ -125,8 +125,7 @@ $balance =  $row["balance"];
           <div class="sidebar-manus">
             <ul>
               <li>
-                <a href="Dashboard.php"><img  class="sidebarspace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>
-                Dashboard</a>
+                <a href="Dashboard.php"><i class="fa fa-home"></i>Dashboard</a>
               </li>
               <li>
                 <a href="profile.php"><i class="fa fa-user"></i>Profile</a>
@@ -147,7 +146,7 @@ $balance =  $row["balance"];
                 <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
                 </li>
               <li>
-                <a href="subscription.php">
+                <a href="#">
                   <i class="fa fa-credit-card"></i>
                   Subscription
                 </a>
@@ -170,6 +169,11 @@ $balance =  $row["balance"];
             <div class="search">
               <i class="fas fa-search" onclick="search()"></i>
               <input type="search" name="search_d" id="search_d" placeholder="Search...">
+            </div>
+            <div class="menu-left manu-right">
+              <div class="bars"></div>
+              <div class="bars"></div>
+              <div class="bars"></div>
             </div>
           </header>
           <section>
@@ -376,7 +380,7 @@ $balance =  $row["balance"];
                   <p>This investment is commpounded daily <br>
                     meaning your investment will increase by 3% <br>
                     every day. Investment period is the time you <br>
-                    wand this investment to last before you can <br>
+                    want this investment to last before you can <br>
                     withdraw your money. 
                   </p>
                </div>
@@ -388,7 +392,7 @@ $balance =  $row["balance"];
                   <p>This investment is commpounded daily <br>
                     meaning your investment will increase by 5% <br>
                     every day. Investment period is the time you <br>
-                    wand this investment to last before you can <br>
+                    want this investment to last before you can <br>
                     withdraw your money. 
                   </p>
                 </div> 
@@ -400,7 +404,7 @@ $balance =  $row["balance"];
                   <p>This investment is commpounded daily <br>
                     meaning your investment will increase by 10% <br>
                     every day. Investment period is the time you <br>
-                    wand this investment to last before you can <br>
+                    want this investment to last before you can <br>
                     withdraw your money. 
                   </p>
                </div>
@@ -412,7 +416,7 @@ $balance =  $row["balance"];
                   <p>This investment is commpounded daily <br>
                     meaning your investment will increase by 20% <br>
                     every day. Investment period is the time you <br>
-                    wand this investment to last before you can <br>
+                    want this investment to last before you can <br>
                     withdraw your money. 
                   </p>
                 </div>                                               
@@ -421,7 +425,7 @@ $balance =  $row["balance"];
                 <p>By executing this investment, You agree to our terms and conditions (visit <a href="#">Terms</a>) to read more</p>
               </div>
               <div class="btnex2">
-                <input type="submit" id="btnexecute2" value="Invest">
+                <input class="button" type="submit" id="btnexecute2" value="Invest">
               </div>
               
             </form>
@@ -515,8 +519,18 @@ $balance =  $row["balance"];
                     <th>Trading Action</th>>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="tablebody" >
                   <!-- This is the only part to be  changed-->
+                  <tr>
+                    <td>FOREX</td>
+                    <td>USDJPY</td>
+                    <td></td>
+                    <td>125.25</td>
+                    <td>105.25</td>
+                    <td>135.25</td>
+                    <td></td>
+                    <td><button id="colour-for" style="background-color: red !important;color: white;border-radius: 3px; ">close</button></td>
+                  </tr>
                   <?php  
                    
                   $sql="SELECT trading_type,currency_pair,lot_size,entry_price,stop_loss,take_profit,trading_action FROM live_trading WHERE username = '$user'";

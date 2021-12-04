@@ -540,33 +540,33 @@ header .logo img{
 }
 .quick-links{
     color: white;
+
 }
 .quick-links a{
-    color: #664406;
+    color: #d68f0c;
  
 }
 .services{
     color: white;
+
 }
 .services a{
-    color: #664406;
+    color: #d68f0c;
 }
 .quick-links a:link{
     text-decoration: underline;
   }
   .quick-links a:hover{
-    color: #062a52;
+    color: #eef0f1;
     
   }
-  .services h5{
-    font-size: 1em;
-  }
+ 
   .services a:link{
     text-decoration: underline;
 
   }
   .services a:hover{
-    color: #062a52;
+    color: #f4f6f8;
   }  
   .last-blockdiv .block-para a:link{
     text-decoration: none;

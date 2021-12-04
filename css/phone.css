@@ -1517,7 +1517,7 @@ header .logo img{
 }
 .last-blockdiv{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 0.3em;
 }
 

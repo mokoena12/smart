@@ -166,7 +166,7 @@ else{
                             <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
                             </li>
                         <li>
-                        <a href="subscription.php">
+                        <a href="#">
                             <i class="fa fa-credit-card"></i>
                             Subscription
                         </a>
@@ -186,8 +186,13 @@ else{
                         <a href="#"><img src="img/smart.investa.logo2.png" class="logo_1" alt="logo"></a>
                     </div>
                     <div class="search">
-                        <i class="fas fa-search"></i>
-                        <input type="search" placeholder="Search...">
+                        <i class="fas fa-search" onclick="search()"></i>
+                        <input type="search" name="search_d" id="search_d" placeholder="Search...">
+                    </div>
+                    <div class="menu-left manu-right">
+                        <div class="bars"></div>
+                        <div class="bars"></div>
+                        <div class="bars"></div>
                     </div>
                 </header>
                 <section>

@@ -495,7 +495,7 @@ font-size: 23px;
 }
 
 .menu_content .dropdown div{
-    width:5em;
+    width:7.5em;
     height: auto;
     background-color: black;
     color: white;
@@ -1535,8 +1535,85 @@ header .logo img{
 /* start of the dashboard page */
 
 .sidebar {
-  display: none;
+  position: fixed;
+  margin-top: -2px;
+  left: -10px;
+  z-index: 1;
+  background-color: white;
+  color: black;
+  width: 50%;
+  height: 100%;
+  box-shadow: 10px 2px 8px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)!important;
+  overflow-y: hidden;
 }
+
+  .sidebar-flex {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  }
+  .Pcontrol {
+  width: 5em;
+  height: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  
+  }
+  .sidebar-manus {
+    position: relative;
+    font-weight: bold;
+    color: white;
+    
+    }
+    .sidebar-manus ul li a {
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    }
+    
+   
+.sidebar li { 
+  list-style: none;
+  text-decoration: none;
+  width:10em;
+  border-radius: 4px;
+  padding: 0px 0px 9px 5px;
+  margin: auto;
+  
+  }
+  .sidebar li:hover{
+    color: white;
+  background-color: rgb(27, 27, 216);
+    
+  }
+  
+  .sidebar li:hover i{
+    color: white;
+  } 
+  
+  
+  .sidebar li:hover a{
+    color: white!important;
+  }  
+  
+div.sidebar_profile {
+  border-bottom: 1px solid grey;
+  text-align: center;
+  margin: 2em 0px 2em 10px;
+  padding: 1em 0px 1em 0px;
+  width: 90%;
+  }
+  .sidebar-manus ul li i{
+    color: black;
+    margin-right:10px ;
+  }
+  
+  
+  
+  /* start of sidebar icon spassing */
+  
 
 .turning {
   width: 100%;
@@ -1544,7 +1621,6 @@ header .logo img{
   overflow-x: hidden;
 }
 .wrapper-box {
-  display: inline;
   width: 100%;
   height: 100%;
 }
@@ -1562,6 +1638,7 @@ header .logo img{
 
 }
 .logo_1 { 
+  display: none;
   width: 6em;
   height: 4em;
   text-align: left;
@@ -1573,11 +1650,31 @@ header .logo img{
   text-align: right;
   margin-right: 1em;
   line-height: 30px;
-  padding-top: 15px;
-  border-radius: 6px;
-  margin-top: -3em;
+  padding-top: 10px;
+  border-radius: 3px;
   height: fit-content;
 
+}
+.menu-left {
+  position: absolute;
+  top: 7px;
+  left: 3px;
+  padding: 3px;
+  width:10%;
+  background-color: transparent;
+
+}
+.menu-left .bars {
+ background-color: white;
+    margin-top: 3px;
+    margin-bottom: 2px;
+    height: 4px;
+    width: 100%;
+}
+.manu-right {
+  margin-left: 0.60em;
+  margin-top: 0.30em;
+ 
 }
 .dash {
   display: flex;
@@ -1719,7 +1816,7 @@ header .logo img{
   margin-right: 1em;
 }
 .money_balance { 
-  font-size: 1.25em;
+  font-size: 0.80em;
   font-weight: 700;
 
 }
@@ -1761,7 +1858,7 @@ a.elevation-1 {
 /* start of investing plan */
 .investing-BOX {
   width: 93.5%;
-  border: 1px solid gray;
+  border: 1px solid #ccc;
   margin-right: 1em;
   margin-left: 1em;
   margin-bottom: 2em;
@@ -1770,9 +1867,10 @@ a.elevation-1 {
 }
 .header_TO {
   height: fit-content;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #ccc;
   padding: 10px;
   color: black;
+  font-weight: bold;
 }
 .control-plan {
   display: flex;
@@ -2090,6 +2188,7 @@ a.elevation-1 {
 }
 .FOREX span {
   color: black;
+  font-weight: bold;
 }
 .cross-chart {
   height: 20em;
@@ -2722,9 +2821,9 @@ text-align: center;
 /* end logout styles */
 
 
+/* search engin */
 
-
-
+/* end of search engine */
 
 
 

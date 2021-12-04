@@ -180,7 +180,7 @@ else{
                                             Payment Methods panel and make the payment.
                                         </p>
                                         <p>
-                                            If you choose Bitcoin then you will have to by using Bitcoin wallet like Luno
+                                            If you choose Bitcoin method then you will have to deposit using Bitcoin wallet like Luno
                                           </p>
                                           <p>
                                             If you choose Bank card please be adviced we only accept Visa/mastercard payment mathods

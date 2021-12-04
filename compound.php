@@ -1,6 +1,7 @@
+
 <?php   
 //Please fix the registration form, we lost some data when moving to Git also make sure it adds the user when registering
-
+ 
 session_start();
 if (isset($_SESSION["investa_user"])){
 
@@ -13,9 +14,9 @@ else{
   header("Location:login.php?user2=$err");
   
 }
-/*if($_SESSION["investa_user"] != "Admin"){
+if($_SESSION["investa_user"] != "Admin"){
   header("Location:index.html");
-}*/
+}
 require_once "connect.php";
  
 $deposit=0;
@@ -30,7 +31,7 @@ function balance($A,$i,$n) {
 }
 function Nwbalance($Ba,$rowB){
   $nwBal = $rowB + $Ba;
-  return $nwBal;
+  return $nwBal; 
 }
 function profit($B,$d){
    $Proft = $B - $d ;
@@ -56,6 +57,7 @@ if($result1->num_rows> 0){
            
           if($typeOfinv=="Bronze"){
             $i = 0.04;
+ 
             $n=1;
             $balance = balance($investd_amount,0.04,1);
             
@@ -63,12 +65,11 @@ if($result1->num_rows> 0){
            
             $Proft = profit($nwBal,$deposit);
             
-
             $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
-            WHERE username = '$user'";
+             WHERE username = '$user'";
             $result3 = $conn->query($sql);
 
-         }if($typeOfinv=="Titanium"){
+         }else if($typeOfinv=="Titanium"){
           $i = 0.05;
           $n=1;
           $balance = balance($investd_amount,0.05,1);

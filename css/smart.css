@@ -157,7 +157,7 @@ body{
 /*=====Style for Buttons====*/
 .button{
     background-image: linear-gradient(to bottom right,white, rgb(0, 183, 255), rgb(32, 85, 230));
-    color: white;
+    color: white!important;
     text-decoration: none;
     font-weight: bold;
     border-radius: 4px;
@@ -540,33 +540,33 @@ header .logo img{
 }
 .quick-links{
     color: white;
+
 }
 .quick-links a{
-    color: #664406;
+    color: #d68f0c;
  
 }
 .services{
     color: white;
+
 }
 .services a{
-    color: #664406;
+    color: #d68f0c;
 }
 .quick-links a:link{
     text-decoration: underline;
   }
   .quick-links a:hover{
-    color: #062a52;
+    color: #eef0f1;
     
   }
-  .services h5{
-    font-size: 1em;
-  }
+ 
   .services a:link{
     text-decoration: underline;
 
   }
   .services a:hover{
-    color: #062a52;
+    color: #f4f6f8;
   }  
   .last-blockdiv .block-para a:link{
     text-decoration: none;
@@ -1195,3 +1195,25 @@ margin: 0;
     margin-left: auto;
   }
 /* end of input btn */
+
+/*Style for deposit user */
+.deposit_user{
+    position: fixed;
+    bottom: 0em;
+    left: 0px;
+    padding:20px;
+    text-align: center;
+    background-color: black;
+    color:white;
+    z-index: 100;
+    border-radius: 3px;
+    animation:fadeout 1s linear;
+}
+.deposit_user .closing{
+color:red;
+font-size: 40px;
+top:-20px;
+right: 1px;
+position:absolute;
+}
+/*====End of Style ====== */

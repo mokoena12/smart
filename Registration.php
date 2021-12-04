@@ -1,5 +1,5 @@
 <?php
-
+//Data type for registration date column is register_date datetime default now();
 require_once "connect.php";
 //define vaariables and set to empty
 $firstnameErr =$approved= $middle_nameErr = $lastnameErr =  $countryErr = $emailErr = $cellphoneErr = $usernameErr  = $passwordErr =

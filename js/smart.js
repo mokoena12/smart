@@ -115,6 +115,10 @@ function Loading(){
     setTimeout(fade,3000);
     setInterval(Count,50);
     setTimeout(text,5000);
+
+    setInterval(deposit,10000);
+    setInterval(deposit1,20000);
+
     }
 
 function fade(){
@@ -228,6 +232,42 @@ $(document).ready(function(){
   });
 });
 //====End=====//
+
+
+///====Style to hide the deposit and withdraw pop_up
+
+$(document).ready(function(){
+  $(".closing").click(function(){
+    $(".deposit_user").hide();
+  });
+});
+
+function deposit(){
+  
+var  des = getRndInteger(0, 23); 
+let indx = getRndInteger(0, 8);
+var array = ["Withdrew","Deposited","Deposited","Withdrew","Withdrew","Deposited","Deposited","Deposited","Withdrew"];
+var name = document.getElementsByClassName("pnames")[des];
+var cash =  getRndInteger(30, 3000);
+document.getElementById("deposit_name").innerHTML= name.textContent;
+document.getElementById("deposit_value").innerHTML= array[indx] +" $"+ cash;
+document.getElementById("deposit_user").style.display="block";
+
+}
+
+function getRndInteger(min, max) {
+
+  return Math.floor(Math.random() * (max - min) ) + min;
+
+}
+
+function deposit1(){
+  document.getElementById("deposit_user").style.display="none";
+
+}
+
+//====End=====//
+
 
 
 

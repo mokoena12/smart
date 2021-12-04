@@ -1,22 +1,5 @@
-<?php
-//Tasks to be Completed
-//=== The following tasks must be done by Evidence
-
-// Must create table for live trading with following columns : username, currency_type, currency_pair, lot_size, 
-//take_profit, stop_loss, entry_price and action_select(be careful of datatypes)-- User Evidence
-//Extend table of investment(Amount) 
-//Select Bal and deposit
-//Fix live trading table datatypes, the column in trading history for clue
-// Create table for Recent trading history -- user Evidence
-
-// Create php functions for live trading -- user Belmiro 
-//Update Dashboard table accordingly 
-//Create table for referrals with following columns (Username and Date_reg) 
+<?php   
 //Please fix the registration form, we lost some data when moving to Git also make sure it adds the user when registering
-//Create table for deposit history, got to deposit page to see it, the table must have these columns Amount,status,credited_at and action
-//Add date column to registration table 
-//The following tasks must be done by Belmiro  
-
 
 session_start();
 if (isset($_SESSION["investa_user"])){
@@ -35,81 +18,97 @@ else{
 }*/
 require_once "connect.php";
  
-$deposit="";
-$balance="";
-$Bal = $nwBal = "";
-$Proft = "";
-$amount = "";
-//Fix this function, remember how compounds works, take the current bal
-function balance(int $A,int $i,int $n) {
-    $Bal = $A * (1 + $i);
+$deposit=0;
+$balance=0;
+$Bal = $nwBal = 0;
+$Proft = 0;
+$amount = 0; 
+
+function balance($A,$i,$n) {
+    $Bal = $A * pow((1 + $i),$n);
    return $Bal;
 }
-function Nwbalance(int $Ba,int $rowB,int $n){
-  $nwBal = $rowB + $Bal;
+function Nwbalance($Ba,$rowB){
+  $nwBal = $rowB + $Ba;
   return $nwBal;
 }
-function profit(int $B, int $d){
+function profit($B,$d){
    $Proft = $B - $d ;
    return $Proft;
 }
-$sql="SELECT balance, deposit FROM dashboard WHERE  username='$user' ";
+$sql="SELECT balance, deposit, invested_amount FROM dashboard WHERE  username='$user' ";
 $result = $conn->query($sql);
 if($result->num_rows> 0){
   $row = $result->fetch_assoc();
-  $balance =  $row["balance"];
+  $balance1 =  $row["balance"];
 $deposit = $row["deposit"];
+$investd_amount = $row["invested_amount"];
 }
 
-    $sql="SELECT typeOfInv,periods,user,amount FROM investment";
+    $sql="SELECT typeOfInv,periods,user FROM investment";
     $result1 = $conn->query($sql);
     
 if($result1->num_rows> 0){ 
-
-    While($type = $result1->fetch_assoc() ){
-      $amount = $type["amount"];
+  while($type = $result1->fetch_assoc()){
+      
            $typeOfinv = $type["typeOfInv"];
             $user = $type["user"];
            
           if($typeOfinv=="Bronze"){
             $i = 0.04;
-            $n=1; 
-            echo balance($amount,0.04,1);
-            echo profit($Bal,$deposit);
-            
-            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
-            WHERE username = '$user'";
-
-         }else if($typeOfinv=="Titanium"){
-            $i = 0.05;
             $n=1;
-            $balance = balance($amount,0.05,1);
-            $Proft = profit($Bal,$deposit);
+            $balance = balance($investd_amount,0.04,1);
+            
+            $nwBal = Nwbalance($balance1,$balance);
+           
+            $Proft = profit($nwBal,$deposit);
+            
 
             $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
             WHERE username = '$user'";
+            $result3 = $conn->query($sql);
+
+         }if($typeOfinv=="Titanium"){
+          $i = 0.05;
+          $n=1;
+          $balance = balance($investd_amount,0.05,1);
+            
+            $nwBal = Nwbalance($balance1,$balance);
+           
+            $Proft = profit($nwBal,$deposit);
+
+          $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
+          WHERE username = '$user'";
+          $result3 = $conn->query($sql);
             
           }else if($typeOfinv=="Gold"){
             $i = 0.10;
             $n=1;
-            $Bal = balance($amount,0.10,1);
+            $balance = balance($investd_amount,0.10,1);
             
-            $Proft = profit($Bal,$deposit);
+            $nwBal = Nwbalance($balance1,$balance);
+           
+            $Proft = profit($nwBal,$deposit);
+
             $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
             WHERE username = '$user'";
+            $result3 = $conn->query($sql);
             
           }elseif($typeOfinv=="Diamond"){
             $i = 0.20;
             $n=1;
-            $Bal = balance($amount,0.20,1);
+            $balance = balance($investd_amount,0.20,1);
             
-            $Proft = profit($Bal,$deposit);
+            $nwBal = Nwbalance($balance1,$balance);
+           
+            $Proft = profit($nwBal,$deposit);
+
             $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
             WHERE username = '$user'";
+            $result3 = $conn->query($sql);
           }
-
+        
     }
-
 
 }
 

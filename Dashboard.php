@@ -25,22 +25,23 @@ else{
 
 require_once "connect.php";
 
-$balance = $profit_return = $bonus = $total_deposit = $total_withdrawal = $deposit = $withdrawal = "";
-$typeOfInv=  $invest_plan_err= $invest_period_err= $invest_results="";
+$balance = $profit_return = $referral_bonus = $invested_amount = $total_withdrawal = $deposit = $Equity = 0;
+$typeOfInv=  $invest_plan_err= $invest_period_err= $invest_results=0;
 
 
-$sql="SELECT balance, profit_return, bonus, total_deposit, total_withdrawal, deposit, withdrawal FROM dashboard WHERE  username='$user' ";
+$sql="SELECT balance, profit_return, referral_bonus, invested_amount, total_withdrawal, deposit, equity FROM dashboard WHERE  username='$user' ";
 $result = $conn->query($sql);
-if($result->num_rows> 0){
-  $row = $result->fetch_assoc(); 
+if($result !==FALSE && $result->num_rows> 0){
+  $row = $result->fetch_assoc();
+
 $balance =  $row["balance"];
  $profit_return = $row["profit_return"];
- 
- $bonus = $row["bonus"];
- $total_deposit = $row["total_deposit"];
+ $referral_bonus = $row["referral_bonus"];
+ $invested_amount = $row["invested_amount"];
  $total_withdrawal = $row["total_withdrawal"];
  $deposit = $row["deposit"];
- $withdrawal = $row["withdrawal"];
+ $Equity = $row["equity"];
+
 }
 
 ?>
@@ -229,7 +230,7 @@ $balance =  $row["balance"];
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Referral Bonus</span>
-                  <span class="money_balance">$ <?php echo $bonus;?></span>
+                  <span class="money_balance">$ <?php echo $referral_bonus;?></span>
                 </div>
               </div>
               <!-- end of bonus box -->
@@ -243,7 +244,7 @@ $balance =  $row["balance"];
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Invested Amount</span>
-                  <span class="money_balance">$ <?php echo $total_deposit;?></span>
+                  <span class="money_balance">$ <?php echo $invested_amount;?></span>
                 </div>
       
               </div>
@@ -287,7 +288,7 @@ $balance =  $row["balance"];
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Equity</span>
-                  <span class="money_balance" id="prices2">$ <?php echo $withdrawal?></span>
+                  <span class="money_balance" id="prices2">$ <?php echo $Equity?></span>
                 </div>
       
               </div>
@@ -506,28 +507,36 @@ $balance =  $row["balance"];
                 <thead class="tablehead">
                   <tr>
                     <th>Trading Type</th>
-                    <th>Currency Pair</th>
-                    <th>Trading Action</th>
+                    <th>Currency Pair</th>                  
                     <th>Entry Price</th>
                     <th>Stop Loss</th>
                     <th>Take Profit</th>
                     <th>Status</th>
-                    <th>Action</th>
+                    <th>Trading Action</th>>
                   </tr>
                 </thead>
                 <tbody>
                   <!-- This is the only part to be  changed-->
-                  
-                  <tr>
-                    <td>FOREX</td>
-                    <td>USDJPY</td>
-                    <td></td>
-                    <td>125.25</td>
-                    <td>105.25</td>
-                    <td>135.25</td>
-                    <td></td>
-                    <td></td>
-                  </tr>
+                  <?php  
+                   
+                  $sql="SELECT trading_type,currency_pair,lot_size,entry_price,stop_loss,take_profit,trading_action FROM live_trading WHERE username = '$user'";
+                  $result2 = $conn->query($sql);
+                     
+                    if($result2 !== FALSE && $result2->num_rows> 0){
+                   
+                  while($row2 = $result2->fetch_assoc()){
+                   echo "<tr>";
+                   echo "<td>".$row2['trading_type']."</td>";
+                   echo "<td>".$row2['currency_pair']."</td>";
+                   echo "<td>".$row2['entry_price']."</td>";
+                   echo "<td>".$row2['stop_loss']."</td>";
+                   echo "<td>".$row2['take_profit']."</td>";
+                   echo "<td></td>";
+                   echo "<td></td>";
+                   echo "</tr>"; 
+                    }
+                  }
+                  ?>
                   <!-- This is the only part to be  changed-->
 
                 </tbody>

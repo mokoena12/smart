@@ -7,11 +7,13 @@
 //Change the deposit history in withdrawal it should be withdrawal history and also change it in activity logs it should be Activity logs History
 //change Account details form in profile it shoulb be account holder's Full name and also add Bank name and card number
 //Fix the hovering of dashboard panel it
-//Put button in live trading history table, the button is named close under action column
+//Put button in live trading history table, the button is named close under action column(RED, COLOR:WHITE)
 //fix side_panel for deposit is not displaying name of user below avatar
 //Fix the size of logo for login/registration and logout
 //Fix the subscription link in side_panel href should be # on subscription.php
 //Fix the search engine for deposit.php, withdrawal.php ,etc it should be working like dashboard.php
+//fIX ADRESS IN PROFILE.PHP
+
 session_start();
 
 if (isset($_SESSION["investa_user"])){

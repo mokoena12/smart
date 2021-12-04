@@ -250,7 +250,7 @@ else{
 
                                 <!-- start sectin fo the profile contents -->
                                 <section class="displayers">
-                                    <form action="#" method="post">
+                                    <form action="PROCESSOR.PHP" method="post">
                                         <div class="profile-content2">
                                             <div class="diveform" >
                                                 <label for="role" >Role </label>

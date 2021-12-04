@@ -24,10 +24,11 @@ else{
   if(isset($_POST["selectplans"])){
 
     $type = $_POST["selectplans"];
-    $period = $_POST["selectperiod"];
+    $amount = $_POST["invest"];
+    $period = $_POST["selectperiod"]; 
       $invest = "INSERT INTO investment(typeOfInv,periods,user) VALUES('$type','$period','$user')"; 
-
-      if($conn->query($invest)){
+      $invest1 = "UPDATE dashboard SET invested_amount=$amount WHERE  username = '$user'"; 
+      if($conn->query($invest) && $conn->query($invest1)){
         $invest_results = "Your Investment was successfully";
         header("Location:Dashboard.php?results=$invest_results");
       }
@@ -54,7 +55,7 @@ else{
   if(empty( $take)){
     $take = "";
   }
-  $trade = "INSERT INTO live_trading(username,currency_type,currency_pair,lot_size,entry_price,stop_loss,take_profit,trading_action) 
+  $trade = "INSERT INTO live_trading(username,trading_type,currency_pair,lot_size,entry_price,stop_loss,take_profit,trading_action) 
   VALUES('$user','$currency_type','$currency_pair', $lot_size,$entry,$stop,$take,'$action')";
 
 if($conn->query($trade)){

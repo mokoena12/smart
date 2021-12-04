@@ -54,7 +54,7 @@ else{
   if(empty( $take)){
     $take = "";
   }
-  $trade = "INSERT INTO live_trading(username,currency_type,currency_pair,lot_size,entry_price,stop_loss,take_profit,action) 
+  $trade = "INSERT INTO live_trading(username,currency_type,currency_pair,lot_size,entry_price,stop_loss,take_profit,trading_action) 
   VALUES('$user','$currency_type','$currency_pair', $lot_size,$entry,$stop,$take,'$action')";
 
 if($conn->query($trade)){

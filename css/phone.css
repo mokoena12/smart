@@ -395,6 +395,7 @@ flex-direction: column;
   width: 96%;
   height:29em;
   margin: 1%;
+  border-radius: 5px;
   background-image: rgb(253, 253, 253);
   background-color: white;
 }
@@ -1512,25 +1513,18 @@ header .logo img{
 .lastblock>h1{
   text-align: center;
   color: white;
-  padding:0.5em;
+  padding:0.3em;
 }
 .last-blockdiv{
   display: flex;
   flex-direction: row;
-  margin: 0.5em;
+  margin: 0.3em;
 }
 
 .last-blockdiv>div{
   margin: 0.5em;
-  font-size: 1em;
+  font-size: 0.7em;
 }
-.quick-links h5{
-  font-size: 1em;
-}
-.services h5{
-  font-size: 1em;
-}
-
 
 /* start of the dashboard page */
 
@@ -2821,7 +2815,20 @@ text-align: center;
 /* end logout styles */
 
 
-/* search engin */
+
+/*Style for deposit user */
+.deposit_user{
+  width: 100%;
+  font-weight: bold;
+}
+.deposit_user .deposit_name{
+  font-size: 19px;
+}
+
+.deposit_user .deposit_value{
+  font-size: 19px;
+}
+/*====End of Style ====== */
 
 /* end of search engine */
 

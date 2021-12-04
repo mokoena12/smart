@@ -54,7 +54,7 @@ else{
   if(empty( $take)){
     $take = "";
   }
-  $trade = "INSERT INTO live_trading(username,currency_type,currency_pair,lot_size,entry_price,stop_loss,take_profit,action) 
+  $trade = "INSERT INTO live_trading(username,currency_type,currency_pair,lot_size,entry_price,stop_loss,take_profit,trading_action) 
   VALUES('$user','$currency_type','$currency_pair', $lot_size,$entry,$stop,$take,'$action')";
 
 if($conn->query($trade)){
@@ -66,14 +66,46 @@ if($conn->query($trade)){
   }
 
   //=====End====//
+  //Processing deposits depositing-methods
+
+  if(isset($_POST["depositing-methods"])){
+    $selecting = "SELECT balance FROM dashboard WHERE  username='$user' ";
+    $old_bal = $conn->query($selecting)->fetch_assoc();
+    $old = $old_bal["balance"];
+
+    $amount = $_POST["amount-paybtc"];
+    $method =  $_POST["depositing-methods"];
+    $sql = "INSERT INTO deposit(username,amount,method) VALUES('$user',$amount,'$method')";
+    $nwBal = $old + $amount;
+    $dash = "UPDATE dashboard SET balance = $nwBal
+    WHERE username = '$user' ";
+
+
+    if($conn->query($sql) && $conn->query($dash)){
+      $invest_results = "Deposit successfully of amount $amount using method of $method";
+      header("Location:Dashboard.php?results=$invest_results");
+    }
+    
+
+  }
+
+  //=====End======//
+  
   ?>
 
 <?php 
 //widthdrawal process 
 if(isset($_POST["widthdraw"])){
+  $selecting = "SELECT balance FROM dashboard WHERE  username='$user' ";
+    $old_bal = $conn->query($selecting)->fetch_assoc();
+    $old = $old_bal["balance"];
+
     $amount = $_POST["amount"];
     $method =  $_POST["payment-options"];
     $value = $_POST["widthdraw"];
+    $nwBal = $old - $amount;
+    $dash = "UPDATE dashboard SET balance = $nwBal
+    WHERE username = '$user' ";
       /*
   $to = $email;;
   $subject ="Widthdrawal";
@@ -107,8 +139,8 @@ style='background-color:red; color:white;border-radius:3px;font-weight:bold;font
   }
   else{
     $sql = "INSERT INTO withdrawal(username,amount,method) VALUES('$user',$amount,'$method')";
-    if($conn->query($sql)){
-      $invest_results = "Withdrawal Successfully of amount $amount and method of $method";
+    if($conn->query($sql) && $conn->query($dash)){
+      $invest_results = "Withdrawal Successfully of amount $amount using method of $method";
       header("Location:Dashboard.php?results=$invest_results");
     }
    

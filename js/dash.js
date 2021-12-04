@@ -99,3 +99,15 @@ else{
     
    
   }
+  
+  function withdrawal(value){
+    let amount = document.getElementById("amount-withdraw").value;
+    if(value<amount){
+      alert("Insuficient balance");
+      return false;
+    }
+    else{
+      return true;
+    }
+
+  }

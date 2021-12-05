@@ -14,6 +14,7 @@ die("Connection Failed : " . $conn->connect_error);
 }
 ;
 //define vaariables and set to empty
+// dATE FORMAT: (column name) datatype ( default Datetime now() )
 $firstnameErr = $middle_nameErr = $lastnameErr =  $countryErr = $emailErr = $cellphoneErr = $usernameErr  = $passwordErr =
 $re_enter_passwordErr = "";
 $firstname = $middle_name = $lastname = $country = $email = $cellphone = $username = $pass = $re_enter_password = "";

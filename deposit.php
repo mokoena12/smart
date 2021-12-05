@@ -1,3 +1,5 @@
+
+
 <?php
 
 
@@ -14,12 +16,12 @@ else{
 
 ?>
 
-<Doctype html>
-    <html lang="en" class="body-style">
+<!DOCTYPE html>
+    <html lang="en">
     <head>
     <!-- start meta tags-->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="Sign in and start trading...." />
     <!-- End of meta tags -->
     
@@ -60,8 +62,8 @@ else{
   <script type="text/javascript" src="js/dash.js"></script>
     
     </head>
-    <body class="turning">
-        <div class="wrapper-box">
+    <body >
+        <!-- <div class="wrapper-box">-->
             <!-- start of the sidebar -->
             <div class="sidebar">
                 <div class="sidebar_profile">
@@ -101,7 +103,7 @@ else{
                 <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
                 </li>
               <li>
-                <a href="subscription.php">
+                <a href="#">
                   <i class="fa fa-credit-card"></i>
                   Subscription
                 </a>
@@ -118,12 +120,17 @@ else{
         <!-- start of the hearder part -->
             <div class="w-box" >
                 <header class="header-dash">
-                    <div>
+                   <div>
                     <a href="#"><img src="img/smart.investa.logo2.png" class="logo_1" alt="logo"></a>
-                    </div>
+                    </div> 
                     <div class="search">
                     <i class="fas fa-search" onclick="search()"></i>
                     <input type="search" name="search_d" id="search_d" placeholder="Search...">
+                    </div>
+                   <div class="menu-left manu-right">
+                        <div class="bars"></div>
+                        <div class="bars"></div>
+                        <div class="bars"></div>
                     </div>
                 </header>
                 <section>
@@ -151,6 +158,7 @@ else{
                             <form action="processor.php" method="post" >
                                 <div class="payment-wallet">
                                     <select name="depositing-methods" id="methods-fund">
+                                        <option value="">--Select Payment Method</option>
                                         <option value="BITCOIN">BITCOIN</option>
                                         <option value="BANK">BANK</option>
                                         <option value="Instant EFT">Instant EFT</option>
@@ -283,6 +291,6 @@ else{
         
                 
             </div>
-        </div>   
+        </div>
     </body>
-    </html>
+</html>

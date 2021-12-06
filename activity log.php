@@ -155,7 +155,7 @@ else{
             <section>
                 <div class="history-deposit">
                     <div class="history-head">
-                        <h4>Deposit History</h4>
+                        <h4>Activity log History</h4>
                     </div>
                     <div class="entry-search">
                         <div class="select-entry">

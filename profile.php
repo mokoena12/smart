@@ -597,9 +597,14 @@ else{
                                                 </select>
                                             </div>
                                             <div class="diveform">
+<<<<<<< HEAD
                                                 <label for="address">Email</label>
                                                 <input type="text" class="name-inputs" name ="addres" id="adre" placeholder="Address">
                                                 <div class="red-text"><?php  echo $address_rr; ?></div>
+=======
+                                                <label for="address">Address</label>
+                                                <input type="text" class="name-inputs" id="adre" placeholder="Address">
+>>>>>>> 5e9b378eeb74dcc65e2b29ae0fc38b5617c28a1b
                                             </div>
                                         </div>
                                         <div class="p-btnsub">
@@ -627,7 +632,7 @@ else{
                                             </div>
                                             <div class="diveform">
                                                 <label for="pass-comfirm">Confirm Password</label>
-                                                <input type="pass" class="name-inputs" name="passwar" id="passwar" placeholder="Password">
+                                                <input type="pass" class="name-inputs" name="passwar" id="passw" placeholder="Password">
                                             </div>
                                         </div>
                                         <div class="p-btnsub">
@@ -646,7 +651,7 @@ else{
                                                 <input class="name-inputs" type="text"  name="bank" id="bankname" placeholder="Bank Name">
                                             </div>
                                             <div class="diveform3">
-                                                <label for="userna">Account Name</label>
+                                                <label for="userna">Account Cardholder Name</label>
                                                 <input type="text" class="name-inputs" name="Accountname" id="accountname" placeholder="Account Name">
                                             </div>
                                             <div class="diveform3">

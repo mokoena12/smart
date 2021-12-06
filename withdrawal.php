@@ -333,7 +333,7 @@ else{
                                                 <th>Amount</th>
                                                 <th>Status</th>
                                                 <th>Credited At</th>
-                                                <th>Action</th>
+                                                <th>Withdrawal method</th>
                                             </tr>
                                         </thead>
                                         <tbody class="tbody">

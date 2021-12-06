@@ -63,7 +63,7 @@ else{
     
     </head>
     <body >
-        <!-- <div class="wrapper-box">-->
+        <div class="wrapper-box">
             <!-- start of the sidebar -->
             <div class="sidebar">
                 <div class="sidebar_profile">
@@ -79,45 +79,45 @@ else{
                     </div>
                 </div>             
                 <div class="sidebar-manus">
-            <ul>
-              <li>
-                <a href="Dashboard.php"><img  class="sidebarspace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>
-                Dashboard</a>
-              </li>
-              <li>
-                <a href="profile.php"><i class="fa fa-user"></i>Profile</a>
-              </li>
-              <li>
-                <a href="activity log.php"><i class="fa fa-tasks"></i>
-                  Active Logs</a>
-              </li>
-              <li>
-                <a href="deposit.php"><i class="fa fa-exchange"></i>
-                  Deposit</a>
-              </li>
-              <li>
-                <a href="withdrawal.php"><i class="fa fa-exchange"></i>
-                  Withdrawal</a>
-              </li>
-              <li>
-                <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
+                <ul>
+                <li>
+                    <a href="Dashboard.php"><img  class="sidebarspace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>
+                    Dashboard</a>
                 </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-credit-card"></i>
-                  Subscription
-                </a>
-                
-              </li>
-              <li>
-                <a href="logout.php"><i class="fa fa-sign-out"></i>Log out</a>
-              </li>
+                <li>
+                    <a href="profile.php"><i class="fa fa-user"></i>Profile</a>
+                </li>
+                <li>
+                    <a href="activity log.php"><i class="fa fa-tasks"></i>
+                    Active Logs</a>
+                </li>
+                <li>
+                    <a href="deposit.php"><i class="fa fa-exchange"></i>
+                    Deposit</a>
+                </li>
+                <li>
+                    <a href="withdrawal.php"><i class="fa fa-exchange"></i>
+                    Withdrawal</a>
+                </li>
+                <li>
+                    <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
+                    </li>
+                <li>
+                    <a href="#">
+                    <i class="fa fa-credit-card"></i>
+                    Subscription
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="logout.php"><i class="fa fa-sign-out"></i>Log out</a>
+                </li>
+    
+                </ul>
+            </div>
+            </div>
   
-            </ul>
-          </div>
-        </div>
-  
-        <!-- start of the hearder part -->
+            <!-- start of the hearder part -->
             <div class="w-box" >
                 <header class="header-dash">
                    <div>
@@ -240,7 +240,7 @@ else{
                                         <th>Amount</th>
                                         <th>Status</th>
                                         <th>Credited At</th>
-                                        <th>Action</th>
+                                        <th>Deposit Method</th>
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">

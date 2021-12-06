@@ -99,7 +99,7 @@ else{
                 <a href="deposit.php"><i class="fa fa-exchange"></i>
                   Deposit</a>
               </li>
-              <li>
+              <li id="sidebar_active">
                 <a href="withdrawal.php"><i class="fa fa-exchange"></i>
                   Withdrawal</a>
               </li>
@@ -135,9 +135,7 @@ else{
           <section>
             <div class="dash">
               <div>
-                <h1>Withdrawal <span style="color:red"><?php if(isset($_GET["results"])){
-                echo $_GET["results"];
-              } ?></span></h1>
+                <h1>Withdrawal </h1>
               </div>
               <div>
                 <ul class="style">
@@ -220,7 +218,7 @@ else{
                                         <strong class="float-right">1-2 days</strong>
                                     </p>
                                     
-                                    <form action="processor.php" method="post" onsubmit="return withdrawal(<?php echo $bal_v['balance'] ?>)">
+                                    <form action="processor.php" method="post" onsubmit="return withdrawal(<?php echo $bal_v['equity'] ?>)">
                                         <div class="method2">
                                             <div class=".h4changing">
                                                 <h4>Select Payment Method</h4>
@@ -369,6 +367,16 @@ else{
 
                     </div>
                 </section>
+                <?php if(isset($_GET["results"])){
+                echo "
+                <div class='notification-centerbox'>".$_GET['results']."
+            <div class='closing2'>
+              <i class='fa fa-close'></i>
+            </div> 
+          </div>
+                ";
+              } ?>
+
                 <!-- start section for the footer -->
                  <!-- start of the footer -->
                  <footer class="footer">

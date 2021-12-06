@@ -96,6 +96,14 @@ body{
     animation: rotation2 1s ease-in-out  infinite ;
     transform: rotate(-180deg);
 }
+/* Style for side bar*/
+#sidebar_active{
+    background-color: rgb(27, 27, 216);
+}
+#sidebar_active i,#sidebar_active a{
+    color: white;
+    color: white!important;
+}
 
 @keyframes  loading_left {
     from{

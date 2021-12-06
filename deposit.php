@@ -91,7 +91,7 @@ else{
                     <a href="activity log.php"><i class="fa fa-tasks"></i>
                     Active Logs</a>
                 </li>
-                <li>
+                <li id="sidebar_active">
                     <a href="deposit.php"><i class="fa fa-exchange"></i>
                     Deposit</a>
                 </li>

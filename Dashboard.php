@@ -15,6 +15,7 @@
 //fIX ADRESS IN PROFILE.PHP
 //Make sure the side panel is animated in dashboard.php for phones and tablet
 //fix the text inside live investment card, put the text at center
+//Fix the dashboard icon on sidebar for deposit.php, withdrawal.php,entry_price
 
 session_start();
 
@@ -128,7 +129,7 @@ $balance =  $row["balance"];
           </div>
           <div class="sidebar-manus">
             <ul>
-              <li>
+              <li id="sidebar_active">
                 <a href="Dashboard.php"><i class="fa fa-home"></i>Dashboard</a>
               </li>
               <li>
@@ -183,9 +184,7 @@ $balance =  $row["balance"];
           <section>
             <div class="dash">
               <div>
-                <h1>Dashboard <span style="color:green"><?php if(isset($_GET["results"])){
-                echo $_GET["results"];
-              } ?></span></h1>
+                <h1>Dashboard</h1>
               </div>
               <div>
                 <ul class="style">
@@ -333,7 +332,7 @@ $balance =  $row["balance"];
             </div>
           <!-- end of a new section for boxes -->
           <div class="investing-BOX">
-            <form class="trading1" action="processor.php" onsubmit="return invest_valid(<?php echo $balance; ?>)" method="POST">
+            <form class="trading1" action="processor.php" onsubmit="return invest_valid(<?php echo $Equity; ?>)" method="POST">
               <div class="header_TO">
                 <span>INVESTING PLAN</span>
               </div>
@@ -641,12 +640,17 @@ $balance =  $row["balance"];
   
           </div>
           <!-- end of crossrate chart -->
-          <div class='notification-centerbox'>
-            <span class='notification_text'>  Your account has been successfully created </span>
+          <?php if(isset($_GET["results"])){
+                echo "
+                <div class='notification-centerbox'>".$_GET['results']."
             <div class='closing2'>
               <i class='fa fa-close'></i>
             </div> 
           </div>
+                ";
+              } ?>
+
+          
   
           <!-- start of the footer -->
         <footer class="footer">

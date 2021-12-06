@@ -22,14 +22,21 @@ else{
 
 //Start of investing 
   if(isset($_POST["selectplans"])){
-
+//check if there is any existing investments
+$amount = $_POST["invest"];
+$check = "SELECT invested_amount FROM dashboard WHERE username='$user'";
+$outcome = $conn->query($check);
+if($outcome->num_rows> 0){
+  $row = $outcome->fetch_assoc();
+  $amount =   $amount + $row["invested_amount"];
+}
     $type = $_POST["selectplans"];
-    $amount = $_POST["invest"];
-    $period = $_POST["selectperiod"]; 
+    
+    $period = $_POST["selectperiod"];
       $invest = "INSERT INTO investment(typeOfInv,periods,user) VALUES('$type','$period','$user')"; 
       $invest1 = "UPDATE dashboard SET invested_amount=$amount WHERE  username = '$user'"; 
       if($conn->query($invest) && $conn->query($invest1)){
-        $invest_results = "Your Investment was successfully";
+        $invest_results = "Your Investment is successfully placed";
         header("Location:Dashboard.php?results=$invest_results");
       }
       

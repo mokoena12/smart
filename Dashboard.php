@@ -449,12 +449,6 @@ $balance =  $row["balance"];
                                 </select>
                                 entries
                             </div>
-                            <div class="search-btn">
-                                <label for="search" >
-                                    Search:
-                                    <input type="search" >
-                                </label>
-                            </div>
                         </div>
                         <div class="table-table">
                             <table class="table-ta">
@@ -473,7 +467,7 @@ $balance =  $row["balance"];
                                         <td>$100</td>
                                         <td>3 weeks</td>
                                         <td>06 Dec 2021</td>
-                                        <td class="close-buttonn"><h5>Close</h5></td>
+                                        <td ><h5  class="close-buttonn">Close</h5></td>
                                     </tr>
                                 </tbody>
                             </table>

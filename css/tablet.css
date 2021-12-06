@@ -1793,7 +1793,17 @@ a.elevation-1 {
 .table td {
   vertical-align: top;
 }
-
+.tbody .close-buttonn { 
+  background: red;
+  text-align: center;
+  padding: 2px;
+  margin: 5px;
+  border-radius: 4px;
+  width: 90%;
+}
+.tbody h5{
+  color: white;
+}
 /* end of the table history */
 
 /* start of the forex crossrate chart */

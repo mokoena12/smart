@@ -2353,22 +2353,22 @@ text-align: center;
   color: black;
   display: table;
   width: 100%;
-  margin-top: 1em;
-  margin-bottom: 1em;
   border-top-color: grey;
   border-bottom-color: grey;
   border-right-color: grey;
   border-left-color: grey;
   border-radius: 3px;
-  height: 2em;
+  margin: 6px;
 }
 .tablehead2{
   display: table-header-group;
   vertical-align: middle;
-  height: 2em;
 }
 .tablehead2 tr {
   display: table-row;
+}
+.tablehead2>tr th{
+  font-size: 13px;
 }
 .tablehead2 th {
   display: table-cell;
@@ -2383,6 +2383,19 @@ text-align: center;
   text-align: center;
   border: 0;
   box-sizing: content-box;
+  font-size: 14px;
+}
+.tbody .close-buttonn { 
+  background: red;
+  text-align: center;
+  padding: 2px;
+  margin: 5px;
+  border-radius: 4px;
+  width: 90%;
+  left: 3%;
+}
+.tbody h5{
+  color: white;
 }
 
 .end-part {

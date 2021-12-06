@@ -2856,6 +2856,17 @@ margin-left: 15px;
 .tbody td {
   display: table-cell;
 }
+.tbody .close-buttonn { 
+  background: red;
+  text-align: center;
+  padding: 2px;
+  margin: 5px;
+  border-radius: 4px;
+ width: 60%;
+}
+.tbody h5{
+  color: white;
+}
 /* end - depossit table */
 
 

@@ -85,7 +85,7 @@ else{
   }
 
 if(num<Amount){
-    alert("Insufficient balance");
+    alert("Insufficient Equity");
     return false;
 }
 else if(min>Amount){
@@ -111,3 +111,23 @@ else{
     }
 
   }
+
+  
+$(document).ready(function(){
+  $(".closing2").click(function(){
+    $(".notification-centerbox").hide();
+  });
+});
+ 
+$(document).ready(function(){
+  $(".closing3").click(function(){
+    $(".sidebar").hide();
+  });
+});
+
+  
+$(document).ready(function(){
+  $(".menu-left").click(function(){
+    $(".sidebar").show();
+  });
+});

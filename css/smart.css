@@ -96,6 +96,14 @@ body{
     animation: rotation2 1s ease-in-out  infinite ;
     transform: rotate(-180deg);
 }
+/* Style for side bar*/
+#sidebar_active{
+    background-color: rgb(27, 27, 216);
+}
+#sidebar_active i,#sidebar_active a{
+    color: white;
+    color: white!important;
+}
 
 @keyframes  loading_left {
     from{
@@ -178,10 +186,6 @@ body{
     background-image: linear-gradient(to bottom right,white, rgb(245, 239, 239), rgb(184, 187, 186));
     color: blue;
     text-decoration: underline;
-}
-
-button{
-    background-image: linear-gradient(to bottom right,white, rgb(0, 183, 255), rgb(32, 85, 230));
 }
 
 .log_reg div a:link{
@@ -1221,9 +1225,10 @@ right: 1px;
 position:absolute;
 }
 
-.pmames{
+.pnames{
     display: none;
 }
+
 /*====End of Style ====== */
 
 .tbody tr td {
@@ -1233,10 +1238,10 @@ position:absolute;
 
 .closing2 .fa{
 color :red;
-font-size: 30px;
+font-size: 20px;
 top: -6px;
 right: 3px;
 position:absolute;
-background-color: black;
 border-radius: 50%;
 }
+

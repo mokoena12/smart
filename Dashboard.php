@@ -14,6 +14,8 @@
 //Fix the search engine for deposit.php, withdrawal.php ,etc it should be working like dashboard.php
 //fIX ADRESS IN PROFILE.PHP
 //Make sure the side panel is animated in dashboard.php for phones and tablet
+//fix the text inside live investment card, put the text at center
+//Fix the dashboard icon on sidebar for deposit.php, withdrawal.php,entry_price
 
 session_start();
 
@@ -50,7 +52,7 @@ $balance =  $row["balance"];
 ?>
 
 <Doctype html>
-  <html lang="en" class="body-style">
+  <html lang="en">
   <head>
   <!-- start meta tags-->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -94,9 +96,6 @@ $balance =  $row["balance"];
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"</script>
   <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
   <script type="text/javascript" src="js/dash.js"></script>
-  </head>
-  <body class="turning">
-  
 
   
 <!--Widget scripts for loading price-->
@@ -109,7 +108,10 @@ $balance =  $row["balance"];
     <div class="wrapper-box">
         <!-- start of the sidemanu -->
            <!-- start of the sidebar -->
-        <div class="sidebar">
+        <div class="sidebar" >
+          <div class="closing2 closing3">
+            <i class="fa fa-close"></i>
+          </div> 
           <div class="sidebar_profile">
             <div class="sidebar-flex" >
             <?php 
@@ -127,35 +129,35 @@ $balance =  $row["balance"];
           </div>
           <div class="sidebar-manus">
             <ul>
-              <li style="animation-delay: 0.6s;">
+              <li id="sidebar_active">
                 <a href="Dashboard.php"><i class="fa fa-home"></i>Dashboard</a>
               </li>
-              <li style="animation-delay: 0.8s;">
+              <li>
                 <a href="profile.php"><i class="fa fa-user"></i>Profile</a>
               </li>
-              <li style="animation-delay: 1.0s;">
+              <li>
                 <a href="activity log.php"><i class="fa fa-tasks"></i>
                   Active Logs</a>
               </li>
-              <li style="animation-delay: 1.2s;">
+              <li>
                 <a href="deposit.php"><i class="fa fa-exchange"></i>
                   Deposit</a>
               </li>
-              <li style="animation-delay: 1.4s;">
+              <li>
                 <a href="withdrawal.php"><i class="fa fa-exchange"></i>
                   Withdrawal</a>
               </li>
-              <li style="animation-delay: 1.6s;">
+              <li>
                 <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
                 </li>
-              <li style="animation-delay: 1.8s;">
+              <li>
                 <a href="#">
                   <i class="fa fa-credit-card"></i>
                   Subscription
                 </a>
                 
               </li>
-              <li style="animation-delay: 2.0s;">
+              <li>
                 <a href="logout.php"><i class="fa fa-sign-out"></i>Log out</a>
               </li>
   
@@ -182,9 +184,7 @@ $balance =  $row["balance"];
           <section>
             <div class="dash">
               <div>
-                <h1>Dashboard <span style="color:green"><?php if(isset($_GET["results"])){
-                echo $_GET["results"];
-              } ?></span></h1>
+                <h1>Dashboard</h1>
               </div>
               <div>
                 <ul class="style">
@@ -332,7 +332,7 @@ $balance =  $row["balance"];
             </div>
           <!-- end of a new section for boxes -->
           <div class="investing-BOX">
-            <form class="trading1" action="processor.php" onsubmit="return invest_valid(<?php echo $balance; ?>)" method="POST">
+            <form class="trading1" action="processor.php" onsubmit="return invest_valid(<?php echo $Equity; ?>)" method="POST">
               <div class="header_TO">
                 <span>INVESTING PLAN</span>
               </div>
@@ -449,49 +449,30 @@ $balance =  $row["balance"];
                                 </select>
                                 entries
                             </div>
-                            <div class="search-btn">
-                                <label for="search" >
-                                    Search:
-                                    <input type="search" >
-                                </label>
-                            </div>
                         </div>
                         <div class="table-table">
                             <table class="table-ta">
                                 <thead class="tablehead2">
                                     <tr>
-                                        <th>Amount</th>
-                                        <th>Status</th>
-                                        <th>Credited At</th>
-                                        <th>Investment Method</th>
+                                        <th>Investment plan</th>
+                                        <th>Amount invested</th>
+                                        <th>Investment period</th>
+                                        <th>Date</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
                                     <tr>
+                                        <td>Bronze</td>
                                         <td>$100</td>
-                                        <td>Approved</td>
-                                        <td>12-oct-2021</td>
-                                        <td>deposit</td>
+                                        <td>3 weeks</td>
+                                        <td>06 Dec 2021</td>
+                                        <td ><h5  class="close-buttonn">Close</h5></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div class="end-part">
-                            <div class="end-shift">
-                                Showing 0 to 0 0f 0 entries 
-                            </div>
-                            <div class="prev-next">
-                                <ul>
-                                    <li>
-                                        <a href="#">Previous</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Next</a>
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
+                      
                     </div>
 
                 </section>
@@ -640,14 +621,17 @@ $balance =  $row["balance"];
   
           </div>
           <!-- end of crossrate chart -->
-          <div class="notification-centerbox">
-            <p>
-              Your account has been successfully created
-            </p>
-            <div class="closing2">
-              <i class="fa fa-close"></i>
+          <?php if(isset($_GET["results"])){
+                echo "
+                <div class='notification-centerbox'>".$_GET['results']."
+            <div class='closing2'>
+              <i class='fa fa-close'></i>
             </div> 
           </div>
+                ";
+              } ?>
+
+          
   
           <!-- start of the footer -->
         <footer class="footer">

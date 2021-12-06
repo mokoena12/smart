@@ -89,7 +89,7 @@ else{
               <li>
                 <a href="profile.php"><i class="fa fa-user"></i>Profile</a>
               </li>
-              <li>
+              <li id="sidebar_active">
                 <a href="activity log.php"><i class="fa fa-tasks"></i>
                   Active Logs</a>
               </li>

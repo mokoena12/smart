@@ -107,7 +107,7 @@ else{
                 <a href="withdrawal.php"><i class="fa fa-exchange"></i>
                   Withdrawal</a>
               </li>
-              <li>
+              <li id="sidebar_active">
                 <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
                 </li>
               <li>

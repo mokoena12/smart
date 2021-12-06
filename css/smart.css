@@ -1217,9 +1217,10 @@ right: 1px;
 position:absolute;
 }
 
-.pmames{
+.pnames{
     display: none;
 }
+
 /*====End of Style ====== */
 
 .tbody tr td {
@@ -1235,3 +1236,4 @@ right: 3px;
 position:absolute;
 border-radius: 50%;
 }
+

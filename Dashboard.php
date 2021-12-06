@@ -601,7 +601,7 @@ $balance =  $row["balance"];
                   </tr>
                  <?php  
                    
-                 /$sql="SELECT trading_type,currency_pair,,trading_action ,lot_size,entry_price,stop_loss,take_profit FROM live_trading WHERE username = '$user'";
+                 $sql="SELECT trading_type,currency_pair,,trading_action ,lot_size,entry_price,stop_loss,take_profit FROM live_trading WHERE username = '$user'";
                   $result2 = $conn->query($sql);
                      
                     if($result2 !== FALSE && $result2->num_rows> 0){

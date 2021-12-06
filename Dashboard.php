@@ -640,13 +640,10 @@ $balance =  $row["balance"];
   
           </div>
           <!-- end of crossrate chart -->
-          <div class="notification-centerbox">
-            <p>
-              Your account has been successfully created s;ncnon; s;nadcjnmcJ;SJC C;DSNCI;CDJCN J;ENDBCUSKCBKDC HDCHSLCWYBEDICYL HCSBDCNHlbchc hdsbnhcjlbedi hsbclibnaisbc hbcldscibd
-              cshldbidbsnacnb hbewcsulcbwiln bwelcneiuowaben wlebnciuebwnc ewbdcnuewibnl hcebibdencn hbewcbshl hbd lched
-            </p>
-            <div class="closing2">
-              <i class="fa fa-close"></i>
+          <div class='notification-centerbox'>
+            <span class='notification_text'>  Your account has been successfully created </span>
+            <div class='closing2'>
+              <i class='fa fa-close'></i>
             </div> 
           </div>
   

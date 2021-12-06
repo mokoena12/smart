@@ -306,7 +306,7 @@ else{
                         <section>
                             <div class="history-deposit">
                                 <div class="history-head">
-                                    <h4>Deposit History</h4>
+                                    <h4>Withdrawal History</h4>
                                 </div>
                                 <div class="entry-search">
                                     <div class="select-entry">
@@ -337,12 +337,27 @@ else{
                                             </tr>
                                         </thead>
                                         <tbody class="tbody">
-                                            <tr>
-                                                <td>$100</td>
-                                                <td>Approved</td>
-                                                <td>12-oct-2021</td>
-                                                <td>Bank card</td>
-                                            </tr>
+                                             
+                   <?php  
+                   $n = 0;
+                    
+                    $sql_w="SELECT amount, date_reg, method FROM withdrawal WHERE username = '$user'";
+                    
+                   $result_w = $conn->query($sql_w); 
+                     if($result_w !== FALSE && $ $result_w->num_rows> 0){
+                    
+                   while($n<=5 && $row2 = $result11->fetch_assoc()){
+                    echo "<tr>";
+                    echo "<td>".$row2['deposit']."</td>";
+                    echo "<td></td>";
+                    echo "<td>".$row2['date_reg']."</td>";
+                    echo "<td>".$row2['method']."</td>";
+                    echo "</tr>";
+                    $n++; 
+                     }
+                   }
+                   ?>
+
                                         </tbody>
                                     </table>
                                 </div>

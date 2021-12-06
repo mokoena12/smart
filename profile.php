@@ -13,14 +13,80 @@ else{
 
 }
 require_once "connect.php";
+
+$username = $phone = $country = $address = "";
+$username_rr = $phone_rr = $country_rr = $address_rr = "";
+if(isset($_POST["full"])){
+ 
+    $approved = 1;
+    function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+        
+      }
+    
+    if(empty($_POST["phone"])){
+        $phone_rr = "Phone number is required";
+      }elseif($_POST["phone"] < 9){
+          $phone_rr = "Number should be more than 8 ";
+          $approved = 0;
+      }else{
+        $phone = test_input($_POST["phone"]);
+        $sql ="UPDATE registration SET cellphone = $phone
+      WHERE username = '$user'";
+      $result2 = $conn->query($sql);
+      }
+        
+     if(empty($_POST["countri"])){
+        $country_rr = "country is required";
+        $approved = 0;
+      }else{
+        $country = (test_input($_POST["countri"]));
+        $sql ="UPDATE registration SET country = $country
+      WHERE username = '$user'";
+      $result2 = $conn->query($sql);
+      }
+      if(empty($_POST["addres"])){
+        $address_rr = "address is required";
+        $approved = 0;
+      }else{
+        $address = test_input($_POST["addres"]);
+        //check if email is well formed
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $address_rr = "Invalid email format";
+      }
+      $sql ="UPDATE registration SET  email = $address 
+      WHERE username = '$user'";
+      $result2 = $conn->query($sql);
+    }
+
+      if(empty($_POST["full"])){
+        $username_rr = "username is required";
+        $approved = 0;
+      }else{
+        $username =ucfirst(strtolower(test_input($_POST["full"]))) ;
+        $sql ="UPDATE registration SET username = $username
+    WHERE username = '$user'";
+    $result2 = $conn->query($sql);
+      }
+
+    }
+ ?>
+
+<?php
+
+$date_reg1 = "";
 $email =  $answer="";
-$sql_email = "SELECT email FROM registration WHERE username='$user' ";
+$sql_email = "SELECT email, date_reg FROM registration WHERE username='$user' ";
 $results = $conn->query($sql_email);
 if($results->num_rows>0){
   $row = $results->fetch_assoc(); 
   $email = $row["email"];
-}
+  $date_reg1 = $row["date_reg"];
 
+}
 ?>
 
 <?php
@@ -224,13 +290,16 @@ else{
                                 <span class="users-control">
                                     <p>
                                         <b>Role:</b>
-                                        users
+                                        user
                                     </p>
                                 </span>
                                 <span class="users-control2">
                                     <p>
                                         <b>Joined:</b>
-                                        1 month ago
+                                        <?php 
+                                    echo $date_reg1;    
+                                        
+                                        ?>
                                     </p>
                                 </span>
                                 <form action="#" method="post" enctype="multipart/form-data">
@@ -268,15 +337,17 @@ else{
                                                 </select>
                                             </div>
                                             <div class="diveform">
-                                                <label for="fullname">fullname </label>
+                                                <label for="fullname">Username </label>
                                                     <input type="text" class="name-inputs" name="full" id="fullname">
+                                                    <div class="red-text"><?php  echo $username_rr; ?></div>
                                             </div>
                                             <div class="diveform">
                                                 <label for="phone">Phone</label>
                                                 <input type="tel" class="name-inputs" name="phone" id="phone" placeholder="Phone">
+                                                <div class="red-text"><?php  echo $phone_rr; ?></div>
                                             </div>
                                             <div class="diveform">
-                                                <label for="countri">Country</label>
+                                                <label for="countri">Country</label> <div class="red-text"><?php  echo $country_rr; ?></div>
                                                 <select name="countri" id="countri">
                                                     <option value="">--select your country--</option>
                                                     <option value="Afghanistan">Afghanistan</option>
@@ -526,8 +597,9 @@ else{
                                                 </select>
                                             </div>
                                             <div class="diveform">
-                                                <label for="address">Adreass</label>
-                                                <input type="text" class="name-inputs" id="adre" placeholder="Address">
+                                                <label for="address">Email</label>
+                                                <input type="text" class="name-inputs" name ="addres" id="adre" placeholder="Address">
+                                                <div class="red-text"><?php  echo $address_rr; ?></div>
                                             </div>
                                         </div>
                                         <div class="p-btnsub">

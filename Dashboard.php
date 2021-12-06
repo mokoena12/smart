@@ -533,9 +533,9 @@ $balance =  $row["balance"];
                     <td></td>
                     <td><button id="colour-for" style="background-color: red !important;color: white;border-radius: 3px; ">close</button></td>
                   </tr>
-                  <?php  
+                 <?php  
                    
-                  $sql="SELECT trading_type,currency_pair,lot_size,entry_price,stop_loss,take_profit,trading_action FROM live_trading WHERE username = '$user'";
+                 /* $sql="SELECT trading_type,currency_pair,lot_size,entry_price,stop_loss,take_profit,trading_action FROM live_trading WHERE username = '$user'";
                   $result2 = $conn->query($sql);
                      
                     if($result2 !== FALSE && $result2->num_rows> 0){
@@ -551,7 +551,7 @@ $balance =  $row["balance"];
                    echo "<td></td>";
                    echo "</tr>"; 
                     }
-                  }
+                  }*/
                   ?>
                   <!-- This is the only part to be  changed-->
 

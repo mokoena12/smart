@@ -1275,15 +1275,6 @@ border-radius: 6px;
 margin-top: -3em;
 
 }
-.manu {
-  display: none;
-}
-.manu_content {
-  display: none;
-}
-.dropdown {
-  display: none;
-}
 
 .dash {
    display: flex;

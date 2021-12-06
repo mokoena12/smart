@@ -180,10 +180,6 @@ body{
     text-decoration: underline;
 }
 
-button{
-    background-image: linear-gradient(to bottom right,white, rgb(0, 183, 255), rgb(32, 85, 230));
-}
-
 .log_reg div a:link{
     text-decoration: none;
     color: white;

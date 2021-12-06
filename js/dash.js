@@ -111,3 +111,22 @@ else{
     }
 
   }
+
+  
+$(document).ready(function(){
+  $(".closing2").click(function(){
+    $(".notification-centerbox").hide();
+    $(".sidebar").hide();
+  });
+});
+
+  
+$(document).ready(function(){
+  $(".menu-left").click(function(){
+    $(".sidebar").show();
+  });
+});
+
+function notify(){
+  
+}

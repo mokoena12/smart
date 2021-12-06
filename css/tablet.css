@@ -1074,6 +1074,14 @@ flex-direction: column;
 }
 /*end-about*/
 /* start of the dashboard page */
+@keyframes slidings{
+  from{
+    left: -20em;
+  }
+  to{
+    left: 0;
+  }
+}
 
 .sidebar {
   position: fixed;
@@ -1086,6 +1094,7 @@ flex-direction: column;
   height: 100%;
   box-shadow: 10px 2px 8px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)!important;
   overflow-y: hidden;
+  animation: slidings 2s linear;
 }
 
   .sidebar-flex {
@@ -2275,11 +2284,10 @@ margin-bottom: -20em;
 
 /* start of the notification box at center */
 .notification-centerbox {
-  position: absolute;
+  position: fixed;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  height: 50%;
   background-color: white;
   padding: 1em;
   top: 25%;

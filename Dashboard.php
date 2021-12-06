@@ -50,7 +50,7 @@ $balance =  $row["balance"];
 ?>
 
 <Doctype html>
-  <html lang="en" class="body-style">
+  <html lang="en">
   <head>
   <!-- start meta tags-->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -94,9 +94,6 @@ $balance =  $row["balance"];
   <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"</script>
   <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
   <script type="text/javascript" src="js/dash.js"></script>
-  </head>
-  <body class="turning">
-  
 
   
 <!--Widget scripts for loading price-->
@@ -109,7 +106,10 @@ $balance =  $row["balance"];
     <div class="wrapper-box">
         <!-- start of the sidemanu -->
            <!-- start of the sidebar -->
-        <div class="sidebar">
+        <div class="sidebar" >
+          <div class="closing2">
+            <i class="fa fa-close"></i>
+          </div> 
           <div class="sidebar_profile">
             <div class="sidebar-flex" >
             <?php 
@@ -127,35 +127,35 @@ $balance =  $row["balance"];
           </div>
           <div class="sidebar-manus">
             <ul>
-              <li style="animation-delay: 0.6s;">
+              <li>
                 <a href="Dashboard.php"><i class="fa fa-home"></i>Dashboard</a>
               </li>
-              <li style="animation-delay: 0.8s;">
+              <li>
                 <a href="profile.php"><i class="fa fa-user"></i>Profile</a>
               </li>
-              <li style="animation-delay: 1.0s;">
+              <li>
                 <a href="activity log.php"><i class="fa fa-tasks"></i>
                   Active Logs</a>
               </li>
-              <li style="animation-delay: 1.2s;">
+              <li>
                 <a href="deposit.php"><i class="fa fa-exchange"></i>
                   Deposit</a>
               </li>
-              <li style="animation-delay: 1.4s;">
+              <li>
                 <a href="withdrawal.php"><i class="fa fa-exchange"></i>
                   Withdrawal</a>
               </li>
-              <li style="animation-delay: 1.6s;">
+              <li>
                 <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
                 </li>
-              <li style="animation-delay: 1.8s;">
+              <li>
                 <a href="#">
                   <i class="fa fa-credit-card"></i>
                   Subscription
                 </a>
                 
               </li>
-              <li style="animation-delay: 2.0s;">
+              <li>
                 <a href="logout.php"><i class="fa fa-sign-out"></i>Log out</a>
               </li>
   
@@ -627,12 +627,10 @@ $balance =  $row["balance"];
   
           </div>
           <!-- end of crossrate chart -->
-          <div class="notification-centerbox">
-            <p>
-              Your account has been successfully created
-            </p>
-            <div class="closing2">
-              <i class="fa fa-close"></i>
+          <div class='notification-centerbox'>
+            <span class='notification_text'>  Your account has been successfully created </span>
+            <div class='closing2'>
+              <i class='fa fa-close'></i>
             </div> 
           </div>
   

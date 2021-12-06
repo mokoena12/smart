@@ -14,6 +14,7 @@
 //Fix the search engine for deposit.php, withdrawal.php ,etc it should be working like dashboard.php
 //fIX ADRESS IN PROFILE.PHP
 //Make sure the side panel is animated in dashboard.php for phones and tablet
+//fix the text inside live investment card, put the text at center
 
 session_start();
 
@@ -107,7 +108,7 @@ $balance =  $row["balance"];
         <!-- start of the sidemanu -->
            <!-- start of the sidebar -->
         <div class="sidebar" >
-          <div class="closing2">
+          <div class="closing2 closing3">
             <i class="fa fa-close"></i>
           </div> 
           <div class="sidebar_profile">

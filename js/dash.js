@@ -116,6 +116,11 @@ else{
 $(document).ready(function(){
   $(".closing2").click(function(){
     $(".notification-centerbox").hide();
+  });
+});
+ 
+$(document).ready(function(){
+  $(".closing3").click(function(){
     $(".sidebar").hide();
   });
 });
@@ -128,5 +133,5 @@ $(document).ready(function(){
 });
 
 function notify(){
-  
+
 }

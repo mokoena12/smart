@@ -306,7 +306,7 @@ else{
                         <section>
                             <div class="history-deposit">
                                 <div class="history-head">
-                                    <h4>Deposit History</h4>
+                                    <h4>Withdrawal History</h4>
                                 </div>
                                 <div class="entry-search">
                                     <div class="select-entry">
@@ -333,7 +333,7 @@ else{
                                                 <th>Amount</th>
                                                 <th>Status</th>
                                                 <th>Credited At</th>
-                                                <th>Action</th>
+                                                <th>Withdrawal method</th>
                                             </tr>
                                         </thead>
                                         <tbody class="tbody">

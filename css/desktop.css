@@ -1275,15 +1275,6 @@ border-radius: 6px;
 margin-top: -3em;
 
 }
-.manu {
-  display: none;
-}
-.manu_content {
-  display: none;
-}
-.dropdown {
-  display: none;
-}
 
 .dash {
    display: flex;
@@ -1732,11 +1723,13 @@ border-top: 1px solid #dee2e6;
 color: #869099;
 padding: 1em;
 text-align: center;
+left: 15px;
 }
 .footer strong a {
   text-decoration: none;
-  color: blue;
+  color: blue ;
 }
+
 
 /* end of footer */
 
@@ -2098,6 +2091,11 @@ width: 90%;
   font-weight: bold;
 }
 #payment-options {
+  width: 100%;
+  height: 2em;
+  border-radius: 4px;
+}
+#payment-options1 {
   width: 100%;
   height: 2em;
   border-radius: 4px;
@@ -2515,7 +2513,7 @@ a.elevation-1 {
 /* start of investing plan */
 .investing-BOX {
   width: 96.5%;
-  border: 1px solid gray;
+  border: 1px solid #ccc;
   margin-right: 1em;
   margin-left: 1em;
   margin-bottom: 2em;
@@ -2524,7 +2522,7 @@ a.elevation-1 {
 }
 .header_TO {
   height: fit-content;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #ccc;
   padding: 10px;
   font-weight: bold;
   color: black;
@@ -2724,6 +2722,7 @@ border-top: 1px solid #dee2e6;
 color: #869099;
 padding: 1em;
 text-align: center;
+margin-left: 15px;
 }
 .footer strong a {
   text-decoration: none;
@@ -2809,7 +2808,7 @@ text-align: center;
 /* start of the table of deposit */
 .history-deposit {
   padding: 1em;
-  border: 1px solid grey;
+  border: 1px solid #ccc;
   width: 95%;
   margin: 1.5em;
   border-radius: 4px;
@@ -2977,7 +2976,21 @@ text-align: center;
 }
 /* end of the referral */
 
-
+/* start of the notification box at center */
+.notification-centerbox {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  padding: 1em;
+  top: 30%;
+  left: 35%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+/* end of the notification box at the center */
 
 
 }

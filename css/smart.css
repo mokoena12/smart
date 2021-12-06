@@ -180,10 +180,6 @@ body{
     text-decoration: underline;
 }
 
-button{
-    background-image: linear-gradient(to bottom right,white, rgb(0, 183, 255), rgb(32, 85, 230));
-}
-
 .log_reg div a:link{
     text-decoration: none;
     color: white;
@@ -1224,4 +1220,21 @@ position:absolute;
 .pnames{
     display: none;
 }
+
 /*====End of Style ====== */
+
+.tbody tr td {
+ text-align: left;
+ padding-left: 0.50em;
+}
+
+.closing2 .fa{
+color :red;
+font-size: 30px;
+top: -6px;
+right: 3px;
+position:absolute;
+background-color: black;
+border-radius: 50%;
+}
+

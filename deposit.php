@@ -246,7 +246,7 @@ else{
                                 <tbody class="tbody">
                    <?php  
                    $n = 0;
-                   $sql="SELECT deposit, method, date_reg FROM deposit WHERE username = '$user'";
+                   $sql="SELECT deposit, method, deposit_date FROM deposit WHERE username = '$user'";
                     
                    $result11 = $conn->query($sql);
                       
@@ -256,7 +256,7 @@ else{
                     echo "<tr>";
                     echo "<td>".$row2['deposit']."</td>";
                     echo "<td></td>";
-                    echo "<td>".$row2['date_reg']."</td>";
+                    echo "<td>".$row2['deposit_date']."</td>";
                     echo "<td>".$row2['method']."</td>";
                     echo "</tr>"; 
                     $n++;

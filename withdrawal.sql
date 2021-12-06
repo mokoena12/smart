@@ -31,6 +31,7 @@ CREATE TABLE `withdrawal` (
   `username` varchar(255) DEFAULT NULL,
   `amount` int(20) DEFAULT NULL,
   `method` varchar(255) DEFAULT NULL
+  `method` DATETIME DEFAULT NOW();
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

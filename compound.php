@@ -1,6 +1,10 @@
 
 <?php   
 //Please fix the registration form, we lost some data when moving to Git also make sure it adds the user when registering
+/*Code referral.php you will have to create a table database named referral with following columns username,friend_name,date_ref. Check the structure of referral link 
+is https://www.smartinvesta.co.za/Registration.php?ref=Raps so you can see we are passing variable named ref with username of
+Raps using GET method. The task is the check during registration whether ref is set and is is set take the value store it in referral table 
+and also store the name of person registering with this link*/
  
 session_start();
 if (isset($_SESSION["investa_user"])){

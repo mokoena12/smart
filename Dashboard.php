@@ -127,35 +127,35 @@ $balance =  $row["balance"];
           </div>
           <div class="sidebar-manus">
             <ul>
-              <li>
+              <li style="animation-delay: 0.6s;">
                 <a href="Dashboard.php"><i class="fa fa-home"></i>Dashboard</a>
               </li>
-              <li>
+              <li style="animation-delay: 0.8s;">
                 <a href="profile.php"><i class="fa fa-user"></i>Profile</a>
               </li>
-              <li>
+              <li style="animation-delay: 1.0s;">
                 <a href="activity log.php"><i class="fa fa-tasks"></i>
                   Active Logs</a>
               </li>
-              <li>
+              <li style="animation-delay: 1.2s;">
                 <a href="deposit.php"><i class="fa fa-exchange"></i>
                   Deposit</a>
               </li>
-              <li>
+              <li style="animation-delay: 1.4s;">
                 <a href="withdrawal.php"><i class="fa fa-exchange"></i>
                   Withdrawal</a>
               </li>
-              <li>
+              <li style="animation-delay: 1.6s;">
                 <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
                 </li>
-              <li>
+              <li style="animation-delay: 1.8s;">
                 <a href="#">
                   <i class="fa fa-credit-card"></i>
                   Subscription
                 </a>
                 
               </li>
-              <li>
+              <li style="animation-delay: 2.0s;">
                 <a href="logout.php"><i class="fa fa-sign-out"></i>Log out</a>
               </li>
   
@@ -432,6 +432,70 @@ $balance =  $row["balance"];
               </div>
               
             </form>
+             <!-- start section for table -->
+             <section>
+                    <div class="history-deposit">
+                        <div class="history-head">
+                            <h4>Investment History</h4>
+                        </div>
+                        <div class="entry-search">
+                            <div class="select-entry">
+                                Show
+                                <select name="entries" id="entries">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                                entries
+                            </div>
+                            <div class="search-btn">
+                                <label for="search" >
+                                    Search:
+                                    <input type="search" >
+                                </label>
+                            </div>
+                        </div>
+                        <div class="table-table">
+                            <table class="table-ta">
+                                <thead class="tablehead2">
+                                    <tr>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th>Credited At</th>
+                                        <th>Investment Method</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbody">
+                                    <tr>
+                                        <td>$100</td>
+                                        <td>Approved</td>
+                                        <td>12-oct-2021</td>
+                                        <td>deposit</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="end-part">
+                            <div class="end-shift">
+                                Showing 0 to 0 0f 0 entries 
+                            </div>
+                            <div class="prev-next">
+                                <ul>
+                                    <li>
+                                        <a href="#">Previous</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Next</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <!-- end secton for table -->
           </div>
           <!-- end of investing plan -->
   
@@ -492,7 +556,7 @@ $balance =  $row["balance"];
                 </div>
                 <div class="select-input">
                   <label for="input">Select Action*</label><br>
-                  <select name="buyORsell" id="execute">
+                  <select name="buyORsell" id="execute" required>
                     <option value="Buy">Buy</option>
                     <option value="Sell">Sell</option>
                   </select>
@@ -507,7 +571,7 @@ $balance =  $row["balance"];
   
             <!-- start of table -->
             <div class="h5">
-              <h5>Rencent Trading History</h5>
+              <h5>Recent Trading History</h5>
             </div>
             <div class="scoll-table">
               <table class="table">
@@ -515,11 +579,12 @@ $balance =  $row["balance"];
                   <tr>
                     <th>Trading Type</th>
                     <th>Currency Pair</th>                  
-                    <th>Entry Price</th>
+                    <th>Trading Action</th>
+                    <th>Entry Pice</th>
                     <th>Stop Loss</th>
                     <th>Take Profit</th>
-                    <th>Status</th>
-                    <th>Trading Action</th>>
+                    <th>Status</th>>
+                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody class="tablebody" >
@@ -532,7 +597,7 @@ $balance =  $row["balance"];
                     <td>105.25</td>
                     <td>135.25</td>
                     <td></td>
-                    <td><button id="colour-for" style="background-color: red !important;color: white;border-radius: 3px; ">close</button></td>
+                    <td><button id="colour-for" style="color: white;border-radius: 3px;background-color: red !important;">close</button></td>
                   </tr>
                   <?php  
                    
@@ -575,6 +640,14 @@ $balance =  $row["balance"];
   
           </div>
           <!-- end of crossrate chart -->
+          <div class="notification-centerbox">
+            <p>
+              Your account has been successfully created
+            </p>
+            <div class="closing2">
+              <i class="fa fa-close"></i>
+            </div> 
+          </div>
   
           <!-- start of the footer -->
         <footer class="footer">
@@ -587,7 +660,6 @@ $balance =  $row["balance"];
   
         </footer>
         <!-- end of the footer -->
-  
         </div>
     </div>
   </body>

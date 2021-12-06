@@ -1180,7 +1180,7 @@ text-decoration: none;
 width:10em;
 border-radius: 4px;
 padding: 0px 0px 9px 5px;
-margin: auto;
+margin-top:3px ;
 
 }
 .sidebar li:hover{
@@ -1274,15 +1274,6 @@ padding-top: 15px;
 border-radius: 6px;
 margin-top: -3em;
 
-}
-.manu {
-  display: none;
-}
-.manu_content {
-  display: none;
-}
-.dropdown {
-  display: none;
 }
 
 .dash {
@@ -2865,6 +2856,17 @@ margin-left: 15px;
 .tbody td {
   display: table-cell;
 }
+.tbody .close-buttonn { 
+  background: red;
+  text-align: center;
+  padding: 2px;
+  margin: 5px;
+  border-radius: 4px;
+ width: 60%;
+}
+.tbody h5{
+  color: white;
+}
 /* end - depossit table */
 
 
@@ -2987,11 +2989,10 @@ margin-left: 15px;
 
 /* start of the notification box at center */
 .notification-centerbox {
-  position: absolute;
+  position: fixed;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  height: 50%;
   background-color: white;
   padding: 1em;
   top: 30%;

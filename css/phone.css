@@ -1527,7 +1527,14 @@ header .logo img{
 }
 
 /* start of the dashboard page */
-
+@keyframes slidings{
+  from{
+    left: -20em;
+  }
+  to{
+    left: 0;
+  }
+}
 .sidebar {
   position: fixed;
   margin-top: -2px;
@@ -1539,7 +1546,7 @@ header .logo img{
   height: 100%;
   box-shadow: 10px 2px 8px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)!important;
   overflow-y: hidden;
-  animation: slide 1s linear;
+  animation: slidings 2s linear;
 }
 
   .sidebar-flex {
@@ -2346,22 +2353,22 @@ text-align: center;
   color: black;
   display: table;
   width: 100%;
-  margin-top: 1em;
-  margin-bottom: 1em;
   border-top-color: grey;
   border-bottom-color: grey;
   border-right-color: grey;
   border-left-color: grey;
   border-radius: 3px;
-  height: 2em;
+  margin: 6px;
 }
 .tablehead2{
   display: table-header-group;
   vertical-align: middle;
-  height: 2em;
 }
 .tablehead2 tr {
   display: table-row;
+}
+.tablehead2>tr th{
+  font-size: 13px;
 }
 .tablehead2 th {
   display: table-cell;
@@ -2376,6 +2383,19 @@ text-align: center;
   text-align: center;
   border: 0;
   box-sizing: content-box;
+  font-size: 14px;
+}
+.tbody .close-buttonn { 
+  background: red;
+  text-align: center;
+  padding: 2px;
+  margin: 5px;
+  border-radius: 4px;
+  width: 90%;
+  left: 3%;
+}
+.tbody h5{
+  color: white;
 }
 
 .end-part {
@@ -2836,11 +2856,10 @@ text-align: center;
 
 /* start of the notification box at center */
 .notification-centerbox {
-  position: absolute;
+  position: fixed;
   margin-left: auto;
   margin-right: auto;
   width: 70%;
-  height: 50%;
   background-color: white;
   padding: 1em;
   top: 15%;

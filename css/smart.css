@@ -1245,3 +1245,7 @@ position:absolute;
 border-radius: 50%;
 }
 
+.tbody>tr .close-buttonn:hover{
+ text-decoration: underline;
+ background: rgb(175, 40, 40);
+}

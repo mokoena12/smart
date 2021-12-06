@@ -1221,3 +1221,18 @@ right: 1px;
 position:absolute;
 }
 /*====End of Style ====== */
+
+.tbody tr td {
+ text-align: left;
+ padding-left: 0.50em;
+}
+
+.closing2 .fa{
+color :red;
+font-size: 30px;
+top: -6px;
+right: 3px;
+position:absolute;
+background-color: black;
+border-radius: 50%;
+}

@@ -77,7 +77,7 @@ if($conn->query($trade)){
   //Processing deposits depositing-methods
 
   if(isset($_POST["depositing-methods"])){
-    $selecting = "SELECT balance FROM dashboard WHERE  username='$user' ";
+    $selecting = "SELECT balance,deposit FROM dashboard WHERE  username='$user' ";
     $old_bal = $conn->query($selecting)->fetch_assoc();
     $old = $old_bal["balance"];
 
@@ -85,7 +85,7 @@ if($conn->query($trade)){
     $method =  $_POST["depositing-methods"];
     $sql = "INSERT INTO deposit(username,amount,method) VALUES('$user',$amount,'$method')";
     $nwBal = $old + $amount;
-    $dash = "UPDATE dashboard SET balance = $nwBal
+    $dash = "UPDATE dashboard SET balance = $nwBal,deposit=$nwBal
     WHERE username = '$user' ";
 
 

@@ -31,11 +31,11 @@ CREATE TABLE `dashboard` (
   `username` varchar(255) NOT NULL,
   `balance` int(20) NOT NULL,
   `profit_return` int(20) NOT NULL,
-  `bonus` int(20) NOT NULL,
-  `total_deposit` int(20) NOT NULL,
+  `referral_bonus` int(20) NOT NULL,
+  `invested_amount` int(20) NOT NULL,
   `total_withdrawal` int(20) NOT NULL,
   `deposit` int(20) NOT NULL,
-  `withdrawal` int(20) NOT NULL,
+  `equity` int(20) NOT NULL,
   `subscription` varchar(255) NOT NULL,
   `notifications` mediumtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -44,7 +44,7 @@ CREATE TABLE `dashboard` (
 -- Dumping data for table `dashboard`
 --
 
-INSERT INTO `dashboard` (`username`, `balance`, `profit_return`, `bonus`, `total_deposit`, `total_withdrawal`, `deposit`, `withdrawal`, `subscription`, `notifications`) VALUES
+INSERT INTO `dashboard` (`username`, `balance`, `profit_return`, `referral_bonus`, `invested_amount`, `total_withdrawal`, `deposit`, `equity`, `subscription`, `notifications`) VALUES
 ('Raps', 125, 0, 0, 0, 0, 100, 0, 'Not subscripted', '0');
 COMMIT;
 

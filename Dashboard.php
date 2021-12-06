@@ -7,11 +7,13 @@
 //Change the deposit history in withdrawal it should be withdrawal history and also change it in activity logs it should be Activity logs History
 //change Account details form in profile it shoulb be account holder's Full name and also add Bank name and card number
 //Fix the hovering of dashboard panel it
-//Put button in live trading history table, the button is named close under action column
+//Put button in live trading history table, the button is named close under action column(RED, COLOR:WHITE)
 //fix side_panel for deposit is not displaying name of user below avatar
 //Fix the size of logo for login/registration and logout
 //Fix the subscription link in side_panel href should be # on subscription.php
 //Fix the search engine for deposit.php, withdrawal.php ,etc it should be working like dashboard.php
+//fIX ADRESS IN PROFILE.PHP
+
 session_start();
 
 if (isset($_SESSION["investa_user"])){
@@ -25,22 +27,23 @@ else{
 
 require_once "connect.php";
 
-$balance = $profit_return = $bonus = $total_deposit = $total_withdrawal = $deposit = $withdrawal = "";
-$typeOfInv=  $invest_plan_err= $invest_period_err= $invest_results="";
+$balance = $profit_return = $referral_bonus = $invested_amount = $total_withdrawal = $deposit = $Equity = 0;
+$typeOfInv=  $invest_plan_err= $invest_period_err= $invest_results=0;
 
 
-$sql="SELECT balance, profit_return, bonus, total_deposit, total_withdrawal, deposit, withdrawal FROM dashboard WHERE  username='$user' ";
+$sql="SELECT balance, profit_return, referral_bonus, invested_amount, total_withdrawal, deposit, equity FROM dashboard WHERE  username='$user' ";
 $result = $conn->query($sql);
-if($result->num_rows> 0){
-  $row = $result->fetch_assoc(); 
+if($result !==FALSE && $result->num_rows> 0){
+  $row = $result->fetch_assoc();
+
 $balance =  $row["balance"];
  $profit_return = $row["profit_return"];
- 
- $bonus = $row["bonus"];
- $total_deposit = $row["total_deposit"];
+ $referral_bonus = $row["referral_bonus"];
+ $invested_amount = $row["invested_amount"];
  $total_withdrawal = $row["total_withdrawal"];
  $deposit = $row["deposit"];
- $withdrawal = $row["withdrawal"];
+ $Equity = $row["equity"];
+
 }
 
 ?>
@@ -124,8 +127,7 @@ $balance =  $row["balance"];
           <div class="sidebar-manus">
             <ul>
               <li>
-                <a href="Dashboard.php"><img  class="sidebarspace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>
-                Dashboard</a>
+                <a href="Dashboard.php"><i class="fa fa-home"></i>Dashboard</a>
               </li>
               <li>
                 <a href="profile.php"><i class="fa fa-user"></i>Profile</a>
@@ -146,7 +148,7 @@ $balance =  $row["balance"];
                 <a href="refferal.php"><i class="fa fa-users"></i>  Referral</a>
                 </li>
               <li>
-                <a href="subscription.php">
+                <a href="#">
                   <i class="fa fa-credit-card"></i>
                   Subscription
                 </a>
@@ -169,6 +171,11 @@ $balance =  $row["balance"];
             <div class="search">
               <i class="fas fa-search" onclick="search()"></i>
               <input type="search" name="search_d" id="search_d" placeholder="Search...">
+            </div>
+            <div class="menu-left manu-right">
+              <div class="bars"></div>
+              <div class="bars"></div>
+              <div class="bars"></div>
             </div>
           </header>
           <section>
@@ -229,7 +236,7 @@ $balance =  $row["balance"];
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Referral Bonus</span>
-                  <span class="money_balance">$ <?php echo $bonus;?></span>
+                  <span class="money_balance">$ <?php echo $referral_bonus;?></span>
                 </div>
               </div>
               <!-- end of bonus box -->
@@ -243,7 +250,7 @@ $balance =  $row["balance"];
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Invested Amount</span>
-                  <span class="money_balance">$ <?php echo $total_deposit;?></span>
+                  <span class="money_balance">$ <?php echo $invested_amount;?></span>
                 </div>
       
               </div>
@@ -287,7 +294,7 @@ $balance =  $row["balance"];
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Equity</span>
-                  <span class="money_balance" id="prices2">$ <?php echo $withdrawal?></span>
+                  <span class="money_balance" id="prices2">$ <?php echo $Equity?></span>
                 </div>
       
               </div>
@@ -375,7 +382,7 @@ $balance =  $row["balance"];
                   <p>This investment is commpounded daily <br>
                     meaning your investment will increase by 3% <br>
                     every day. Investment period is the time you <br>
-                    wand this investment to last before you can <br>
+                    want this investment to last before you can <br>
                     withdraw your money. 
                   </p>
                </div>
@@ -387,7 +394,7 @@ $balance =  $row["balance"];
                   <p>This investment is commpounded daily <br>
                     meaning your investment will increase by 5% <br>
                     every day. Investment period is the time you <br>
-                    wand this investment to last before you can <br>
+                    want this investment to last before you can <br>
                     withdraw your money. 
                   </p>
                 </div> 
@@ -399,7 +406,7 @@ $balance =  $row["balance"];
                   <p>This investment is commpounded daily <br>
                     meaning your investment will increase by 10% <br>
                     every day. Investment period is the time you <br>
-                    wand this investment to last before you can <br>
+                    want this investment to last before you can <br>
                     withdraw your money. 
                   </p>
                </div>
@@ -411,7 +418,7 @@ $balance =  $row["balance"];
                   <p>This investment is commpounded daily <br>
                     meaning your investment will increase by 20% <br>
                     every day. Investment period is the time you <br>
-                    wand this investment to last before you can <br>
+                    want this investment to last before you can <br>
                     withdraw your money. 
                   </p>
                 </div>                                               
@@ -420,7 +427,7 @@ $balance =  $row["balance"];
                 <p>By executing this investment, You agree to our terms and conditions (visit <a href="#">Terms</a>) to read more</p>
               </div>
               <div class="btnex2">
-                <input type="submit" id="btnexecute2" value="Invest">
+                <input class="button" type="submit" id="btnexecute2" value="Invest">
               </div>
               
             </form>
@@ -506,18 +513,16 @@ $balance =  $row["balance"];
                 <thead class="tablehead">
                   <tr>
                     <th>Trading Type</th>
-                    <th>Currency Pair</th>
-                    <th>Trading Action</th>
+                    <th>Currency Pair</th>                  
                     <th>Entry Price</th>
                     <th>Stop Loss</th>
                     <th>Take Profit</th>
                     <th>Status</th>
-                    <th>Action</th>
+                    <th>Trading Action</th>>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="tablebody" >
                   <!-- This is the only part to be  changed-->
-                  
                   <tr>
                     <td>FOREX</td>
                     <td>USDJPY</td>
@@ -526,8 +531,28 @@ $balance =  $row["balance"];
                     <td>105.25</td>
                     <td>135.25</td>
                     <td></td>
-                    <td></td>
+                    <td><button id="colour-for" style="background-color: red !important;color: white;border-radius: 3px; ">close</button></td>
                   </tr>
+                  <?php  
+                   
+                  $sql="SELECT trading_type,currency_pair,lot_size,entry_price,stop_loss,take_profit,trading_action FROM live_trading WHERE username = '$user'";
+                  $result2 = $conn->query($sql);
+                     
+                    if($result2 !== FALSE && $result2->num_rows> 0){
+                   
+                  while($row2 = $result2->fetch_assoc()){
+                   echo "<tr>";
+                   echo "<td>".$row2['trading_type']."</td>";
+                   echo "<td>".$row2['currency_pair']."</td>";
+                   echo "<td>".$row2['entry_price']."</td>";
+                   echo "<td>".$row2['stop_loss']."</td>";
+                   echo "<td>".$row2['take_profit']."</td>";
+                   echo "<td></td>";
+                   echo "<td></td>";
+                   echo "</tr>"; 
+                    }
+                  }
+                  ?>
                   <!-- This is the only part to be  changed-->
 
                 </tbody>

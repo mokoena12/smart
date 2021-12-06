@@ -608,8 +608,8 @@ to{
 }
  /* start of logo login */
  .logo_img{
-  height: 4em;
-  width: 8em;
+  height: 3em;
+  width: 6em;
   text-align: center;
   margin-top: -1px;
   margin-bottom: 10px;
@@ -1005,8 +1005,8 @@ flex-direction: row;
 }
 /* start of logo login */
 .logo_img{
-height: 6em;
-width: 12em;
+height: 4em;
+width: 8em;
 text-align: center;
 margin-top: -1px;
 margin-bottom: 10px;
@@ -1173,15 +1173,34 @@ overflow-x: hidden;
 .body-style {
 height: 100%;
 }
+
 .sidebar li { 
 list-style: none;
 text-decoration: none;
+width:10em;
+border-radius: 4px;
+padding: 0px 0px 9px 5px;
+margin: auto;
 
 }
+.sidebar li:hover{
+  color: white;
+background-color: rgb(27, 27, 216);
+  
+}
+
+.sidebar li:hover i{
+  color: white;
+} 
+
+
+.sidebar li:hover a{
+  color: white!important;
+} 
 .sidebar {
 background-color: white;
 color: black;
-width: 17%;
+width: 20%;
 height: 100%;
 box-shadow: 10px 2px 8px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)!important;
 overflow-y: hidden;
@@ -1200,57 +1219,24 @@ margin-right: auto;
 border-radius: 50%;
 
 }
-
-div.sidebar_profile {
-border-bottom: 1px solid grey;
-text-align: center;
-margin: 2em 0px 2em 10px;
-padding: 1em 0px 1em 0px;
-width: 90%;
-}
 .sidebar-manus {
 position: relative;
 font-weight: bold;
-margin-top: 1em;
 color: white;
 
 }
 .sidebar-manus ul li a {
 text-decoration: none;
 color: black;
-width: 10em;
 align-items: center;
+}
 
-}
-.sidebar-manus ul li:hover {
-background-color: blue;
-border-radius: 6px;
 
-}
-.sidebar-manus ul li a i {
-height: 1em;
-border-radius: 12px;
-}
+
+
 /* start of sidebar icon spassing */
-.sidebarspace  {
-padding-right: 1em;
-}
-li .fa {
-margin-left: 2px;
-color: black;
-}
-.fa-user {
-padding-right: 0.50em;
-}
-.fa-tasks {
-padding-right: 0.50em;
-}
-.fa-exchange {
-padding-right: 0.50em;
-}
-.fa-credit-card {
-padding-right: 0.50em;
-}
+
+
 /* end of sidebar icon spassing */
 
 
@@ -1272,10 +1258,6 @@ flex-direction: row;
 width: 100%;
 height: 100%;
 }
-.w-box {
-width: 83%;
-height: 100%;
-}
 .header-dash {
 position: relative;
 background-color: black !important;
@@ -1292,6 +1274,15 @@ padding-top: 15px;
 border-radius: 6px;
 margin-top: -3em;
 
+}
+.manu {
+  display: none;
+}
+.manu_content {
+  display: none;
+}
+.dropdown {
+  display: none;
 }
 
 .dash {
@@ -1480,7 +1471,7 @@ a.elevation-1 {
 /* start of investing plan */
 .investing-BOX {
   width: 96.5%;
-  border: 1px solid gray;
+  border: 1px solid #ccc;
   margin-right: 1em;
   margin-left: 1em;
   margin-bottom: 2em;
@@ -1489,9 +1480,10 @@ a.elevation-1 {
 }
 .header_TO {
   height: fit-content;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #ccc;
   padding: 10px;
   color: black;
+  font-weight: bold;
 }
 .control-plan {
   display: flex;
@@ -2033,25 +2025,7 @@ width: 100%;
 .body-style {
 height: 100%;
 }
-.sidebar li { 
-list-style: none;
-text-decoration: none;
 
-}
-.sidebar {
-background-color: white;
-color: black;
-width: 17%;
-height: 100%;
-box-shadow: 10px 2px 8px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)!important;
-overflow-y: hidden;
-}
-.sidebar-flex {
-display: flex;
-flex-direction: column;
-position: relative;
-text-align: center;
-}
 .Pcontrol {
 width: 5em;
 height: 5em;
@@ -2060,7 +2034,6 @@ margin-right: auto;
 border-radius: 50%;
 
 }
-
 
 div.sidebar_profile {
 border-bottom: 1px solid grey;
@@ -2315,50 +2288,12 @@ width: 90%;
 /* end of banking details */
 /* end of the profile */
 
-
-.sidebar-manus {
-position: relative;
-font-weight: bold;
-margin-top: 1em;
-color: white;
-
-}
-.sidebar-manus ul li a {
-text-decoration: none;
-color: black;
-width: 5em;
-align-items: center;
-
-}
-.sidebar-manus ul li:hover {
-background-color: blue;
-}
-.sidebar-manus ul li a i {
-height: 1em;
-min-width: 30px;
-border-radius: 12px;
-line-height: 30px;
+.sidebar-manus ul li i{
+  color: black;
+  margin-right:10px ;
 }
 /* start of sidebar icon spassing */
-.sidebarspace  {
-padding-right: 1em;
-}
-li .fa {
-margin-left: 1px;
-color: black;
-}
-.fa-user {
-padding-right: 1em;
-}
-.fa-tasks {
-padding-right: 1em;
-}
-.fa-exchange {
-padding-right: 1em;
-}
-.fa-credit-card {
-padding-right: 1em;
-}
+
 /* end of sidebar icon spassing */
 
 
@@ -2380,8 +2315,8 @@ width: 100%;
 height: 100%;
 }
 .w-box {
-width: 83%;
-height: 100%;
+width: 80%;
+height:auto;
 }
 
 
@@ -2593,6 +2528,7 @@ a.elevation-1 {
   padding: 10px;
   font-weight: bold;
   color: black;
+  font-weight: bold;
 }
 .control-plan {
   display: flex;
@@ -2774,7 +2710,9 @@ a.elevation-1 {
 .table td {
   vertical-align: top;
 }
-
+#colour-for {
+  background-color: red !important;
+}
 /* end of the table history */
 
 
@@ -3038,6 +2976,7 @@ text-align: center;
   margin-top: 2em;
 }
 /* end of the referral */
+
 
 
 

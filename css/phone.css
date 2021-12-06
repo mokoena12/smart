@@ -1527,7 +1527,14 @@ header .logo img{
 }
 
 /* start of the dashboard page */
-
+@keyframes slidings{
+  from{
+    left: -20em;
+  }
+  to{
+    left: 0;
+  }
+}
 .sidebar {
   position: fixed;
   margin-top: -2px;
@@ -1539,7 +1546,7 @@ header .logo img{
   height: 100%;
   box-shadow: 10px 2px 8px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)!important;
   overflow-y: hidden;
-  animation: slide 1s linear;
+  animation: slidings 2s linear;
 }
 
   .sidebar-flex {
@@ -2836,11 +2843,10 @@ text-align: center;
 
 /* start of the notification box at center */
 .notification-centerbox {
-  position: absolute;
+  position: fixed;
   margin-left: auto;
   margin-right: auto;
   width: 70%;
-  height: 50%;
   background-color: white;
   padding: 1em;
   top: 15%;

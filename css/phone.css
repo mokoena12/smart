@@ -2377,6 +2377,18 @@ text-align: center;
   border: 0;
   box-sizing: content-box;
 }
+.tbody .close-buttonn { 
+  background: red;
+  text-align: center;
+  padding: 2px;
+  margin: 5px;
+  border-radius: 4px;
+  width: 6.5%;
+  left: 5px;
+}
+.tbody h5{
+  color: white;
+}
 
 .end-part {
   display: flex;

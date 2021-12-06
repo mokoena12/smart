@@ -460,38 +460,25 @@ $balance =  $row["balance"];
                             <table class="table-ta">
                                 <thead class="tablehead2">
                                     <tr>
-                                        <th>Amount</th>
-                                        <th>Status</th>
-                                        <th>Credited At</th>
-                                        <th>Investment Method</th>
+                                        <th>Investment plan</th>
+                                        <th>Amount invested</th>
+                                        <th>Investment period</th>
+                                        <th>Date</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
                                     <tr>
+                                        <td>Bronze</td>
                                         <td>$100</td>
-                                        <td>Approved</td>
-                                        <td>12-oct-2021</td>
-                                        <td>deposit</td>
+                                        <td>3 weeks</td>
+                                        <td>06 Dec 2021</td>
+                                        <td class="close-buttonn"><h5>Close</h5></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div class="end-part">
-                            <div class="end-shift">
-                                Showing 0 to 0 0f 0 entries 
-                            </div>
-                            <div class="prev-next">
-                                <ul>
-                                    <li>
-                                        <a href="#">Previous</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Next</a>
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
+                      
                     </div>
 
                 </section>

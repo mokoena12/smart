@@ -1220,6 +1220,10 @@ top:-20px;
 right: 1px;
 position:absolute;
 }
+
+.pmames{
+    display: none;
+}
 /*====End of Style ====== */
 
 .tbody tr td {

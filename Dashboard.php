@@ -13,6 +13,7 @@
 //Fix the subscription link in side_panel href should be # on subscription.php
 //Fix the search engine for deposit.php, withdrawal.php ,etc it should be working like dashboard.php
 //fIX ADRESS IN PROFILE.PHP
+//Make sure the side panel is animated in dashboard.php for phones and tablet
 
 session_start();
 

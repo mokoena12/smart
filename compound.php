@@ -11,6 +11,7 @@ and also store the name of person registering with this link*/
 /*Make sure the equity is updated everytime we enter dashboard, like now my balance is $125 and Invested_amount is
 $115  but my equity is zero 
  */
+
 session_start();
 if (isset($_SESSION["investa_user"])){
 

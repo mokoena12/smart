@@ -75,7 +75,7 @@ else{
                         }
                         ?>
                         <img class="Pcontrol" src="<?php echo $avatar?>" alt="profile">
-                        <span>belmiro</span>
+                        <span><?php echo "Hi ".$user; ?></span>
                     </div>
                 </div>             
                 <div class="sidebar-manus">

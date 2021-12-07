@@ -11,6 +11,10 @@ and also store the name of person registering with this link*/
 /*Make sure the equity is updated everytime we enter dashboard, like now my balance is $125 and Invested_amount is
 $115  but my equity is zero 
  */
+//Fix your table for registration it is dublicated is registration(1).sql
+//Activity logs is not fixed, activity description must be "Registration " then date it will be retrived from database
+//deposit is not fixed
+//Withdrawal history not fixed
 
 session_start();
 if (isset($_SESSION["investa_user"])){

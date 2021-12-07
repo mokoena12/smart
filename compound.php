@@ -11,6 +11,7 @@ and also store the name of person registering with this link*/
 /*Make sure the equity is updated everytime we enter dashboard, like now my balance is $125 and Invested_amount is
 $115  but my equity is zero 
  */
+
 session_start();
 if (isset($_SESSION["investa_user"])){
 
@@ -22,14 +23,14 @@ else{
   $err = "Please login as Administrator";
   header("Location:login.php?user2=$err");
   
-}
+}/*
 if($_SESSION["investa_user"] != "Admin"){
   header("Location:index.html");
-}
+}*/
 require_once "connect.php";
  
 $deposit=0;
-$balance=0;
+$balance= $equity =0;
 $Bal = $nwBal = 0;
 $Proft = 0;
 $amount = 0; 
@@ -66,28 +67,25 @@ if($result1->num_rows> 0){
            
           if($typeOfinv=="Bronze"){
             $i = 0.04;
- 
             $n=1;
-            $balance = balance($investd_amount,0.04,1);
-            
+            $balance = balance($investd_amount,0.04,1);      
             $nwBal = Nwbalance($balance1,$balance);
-           
+            $equity = $nwBal - $investd_amount;          
             $Proft = profit($nwBal,$deposit);
             
-            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
+            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft, equity = $equity
              WHERE username = '$user'";
             $result3 = $conn->query($sql);
 
          }else if($typeOfinv=="Titanium"){
           $i = 0.05;
           $n=1;
-          $balance = balance($investd_amount,0.05,1);
-            
+          $balance = balance($investd_amount,0.05,1);    
             $nwBal = Nwbalance($balance1,$balance);
-           
+            $equity = $nwBal - $investd_amount;           
             $Proft = profit($nwBal,$deposit);
 
-          $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
+          $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft, equity = $equity
           WHERE username = '$user'";
           $result3 = $conn->query($sql);
             
@@ -95,25 +93,23 @@ if($result1->num_rows> 0){
             $i = 0.10;
             $n=1;
             $balance = balance($investd_amount,0.10,1);
-            
             $nwBal = Nwbalance($balance1,$balance);
-           
+            $equity = $nwBal - $investd_amount;
             $Proft = profit($nwBal,$deposit);
 
-            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
+            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft, equity = $equity
             WHERE username = '$user'";
             $result3 = $conn->query($sql);
             
           }elseif($typeOfinv=="Diamond"){
             $i = 0.20;
             $n=1;
-            $balance = balance($investd_amount,0.20,1);
-            
+            $balance = balance($investd_amount,0.20,1); 
             $nwBal = Nwbalance($balance1,$balance);
-           
+            $equity = $nwBal - $investd_amount;
             $Proft = profit($nwBal,$deposit);
 
-            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
+            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft, equity = $equity
             WHERE username = '$user'";
             $result3 = $conn->query($sql);
           }

@@ -2,7 +2,7 @@
 
 <?php
 
-
+require_once "connect.php";
 session_start();
 
 if (isset($_SESSION["investa_user"])){
@@ -244,12 +244,27 @@ else{
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
-                                    <tr>
-                                        <td>$100</td>
-                                        <td>Approved</td>
-                                        <td>12-oct-2021</td>
-                                        <td>deposit</td>
-                                    </tr>
+                   <?php  
+                   $n = 0;
+                   $sql="SELECT deposit, method, deposit_date FROM deposit WHERE username = '$user'";
+                    
+                   $result11 = $conn->query($sql);
+                      
+                     if($result11 !== FALSE && $result11->num_rows> 0){
+                    
+                   while($n <=5 && $row2 = $result11->fetch_assoc()){
+                    echo "<tr>";
+                    echo "<td>".$row2['deposit']."</td>";
+                    echo "<td></td>";
+                    echo "<td>".$row2['deposit_date']."</td>";
+                    echo "<td>".$row2['method']."</td>";
+                    echo "</tr>"; 
+                    $n++;
+                     }
+                   }
+                   ?>
+
+                           
                                 </tbody>
                             </table>
                         </div>

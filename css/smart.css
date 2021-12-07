@@ -1254,3 +1254,47 @@ border-radius: 50%;
  text-decoration: underline;
  background: rgb(175, 40, 40);
 }
+
+/*messanger icons*/
+.social-med{
+    background-color: white;
+    z-index: 999;
+    position: fixed;
+    top: 50%;
+    right: -0.4%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    width: 4%;
+    overflow: visible;
+}
+
+.social-med::first i{
+    color: rgb(57, 219, 17);
+}
+.social-med i{
+    color: rgb(6, 37, 94);
+    padding: 3px;
+    margin: 4px;   
+}
+.social-med i:hover{
+    color: rgb(67, 87, 122);
+    
+}
+.social-med:hover span{
+   display: block;
+ 
+
+}
+.social-med span{
+    position: absolute;
+    right: 4em;
+    top: 17px;
+    background-color: white;
+    width: 7em;
+    text-align: center;
+    border-radius: 4px;
+    display: none;
+}
+  /*end-messanger icons*/
+  

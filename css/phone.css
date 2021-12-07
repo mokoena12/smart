@@ -2869,7 +2869,12 @@ text-align: center;
 }
 /* end of the notification box at the center */
 
+/*messanger icons*/
+.social-med i{
+  font-size: 37px;
+}
 
+/*end-messanger icons*/
 
 
 }

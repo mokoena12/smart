@@ -1271,8 +1271,8 @@ text-align: center;
 
   /* start of web logo */
   .logo_2 {
-    height: 6em;
-    width: 12em;
+    height: 3em;
+    width: 6em;
 
 }
 .logo_img{
@@ -1536,6 +1536,7 @@ header .logo img{
   }
 }
 .sidebar {
+  display: none;
   position: fixed;
   margin-top: -2px;
   left: -10px;
@@ -2739,6 +2740,15 @@ text-align: center;
   border-radius: 4px;
   padding: 1em;
 }
+.copy-btn {
+  text-align: right;
+  position: relative;
+  margin-top: 2%;
+  height: 2.5em;
+  color: white;
+  border-radius: 4px;
+}
+
 .referral-members {
   border-radius: 4px;
   border: 1px solid #ccc;
@@ -2869,8 +2879,91 @@ text-align: center;
 }
 /* end of the notification box at the center */
 
+/*messanger icons*/
+.social-med i{
+  font-size: 37px;
+}
 
 
+.header_2 { 
+  background-color: white;
+  height: 5em;
+  width: 100%;
+  text-transform: uppercase;
+  padding-left:  40px;
+  
+}
+     /* start of web logo */
+     .logo_2 {
+      height: 3em;
+      width: 6em;
+      margin-bottom: 10px;
+  
+      }
+      /* end of logo reg */
+      .icon2 {
+        color: orange;
+        margin-left: 1em;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        font-size: 11px;
+    }
+div.box_header {
+  font-weight: 700;
+  height: 2em;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.center_2 {
+  position: absolute;
+  box-sizing: border-box;
+  border: 3px solid grey;
+  height: auto;
+  width: 95%;
+  margin-left: 1em;
+  padding-right: 2em;
+
+/*end-messanger icons*/
+
+
+}
+.box2 {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1em;
+
+}
+.box2_style {
+  position: relative;
+  width: 18em;
+  height: 2em;
+  margin-bottom: 10px;
+  border-color: none;
+  margin-right: 30px;
+}
+.shift_upl {
+  margin-left: auto;
+  margin-right: auto;
+}
+.fileupload {
+  width: 11em;
+  height: 2em;
+  color: rgb(110, 110, 110);
+}
+.reg_btn {
+  color: white;
+  background-color: blue;
+  width: 9em;
+  height: 2em;
+  border-radius: 4px;
+  margin-top: 2em;
+  margin-left: 30%;
+}
+/* end of registration form for tablet */
 
 }
  

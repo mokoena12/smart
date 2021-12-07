@@ -1,24 +1,4 @@
 <?php
-//Tasks to be completed by front-end
-
-//Fix the html tag for withdrawal(is not closed and it has class) check this for all other files in dashboard(deposit.php,profile.php, etc....)
-//Code notification pop_up
-//Change the deposit history in withdrawal it should be withdrawal history and also change it in activity logs it should be Activity logs History
-//change Account details form in profile it shoulb be account holder's Full name and also add Bank name and card number
-//Fix the hovering of dashboard panel it
-//Put button in live trading history table, the button is named close under action column(RED, COLOR:WHITE)
-//fix side_panel for deposit is not displaying name of user below avatar
-//Fix the size of logo for login/registration and logout
-//Fix the subscription link in side_panel href should be # on subscription.php
-//Fix the search engine for deposit.php, withdrawal.php ,etc it should be working like dashboard.php
-//fIX ADRESS IN PROFILE.PHP
-//Make sure the side panel is animated in dashboard.php for phones and tablet
-//fix the text inside live investment card, put the text at center
-//Fix the dashboard icon on sidebar for deposit.php, withdrawal.php,entry_price
-//The task_bar in desposit.php, withdrawal.php,etc
-//Make sidebar display none is small phones
-//The text inside investment plans should be centered
-//Add shortcut icon meta tag in all files, google about it to know more
 
 session_start();
 
@@ -54,7 +34,7 @@ $balance =  $row["balance"];
 
 ?>
 
-<Doctype html>
+<!DOCTYPE html>
   <html lang="en">
   <head>
   <!-- start meta tags-->
@@ -83,6 +63,7 @@ $balance =  $row["balance"];
   <link rel="stylesheet" href="fonts/css/v4-shims.css">
   <link rel="stylesheet" href="fonts/css/v4-shims.min.css">
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="shortcut icon" href="img/smart.investa.logo2.png" />
   <!-- end of fonts -->
   
   <!-- start of links styling-->
@@ -581,7 +562,7 @@ $balance =  $row["balance"];
                     <td>105.25</td>
                     <td>135.25</td>
                     <td></td>
-                    <td><button id="colour-for" style="color: white;border-radius: 3px;background-color: red !important;">close</button></td>
+                    <td><button class="clossing-btn">close</button></td>
                   </tr>
                  <?php  
                    

@@ -187,6 +187,11 @@ body{
     color: blue;
     text-decoration: underline;
 }
+#button_hover{
+    background-image: linear-gradient(to bottom right,white, rgb(245, 239, 239), rgb(184, 187, 186));
+    color: blue!important;
+    text-decoration: underline;
+}
 
 .log_reg div a:link{
     text-decoration: none;
@@ -1217,7 +1222,7 @@ margin: 0;
     border-radius: 3px;
     animation:fadeout 1s linear;
 }
-.deposit_user .closing{
+.deposit_user .closingg{
 color:red;
 font-size: 40px;
 top:-20px;

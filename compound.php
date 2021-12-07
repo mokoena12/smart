@@ -1,7 +1,27 @@
 
 <?php   
 //Please fix the registration form, we lost some data when moving to Git also make sure it adds the user when registering
- 
+/*Code referral.php you will have to create a table database named referral with following columns username,friend_name,date_ref. Check the structure of referral link 
+is https://www.smartinvesta.co.za/Registration.php?ref=Raps so you can see we are passing variable named ref with username of
+Raps using GET method. The task is the check during registration whether ref is set and is is set take the value store it in referral table 
+and also store the name of person registering with this link*/
+
+//Code referral members table in referral.php using the table database above to do the work
+
+/*Make sure the equity is updated everytime we enter dashboard, like now my balance is $125 and Invested_amount is
+$115  but my equity is zero 
+ */
+//Fix your table for registration it is dublicated is registration(1).sql
+//Activity logs is not fixed, activity description must be "Registration " then date it will be retrived from database
+//deposit is not fixed
+//Withdrawal history not fixed
+/*You did not fix investment table as suggested, leave the amount column as it is don't delete it. date column must be added
+//referral bonus amount it shoulb be the total number of (referrals*10)
+
+*/
+
+//In the recent trading history, the trading action column shoulb be sell or buy and status column shoulb be opened
+
 session_start();
 if (isset($_SESSION["investa_user"])){
 
@@ -13,14 +33,14 @@ else{
   $err = "Please login as Administrator";
   header("Location:login.php?user2=$err");
   
-}
+}/*
 if($_SESSION["investa_user"] != "Admin"){
   header("Location:index.html");
-}
+}*/
 require_once "connect.php";
  
 $deposit=0;
-$balance=0;
+$balance= $equity =0;
 $Bal = $nwBal = 0;
 $Proft = 0;
 $amount = 0; 
@@ -57,28 +77,25 @@ if($result1->num_rows> 0){
            
           if($typeOfinv=="Bronze"){
             $i = 0.04;
- 
             $n=1;
-            $balance = balance($investd_amount,0.04,1);
-            
+            $balance = balance($investd_amount,0.04,1);      
             $nwBal = Nwbalance($balance1,$balance);
-           
+            $equity = $nwBal - $investd_amount;          
             $Proft = profit($nwBal,$deposit);
             
-            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
+            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft, equity = $equity
              WHERE username = '$user'";
             $result3 = $conn->query($sql);
 
          }else if($typeOfinv=="Titanium"){
           $i = 0.05;
           $n=1;
-          $balance = balance($investd_amount,0.05,1);
-            
+          $balance = balance($investd_amount,0.05,1);    
             $nwBal = Nwbalance($balance1,$balance);
-           
+            $equity = $nwBal - $investd_amount;           
             $Proft = profit($nwBal,$deposit);
 
-          $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
+          $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft, equity = $equity
           WHERE username = '$user'";
           $result3 = $conn->query($sql);
             
@@ -86,25 +103,23 @@ if($result1->num_rows> 0){
             $i = 0.10;
             $n=1;
             $balance = balance($investd_amount,0.10,1);
-            
             $nwBal = Nwbalance($balance1,$balance);
-           
+            $equity = $nwBal - $investd_amount;
             $Proft = profit($nwBal,$deposit);
 
-            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
+            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft, equity = $equity
             WHERE username = '$user'";
             $result3 = $conn->query($sql);
             
           }elseif($typeOfinv=="Diamond"){
             $i = 0.20;
             $n=1;
-            $balance = balance($investd_amount,0.20,1);
-            
+            $balance = balance($investd_amount,0.20,1); 
             $nwBal = Nwbalance($balance1,$balance);
-           
+            $equity = $nwBal - $investd_amount;
             $Proft = profit($nwBal,$deposit);
 
-            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft
+            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft, equity = $equity
             WHERE username = '$user'";
             $result3 = $conn->query($sql);
           }

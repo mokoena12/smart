@@ -115,10 +115,6 @@ if($validated == 1){
                 </div>
                 <input type="submit"  name="Re-new" value="Re-new" class="subbtn button">
             </div>
-             name@gamil.com
-        
-        Royalbafukeng@proinbox.co.za
-        hospital@sales1.org.za
         </form>
         <!-- end of form -->
     </div>

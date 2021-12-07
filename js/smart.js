@@ -237,7 +237,7 @@ $(document).ready(function(){
 ///====Style to hide the deposit and withdraw pop_up
 
 $(document).ready(function(){
-  $(".closing").click(function(){
+  $(".closingg").click(function(){
     $(".deposit_user").hide();
   });
 });

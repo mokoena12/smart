@@ -15,6 +15,10 @@
 //Make sure the side panel is animated in dashboard.php for phones and tablet
 //fix the text inside live investment card, put the text at center
 //Fix the dashboard icon on sidebar for deposit.php, withdrawal.php,entry_price
+//The task_bar in desposit.php, withdrawal.php,etc
+//Make sidebar display none is small phones
+//The text inside investment plans should be centered
+//Add shortcut icon meta tag in all files, google about it to know more
 
 session_start();
 
@@ -579,9 +583,9 @@ $balance =  $row["balance"];
                     <td></td>
                     <td><button id="colour-for" style="color: white;border-radius: 3px;background-color: red !important;">close</button></td>
                   </tr>
-                  <?php  
+                 <?php  
                    
-                  $sql="SELECT trading_type,currency_pair,lot_size,entry_price,stop_loss,take_profit,trading_action FROM live_trading WHERE username = '$user'";
+                 $sql="SELECT trading_type,currency_pair,,trading_action ,lot_size,entry_price,stop_loss,take_profit FROM live_trading WHERE username = '$user'";
                   $result2 = $conn->query($sql);
                      
                     if($result2 !== FALSE && $result2->num_rows> 0){
@@ -590,11 +594,11 @@ $balance =  $row["balance"];
                    echo "<tr>";
                    echo "<td>".$row2['trading_type']."</td>";
                    echo "<td>".$row2['currency_pair']."</td>";
+                   echo "<td>".$row2['trading_action']."</td>";
                    echo "<td>".$row2['entry_price']."</td>";
                    echo "<td>".$row2['stop_loss']."</td>";
                    echo "<td>".$row2['take_profit']."</td>";
-                   echo "<td></td>";
-                   echo "<td></td>";
+                   echo "<td><button id='colour-for' style='color: white;border-radius: 3px;background-color: red !important;'>close</button>.</td>";
                    echo "</tr>"; 
                     }
                   }

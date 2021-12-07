@@ -2,7 +2,6 @@
 //Tasks to be completed by front-end
 
 //Fix the html tag for withdrawal(is not closed and it has class) check this for all other files in dashboard(deposit.php,profile.php, etc....)
-//Code investing History it should be below Live investing. The design is the as as trading history
 //Code notification pop_up
 //Change the deposit history in withdrawal it should be withdrawal history and also change it in activity logs it should be Activity logs History
 //change Account details form in profile it shoulb be account holder's Full name and also add Bank name and card number
@@ -580,9 +579,9 @@ $balance =  $row["balance"];
                     <td></td>
                     <td><button id="colour-for" style="color: white;border-radius: 3px;background-color: red !important;">close</button></td>
                   </tr>
-                  <?php  
+                 <?php  
                    
-                  $sql="SELECT trading_type,currency_pair,lot_size,entry_price,stop_loss,take_profit,trading_action FROM live_trading WHERE username = '$user'";
+                 $sql="SELECT trading_type,currency_pair,,trading_action ,lot_size,entry_price,stop_loss,take_profit FROM live_trading WHERE username = '$user'";
                   $result2 = $conn->query($sql);
                      
                     if($result2 !== FALSE && $result2->num_rows> 0){
@@ -591,11 +590,11 @@ $balance =  $row["balance"];
                    echo "<tr>";
                    echo "<td>".$row2['trading_type']."</td>";
                    echo "<td>".$row2['currency_pair']."</td>";
+                   echo "<td>".$row2['trading_action']."</td>";
                    echo "<td>".$row2['entry_price']."</td>";
                    echo "<td>".$row2['stop_loss']."</td>";
                    echo "<td>".$row2['take_profit']."</td>";
-                   echo "<td></td>";
-                   echo "<td></td>";
+                   echo "<td><button id='colour-for' style='color: white;border-radius: 3px;background-color: red !important;'>close</button>.</td>";
                    echo "</tr>"; 
                     }
                   }

@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `withdrawal` (
   `username` varchar(255) DEFAULT NULL,
   `amount` int(20) DEFAULT NULL,
+
   `method` varchar(255) DEFAULT NULL,
   `with_date` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

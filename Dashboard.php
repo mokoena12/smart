@@ -15,6 +15,8 @@
 //Make sure the side panel is animated in dashboard.php for phones and tablet
 //fix the text inside live investment card, put the text at center
 //Fix the dashboard icon on sidebar for deposit.php, withdrawal.php,entry_price
+//The task_bar in desposit.php, withdrawal.php,etc
+//Make sidebar display none is small phones
 
 session_start();
 

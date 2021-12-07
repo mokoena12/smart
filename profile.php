@@ -597,14 +597,9 @@ else{
                                                 </select>
                                             </div>
                                             <div class="diveform">
-<<<<<<< HEAD
                                                 <label for="address">Email</label>
                                                 <input type="text" class="name-inputs" name ="addres" id="adre" placeholder="Address">
                                                 <div class="red-text"><?php  echo $address_rr; ?></div>
-=======
-                                                <label for="address">Address</label>
-                                                <input type="text" class="name-inputs" id="adre" placeholder="Address">
->>>>>>> 5e9b378eeb74dcc65e2b29ae0fc38b5617c28a1b
                                             </div>
                                         </div>
                                         <div class="p-btnsub">

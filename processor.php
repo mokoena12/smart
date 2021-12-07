@@ -1,4 +1,8 @@
 <?php
+//Belmiro's Tasks 
+//Need to test withdrawal
+//Create investment history when they are done
+
 
 function test_input($data) {
   $data = trim($data);
@@ -104,15 +108,17 @@ if($conn->query($trade)){
 <?php 
 //widthdrawal process 
 if(isset($_POST["widthdraw"])){
-  $selecting = "SELECT balance FROM dashboard WHERE  username='$user' ";
+  $selecting = "SELECT balance,total_withdrawal FROM dashboard WHERE  username='$user' ";
     $old_bal = $conn->query($selecting)->fetch_assoc();
     $old = $old_bal["balance"];
+    $with = $old_bal["total_withdrawal"];
 
     $amount = $_POST["amount"];
     $method =  $_POST["payment-options"];
     $value = $_POST["widthdraw"];
     $nwBal = $old - $amount;
-    $dash = "UPDATE dashboard SET balance = $nwBal
+    $nw_with = $with +  $amount;
+    $dash = "UPDATE dashboard SET balance = $nwBal, total_withdrawal = $nw_with
     WHERE username = '$user' ";
       /*
   $to = $email;;

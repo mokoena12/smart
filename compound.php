@@ -15,6 +15,10 @@ $115  but my equity is zero
 //Activity logs is not fixed, activity description must be "Registration " then date it will be retrived from database
 //deposit is not fixed
 //Withdrawal history not fixed
+/*You did not fix investment table as suggested, leave the amount column as it is don't delete it. date column must be added
+//referral bonus amount it shoulb be the total number of (referrals*10)
+
+*/
 
 session_start();
 if (isset($_SESSION["investa_user"])){

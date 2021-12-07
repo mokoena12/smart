@@ -12,8 +12,10 @@
     let profile = document.getElementsByClassName("displayers");
     for(let i =0; i<3 ; i++){
       profile[i].style.display="none";
+      profile[i].setAttribute('id','button_hover1');
     }
     profile[n].style.display="block";
+    profile[n].setAttribute('id','button_hover');
     
   }
     

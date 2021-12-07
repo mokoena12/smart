@@ -1,5 +1,9 @@
 <?php
-
+//check withdrawal.php on small phones and tablet is overflowing the screen and some elements are not clear
+//Make sure you view all files deposit.php, referral.php,etc and check they are displaying well
+//fill something in your referral member tablet
+//display the deposit instructions first in the deposit(in cellphone.) they must display in reverse column
+//The dashboard is not displaying well in small phones(specific iphone 6,7 and 8 plus ) try to make icons inside cards bit smaller
 session_start();
 
 if (isset($_SESSION["investa_user"])){

@@ -166,8 +166,8 @@ else{
                     <div class="refferal-link">
                         <h5>To Referrer a User, Copy the referal link for registration</h5>
                         <label for="refferal link">Referral Link</label><br>
-                        <input type="text" name="referral_link" id="ref-link" value="https://www.smartinvesta.co.za/Registration.php?ref=<?php echo $user;?>" disabled>
-                        <button class="copy-btn">Copytext</button>
+                        <input type="text" name="referral_link" id="referral_link" value="https://www.smartinvesta.co.za/Registration.php?ref=<?php echo $user;?>" disabled>
+                        <button class="copy-btn button" onclick="ref_link()">Copytext</button>
                     </div>
                     <div class="referral-members">
                         <h5>Your referral members</h5>

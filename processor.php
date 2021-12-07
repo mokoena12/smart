@@ -31,15 +31,16 @@ $nw = $amount;
 $check = "SELECT invested_amount FROM dashboard WHERE username='$user'";
 $outcome = $conn->query($check);
 if($outcome->num_rows> 0){
+
   $row = $outcome->fetch_assoc();
   $amount =   $amount + $row["invested_amount"];
+
 }
     $type = $_POST["selectplans"];
-    
     $period = $_POST["selectperiod"];
-      $invest = "INSERT INTO investment(typeOfInv,periods,user,amount) VALUES('$type','$period','$user',$nw)"; 
-      $invest1 = "UPDATE dashboard SET invested_amount=$amount WHERE  username = '$user'"; 
-      if($conn->query($invest) && $conn->query($invest1)){
+    $invest = "INSERT INTO investment(typeOfInv,periods,user,amount) VALUES('$type','$period','$user',$nw)"; 
+    $invest1 = "UPDATE dashboard SET invested_amount=$amount WHERE  username = '$user'"; 
+    if($conn->query($invest) && $conn->query($invest1)){
         $invest_results = "Your Investment is successfully placed";
         header("Location:Dashboard.php?results=$invest_results");
       }

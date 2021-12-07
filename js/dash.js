@@ -151,3 +151,12 @@ $(document).ready(function(){
 
   });
 });
+function ref_link() {
+
+  var copyText = document.getElementById("referral_link");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); 
+  navigator.clipboard.writeText("belmiro");
+  alert("Link Copied to clipboard");
+
+}

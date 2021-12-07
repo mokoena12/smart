@@ -320,9 +320,9 @@ else{
                             <div class="profile-details">
                                 <div class="profile-header">
                                     <ul class="profile-flex">
-                                        <li><button class="button" onclick="profile(0)"> Account Details</button></li>
-                                        <li><button class="button" onclick="profile(1)">Login Details</button></li>
-                                        <li><button class="button" onclick="profile(2)">Banking Details</button></li>
+                                        <li><button class="button profile" id="button_hover" onclick="profile(0)"> Account Details</button></li>
+                                        <li><button class="button profile" onclick="profile(1)">Login Details</button></li>
+                                        <li><button class="button profile" onclick="profile(2)">Banking Details</button></li>
                                     </ul>
                                 </div>
                                 <!-- end section for the avater -->

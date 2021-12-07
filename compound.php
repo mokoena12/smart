@@ -20,6 +20,8 @@ $115  but my equity is zero
 
 */
 
+//In the recent trading history, the trading action column shoulb be sell or buy and status column shoulb be opened
+
 session_start();
 if (isset($_SESSION["investa_user"])){
 

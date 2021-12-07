@@ -2879,6 +2879,11 @@ text-align: center;
 }
 /* end of the notification box at the center */
 
+/*messanger icons*/
+.social-med i{
+  font-size: 37px;
+}
+
 
 .header_2 { 
   background-color: white;
@@ -2917,6 +2922,9 @@ div.box_header {
   width: 95%;
   margin-left: 1em;
   padding-right: 2em;
+
+/*end-messanger icons*/
+
 
 }
 .box2 {

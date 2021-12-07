@@ -3003,6 +3003,12 @@ margin-left: 15px;
   border: 1px solid #ccc;
 }
 /* end of the notification box at the center */
+/*messanger icons*/
+.social-med i{
+  font-size: 45px;
+  
+}
+/*end-messanger icons*/
 
 
 }

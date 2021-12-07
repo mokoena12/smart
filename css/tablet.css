@@ -2317,11 +2317,14 @@ margin-bottom: -20em;
 /* end of the notification box at the center */
 
 
-
+/*social med icons*/
+.social-med i{
+  font-size: 35px;
+}
+/*end-social med icons*/
 
 
 
 
 
 }
-

@@ -14,19 +14,59 @@ else{
 }
 require_once "connect.php";
 
-$username = $phone = $country = $address = "";
-$username_rr = $phone_rr = $country_rr = $address_rr = "";
-if(isset($_POST["full"])){
+$username = $phone = $country = $address =$email1 = $bank_name = $accnt_holder = $bit_addres = ""; $accont_num = 0;
+$username_rr = $phone_rr = $country_rr = $address_rr = $bank_namerr = $accnt_holderrr = $bit_addresrr = $accont_numrr =""; 
+if(isset($_POST["full"],$_POST["bank"])){
  
     $approved = 1;
-    function test_input($data) {
+    function test_input($data){
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
-        return $data;
-        
+        return $data; 
       }
     
+      if(empty($_POST["bank"])){
+        $bank_namerr = "Bank name is required";
+        $approved = 0;
+      }else{
+        $bank_name = (test_input($_POST["bank"]));
+        $sql ="UPDATE banking_details SET bank_name = $bank_name
+      WHERE username = '$user'";
+      $result2 = $conn->query($sql);
+      }
+         
+     if(empty($_POST["Accountname"])){
+        $accnt_holderrr = "Please enter your fullname";
+        $approved = 0;
+      }else{
+        $accnt_holder = (test_input($_POST["Accountname"]));
+        $sql ="UPDATE banking_details SET account_holder = $accnt_holder
+      WHERE username = '$user'";
+      $result2 = $conn->query($sql);
+      }
+         
+     if(empty($_POST["a-number"])){
+        $accont_numrr = "account number is required";
+        $approved = 0;
+      }else{
+        $accont_num = (test_input($_POST["a-number"]));
+        $sql ="UPDATE banking_details SET account_number = $accont_num
+      WHERE username = '$user'";
+      $result2 = $conn->query($sql);
+      }
+
+      if(empty($_POST["btc-adress"])){
+        $bit_addresrr = "Bit-coin adddress is required";
+        $approved = 0;
+      }else{
+        $bit_addres = (test_input($_POST["btc-adress"]));
+        $sql ="UPDATE banking_details SET account_number = $bit_addres
+      WHERE username = '$user'";
+      $result2 = $conn->query($sql);
+      }
+
+
     if(empty($_POST["phone"])){
         $phone_rr = "Phone number is required";
       }elseif($_POST["phone"] < 9){
@@ -51,17 +91,16 @@ if(isset($_POST["full"])){
       if(empty($_POST["addres"])){
         $address_rr = "address is required";
         $approved = 0;
-      }else{
-        $address = test_input($_POST["addres"]);
-        //check if email is well formed
-    if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      }elseif(!filter_var($address, FILTER_VALIDATE_EMAIL)) {
         $address_rr = "Invalid email format";
-      }
+        $approved = 0;
+      }else{
+      $address = test_input($_POST["addres"]);
       $sql ="UPDATE registration SET  email = $address 
       WHERE username = '$user'";
       $result2 = $conn->query($sql);
-    }
-
+      }
+    
       if(empty($_POST["full"])){
         $username_rr = "username is required";
         $approved = 0;
@@ -71,8 +110,10 @@ if(isset($_POST["full"])){
     WHERE username = '$user'";
     $result2 = $conn->query($sql);
       }
-
     }
+
+
+    
  ?>
 
 <?php
@@ -81,7 +122,7 @@ $date_reg1 = "";
 $email =  $answer="";
 $sql_email = "SELECT email, date_reg FROM registration WHERE username='$user' ";
 $results = $conn->query($sql_email);
-if($results->num_rows>0){
+if($results !== FALSE && $results->num_rows>0){
   $row = $results->fetch_assoc(); 
   $email = $row["email"];
   $date_reg1 = $row["date_reg"];
@@ -324,7 +365,7 @@ else{
 
                                 <!-- start sectin fo the profile contents -->
                                 <section class="displayers">
-                                    <form action="PROCESSOR.PHP" method="post">
+                                    <form action="processor.php" method="post">
                                         <div class="profile-content2">
                                             <div class="diveform" >
                                                 <label for="role" >Role </label>
@@ -597,14 +638,10 @@ else{
                                                 </select>
                                             </div>
                                             <div class="diveform">
-<<<<<<< HEAD
                                                 <label for="address">Email</label>
                                                 <input type="text" class="name-inputs" name ="addres" id="adre" placeholder="Address">
                                                 <div class="red-text"><?php  echo $address_rr; ?></div>
-=======
-                                                <label for="address">Address</label>
-                                                <input type="text" class="name-inputs" id="adre" placeholder="Address">
->>>>>>> 5e9b378eeb74dcc65e2b29ae0fc38b5617c28a1b
+
                                             </div>
                                         </div>
                                         <div class="p-btnsub">
@@ -648,19 +685,23 @@ else{
                                         <div class="profile-content3">
                                             <div class="diveform3" >
                                                 <label for="Bankname" >Bank Name</label>
-                                                <input class="name-inputs" type="text"  name="bank" id="bankname" placeholder="Bank Name">
+                                                <input class="name-inputs" required type="text"  name="bank" id="bankname" placeholder="Bank Name" >
+                                                <div class="red-text"><?php  echo $bank_namerr; ?></div>
                                             </div>
                                             <div class="diveform3">
-                                                <label for="userna">Account Cardholder Name</label>
-                                                <input type="text" class="name-inputs" name="Accountname" id="accountname" placeholder="Account Name">
+                                                <label for="userna">Account holder(name)</label>
+                                                <input type="text" class="name-inputs" required name="Accountname" id="accountname" placeholder="Account Name">
+                                                <div class="red-text"><?php  echo $accnt_holderrr; ?></div>
                                             </div>
                                             <div class="diveform3">
                                                 <label for="Accountnumber">Account Number</label>
-                                                    <input type="text" class="name-inputs" name="a-number" id="accountnumber" placeholder="Account Number">
+                                                    <input type="text" class="name-inputs" required name="a-number" id="accountnumber" placeholder="Account Number">
+                                                    <div class="red-text"><?php  echo $accont_numrr; ?></div>
                                             </div>
                                             <div class="diveform3">
                                                 <label for="BITCOIN">Bitcoin Address</label>
-                                                <input type="text" class="name-inputs" name="btc-adress" id="bitcoin-adress" placeholder="Bitcoin Address">
+                                                <input type="text" class="name-inputs" required name="btc-adress" id="bitcoin-adress" placeholder="Bitcoin Address">
+                                                <div class="red-text"><?php  echo $bit_addresrr; ?></div>
                                             </div>
                                         </div>
                                         <div class="p-btnsub3">

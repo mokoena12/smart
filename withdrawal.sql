@@ -31,15 +31,15 @@ CREATE TABLE `withdrawal` (
   `username` varchar(255) DEFAULT NULL,
   `amount` int(20) DEFAULT NULL,
   `method` varchar(255) DEFAULT NULL
-  `method` DATETIME DEFAULT NOW();
+  `Date_w` DATETIME DEFAULT NOW();
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `withdrawal`
 --
 
-INSERT INTO `withdrawal` (`username`, `amount`, `method`) VALUES
-('Raps', 700, 'Bank');
+INSERT INTO `withdrawal` (`username`, `amount`, `method`, `Date_w` ) VALUES
+('Raps', 700, 'Bank', '2021-12-03 11:27:32');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

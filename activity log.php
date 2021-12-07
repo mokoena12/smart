@@ -19,6 +19,17 @@ else{
 }
 
 ?>
+<?php 
+require_once "connect.php";
+$date_reg = "";
+$sql_d = "SELECT date_reg FROM registration WHERE username = '$user'";
+$result_d = $conn->query($sql_d);
+if($result_d !== FALSE && $result_d->num_rows >0){
+  $row = $result_d->fetch_assoc();
+  $date_reg = $row["date_reg"];
+} 
+
+?>
 
 <Doctype html>
   <html lang="en" class="body-style">
@@ -185,8 +196,8 @@ else{
                             </thead>
                             <tbody class="tbody">
                                 <tr>
-                                    <td></td>
-                                    <td></td>
+                                    <td>Registration</td>
+                                    <td><?php echo $date_reg; ?></td>
                                 </tr>
                             </tbody>
                         </table>

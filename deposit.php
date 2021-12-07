@@ -246,7 +246,7 @@ else{
                                 <tbody class="tbody">
                    <?php  
                    $n = 0;
-                   $sql="SELECT deposit, method, deposit_date FROM deposit WHERE username = '$user'";
+                   $sql="SELECT amount, method, deposit_date FROM deposit WHERE username = '$user'";
                     
                    $result11 = $conn->query($sql);
                       
@@ -254,7 +254,7 @@ else{
                     
                    while($n <=5 && $row2 = $result11->fetch_assoc()){
                     echo "<tr>";
-                    echo "<td>".$row2['deposit']."</td>";
+                    echo "<td>".$row2['amount']."</td>";
                     echo "<td></td>";
                     echo "<td>".$row2['deposit_date']."</td>";
                     echo "<td>".$row2['method']."</td>";

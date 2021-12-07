@@ -9,9 +9,8 @@ if(isset($_POST["Yes"])){
  unset($_SESSION["investa_user"]);
    header("location:index.html");
    
-
-//}elseif(isset($_POST["No"])){
-//    header("location:Dashboard.php");
+}elseif(isset($_POST["No"])){
+   header("location:Dashboard.php");
 }
 ?>
 

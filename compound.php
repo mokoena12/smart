@@ -12,6 +12,11 @@ and also store the name of person registering with this link*/
 $115  but my equity is zero 
  */
 
+//create banking table database and code the program to update the bankings
+//date_re default datetime now()
+//Activity Logs
+//fix the logout button
+
 session_start();
 if (isset($_SESSION["investa_user"])){
 

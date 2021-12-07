@@ -624,15 +624,7 @@ $balance =  $row["balance"];
   
           </div>
           <!-- end of crossrate chart -->
-          <?php if(isset($_GET["results"])){
-                echo "
-                <div class='notification-centerbox'>".$_GET['results']."
-            <div class='closing2'>
-              <i class='fa fa-close'></i>
-            </div> 
-          </div>
-                ";
-              } ?>
+          
 
           
   

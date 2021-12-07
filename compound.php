@@ -10,11 +10,7 @@ and also store the name of person registering with this link*/
 
 /*Make sure the equity is updated everytime we enter dashboard, like now my balance is $125 and Invested_amount is
 $115  but my equity is zero 
- */
-//Fix your table for registration it is dublicated is registration(1).sql
-//Activity logs is not fixed, activity description must be "Registration " then date it will be retrived from database
-//deposit is not fixed
-//Withdrawal history not fixed
+ */ 
 /*fix investment table, leave the amount column as it is don't delete it anymore. date column must be added. Change Datatype for period to text
 //referral bonus amount it shoulb be the total number of (referrals*10)
 
@@ -24,10 +20,10 @@ $115  but my equity is zero
 /*Please initialize the dashboard for a user after registration( we discussed about this) so that when we insert for a user
  in dashboard we don't get error.
  */
-
+ 
 /*redirect the user to login.php after registration if the registration was successfully with the message of
 your 'Registration is successfully' */
-//Fix logout page when user choose No it should redirect to dashboard.php
+ 
 require_once "connect.php";
 session_start();
 if (isset($_SESSION["investa_user"])){

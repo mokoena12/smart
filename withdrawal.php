@@ -170,7 +170,9 @@ else{
                                         <span>Minimum Amount:</span>
                                         <?php
                                         $sql = "SELECT typeOfInv FROM investment WHERE user = '$user'";
+                         
                                         $bal = "SELECT balance,equity,referral_bonus FROM dashboard WHERE username = '$user' ";
+                                      
                                         $result = $conn->query($sql);
                                         $bal_r = $conn->query($bal);
                                         $bal_v =  $bal_r->fetch_assoc();
@@ -348,16 +350,16 @@ else{
                    <?php  
                    $n = 0;
                     
-                    $sql_w="SELECT amount, date_reg, method FROM withdrawal WHERE username = '$user'";
+                    $sql_w="SELECT amount, date_w, method FROM withdrawal WHERE username = '$user'";
                     
                    $result_w = $conn->query($sql_w); 
-                     if($result_w !== FALSE && $ $result_w->num_rows> 0){
+                    if($result_w !== FALSE && $result_w->num_rows> 0){
                     
                    while($n<=5 && $row2 = $result11->fetch_assoc()){
                     echo "<tr>";
                     echo "<td>".$row2['deposit']."</td>";
                     echo "<td></td>";
-                    echo "<td>".$row2['date_reg']."</td>";
+                    echo "<td>".$row2['date_w']."</td>";
                     echo "<td>".$row2['method']."</td>";
                     echo "</tr>";
                     $n++; 

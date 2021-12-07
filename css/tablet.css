@@ -679,8 +679,8 @@ to{
 
 }
 .logo_img {
-  height: 4em;
-  width: 8em;
+  height: 3em;
+  width: 6em;
   text-align: center;
 
 }
@@ -766,8 +766,8 @@ to{
 }
      /* start of web logo */
      .logo_2 {
-      height: 4em;
-      width: 8em;
+      height: 3em;
+      width: 6em;
       margin-bottom: 10px;
   
       }
@@ -1084,6 +1084,7 @@ flex-direction: column;
 }
 
 .sidebar {
+  display: none;
   position: fixed;
   top: -2px;
   left: -10px;
@@ -2238,10 +2239,18 @@ margin-bottom: -20em;
   font-weight: bold;
 }
 .refferal-link input {
-  width: 100%;
+  width: 88%;
   height: 2.5em;
   border-radius: 4px;
   padding: 1em;
+}
+.copy-btn {
+  text-align: right;
+  position: absolute;
+  margin-left: 1%;
+  height: 2.5em;
+  color: white;
+  border-radius: 4px;
 }
 .referral-members {
   border-radius: 4px;
@@ -2308,11 +2317,14 @@ margin-bottom: -20em;
 /* end of the notification box at the center */
 
 
-
+/*social med icons*/
+.social-med i{
+  font-size: 35px;
+}
+/*end-social med icons*/
 
 
 
 
 
 }
-

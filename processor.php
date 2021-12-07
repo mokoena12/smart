@@ -1,4 +1,7 @@
 <?php
+//Belmiro's Tasks 
+//Need to test withdrawal when they are done
+//Create investment history when they are done
 
 function test_input($data) {
   $data = trim($data);
@@ -24,6 +27,7 @@ else{
   if(isset($_POST["selectplans"])){
 //check if there is any existing investments
 $amount = $_POST["invest"];
+$nw = $amount;
 $check = "SELECT invested_amount FROM dashboard WHERE username='$user'";
 $outcome = $conn->query($check);
 if($outcome->num_rows> 0){
@@ -33,7 +37,7 @@ if($outcome->num_rows> 0){
     $type = $_POST["selectplans"];
     
     $period = $_POST["selectperiod"];
-      $invest = "INSERT INTO investment(typeOfInv,periods,user) VALUES('$type','$period','$user')"; 
+      $invest = "INSERT INTO investment(typeOfInv,periods,user,amount) VALUES('$type','$period','$user',$nw)"; 
       $invest1 = "UPDATE dashboard SET invested_amount=$amount WHERE  username = '$user'"; 
       if($conn->query($invest) && $conn->query($invest1)){
         $invest_results = "Your Investment is successfully placed";
@@ -104,15 +108,17 @@ if($conn->query($trade)){
 <?php 
 //widthdrawal process 
 if(isset($_POST["widthdraw"])){
-  $selecting = "SELECT balance FROM dashboard WHERE  username='$user' ";
+  $selecting = "SELECT balance,total_withdrawal FROM dashboard WHERE  username='$user' ";
     $old_bal = $conn->query($selecting)->fetch_assoc();
     $old = $old_bal["balance"];
+    $with = $old_bal["total_withdrawal"];
 
     $amount = $_POST["amount"];
     $method =  $_POST["payment-options"];
     $value = $_POST["widthdraw"];
     $nwBal = $old - $amount;
-    $dash = "UPDATE dashboard SET balance = $nwBal
+    $nw_with = $with +  $amount;
+    $dash = "UPDATE dashboard SET balance = $nwBal, total_withdrawal = $nw_with
     WHERE username = '$user' ";
       /*
   $to = $email;;
@@ -164,6 +170,10 @@ style='background-color:red; color:white;border-radius:3px;font-weight:bold;font
 if(isset($_POST["referral"])){
 $amount = $_POST["amount1"];
 $method =  $_POST["payment-options1"];
+$selecting = "SELECT referral_bonus FROM dashboard WHERE  username='$user' ";
+$old_bal = $conn->query($selecting)->fetch_assoc();
+$old = $old_bal["referral_bonus"];
+$with = $old - $amount; 
   /*
   $to = $email;;
   $subject ="Referral Widthdrawal";
@@ -192,8 +202,10 @@ style='background-color:red; color:white;border-radius:3px;font-weight:bold;font
 
   mail($to,$subject,$message,$headers); */
   $sql = "INSERT INTO widthdrawal(username,amount,method) VALUES('$user',$amount,'$method')";
-    if($conn->query($sql)){
-      $invest_results = "Withdrawal Successfully of amount $amount and method of $method";
+  $dash = "UPDATE dashboard SET referral_bonus = $with
+  WHERE username = '$user' ";
+    if($conn->query($sql) && $conn->query($dash)){
+      $invest_results = "Withdrawal Successfully of amount $amount using method of $method";
       header("Location:Dashboard.php?results=$invest_results");
     }
 
@@ -201,3 +213,4 @@ style='background-color:red; color:white;border-radius:3px;font-weight:bold;font
                                   
                                     
                                     ?>
+

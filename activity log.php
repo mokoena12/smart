@@ -1,9 +1,4 @@
 <?php
-//Create table 
-//create functions for balance and profit
-// profit = balance - deposit
-// A = P(1  + i)^n 
-// investment table (user, type,period) 
 
 session_start();
 
@@ -31,8 +26,8 @@ if($result_d !== FALSE && $result_d->num_rows >0){
 
 ?>
 
-<Doctype html>
-  <html lang="en" class="body-style">
+<!DOCTYPE html>
+  <html lang="en">
   <head>
   <!-- start meta tags-->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -59,6 +54,7 @@ if($result_d !== FALSE && $result_d->num_rows >0){
   <link rel="stylesheet" href="fonts/css/svg-with-js.min.css">
   <link rel="stylesheet" href="fonts/css/v4-shims.css">
   <link rel="stylesheet" href="fonts/css/v4-shims.min.css">
+  <link rel="shortcut icon" href="img/smart.investa.logo2.png" />
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
   <!-- end of fonts -->
   
@@ -82,6 +78,9 @@ if($result_d !== FALSE && $result_d->num_rows >0){
             <!-- start of the sidemanu -->
             <!-- start of the sidebar -->
             <div class="sidebar">
+            <div class="closing2 closing3">
+              <i class="fa fa-close"></i>
+            </div> 
             <div class="sidebar_profile">
                 <div class="sidebar-flex" >
                 <img class="Pcontrol" src="img/BITCOIN.png" alt="profile">
@@ -94,7 +93,7 @@ if($result_d !== FALSE && $result_d->num_rows >0){
             <div class="sidebar-manus">
             <ul>
               <li>
-                <a href="Dashboard.php"><img  class="sidebarspace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>
+                <a href="Dashboard.php"><i class="fa fa-home"></i>
                 Dashboard</a>
               </li>
               <li>
@@ -166,7 +165,7 @@ if($result_d !== FALSE && $result_d->num_rows >0){
             <section>
                 <div class="history-deposit">
                     <div class="history-head">
-                        <h4>Activity log History</h4>
+                        <h4>Activity Logs History</h4>
                     </div>
                     <div class="entry-search">
                         <div class="select-entry">
@@ -241,3 +240,4 @@ if($result_d !== FALSE && $result_d->num_rows >0){
             </div>
         </div>
     </body>
+  </html>

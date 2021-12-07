@@ -17,6 +17,8 @@
 //Fix the dashboard icon on sidebar for deposit.php, withdrawal.php,entry_price
 //The task_bar in desposit.php, withdrawal.php,etc
 //Make sidebar display none is small phones
+//The text inside investment plans should be centered
+//Add shortcut icon meta tag in all files, google about it to know more
 
 session_start();
 

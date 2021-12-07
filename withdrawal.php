@@ -161,7 +161,7 @@ else{
                                         <span>Minimum Amount:</span>
                                         <?php
                                         $sql = "SELECT typeOfInv FROM investment WHERE user = '$user'";
-                                        $bal = "SELECT balance FROM dashboard WHERE username = '$user' ";
+                                        $bal = "SELECT balance,equity,referral_bonus FROM dashboard WHERE username = '$user' ";
                                         $result = $conn->query($sql);
                                         $bal_r = $conn->query($bal);
                                         $bal_v =  $bal_r->fetch_assoc();
@@ -224,7 +224,7 @@ else{
                                                 <h4>Select Payment Method</h4>
                                             </div>
                                             <div>
-                                                <select name="payment-options" id="payment-options" >
+                                                <select name="payment-options" id="payment-options" required>
                                                     <option value="">--Select Payment Method</option>
                                                     <option value="Bank">Bank</option>
                                                     <option value="Bitcoin">Bitcoin</option>
@@ -237,7 +237,7 @@ else{
                                                 <h4>Enter Amount to Withdraw</h4>
                                             </div>
                                             <div>
-                                            <input type="number" name="amount" min="30" id="amount-withdraw" class="input-withdraw" placeholder="Enter Amount">
+                                            <input type="number" name="amount" min="30" id="amount-withdraw" class="input-withdraw" placeholder="Enter Amount" required>
                                             </div>
                                         </div>
                                         <div class="btn-withdraw">
@@ -268,13 +268,13 @@ else{
                                             <span>Duration:</span>
                                             <strong class="float-right">1-2 days</strong>
                                         </p>
-                                        <form action="#" method="post" >
+                                        <form action="processor.php" method="post" onsubmit="return withdrawal_r(<?php echo $bal_v['referral_bonus'] ?>)">
                                             <div class="method2">
                                                 <div class=".h4changing">
                                                     <h4>Select Payment Method</h4>
                                                 </div>
                                                 <div>
-                                                    <select name="payment-options1" id="payment-options1">
+                                                    <select name="payment-options1" id="payment-options1" required>
                                                         <option value="">--Select Payment Method</option>
                                                         <option value="Bank">Bank</option>
                                                         <option value="Bitcoin">Bitcoin</option>
@@ -287,7 +287,7 @@ else{
                                                     <h4>Enter Amount to Withdraw</h4>
                                                 </div>
                                                 <div>
-                                                <input type="text" name="amount1" id="amount-withdraw1" class="input-withdraw" placeholder="Enter Amount">
+                                                <input type="number" min="10" name="amount1" id="amount-withdraw1" class="input-withdraw" placeholder="Enter Amount" required>
                                                 </div>
                                             </div>
                                             <div class="btn-withdraw">

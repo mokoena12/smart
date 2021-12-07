@@ -12,10 +12,8 @@
     let profile = document.getElementsByClassName("displayers");
     for(let i =0; i<3 ; i++){
       profile[i].style.display="none";
-      profile[i].setAttribute('id','button_hover1');
     }
     profile[n].style.display="block";
-    profile[n].setAttribute('id','button_hover');
     
   }
     
@@ -113,6 +111,18 @@ else{
     }
 
   }
+  
+  function withdrawal_r(value){
+    let amount = document.getElementById("amount-withdraw1").value;
+    if(value<amount){
+      alert("Insuficient balance");
+      return false;
+    }
+    else{
+      return true;
+    }
+
+  }
 
   
 $(document).ready(function(){
@@ -131,5 +141,13 @@ $(document).ready(function(){
 $(document).ready(function(){
   $(".menu-left").click(function(){
     $(".sidebar").show();
+  });
+});
+ 
+$(document).ready(function(){
+  $(".profile").click(function(){
+    $(".profile").attr("id","button_hover1");
+    $(this).attr("id","button_hover");
+
   });
 });

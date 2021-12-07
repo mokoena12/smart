@@ -189,7 +189,7 @@ body{
 }
 #button_hover{
     background-image: linear-gradient(to bottom right,white, rgb(245, 239, 239), rgb(184, 187, 186));
-    color: blue;
+    color: blue!important;
     text-decoration: underline;
 }
 

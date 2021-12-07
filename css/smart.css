@@ -1249,3 +1249,28 @@ border-radius: 50%;
  text-decoration: underline;
  background: rgb(175, 40, 40);
 }
+
+/*messanger icons*/
+.social-med{
+    background-color: white;
+    z-index: 999;
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    right: -0.4%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+}
+
+.social-med::first i{
+    color: rgb(57, 219, 17);
+}
+.social-med i{
+    color: rgb(6, 37, 94);
+    padding: 6px;
+    align-content: center;
+
+}
+  /*end-messanger icons*/
+  

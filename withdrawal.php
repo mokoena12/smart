@@ -16,8 +16,8 @@ else{
 
 ?>
 
-<Doctype html>
-  <html lang="en" class="body-style">
+<!DOCTYPE html>
+  <html lang="en">
   <head>
   <!-- start meta tags-->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -45,6 +45,7 @@ else{
   <link rel="stylesheet" href="fonts/css/v4-shims.css">
   <link rel="stylesheet" href="fonts/css/v4-shims.min.css">
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="shortcut icon" href="img/smart.investa.logo2.png" />
   <!-- end of fonts -->
   
   <!-- start of links styling-->
@@ -67,6 +68,9 @@ else{
         <!-- start of the sidemanu -->
            <!-- start of the sidebar -->
         <div class="sidebar">
+            <div class="closing2 closing3">
+                <i class="fa fa-close"></i>
+            </div> 
           <div class="sidebar_profile">
             <div class="sidebar-flex" >
             <?php 
@@ -85,7 +89,7 @@ else{
           <div class="sidebar-manus">
             <ul>
               <li>
-                <a href="Dashboard.php"><img  class="sidebarspace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>
+                <a href="Dashboard.php"><i class="fa fa-home"></i>
                 Dashboard</a>
               </li>
               <li>
@@ -130,6 +134,11 @@ else{
             <div class="search">
               <i class="fas fa-search" onclick="search()"></i>
               <input type="search" name="search_d" id="search_d" placeholder="Search...">
+            </div>
+            <div class="menu-left manu-right">
+              <div class="bars"></div>
+              <div class="bars"></div>
+              <div class="bars"></div>
             </div>
           </header>
           <section>
@@ -411,3 +420,4 @@ else{
         </div>
         
     </body>
+</html>

@@ -74,10 +74,10 @@ if(isset($_POST["full"])){
 
     }
  ?>
-
+<!--
 <?php
 
-$date_reg1 = "";
+$date_reg1 = ""; 
 $email =  $answer="";
 $sql_email = "SELECT email, date_reg FROM registration WHERE username='$user' ";
 $results = $conn->query($sql_email);
@@ -88,6 +88,8 @@ if($results->num_rows>0){
 
 }
 ?>
+-->
+
 
 <?php
 
@@ -141,60 +143,64 @@ else{
 }
 
 }
-?>
+?> 
 
-<Doctype html>
+
+<!DOCTYPE html>
   <html lang="en">
   <head>
   <!-- start meta tags-->
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="description" content="Sign in and start trading...." />
   <!-- End of meta tags -->
   
   <!-- SITE TITLE -->
-  <title>Profile</title>
-  <!-- Latest Bootstrap min CSS -->
-  <link rel="stylesheet" type="text/css" href="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/css/bootstrap.css">
+  <title>Profile</title> 
+  <link rel="stylesheet" type="text/css" href="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/css/bootstrap.css"> 
   <link rel="stylesheet" type="text/css" href="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css">
   
-   <!--start of fonts -->
-   <link rel="stylesheet" href="fonts/css/all.css">
-  <link rel="stylesheet" href="fonts/css/all.min.css">
-  <link rel="stylesheet" href="fonts/css/brands.css">
-  <link rel="stylesheet" href="fonts/css/brands.min.css">
-  <link rel="stylesheet" href="fonts/css/fontawesome.css">
-  <link rel="stylesheet" href="fonts/css/regular.css">
-  <link rel="stylesheet" href="fonts/css/regular.min.css">
-  <link rel="stylesheet" href="fonts/css/solid.css">
-  <link rel="stylesheet" href="fonts/css/svg-with-js.css">
-  <link rel="stylesheet" href="fonts/css/svg-with-js.min.css">
-  <link rel="stylesheet" href="fonts/css/v4-shims.css">
-  <link rel="stylesheet" href="fonts/css/v4-shims.min.css">
-  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-  <!-- end of fonts -->
+   <!-- start of fonts -->
+    <link rel="stylesheet" href="fonts/css/all.css"> 
+    <link rel="stylesheet" href="fonts/css/all.min.css">
+    <link rel="stylesheet" href="fonts/css/brands.css">
+    <link rel="stylesheet" href="fonts/css/brands.min.css">
+    <link rel="stylesheet" href="fonts/css/fontawesome.css">
+    <link rel="stylesheet" href="fonts/css/regular.css">
+    <link rel="stylesheet" href="fonts/css/regular.min.css">
+    <link rel="stylesheet" href="fonts/css/solid.css">
+    <link rel="stylesheet" href="fonts/css/svg-with-js.css">
+    <link rel="stylesheet" href="fonts/css/svg-with-js.min.css">
+    <link rel="stylesheet" href="fonts/css/v4-shims.css">
+    <link rel="stylesheet" href="fonts/css/v4-shims.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="img/smart.investa.logo2.png" />
+  <!-- end of fonts-->
   
   <!-- start of links styling-->
   <link rel="stylesheet" href="css/tablet.css">
   <link rel="stylesheet" href="css/desktop.css">
   <link rel="stylesheet" href="css/phone.css">
   <link rel="stylesheet" href="css/smart.css">
-  <!--end of link styling-->
+  <!-- end of link styling -->
   
   
   <!-- javascript -->
-  <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.js"></script>
-  <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"></script>
-  <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
-  <script type="text/javascript" src="js/dash.js"></script>
+    <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/dash.js"></script>
   
   
   </head>
-  <body class="turning"  onload="init()">
+   <body class="turning"  onload="init()">
         <div class="wrapper-box">
-            <!-- start of the sidebar -->
-            <div class="sidebar">
+             <!-- start of the sidebar -->
+            <div class="sidebar"> 
+                <div class="closing2 closing3">
+                    <i class="fa fa-close"></i>
+                </div> 
                 <div class="sidebar_profile">
                     <div class="sidebar-flex" >
                         <?php 
@@ -210,7 +216,7 @@ else{
                 <div class="sidebar-manus">
                     <ul>
                         <li>
-                        <a href="Dashboard.php"><img  class="sidebarspace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>
+                        <a href="Dashboard.php"><i class="fa fa-home"></i>
                         Dashboard</a>
                         </li>
                         <li id="sidebar_active">
@@ -277,7 +283,7 @@ else{
                 <!-- end of the header part -->
             
                 <!-- start of the profile contant -->
-                <section>
+                <section> 
                     <div class="profile-content">
                         <div class="profile-container">
                             <div class="profile-avater">
@@ -608,8 +614,8 @@ else{
                                     </form>
                                 </section>
 
-                                <!-- start of the login details -->
-                                <section class="displayers" >
+                                <!--start of the login details -->
+                                <section class="displayers" > 
                                     <form action="#" method="post">
                                         <div class="profile-content2">
                                             <div class="diveform" >
@@ -635,10 +641,10 @@ else{
                                         </div>
                                     </form>
                                 </section>
-                                <!-- end of the login details -->
+                                <!--end of the login details -->
 
                                 <!-- start of banking details -->
-                                <section class="displayers">
+                                <section class="displayers"> 
                                     <form action="#" method="post">
                                         <div class="profile-content3">
                                             <div class="diveform3" >
@@ -646,7 +652,7 @@ else{
                                                 <input class="name-inputs" type="text"  name="bank" id="bankname" placeholder="Bank Name">
                                             </div>
                                             <div class="diveform3">
-                                                <label for="userna">Account Cardholder Name</label>
+                                                <label for="userna">Account Cardholder's Name</label>
                                                 <input type="text" class="name-inputs" name="Accountname" id="accountname" placeholder="Account Name">
                                             </div>
                                             <div class="diveform3">
@@ -689,11 +695,5 @@ else{
                 
             </div>    <!-- end section for the footer -->
         </div>         
-  </body>
-  </html>
-
-<!-- <div class="manu">
-                        <div class="bars"></div>
-                        <div class="bars"></div>
-                        <div class="bars"></div>
-                    </div> -->
+    </body>
+    </html>

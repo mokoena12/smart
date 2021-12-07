@@ -849,15 +849,6 @@ header .logo img{
 
 
 
-
- /* start of web logo */
- .logo_2 {
-  height: 4em;
-  width: 8em;
-  margin-bottom: 20px;
-
-}
-/* end of logo reg */
 /*three steps*/
 
 .three-steps>div{
@@ -1005,8 +996,8 @@ flex-direction: row;
 }
 /* start of logo login */
 .logo_img{
-height: 4em;
-width: 8em;
+height: 3em;
+width: 6em;
 text-align: center;
 margin-top: -1px;
 margin-bottom: 10px;
@@ -1079,8 +1070,8 @@ margin-bottom: 10px;
 }
 /* start of web logo */
 .logo_2 {
-height: 4em;
-width: 8em;
+height: 3em;
+width: 6em;
 margin-bottom: 20px;
 
 }
@@ -1543,6 +1534,7 @@ a.elevation-1 {
   margin-top: 1em;
   margin-right: 3em;
   padding: 2em;
+  text-align: center;
 }
 #invest-cards1 {
   display: block;
@@ -1937,8 +1929,8 @@ left: 15px;
 }
 /* start of web logo */
 .logo_2 {
-height: 4em;
-width: 8em;
+height: 3em;
+width: 6em;
 margin-bottom: 20px;
 
 }
@@ -2867,6 +2859,7 @@ margin-left: 15px;
 .tbody h5{
   color: white;
 }
+
 /* end - depossit table */
 
 
@@ -2949,10 +2942,19 @@ margin-left: 15px;
   font-weight: bold;
 }
 .refferal-link input {
-  width: 100%;
+  width: 90%;
   height: 2.5em;
   border-radius: 4px;
   padding: 1em;
+}
+.copy-btn {
+  text-align: right;
+  position: absolute;
+  margin-left: 1%;
+  height: 2.5em;
+  color: white;
+  border-radius: 4px;
+  
 }
 .referral-members {
   border-radius: 4px;

@@ -457,7 +457,7 @@ $balance =  $row["balance"];
                                         <td>$100</td>
                                         <td>3 weeks</td>
                                         <td>06 Dec 2021</td>
-                                        <td ><h5  class="close-buttonn">Close</h5></td>
+                                        <td ><h5  class="close-buttonn" onclick="investment('Bronze','Raps')">Close</h5></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -612,8 +612,20 @@ $balance =  $row["balance"];
           </div>
           <!-- end of crossrate chart -->
           
-
-          
+          <?php if(isset($_GET["results"])){
+                echo "
+                <div class='notification-centerbox'>".$_GET['results']."
+            <div class='closing2'>
+              <i class='fa fa-close'></i>
+            </div> 
+          </div>
+                ";
+              } ?>
+          <div class='notification-centerbox hide_all' id="notification-centerbox"> <span id="notification_text"> </span>
+            <div class='closing2'>
+              <i class='fa fa-close'></i>
+            </div> 
+          </div>
   
           <!-- start of the footer -->
         <footer class="footer">

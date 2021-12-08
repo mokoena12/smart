@@ -6,6 +6,7 @@
 //The dashboard is not displaying well in small phones(specific iphone 6,7 and 8 plus ) try to make icons inside cards bit smaller
 //Your button(close button) in recent trading history is not hovering
 //Fix the dashboard is not displaying recent trading history in desktop
+//terms and conditions
 session_start();
 
 if (isset($_SESSION["investa_user"])){

@@ -3005,11 +3005,16 @@ margin-left: 15px;
 }
 /* end of the notification box at the center */
 /*messanger icons*/
-.social-med i{
-  font-size: 45px;
-  
-}
-/*end-messanger icons*/
-
-
+.social-med{
+  width: 3em;
+ }
+ .social-med i{
+   font-size: 40px;
+ }
+ .social-med span{
+  width: 9em;
+  right: 3.5em;
+ }
+    
+ /*end-messanger icons*/
 }

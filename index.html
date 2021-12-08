@@ -1,6 +1,13 @@
 <!--
   Tasks to be completed:  
-  
+  1.The deposit links are not working under investment plans, make href to deposit.php
+  2.This is a tip not task, your form structure is wrong you need to study form structure. form must have method and 
+  action. Your input filds must be required so that the user doesn't submit empty form, check the fixed  leave message form to see 
+  the structure
+
+  3.Go to dashboard.php and fix the table of trading history it must have status column, the status will be opened or closed
+  4.The button you created at dashboard investment history is not recommended don't repeat such mistake if you're asked to create a button
+  create it with button tag not h5 or anything else.
 -->
 
 <!DOCTYPE html>
@@ -731,23 +738,25 @@
                                         
                                             </div>
 
-                                            <div class="formmm" id="formmm">
+                                            <div class="formmm" id="formmm" method="post">
                                       <div style="background-image: linear-gradient(to bottom right,white, rgb(0, 183, 255), rgb(32, 85, 230));
                                       ;border-radius: 7px;">
                                         <h3>Leave a mesagge <i class="fa fa-arrow-down"></i></h3>
                                         <i class="fa fa-bitcoin">-<b>If You have any questions? we're happy to help</b></i>
                                       </div>
-                                                <form action="action_page.php" class="formmmm">
+                                                <form action="processor.php" class="formmmm" method="post">
 
                                               
                                                   <label for="fname">First Name</label>
-                                                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                                                  <input type="text" id="fname" name="firstname" placeholder="Your name.." required/>
                                               
                                                   <label for="lname">Last Name</label>
-                                                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                                                  <input type="text" id="lname" name="lastname" placeholder="Your last name.." required/>
+                                                  <label for="email">Email Adress</label>
+                                                  <input type="text" id="email" name="email" placeholder="eg:info@smartinvesta.co.za" required/>
                                               
                                                   <label for="country">Country</label>
-                                                  <select id="country" name="country">
+                                                  <select id="country" name="country" required>
                                                     <option value="australia">Australia</option>
                                                     <option value="Afghanistan">Afghanistan</option>
                                                     <option value="Åland Islands">Åland Islands</option>
@@ -996,7 +1005,7 @@
                                                                         </select>
                                               
                                                   <label for="subject">Subject</label>
-                                                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+                                                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px" required></textarea>
                                               
                                                   <input type="submit" value="Submit" class="button">
                                               

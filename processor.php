@@ -2,6 +2,8 @@
 //Belmiro's Tasks 
 //Need to test withdrawal when they are done
 //Create investment history when they are done
+//Fix the equity during live trading_type
+//Create pdf for terms and conditions
 
 function test_input($data) {
   $data = trim($data);
@@ -28,18 +30,21 @@ else{
 //check if there is any existing investments
 $amount = $_POST["invest"];
 $nw = $amount;
-$check = "SELECT invested_amount FROM dashboard WHERE username='$user'";
+$check = "SELECT invested_amount,balance FROM dashboard WHERE username='$user'";
 $outcome = $conn->query($check);
+$bal_n = 0;
 if($outcome->num_rows> 0){
 
   $row = $outcome->fetch_assoc();
   $amount =   $amount + $row["invested_amount"];
+  $bal_n = $row["balance"];
 
 }
+$equity = $bal_n - $amount;
     $type = $_POST["selectplans"];
     $period = $_POST["selectperiod"];
     $invest = "INSERT INTO investment(typeOfInv,periods,user,amount) VALUES('$type','$period','$user',$nw)"; 
-    $invest1 = "UPDATE dashboard SET invested_amount=$amount WHERE  username = '$user'"; 
+    $invest1 = "UPDATE dashboard SET invested_amount=$amount,equity =$equity  WHERE  username = '$user'"; 
     if($conn->query($invest) && $conn->query($invest1)){
         $invest_results = "Your Investment is successfully placed";
         header("Location:Dashboard.php?results=$invest_results");
@@ -215,3 +220,81 @@ style='background-color:red; color:white;border-radius:3px;font-weight:bold;font
                                     
                                     ?>
 
+
+<?php
+//Processing information from index.html leave us messag form 
+if(isset($_POST["subject"])){
+  $email = $_POST["email"];
+  $firstname = $_POST["firstname"];
+  $lastname = $_POST["lastname"];
+  $country =  $_POST["country"];
+  $body = $_POST["subject"];
+  /*
+  $to = "info@smartinvesta.co.za;belmiromohlala34@gmail.com";
+  $subject ="New message";
+
+  $message = "
+  <html>
+  <head>
+  <title>Clint Message</title>
+</head>
+<body >
+<p><strong>Hi Admin </strong></p>
+<p>The following person send message </p>
+<p> Full name:<b> $firstname $lastname </b></p>
+<p> Email Adress : $email </p>
+
+<p> message : $body  </p>
+
+<p><a href='https://www.smartinvesta.co.za' 
+style='background-color:red; color:white;border-radius:3px;font-weight:bold;font-size:12px;padding:5px;text-decoration:none;box-shadow:3px 3px 2px black;'>Visit Our site</a></p>
+<p>Kind Regards</p>
+<p> Smart Investa</p>
+</body>
+
+  </html>
+  ";
+  $headers = "MIME-version:1.0"."\r\n";
+  $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
+  $headers .= "From:info@smartinvesta.co.za"."\r\n";
+
+  mail($to,$subject,$message,$headers); */
+  $results = "message received";
+  header("Location:index.html?results=$results");
+
+}
+
+
+?>
+
+<?php 
+//Code to delete investment
+if(isset($_GET["invest_delete"])){
+
+  $user = $_GET["invest_delete"];
+$amount = 0;
+  $type= $_GET["type"];
+  $sql = "DELETE FROM investment WHERE user = '$user' AND typeOfInv='$type'";
+  $select = "SELECT amount FROM investment WHERE user = '$user' AND typeOfInv='$type'";
+  $select= $conn->query($select);
+  while($row = $select->fetch_assoc()){
+$amount = $amount + $row["amount"];
+  }
+  $get_amount= "SELECT invested_amount,equity,balance FROM dashboard WHERE  username='$user'";
+  $get_amount = $conn->query($get_amount)->fetch_assoc();
+  $amount = $get_amount["invested_amount"] - $amount;
+  $equity = $get_amount["balance"] - $amount;
+  
+  $update = "UPDATE dashboard SET invested_amount=$amount, equity=$equity";
+
+  if($conn->query($sql) && $conn->query($update)){
+    
+    echo "Your $type investment is now closed. Please refresh the browser";
+  }
+  else{
+    echo "Failed to close your $type investment, Try again later";
+  }
+}
+
+
+?>

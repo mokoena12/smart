@@ -177,7 +177,8 @@ else{
                                 <th>Date of Registration</th>
                             </thead>
                             <tbody class="tbody">
-                                <td></td>
+                                <td>mokoena</td>
+                                <td>kgotlelelo</td>
                             </tbody >
                         </table>
     
@@ -211,7 +212,7 @@ else{
                                         <tr>
                                             <th>Amount</th>
                                             <th>Status</th>
-                                            <th>Credited At</th>
+                                            <th>Created At</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>

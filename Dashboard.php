@@ -1,12 +1,4 @@
 <?php
-//check withdrawal.php on small phones and tablet is overflowing the screen and some elements are not clear
-//Make sure you view all files in small phones, deposit.php, referral.php,etc and check they are displaying well
-//fill something in your referral member table
-//display the deposit instructions first in the deposit(in cellphone.) they must display in reverse column
-//The dashboard is not displaying well in small phones(specific iphone 6,7 and 8 plus ) try to make icons inside cards bit smaller
-//Your button(close button) in recent trading history is not hovering
-//Fix the dashboard is not displaying recent trading history in desktop
-//terms and conditions
 session_start();
 
 if (isset($_SESSION["investa_user"])){
@@ -194,6 +186,7 @@ $balance =  $row["balance"];
                 <div class="info_icon">
                   <a href="#" class="elevation-1">
                     <i class="fa fa-money"></i>
+                    <span>view balance</span>
                   </a>
                 </div>
                 <div class="infom">
@@ -210,6 +203,7 @@ $balance =  $row["balance"];
                 <div class="info_icon">
                   <a href="#" class="elevation-1">
                     <i class="fa fa-money"></i>
+                    <span>view Profit</span>
                   </a>
                 </div>
                 <div class="infom">
@@ -224,6 +218,7 @@ $balance =  $row["balance"];
                 <div class="info_icon">
                   <a href="#" >
                     <i class="fa fa-money"></i>
+                    <span>Refer a friend to earn $10</span>
                   </a>
                 </div>
                 <div class="infom">
@@ -238,6 +233,7 @@ $balance =  $row["balance"];
                 <div class="info_icon">
                   <a href="#" >
                     <i class="fa fa-money"></i>
+                    <span>Amount Invested</span>
                   </a>
                 </div>
                 <div class="infom">
@@ -251,8 +247,10 @@ $balance =  $row["balance"];
               <!-- start of total withdraw box -->
               <div  class="box_balance5">
                 <div class="info_icon">
+                  <span>view balance</span>
                   <a href="#" >
                     <i class="fa fa-money"></i>
+                    <span>view Withdrawal</span>
                   </a>
                 </div>
                 <div class="infom">
@@ -267,6 +265,7 @@ $balance =  $row["balance"];
                 <div class="info_icon">
                   <a href="#" >
                     <i class="fa fa-exchange"></i>
+                    <span>Make a deposit now</span>
                   </a>
                 </div>
                 <div class="infom">
@@ -282,6 +281,7 @@ $balance =  $row["balance"];
                 <div class="info_icon">
                   <a href="#" >
                     <i class="fa fa-exchange"></i>
+                    <span>Available Amount to invest</span>
                   </a>
                 </div>
                 <div class="infom">
@@ -297,6 +297,8 @@ $balance =  $row["balance"];
                     <div class="info_icon">
                       <a href="#" >
                         <i class="fa fa-credit-card"></i>
+                        <span>Subscribe to our email</span>
+
                       </a>
                     </div>
                     <div class="infom">
@@ -312,6 +314,7 @@ $balance =  $row["balance"];
                 <div class="info_icon">
                   <a href="#" >
                     <i class="fa fa-bullhorn"></i>
+                    <span>0 notification</span>
                   </a>
                 </div>
                 <div class="infom">
@@ -555,7 +558,7 @@ $balance =  $row["balance"];
                     <th>Entry Pice</th>
                     <th>Stop Loss</th>
                     <th>Take Profit</th>
-                    <th>Status</th>>
+                    <th>Status</th>
                     <th>Action</th>
                   </tr>
                 </thead>

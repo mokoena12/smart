@@ -23,6 +23,11 @@ $115  but my equity is zero
  
 /*redirect the user to login.php after registration if the registration was successfully with the message of
 your 'Registration is successfully' */
+//There was a conflict in withdrawal table database, please dob't change anything just import it as it is You added date_with =, remove that
+//send us database for investment 
+//code compound to properly, please import time_server table for your compound to work, login with password of Smartinvesta@2021.
+//The compound works in interval of 10 mins
+//Please push registration database for us don't duplicate it
  
 require_once "connect.php";
 session_start();

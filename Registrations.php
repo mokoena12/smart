@@ -1,5 +1,5 @@
 <?php
-$test = "I'm not running";
+
 $servername = "localhost";
 $username ="root";
 $password = "";

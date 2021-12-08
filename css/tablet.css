@@ -679,8 +679,8 @@ to{
 
 }
 .logo_img {
-  height: 4em;
-  width: 8em;
+  height: 3em;
+  width: 6em;
   text-align: center;
 
 }
@@ -766,8 +766,8 @@ to{
 }
      /* start of web logo */
      .logo_2 {
-      height: 4em;
-      width: 8em;
+      height: 3em;
+      width: 6em;
       margin-bottom: 10px;
   
       }
@@ -1084,6 +1084,7 @@ flex-direction: column;
 }
 
 .sidebar {
+  display: none;
   position: fixed;
   top: -2px;
   left: -10px;
@@ -1711,6 +1712,8 @@ a.elevation-1 {
 
 .container_box {
   top: 7%;
+  margin-top: 13%;
+  
 
 
 }
@@ -1811,7 +1814,7 @@ a.elevation-1 {
   position: relative;
   width: 100%;
   height: 95%;
-  margin-top: 20%;
+  margin-top: 8%;
 }
 .FOREX {
   border: 1px solid #ccc;
@@ -1825,6 +1828,7 @@ a.elevation-1 {
 }
 .cross-chart {
   height: 30em;
+  margin-bottom: 10%;
 }
 
 /* end of the forex crossrate chart */
@@ -2214,7 +2218,7 @@ border-top: 1px solid #dee2e6;
 color: #869099;
 padding: 1em;
 text-align: center;
-margin-bottom: -20em;
+margin-bottom: -25em;
 }
 .footer strong a {
   text-decoration: none;
@@ -2238,10 +2242,18 @@ margin-bottom: -20em;
   font-weight: bold;
 }
 .refferal-link input {
-  width: 100%;
+  width: 88%;
   height: 2.5em;
   border-radius: 4px;
   padding: 1em;
+}
+.copy-btn {
+  text-align: right;
+  position: absolute;
+  margin-left: 1%;
+  height: 2.5em;
+  color: white;
+  border-radius: 4px;
 }
 .referral-members {
   border-radius: 4px;

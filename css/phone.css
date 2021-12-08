@@ -1271,8 +1271,8 @@ text-align: center;
 
   /* start of web logo */
   .logo_2 {
-    height: 6em;
-    width: 12em;
+    height: 3em;
+    width: 6em;
 
 }
 .logo_img{
@@ -1536,6 +1536,7 @@ header .logo img{
   }
 }
 .sidebar {
+  display: none;
   position: fixed;
   margin-top: -2px;
   left: -10px;
@@ -1837,7 +1838,7 @@ div.sidebar_profile {
 .info_icon a {
   width: 30%;
   height: 30%;
-  padding: 1em;
+  padding: 0.50em;
   margin-left: 0.70em;
   border-radius: 2px;
   box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)!important;
@@ -1854,7 +1855,7 @@ a.elevation-1 {
   display: flex;
   flex-direction: column;
   margin-left: 1.6em;
-  line-height: 30px;
+  line-height: 26px;
 
 }
 /* start of investing plan */
@@ -2003,6 +2004,7 @@ a.elevation-1 {
   height: 2em;
   width: 10em;
   margin-top: 1em;
+  margin-bottom: 1em;
   border-radius: 6px;
   background-color: #17a2b8;
   color: white;
@@ -2034,6 +2036,10 @@ a.elevation-1 {
 /* start of the Btc CHart */
 .chart {
   height: 20em;
+  margin-top: 1.5em;
+}
+.container_box {
+  margin-top: 20%;
 }
 
 .chart iframe{
@@ -2044,6 +2050,7 @@ a.elevation-1 {
 /*==End of Chart */
 
 /* start of live trading inputs */
+
 
 .header_for {
   height: fit-content;
@@ -2171,7 +2178,7 @@ a.elevation-1 {
   position: relative;
   width: 100%;
   height: 70%;
-  margin-top: 20%;
+  margin-top: 13%;
   display: block;
   overflow-x: auto;
 
@@ -2190,6 +2197,7 @@ a.elevation-1 {
 }
 .cross-chart {
   height: 20em;
+  margin-bottom: 10%;
 }
 
 
@@ -2218,7 +2226,7 @@ text-align: center;
 
 .transact-flex {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   margin: 1em;
 }
 .payment {
@@ -2434,8 +2442,7 @@ text-align: center;
 /* start of the withdrawal section */
 .withdrawal-fullbody {
   width: 100%;
-  padding: 2em;
-  margin: 1em;
+  padding: 1em;
 }
 .flexdive {
   display: flex;
@@ -2739,6 +2746,15 @@ text-align: center;
   border-radius: 4px;
   padding: 1em;
 }
+.copy-btn {
+  text-align: right;
+  position: relative;
+  margin-top: 2%;
+  height: 2.5em;
+  color: white;
+  border-radius: 4px;
+}
+
 .referral-members {
   border-radius: 4px;
   border: 1px solid #ccc;
@@ -2881,8 +2897,86 @@ text-align: center;
  right: 3.4em;
 }
 
+
+.header_2 { 
+  background-color: white;
+  height: 5em;
+  width: 100%;
+  text-transform: uppercase;
+  padding-left:  40px;
+  
+}
+     /* start of web logo */
+     .logo_2 {
+      height: 3em;
+      width: 6em;
+      margin-bottom: 10px;
+  
+      }
+      /* end of logo reg */
+      .icon2 {
+        color: orange;
+        margin-left: 1em;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        font-size: 11px;
+    }
+div.box_header {
+  font-weight: 700;
+  height: 2em;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.center_2 {
+  position: absolute;
+  box-sizing: border-box;
+  border: 3px solid grey;
+  height: auto;
+  width: 95%;
+  margin-left: 1em;
+  padding-right: 2em;
+
 /*end-messanger icons*/
 
+
+}
+.box2 {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1em;
+
+}
+.box2_style {
+  position: relative;
+  width: 18em;
+  height: 2em;
+  margin-bottom: 10px;
+  border-color: none;
+  margin-right: 30px;
+}
+.shift_upl {
+  margin-left: auto;
+  margin-right: auto;
+}
+.fileupload {
+  width: 11em;
+  height: 2em;
+  color: rgb(110, 110, 110);
+}
+.reg_btn {
+  color: white;
+  background-color: blue;
+  width: 9em;
+  height: 2em;
+  border-radius: 4px;
+  margin-top: 2em;
+  margin-left: 30%;
+}
+/* end of registration form for tablet */
 
 }
  

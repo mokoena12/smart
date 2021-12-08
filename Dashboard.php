@@ -1,25 +1,4 @@
 <?php
-//Tasks to be completed by front-end
-
-//Fix the html tag for withdrawal(is not closed and it has class) check this for all other files in dashboard(deposit.php,profile.php, etc....)
-//Code notification pop_up
-//Change the deposit history in withdrawal it should be withdrawal history and also change it in activity logs it should be Activity logs History
-//change Account details form in profile it shoulb be account holder's Full name and also add Bank name and card number
-//Fix the hovering of dashboard panel it
-//Put button in live trading history table, the button is named close under action column(RED, COLOR:WHITE)
-//fix side_panel for deposit is not displaying name of user below avatar
-//Fix the size of logo for login/registration and logout
-//Fix the subscription link in side_panel href should be # on subscription.php
-//Fix the search engine for deposit.php, withdrawal.php ,etc it should be working like dashboard.php
-//fIX ADRESS IN PROFILE.PHP
-//Make sure the side panel is animated in dashboard.php for phones and tablet
-//fix the text inside live investment card, put the text at center
-//Fix the dashboard icon on sidebar for deposit.php, withdrawal.php,entry_price
-//The task_bar in desposit.php, withdrawal.php,etc
-//Make sidebar display none is small phones
-//The text inside investment plans should be centered
-//Add shortcut icon meta tag in all files, google about it to know more
-
 session_start();
 
 if (isset($_SESSION["investa_user"])){
@@ -54,7 +33,7 @@ $balance =  $row["balance"];
 
 ?>
 
-<Doctype html>
+<!DOCTYPE html>
   <html lang="en">
   <head>
   <!-- start meta tags-->
@@ -83,6 +62,7 @@ $balance =  $row["balance"];
   <link rel="stylesheet" href="fonts/css/v4-shims.css">
   <link rel="stylesheet" href="fonts/css/v4-shims.min.css">
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="shortcut icon" href="img/smart.investa.logo2.png" />
   <!-- end of fonts -->
   
   <!-- start of links styling-->
@@ -206,6 +186,7 @@ $balance =  $row["balance"];
                 <div class="info_icon">
                   <a href="#" class="elevation-1">
                     <i class="fa fa-money"></i>
+                    <span>view balance</span>
                   </a>
                 </div>
                 <div class="infom">
@@ -222,6 +203,7 @@ $balance =  $row["balance"];
                 <div class="info_icon">
                   <a href="#" class="elevation-1">
                     <i class="fa fa-money"></i>
+                    <span>view Profit</span>
                   </a>
                 </div>
                 <div class="infom">
@@ -236,6 +218,7 @@ $balance =  $row["balance"];
                 <div class="info_icon">
                   <a href="#" >
                     <i class="fa fa-money"></i>
+                    <span>Refer a friend to earn $10</span>
                   </a>
                 </div>
                 <div class="infom">
@@ -250,6 +233,7 @@ $balance =  $row["balance"];
                 <div class="info_icon">
                   <a href="#" >
                     <i class="fa fa-money"></i>
+                    <span>Amount Invested</span>
                   </a>
                 </div>
                 <div class="infom">
@@ -263,8 +247,10 @@ $balance =  $row["balance"];
               <!-- start of total withdraw box -->
               <div  class="box_balance5">
                 <div class="info_icon">
+                  <span>view balance</span>
                   <a href="#" >
                     <i class="fa fa-money"></i>
+                    <span>view Withdrawal</span>
                   </a>
                 </div>
                 <div class="infom">
@@ -279,6 +265,7 @@ $balance =  $row["balance"];
                 <div class="info_icon">
                   <a href="#" >
                     <i class="fa fa-exchange"></i>
+                    <span>Make a deposit now</span>
                   </a>
                 </div>
                 <div class="infom">
@@ -294,6 +281,7 @@ $balance =  $row["balance"];
                 <div class="info_icon">
                   <a href="#" >
                     <i class="fa fa-exchange"></i>
+                    <span>Available Amount to invest</span>
                   </a>
                 </div>
                 <div class="infom">
@@ -309,6 +297,8 @@ $balance =  $row["balance"];
                     <div class="info_icon">
                       <a href="#" >
                         <i class="fa fa-credit-card"></i>
+                        <span>Subscribe to our email</span>
+
                       </a>
                     </div>
                     <div class="infom">
@@ -324,6 +314,7 @@ $balance =  $row["balance"];
                 <div class="info_icon">
                   <a href="#" >
                     <i class="fa fa-bullhorn"></i>
+                    <span>0 notification</span>
                   </a>
                 </div>
                 <div class="infom">
@@ -470,7 +461,7 @@ $balance =  $row["balance"];
                                         <td>$100</td>
                                         <td>3 weeks</td>
                                         <td>06 Dec 2021</td>
-                                        <td ><h5  class="close-buttonn">Close</h5></td>
+                                        <td ><h5  class="close-buttonn" onclick="investment('Bronze','Raps')">Close</h5></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -567,7 +558,7 @@ $balance =  $row["balance"];
                     <th>Entry Pice</th>
                     <th>Stop Loss</th>
                     <th>Take Profit</th>
-                    <th>Status</th>>
+                    <th>Status</th>
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -581,7 +572,7 @@ $balance =  $row["balance"];
                     <td>105.25</td>
                     <td>135.25</td>
                     <td></td>
-                    <td><button id="colour-for" style="color: white;border-radius: 3px;background-color: red !important;">close</button></td>
+                    <td><button class="clossing-btn">close</button></td>
                   </tr>
                  <?php  
                    
@@ -624,6 +615,7 @@ $balance =  $row["balance"];
   
           </div>
           <!-- end of crossrate chart -->
+          
           <?php if(isset($_GET["results"])){
                 echo "
                 <div class='notification-centerbox'>".$_GET['results']."
@@ -633,8 +625,11 @@ $balance =  $row["balance"];
           </div>
                 ";
               } ?>
-
-          
+          <div class='notification-centerbox hide_all' id="notification-centerbox"> <span id="notification_text"> </span>
+            <div class='closing2'>
+              <i class='fa fa-close'></i>
+            </div> 
+          </div>
   
           <!-- start of the footer -->
         <footer class="footer">

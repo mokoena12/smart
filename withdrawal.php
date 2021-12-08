@@ -16,8 +16,8 @@ else{
 
 ?>
 
-<Doctype html>
-  <html lang="en" class="body-style">
+<!DOCTYPE html>
+  <html lang="en">
   <head>
   <!-- start meta tags-->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -45,6 +45,7 @@ else{
   <link rel="stylesheet" href="fonts/css/v4-shims.css">
   <link rel="stylesheet" href="fonts/css/v4-shims.min.css">
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="shortcut icon" href="img/smart.investa.logo2.png" />
   <!-- end of fonts -->
   
   <!-- start of links styling-->
@@ -67,6 +68,9 @@ else{
         <!-- start of the sidemanu -->
            <!-- start of the sidebar -->
         <div class="sidebar">
+            <div class="closing2 closing3">
+                <i class="fa fa-close"></i>
+            </div> 
           <div class="sidebar_profile">
             <div class="sidebar-flex" >
             <?php 
@@ -85,7 +89,7 @@ else{
           <div class="sidebar-manus">
             <ul>
               <li>
-                <a href="Dashboard.php"><img  class="sidebarspace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>
+                <a href="Dashboard.php"><i class="fa fa-home"></i>
                 Dashboard</a>
               </li>
               <li>
@@ -131,6 +135,11 @@ else{
               <i class="fas fa-search" onclick="search()"></i>
               <input type="search" name="search_d" id="search_d" placeholder="Search...">
             </div>
+            <div class="menu-left manu-right">
+              <div class="bars"></div>
+              <div class="bars"></div>
+              <div class="bars"></div>
+            </div>
           </header>
           <section>
             <div class="dash">
@@ -161,7 +170,9 @@ else{
                                         <span>Minimum Amount:</span>
                                         <?php
                                         $sql = "SELECT typeOfInv FROM investment WHERE user = '$user'";
+                         
                                         $bal = "SELECT balance,equity,referral_bonus FROM dashboard WHERE username = '$user' ";
+                                      
                                         $result = $conn->query($sql);
                                         $bal_r = $conn->query($bal);
                                         $bal_v =  $bal_r->fetch_assoc();
@@ -330,25 +341,31 @@ else{
                                             <tr>
                                                 <th>Amount</th>
                                                 <th>Status</th>
-                                                <th>Credited At</th>
-                                                <th>Withdrawal method</th>
+                                                <th>Created At</th>
+                                                <th>method</th>
                                             </tr>
                                         </thead>
                                         <tbody class="tbody">
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
                                              
                    <?php  
                    $n = 0;
                     
-                    $sql_w="SELECT amount, date_reg, method FROM withdrawal WHERE username = '$user'";
+                    $sql_w="SELECT amount, date_w, method FROM withdrawal WHERE username = '$user'";
                     
                    $result_w = $conn->query($sql_w); 
-                     if($result_w !== FALSE && $ $result_w->num_rows> 0){
+                    if($result_w !== FALSE && $result_w->num_rows> 0){
                     
                    while($n<=5 && $row2 = $result11->fetch_assoc()){
                     echo "<tr>";
                     echo "<td>".$row2['deposit']."</td>";
                     echo "<td></td>";
-                    echo "<td>".$row2['date_reg']."</td>";
+                    echo "<td>".$row2['date_w']."</td>";
                     echo "<td>".$row2['method']."</td>";
                     echo "</tr>";
                     $n++; 
@@ -411,3 +428,4 @@ else{
         </div>
         
     </body>
+</html>

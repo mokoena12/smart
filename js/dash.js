@@ -151,3 +151,35 @@ $(document).ready(function(){
 
   });
 });
+function ref_link() {
+
+  var copyText = document.getElementById("referral_link");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); 
+  navigator.clipboard.writeText(copyText.value);
+  alert("Link Copied to clipboard");
+
+}
+
+//Closing Investment 
+function investment(type,user){
+
+var result = confirm("Do you want to close this investment?");
+if(result){
+  var xmlhttp= new XMLHttpRequest();
+  xmlhttp.onreadystatechange= 
+  function (){
+      if(this.readyState ==4 && this.status == 200){
+          document.getElementById("notification_text").innerHTML=this.responseText;
+          document.getElementById("notification-centerbox").style.display="block";
+      }
+  }
+  xmlhttp.open("GET","processor.php?invest_delete="+ user+"&type=" +type,true);
+  xmlhttp.send();
+}
+else{
+  alert("Investment is not closed");
+}
+ 
+
+}

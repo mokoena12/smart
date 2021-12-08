@@ -44,6 +44,7 @@ else{
     <link rel="stylesheet" href="fonts/css/svg-with-js.min.css">
     <link rel="stylesheet" href="fonts/css/v4-shims.css">
     <link rel="stylesheet" href="fonts/css/v4-shims.min.css">
+    <link rel="shortcut icon" href="img/smart.investa.logo2.png" />
     <!-- end of fonts -->
     
     <!-- start of links styling-->
@@ -66,6 +67,9 @@ else{
         <div class="wrapper-box">
             <!-- start of the sidebar -->
             <div class="sidebar">
+                <div class="closing2 closing3">
+                    <i class="fa fa-close"></i>
+                </div> 
                 <div class="sidebar_profile">
                     <div class="sidebar-flex" >
                     <?php 
@@ -81,7 +85,7 @@ else{
                 <div class="sidebar-manus">
                 <ul>
                 <li>
-                    <a href="Dashboard.php"><img  class="sidebarspace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>
+                    <a href="Dashboard.php"><i class="fa fa-home"></i>
                     Dashboard</a>
                 </li>
                 <li>
@@ -244,9 +248,15 @@ else{
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
                    <?php  
                    $n = 0;
-                   $sql="SELECT deposit, method, deposit_date FROM deposit WHERE username = '$user'";
+                   $sql="SELECT amount, method, deposit_date FROM deposit WHERE username = '$user'";
                     
                    $result11 = $conn->query($sql);
                       
@@ -254,7 +264,7 @@ else{
                     
                    while($n <=5 && $row2 = $result11->fetch_assoc()){
                     echo "<tr>";
-                    echo "<td>".$row2['deposit']."</td>";
+                    echo "<td>".$row2['amount']."</td>";
                     echo "<td></td>";
                     echo "<td>".$row2['deposit_date']."</td>";
                     echo "<td>".$row2['method']."</td>";

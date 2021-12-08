@@ -2870,8 +2870,15 @@ text-align: center;
 /* end of the notification box at the center */
 
 /*messanger icons*/
+.social-med{
+ width: 2.5em;
+}
 .social-med i{
-  font-size: 37px;
+  font-size: 30px;
+}
+.social-med span{
+ width: 9em;
+ right: 3.4em;
 }
 
 /*end-messanger icons*/

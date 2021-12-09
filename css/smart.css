@@ -1114,10 +1114,10 @@ margin: 0;
 
 .container_box {
     width: 100%;
-    border: 1px solid gray;
+    border: 1px solid #ccc;
     border-radius: 3px;
     position: relative;
-    top: 17%;
+
   
   }
 
@@ -1125,7 +1125,7 @@ margin: 0;
   
 /* start of the forex crossrate chart */
 .crossrate {
-   top:7%;
+   top:6%;
   }
   
 .cross-chart {
@@ -1139,7 +1139,6 @@ margin: 0;
 /* start of the Btc CHart */
 .chart {
     width: 100%;
-    margin: 0em;
   }
   .div-chart {
     border: 1px solid #ccc;
@@ -1265,11 +1264,10 @@ border-radius: 50%;
     z-index: 999;
     position: fixed;
     top: 50%;
-    right: -0.4%;
     display: flex;
     flex-direction: column;
     border-radius: 4px;
-    width: 4%;
+    right: 0%;
     overflow: visible;
 }
 
@@ -1292,13 +1290,49 @@ border-radius: 50%;
 }
 .social-med span{
     position: absolute;
-    right: 4em;
-    top: 17px;
     background-color: white;
-    width: 7em;
     text-align: center;
     border-radius: 4px;
     display: none;
 }
   /*end-messanger icons*/
+  /*Class to hide element in all devices */
+.hide_all{
+    display:none;
+}
   
+
+  /* hover the boxes */
+  .info_icon a i:hover {
+    opacity: 0.5;
+    color: white;
+  }
+  .info_icon span {
+      position: absolute;
+      background-color: black;
+      color: white;
+      width: 7em;
+      text-align: center;
+      border-radius: 4px;
+      display: none;
+      top: 4em;
+      z-index: 1;
+      
+  }
+  .info_icon a:hover span {
+    display: block;
+    z-index: 1;
+    opacity: 1;
+  }
+  /* endof hover boxes */
+
+  /* execute btn hover */
+  .btnsub:hover {
+    opacity: 0.9;
+    color: white;
+  }
+  .clossing-btn:hover {
+      opacity: 0.9;
+      color: black;
+  }
+  /* end execute hover */

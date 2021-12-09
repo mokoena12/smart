@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2021 at 05:27 PM
+-- Generation Time: Dec 08, 2021 at 05:46 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -24,27 +24,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `withdrawal`
+-- Table structure for table `time_server`
 --
 
-CREATE TABLE `withdrawal` (
+CREATE TABLE `time_server` (
   `username` varchar(255) DEFAULT NULL,
-  `amount` int(20) DEFAULT NULL,
-  `method` varchar(255) DEFAULT NULL,
-  `with_date` datetime DEFAULT current_timestamp()
+  `times` int(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `withdrawal`
+-- Dumping data for table `time_server`
 --
 
-INSERT INTO `withdrawal` (`username`, `amount`, `method`, `with_date`) VALUES
-('Raps', 700, 'Bank', '2021-12-03 10:13:36'),
-('Raps', 5000, 'Bitcoin', '2021-12-03 10:13:36'),
-('Raps', 4735, 'Bank', '2021-12-03 10:56:50'),
-('Raps', 5000, 'EFT', '2021-12-03 10:58:58'),
-('Raps', 650, 'EFT', '2021-12-03 11:22:37'),
-('Raps', 670, 'Bitcoin', '2021-12-04 14:24:23');
+INSERT INTO `time_server` (`username`, `times`) VALUES
+('Admin', 1638876764);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -248,6 +248,12 @@ else{
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
                    <?php  
                    $n = 0;
                    $sql="SELECT amount, method, deposit_date FROM deposit WHERE username = '$user'";

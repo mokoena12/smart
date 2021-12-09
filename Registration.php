@@ -169,6 +169,7 @@ if(isset($_GET["ref"])){
     $approved = 1;
 
     if($stmt->execute()){
+      
         /*
         $to = $email;;
         $subject ="New Account";

@@ -1433,6 +1433,7 @@ li {
   border-radius: 2px;
   box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)!important;
 }
+
 .info_icon i {
   font-weight: bold;
 
@@ -1600,7 +1601,7 @@ a.elevation-1 {
 /* start of live trading inputs */
 
 .container_box {
-  top: 7%;
+  top: 4%;
 
 
 }
@@ -1651,6 +1652,7 @@ a.elevation-1 {
   text-align: center;
 }
 
+
 /* start of recent trading history */
 .h5 {
   color: blue;
@@ -1688,8 +1690,8 @@ a.elevation-1 {
 .crossrate {
   position: relative;
   width: 100%;
-  height: 95%;
-  margin-top: 13%;
+  height: 27%;
+  
 }
 .FOREX {
   border: 1px solid #ccc;
@@ -3004,11 +3006,16 @@ margin-left: 15px;
 }
 /* end of the notification box at the center */
 /*messanger icons*/
-.social-med i{
-  font-size: 45px;
-  
-}
-/*end-messanger icons*/
-
-
+.social-med{
+  width: 3em;
+ }
+ .social-med i{
+   font-size: 40px;
+ }
+ .social-med span{
+  width: 9em;
+  right: 3.5em;
+ }
+    
+ /*end-messanger icons*/
 }

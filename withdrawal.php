@@ -341,11 +341,17 @@ else{
                                             <tr>
                                                 <th>Amount</th>
                                                 <th>Status</th>
-                                                <th>Credited At</th>
-                                                <th>Withdrawal method</th>
+                                                <th>Created At</th>
+                                                <th>method</th>
                                             </tr>
                                         </thead>
                                         <tbody class="tbody">
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
                                              
                    <?php  
                    $n = 0;

@@ -637,7 +637,13 @@ else{
                                                     <option value="Zambia">Zambia</option>
                                                     <option value="Zimbabwe">Zimbabwe</option>
                                                 </select>
-                                            </div>                                        
+
+                                            </div>
+                                            <div class="diveform">
+                                                <label for="address">Address</label>
+                                                <input type="text" class="name-inputs" name ="addres" id="adre" placeholder="Address">
+                                                <div class="red-text"><?php  echo $address_rr; ?></div>
+                                            </div>
                                         </div>
                                         <div class="p-btnsub">
                                             <input class="button" type="submit" id="profile-btn1" value="Update Accounts">

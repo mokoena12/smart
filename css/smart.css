@@ -1300,6 +1300,10 @@ border-radius: 50%;
     display: none;
 }
   /*end-messanger icons*/
+  /*Class to hide element in all devices */
+.hide_all{
+    display:none;
+}
   
 
   /* hover the boxes */

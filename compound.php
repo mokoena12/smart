@@ -3,7 +3,7 @@
 //Please fix the registration form, we lost some data when moving to Git also make sure it adds the user when registering
 /*Code referral.php you will have to create a table database named referral with following columns username,friend_name,date_ref. Check the structure of referral link 
 is https://www.smartinvesta.co.za/Registration.php?ref=Raps so you can see we are passing variable named ref with username of
-Raps using GET method. The task is the check during registration whether ref is set and is is set take the value store it in referral table 
+Raps using GET method. The task is the check during registration whether ref is set and if it is set take the value store it in referral table 
 and also store the name of person registering with this link*/
 
 //Code referral members table in referral.php using the table database above to do the work
@@ -23,6 +23,11 @@ $115  but my equity is zero
  
 /*redirect the user to login.php after registration if the registration was successfully with the message of
 your 'Registration is successfully' */
+//There was a conflict in withdrawal table database, please dob't change anything just import it as it is You added date_with =, remove that
+//send us database for investment 
+//code compound to properly, please import time_server table for your compound to work, login with password of Smartinvesta@2021.
+//The compound works in interval of 10 mins
+//Please push registration database for us don't duplicate it
  
 require_once "connect.php";
 session_start();

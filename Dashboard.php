@@ -429,7 +429,7 @@ $balance =  $row["balance"];
                 </div>                                               
               </div>
               <div class="highlight-terms">
-                <p>By executing this investment, You agree to our terms and conditions (visit <a href="#">Terms</a>) to read more</p>
+                <p>By executing this investment, You agree to our terms and conditions (visit <a href="files/smartinvesta_risk.pdf">Terms</a>) to read more</p>
               </div>
               <div class="btnex2">
                 <input class="button" type="submit" id="btnexecute2" value="Invest">
@@ -548,6 +548,9 @@ $balance =  $row["balance"];
                 </div>
                 <div>
                   <input type="submit" class="btnsub" value="execute">
+                </div>
+                <div class="highlight-terms">
+                  <p>By executing this investment, You agree to our terms and conditions (visit <a href="files/smartinvesta_risk.pdf">Terms</a>) to read more</p>
                 </div>
                 
               </div>

@@ -58,7 +58,7 @@ else{
   $err = "Please login as Administrator";
   header("Location:login.php?user2=$err");
   
-}*/
+}
 
 $date = time();
 $get_time = "SELECT times FROM time_server WHERE username = 'Admin'";
@@ -66,11 +66,12 @@ $get_time = $conn->query($get_time)->fetch_assoc();
 $get_time = $get_time["times"];
 $date = ($get_time - $date)/60;
 $time =  round($date);
+//&& $time<0
 
 
 if(isset($_POST["Admin_Password"]) ){
 
-  if($_POST["Admin_Password"]=="Smartinvesta@2021." && $time<0){
+  if($_POST["Admin_Password"]=="bbb" ){
 
     $times = time() + 10*60;
 
@@ -88,53 +89,59 @@ function balance($A,$i,$n) {
     $Bal = $A * pow((1 + $i),$n);
    return $Bal;
 }
+$test = " not compounded";
+
 function Nwbalance($Ba,$rowB){
   $nwBal = $rowB + $Ba;
   return $nwBal; 
 }
 function profit($B,$d){
-   $Proft = $B - $d ;
+   $Proft =  $B -$d ;
    return $Proft;
 }
-    
-if($result1->num_rows> 0){ 
-  while($type = $result1->fetch_assoc()){
+$sql5="SELECT typeOfInv,periods,user,amount FROM investment";
+$result4 = $conn->query($sql5);
+$user = $result4->fetch_assoc();
 
-    $sql="SELECT typeOfInv,periods,user,amount FROM investment";
-    $result1 = $conn->query($sql);
-  
-    $typeOfinv = $type["typeOfInv"];
-    $user = $type["user"];
+$user = $user["user"];
+
+
+if($result4->num_rows> 0){ 
+  $new = $conn->query($sql5);
+  while($type = $new->fetch_assoc()){  
     $investd_amount =$type["amount"];
-    
+    $typeOfinv = $type["typeOfInv"];
     $sql="SELECT balance, deposit,invested_amount FROM dashboard WHERE  username='$user' ";
     $result = $conn->query($sql);
+
 
     $row = $result->fetch_assoc();
     $Old_balance =  $row["balance"];
     $deposit = $row["deposit"];
+
     $invested = $row["invested_amount"];
           if($typeOfinv=="Bronze"){
             $i = 0.04;
             $n=1;
             $comp_balance = balance($investd_amount,0.04,1); 
-            $Inv_balance = profit($Old_balance,$Inv_balance);     
+            $Inv_balance = profit($comp_balance,$Old_balance,);     
             $New_bal = Nwbalance($Old_balance,$Inv_balance);
-            $equity = $New_bal - $investd;          
+            $equity = $New_bal - $invested;          
             $Proft = profit($New_bal,$deposit);
             
             $sql ="UPDATE dashboard SET balance = $New_bal , profit_return = $Proft, equity = $equity
              WHERE username = '$user'";
-            $result3 = $conn->query($sql);
+           
+
 
          }else if($typeOfinv=="Titanium"){
           $i = 0.05;
           $n=1;
           $comp_balance = balance($investd_amount,0.05,1); 
-          $Inv_balance = profit($Old_balance,$Inv_balance);     
-          $New_bal = Nwbalance($Old_balance,$Inv_balance);
-          $equity = $New_bal - $investd;          
-          $Proft = profit($New_bal,$deposit);
+            $Inv_balance = profit($comp_balance,$Old_balance,);     
+            $New_bal = Nwbalance($Old_balance,$Inv_balance);
+            $equity = $New_bal - $invested;          
+            $Proft = profit($New_bal,$deposit);
           
           $sql ="UPDATE dashboard SET balance = $New_bal , profit_return = $Proft, equity = $equity
            WHERE username = '$user'";
@@ -143,11 +150,11 @@ if($result1->num_rows> 0){
           }else if($typeOfinv=="Gold"){
             $i = 0.10;
             $n=1;
-          $comp_balance = balance($investd_amount,0.10,1); 
-          $Inv_balance = profit($Old_balance,$Inv_balance);     
-          $New_bal = Nwbalance($Old_balance,$Inv_balance);
-          $equity = $New_bal - $investd;          
-          $Proft = profit($New_bal,$deposit);
+            $comp_balance = balance($investd_amount,0.10,1); 
+            $Inv_balance = profit($comp_balance,$Old_balance,);     
+            $New_bal = Nwbalance($Old_balance,$Inv_balance);
+            $equity = $New_bal - $invested;          
+            $Proft = profit($New_bal,$deposit);
           
           $sql ="UPDATE dashboard SET balance = $New_bal , profit_return = $Proft, equity = $equity
            WHERE username = '$user'";
@@ -157,21 +164,21 @@ if($result1->num_rows> 0){
             $i = 0.20;
             $n=1;
             $comp_balance = balance($investd_amount,0.20,1); 
-            $Inv_balance = profit($Old_balance,$Inv_balance);     
+            $Inv_balance = profit($comp_balance,$Old_balance,);     
             $New_bal = Nwbalance($Old_balance,$Inv_balance);
-            $equity = $New_bal - $investd;          
+            $equity = $New_bal - $invested;          
             $Proft = profit($New_bal,$deposit);
             
             $sql ="UPDATE dashboard SET balance = $New_bal , profit_return = $Proft, equity = $equity
              WHERE username = '$user'";
             $result3 = $conn->query($sql);
           }
-        
+          $result = "All investments are compounded successfully";
+          header("location:compound.php?results=$result");
     }
 
+    
 }
-$result = "All investments are compounded successfully";
-header("location:compound.php?results=$result");
   }
   else{
 

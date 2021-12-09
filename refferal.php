@@ -1,10 +1,5 @@
 <?php
-//Create table 
-//create functions for balance and profit
-// profit = balance - deposit
-// A = P(1  + i)^n 
-// investment table (user, type,period) 
-
+ 
 session_start();
 
 if (isset($_SESSION["investa_user"])){
@@ -18,6 +13,17 @@ else{
 
 }
 
+?>
+<?php 
+require_once "connect.php";
+
+$friend_name = "";
+$sql_email = "SELECT firstname, date_reg FROM registration WHERE username='$user' ";
+$results = $conn->query($sql_email);
+if($results !== FALSE && $results->num_rows>0){
+  $row = $results->fetch_assoc(); 
+  $friend_name = $row["firstname"];
+  $date_ref = $row["date_reg"]; 
 ?>
 
 <!DOCTYPE html>
@@ -173,8 +179,8 @@ else{
                         <h5>Your referral members</h5>
                         <table class="table2">
                             <thead>
-                                <th>Name</th>
-                                <th>Date of Registration</th>
+                                <th><?php echo $friend_name; ?></th>
+                                <th><?php echo $date_ref; ?></th>
                             </thead>
                             <tbody class="tbody">
                                 <td></td>

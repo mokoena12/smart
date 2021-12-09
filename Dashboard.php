@@ -1,4 +1,5 @@
 <?php
+//make shortcut icons for login.php and registration.php
 
 session_start();
 
@@ -30,6 +31,18 @@ $balance =  $row["balance"];
  $deposit = $row["deposit"];
  $Equity = $row["equity"];
 
+}
+
+$ref_amnt = $n = 0;
+  $sql_r="SELECT friend_name FROM refferals WHERE username = '$user'";
+  $result2 = $conn->query($sql_r);
+                     
+  if($result2 !== FALSE && $result2->num_rows> 0){               
+  while($n=0 && $row2 = $result2->fetch_assoc()){
+     $ref_amnt = $n*10;  
+      $sql_r="UPDATE dashboard SET refferal_bonus = $ref_amnt WHERE username = '$user'";
+      $result2 = $conn->query($sql_r);  
+  }
 }
 
 ?>
@@ -221,7 +234,7 @@ $balance =  $row["balance"];
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Referral Bonus</span>
-                  <span class="money_balance">$ <?php echo $referral_bonus;?></span>
+                  <span class="money_balance">$ <?php echo $ref_amnt;?></span>
                 </div>
               </div>
               <!-- end of bonus box -->
@@ -554,16 +567,7 @@ $balance =  $row["balance"];
                 </thead>
                 <tbody class="tablebody" >
                   <!-- This is the only part to be  changed-->
-                  <tr>
-                    <td>FOREX</td>
-                    <td>USDJPY</td>
-                    <td></td>
-                    <td>125.25</td>
-                    <td>105.25</td>
-                    <td>135.25</td>
-                    <td></td>
-                    <td><button class="clossing-btn">close</button></td>
-                  </tr>
+                   
                  <?php  
                    
                  $sql="SELECT trading_type,currency_pair,,trading_action ,lot_size,entry_price,stop_loss,take_profit FROM live_trading WHERE username = '$user'";

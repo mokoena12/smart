@@ -2,9 +2,10 @@
 //Data type for registration date column is register_date datetime default now();
 require_once "connect.php";
 //define vaariables and set to empty
-$firstnameErr =$approved= $middle_nameErr = $lastnameErr =  $countryErr = $emailErr = $cellphoneErr = $usernameErr  = $passwordErr =
-$re_enter_passwordErr = "";
-$firstname = $middle_name = $lastname = $country = $email = $cellphone = $username = $pass = $re_enter_pass = "";
+$firstnameErr =$approved= $middle_nameErr = $lastnameErr =  $countryErr = $emailErr = $usernameErr  = $passwordErr =
+$re_enter_passwordErr ="";
+$firstname = $middle_name = $lastname = $country = $email = $username = $pass = $re_enter_pass = $friend_name = $Succes = "";
+$cellphone = $cellphoneErr = 0;
 $error = $error1 = "";
 
 if(isset($_POST["name"])){
@@ -105,9 +106,7 @@ if(empty($_POST["name2"])){
     
   if($password === $re_enter_pass){
    
-
-}
-else{
+}else{
     $error = "Password do not match";
     $approved = 0;
 }
@@ -136,7 +135,8 @@ if($result->num_rows>0){
     $approved = 0;
     $email_rr = "Your email already exist";
 
-}else{ $C = "SELECT firstname,lastname FROM registration WHERE cellphone = '$cellphone' " ;
+}
+ $C = "SELECT firstname,lastname FROM registration WHERE cellphone = '$cellphone' " ;
    $result1 = $conn->query($C);
 
 if($result->num_rows>0){
@@ -151,20 +151,20 @@ if($result->num_rows>0){
     
     if($approved == 0){
     
-    }
-    else{
+    } else{
         $stmt->execute();
-       echo "registered successfully..";
-  
+       
     }
+ 
 
-    $stmt->close();
-    $conn->close();
-    
-    
-    $stmt = $conn->prepare("INSERT INTO registration (firstname,middle_name,lastname,country,email,cellphone,username,passwords,re_enter_pass)
-    values(?,?,?,?,?,?,?,?,?)");
-    $stmt->bind_param("sssssisss",$firstname,$middle_name,$lastname,$country,$email,$cellphone,$username,$pass,$re_enter_pass);
+ $friend_name = "";
+if(isset($_GET["ref"])){
+  $friend_name = $firstname;
+  $stmt = $conn->prepare("INSERT INTO refferals (username,friend_name) VALUES($user,$friend_name)");
+  $stmt->bind_param("ss",$user,$friend_name);
+  $stmt->execute();
+
+} 
 
     $approved = 1;
 
@@ -199,7 +199,9 @@ if($result->num_rows>0){
         mail($to,$subject,$message,$headers); */
 
         $approved = 1;
-        echo "registered successfully..";
+        $Succes = "registered successfully..";
+         
+
     }
     else{
         $approved = 0;
@@ -210,7 +212,7 @@ if($result->num_rows>0){
 
 
     $conn->close();
-} 
+ 
      
 
 ?>

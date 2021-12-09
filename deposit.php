@@ -274,7 +274,8 @@ else{
                         </div>
                         <div class="end-part">
                             <div class="end-shift">
-                                Showing 0 to 0 0f 0 entries 
+                                
+                                <?php echo " Showing $n to $n 0f 10 entries  "?>
                             </div>
                             <div class="prev-next">
                                 <ul>

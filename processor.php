@@ -95,7 +95,8 @@ if($conn->query($trade)){
     $method =  $_POST["depositing-methods"];
     $sql = "INSERT INTO deposit(username,amount,method) VALUES('$user',$amount,'$method')";
     $nwBal = $old + $amount;
-    $dash = "UPDATE dashboard SET balance = $nwBal,deposit=$nwBal
+    $equity = $old + $amount;
+    $dash = "UPDATE dashboard SET balance = $nwBal,deposit=$nwBal,equity=$equity
     WHERE username = '$user' ";
 
 

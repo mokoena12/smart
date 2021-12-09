@@ -85,6 +85,7 @@ if(empty($_POST["name2"])){
     $approved = 1;
 
     if($stmt->execute()){
+      
         /*
         $to = $email;;
         $subject ="New Account";

@@ -1,4 +1,3 @@
-
 <?php   
 //Please fix the registration form, we lost some data when moving to Git also make sure it adds the user when registering
 /*Code referral.php you will have to create a table database named referral with following columns username,friend_name,date_ref. Check the structure of referral link 
@@ -28,6 +27,22 @@ your 'Registration is successfully' */
 //code compound to properly, please import time_server table for your compound to work, login with password of Smartinvesta@2021.
 //The compound works in interval of 10 mins
 //Please push registration database for us don't duplicate it
+
+/* 
+We moving to online server now so you need to learn about cpanel and web server it's easy like XAMPP server and github,
+to understand how cpanel works google it you can also read some guide here https://www.hostgator.com/blog/beginner-guide-cpanel/#:~:text=cPanel%20is%20the%20control%20panel%20that%20allows%20you,interface%20that%E2%80%99ll%20enable%20you%20to%20manage%20your%20website.
+From now onwards if there is any change you want to make in the website you will have make it in github and then login to web host using 
+URL: https://da12.domains.co.za:2222
+Username: weballco
+Password:xKg08J9se1
+also in cpanel under file manager
+*/
+
+/*
+We must start with portifolio website for Company to prepare for upwork and some projects. So I created repository
+  named Portifolio, please fork it to your github account then clone it to your local repo(local github) so you can have it in your computer and 
+  VS code the connect your remote repository of Portifolio with Local repo so that you can push your changes to online and pull request
+*/
  
 require_once "connect.php";
 session_start();
@@ -149,12 +164,12 @@ if($result1->num_rows> 0){
 
 }
 $result = "All investments are compounded successfully";
-header("location:commpound.php?results=$result");
+header("location:compound.php?results=$result");
   }
   else{
 
     $result = "Your password is wrong or time left is greater than 0 mins";
-    header("location:commpound.php?results=$result");
+    header("location:compound.php?results=$result");
   }
 }
 
@@ -199,7 +214,8 @@ header("location:commpound.php?results=$result");
 <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.js"</script>
 <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"</script>
 <script type="text/javascript"> src="bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"</script>
-
+<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="js/dash.js"></script>
 
 </head>
 <!-- start of body -->

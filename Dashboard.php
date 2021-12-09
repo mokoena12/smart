@@ -1,4 +1,24 @@
 <?php
+/* 
+We moving to online server now so you need to learn about cpanel and web server it's easy like XAMPP server and github,
+to understand how cpanel works google it you can also read some guide here https://www.hostgator.com/blog/beginner-guide-cpanel/#:~:text=cPanel%20is%20the%20control%20panel%20that%20allows%20you,interface%20that%E2%80%99ll%20enable%20you%20to%20manage%20your%20website.
+From now onwards if there is any change you want to make in the website you will have make it in github and then login to web host using 
+URL: https://da12.domains.co.za:2222
+Username: weballco
+Password:xKg08J9se1
+also in cpanel under file manager
+*/
+
+/*
+We must start with portifolio website for Company to prepare for upwork and some projects. So I created repository
+  named Portifolio, please fork it to your github account then clone it to your local repo(local github) so you can have it in your computer and 
+  VS code the connect your remote repository of Portifolio with Local repo so that you can push your changes to online and pull request
+*/
+/*The website is hosted now, anychange it must be applied to online server also*/
+
+//Create google console account, learn about google console its easy. then create a site map for our website.
+
+//After the step above submit our website to google search engine
 session_start();
 
 if (isset($_SESSION["investa_user"])){
@@ -419,7 +439,7 @@ $balance =  $row["balance"];
                 </div>                                               
               </div>
               <div class="highlight-terms">
-                <p>By executing this investment, You agree to our terms and conditions (visit <a href="#">Terms</a>) to read more</p>
+                <p>By executing this investment, You agree to our terms and conditions (visit <a href="files/smartinvesta_risk.pdf">Terms</a>) to read more</p>
               </div>
               <div class="btnex2">
                 <input class="button" type="submit" id="btnexecute2" value="Invest">
@@ -540,6 +560,9 @@ $balance =  $row["balance"];
                 </div>
                 <div>
                   <input type="submit" class="btnsub" value="execute">
+                </div>
+                <div class="highlight-terms">
+                  <p>By executing this investment, You agree to our terms and conditions (visit <a href="files/smartinvesta_risk.pdf">Terms</a>) to read more</p>
                 </div>
                 
               </div>

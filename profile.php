@@ -644,7 +644,7 @@ else{
                                                 </select>
                                             </div>
                                             <div class="diveform">
-                                                <label for="address">Email</label>
+                                                <label for="address">Address</label>
                                                 <input type="text" class="name-inputs" name ="addres" id="adre" placeholder="Address">
                                                 <div class="red-text"><?php  echo $address_rr; ?></div>
                                             </div>

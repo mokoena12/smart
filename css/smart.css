@@ -1329,3 +1329,14 @@ border-radius: 50%;
     opacity: 1;
   }
   /* endof hover boxes */
+
+  /* execute btn hover */
+  .btnsub:hover {
+    opacity: 0.9;
+    color: white;
+  }
+  .clossing-btn:hover {
+      opacity: 0.9;
+      color: black;
+  }
+  /* end execute hover */

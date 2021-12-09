@@ -1245,12 +1245,16 @@ border-radius: 50%;
 .tbody>tr .close-buttonn:hover{
  text-decoration: underline;
  background: rgb(175, 40, 40);
+ 
+ 
 }
 
 .clossing-btn {
     background-color: red;
     color: white;
     border-radius: 3px;
+    justify-content: center;
+    align-content: center;
   }
   .copy-btn {
      background-image: linear-gradient(to bottom right,white, rgb(0, 183, 255), rgb(32, 85, 230));

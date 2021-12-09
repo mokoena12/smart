@@ -2856,6 +2856,7 @@ margin-left: 15px;
   margin: 5px;
   border-radius: 4px;
  width: 60%;
+ border: none;
 }
 .tbody h5{
   color: white;

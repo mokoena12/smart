@@ -453,6 +453,7 @@ $balance =  $row["balance"];
                                         <th>Investment period</th>
                                         <th>Date</th>
                                         <th>Action</th>
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
@@ -461,7 +462,8 @@ $balance =  $row["balance"];
                                         <td>$100</td>
                                         <td>3 weeks</td>
                                         <td>06 Dec 2021</td>
-                                        <td ><h5  class="close-buttonn" onclick="investment('Bronze','Raps')">Close</h5></td>
+                                        <td ><button class="close-buttonn" onclick="investment('Bronze','Raps')">Close</button></td>
+                                        <td>Open</td>
                                     </tr>
                                 </tbody>
                             </table>

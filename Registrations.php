@@ -73,12 +73,14 @@ if(empty($_POST["middle_name"])){
   }
  if(empty($_POST["password"])){
     $passwordErr = "password is required";
-  }else{
+  }
+  else{
     $pass = test_input($_POST["password"]);
   }
   if(empty($_POST["re_enter_password"])){
     $re_enter_passwordErr = "please re_enter your password";
-  }else{
+  }
+  else{
     $re_enter_password = test_input($_POST["re_enter_password"]);
 
     if($password != $re_enter_password){

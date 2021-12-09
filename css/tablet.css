@@ -2320,12 +2320,18 @@ margin-bottom: -25em;
 /* end of the notification box at the center */
 
 
-/*social med icons*/
-.social-med i{
-  font-size: 35px;
-}
-/*end-social med icons*/
-
+/*messanger icons*/
+.social-med{
+  width: 3em;
+ }
+ .social-med i{
+   font-size: 35px;
+ }
+ .social-med span{
+  width: 10em;
+  right: 3.4em;
+ }
+ /*end-messanger icons*/
 
 
 

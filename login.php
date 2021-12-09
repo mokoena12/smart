@@ -90,6 +90,7 @@ $conn->close();
 <link rel="stylesheet" href="fonts/css/svg-with-js.min.css">
 <link rel="stylesheet" href="fonts/css/v4-shims.css">
 <link rel="stylesheet" href="fonts/css/v4-shims.min.css">
+<link rel="shortcut icon" href="img/smart.investa.logo2.png" />
 
 <!-- links of styling-->
 <link rel="stylesheet" href="css/tablet.css">

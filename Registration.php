@@ -220,6 +220,7 @@ else{
     <link rel="stylesheet" href="fonts/css/svg-with-js.min.css">
     <link rel="stylesheet" href="fonts/css/v4-shims.css">
     <link rel="stylesheet" href="fonts/css/v4-shims.min.css">
+    <link rel="shortcut icon" href="img/smart.investa.logo2.png" />
     <!-- end of fonts -->
     
     <!-- start of links styling-->

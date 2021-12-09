@@ -1,4 +1,4 @@
-<?php
+<?php 
 require_once "connect.php";
 
 $pasword_username_err=$login_err="";
@@ -61,8 +61,8 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
 
 $conn->close();
 
-?>
-<Doctype html>
+ ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- start meta tags-->
@@ -153,6 +153,6 @@ $conn->close();
         <!-- end of form -->
     </div>
 
-</body>
+  </body>
 <!-- end of body -->
 </html>

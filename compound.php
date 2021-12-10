@@ -10,10 +10,9 @@ and also store the name of person registering with this link*/
 /*Make sure the equity is updated everytime we enter dashboard, like now my balance is $125 and Invested_amount is
 $115  but my equity is zero 
  */ 
-/*fix investment table, leave the amount column as it is don't delete it anymore. date column must be added. Change Datatype for period to text
-//referral bonus amount it shoulb be the total number of (referrals*10)
+ //referral bonus amount it shoulb be the total number of (referrals*10)
 
-*/
+//Initalize the dashboard during registration
 
 //In the recent trading history, the trading action column shoulb be sell or buy and status column shoulb be opened
 /*Please initialize the dashboard for a user after registration( we discussed about this) so that when we insert for a user
@@ -22,6 +21,9 @@ $115  but my equity is zero
  
 /*redirect the user to login.php after registration if the registration was successfully with the message of
 your 'Registration is successfully' */
+
+//Don't forget to push all databases to git when done
+ /*
 //There was a conflict in withdrawal table database, please dob't change anything just import it as it is You added date_with =, remove that
 //send us database for investment 
 //code compound to properly, please import time_server table for your compound to work, login with password of Smartinvesta@2021.
@@ -47,7 +49,7 @@ We must start with portifolio website for Company to prepare for upwork and some
   open it with VS code it must be in htdocs folder when clone it
   step 3. Then connect your remote repository of Portifolio with Local repo of Portifolio so that you can push your changes to online and pull requestlike you did with Bitcoin Project
 */
- 
+
 require_once "connect.php";
 session_start();
 if (isset($_SESSION["investa_user"])){
@@ -61,17 +63,19 @@ else{
   header("Location:login.php?user2=$err");
   
 }
+
 $date = time();
 $get_time = "SELECT times FROM time_server WHERE username = 'Admin'";
 $get_time = $conn->query($get_time)->fetch_assoc();
 $get_time = $get_time["times"];
 $date = ($get_time - $date)/60;
 $time =  round($date);
+//&& $time<0
 
 
 if(isset($_POST["Admin_Password"]) ){
 
-  if($_POST["Admin_Password"]=="Smartinvesta@2021." && $time<0){
+  if($_POST["Admin_Password"]=="bbb" ){
 
     $times = time() + 10*60;
 
@@ -79,96 +83,106 @@ if(isset($_POST["Admin_Password"]) ){
     $conn->query($checking);
 
      
-$deposit=0;
-$balance= $equity =0;
-$Bal = $nwBal = 0;
+$deposit=0; $comp_balance = 0;
+$Old_balance = $equity =0;
+$Inv_balance = $New_bal = 0;
 $Proft = 0;
-$amount = 0; 
+$investd_amount = 0; 
 
 function balance($A,$i,$n) {
     $Bal = $A * pow((1 + $i),$n);
    return $Bal;
 }
+$test = " not compounded";
+
 function Nwbalance($Ba,$rowB){
   $nwBal = $rowB + $Ba;
   return $nwBal; 
 }
 function profit($B,$d){
-   $Proft = $B - $d ;
+   $Proft =  $B -$d ;
    return $Proft;
 }
-$sql="SELECT balance, deposit, invested_amount FROM dashboard WHERE  username='$user' ";
-$result = $conn->query($sql);
-if($result->num_rows> 0){
-  $row = $result->fetch_assoc();
-  $balance1 =  $row["balance"];
-$deposit = $row["deposit"];
-$investd_amount = $row["invested_amount"];
-}
+$sql5="SELECT typeOfInv,periods,user,amount FROM investment";
+$result4 = $conn->query($sql5);
+$user = $result4->fetch_assoc();
 
-    $sql="SELECT typeOfInv,periods,user FROM investment";
-    $result1 = $conn->query($sql);
-    
-if($result1->num_rows> 0){ 
-  while($type = $result1->fetch_assoc()){
-      
-           $typeOfinv = $type["typeOfInv"];
-            $user = $type["user"];
-           
+$user = $user["user"];
+
+
+if($result4->num_rows> 0){ 
+  $new = $conn->query($sql5);
+  while($type = $new->fetch_assoc()){  
+    $investd_amount =$type["amount"];
+    $typeOfinv = $type["typeOfInv"];
+    $sql="SELECT balance, deposit,invested_amount FROM dashboard WHERE  username='$user' ";
+    $result = $conn->query($sql);
+
+
+    $row = $result->fetch_assoc();
+    $Old_balance =  $row["balance"];
+    $deposit = $row["deposit"];
+
+    $invested = $row["invested_amount"];
           if($typeOfinv=="Bronze"){
             $i = 0.04;
             $n=1;
-            $balance = balance($investd_amount,0.04,1);      
-            $nwBal = Nwbalance($balance1,$balance);
-            $equity = $nwBal - $investd_amount;          
-            $Proft = profit($nwBal,$deposit);
+            $comp_balance = balance($investd_amount,0.04,1); 
+            $Inv_balance = profit($comp_balance,$Old_balance,);     
+            $New_bal = Nwbalance($Old_balance,$Inv_balance);
+            $equity = $New_bal - $invested;          
+            $Proft = profit($New_bal,$deposit);
             
-            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft, equity = $equity
+            $sql ="UPDATE dashboard SET balance = $New_bal , profit_return = $Proft, equity = $equity
              WHERE username = '$user'";
-            $result3 = $conn->query($sql);
+           
+
 
          }else if($typeOfinv=="Titanium"){
           $i = 0.05;
           $n=1;
-          $balance = balance($investd_amount,0.05,1);    
-            $nwBal = Nwbalance($balance1,$balance);
-            $equity = $nwBal - $investd_amount;           
-            $Proft = profit($nwBal,$deposit);
-
-          $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft, equity = $equity
-          WHERE username = '$user'";
+          $comp_balance = balance($investd_amount,0.05,1); 
+            $Inv_balance = profit($comp_balance,$Old_balance,);     
+            $New_bal = Nwbalance($Old_balance,$Inv_balance);
+            $equity = $New_bal - $invested;          
+            $Proft = profit($New_bal,$deposit);
+          
+          $sql ="UPDATE dashboard SET balance = $New_bal , profit_return = $Proft, equity = $equity
+           WHERE username = '$user'";
           $result3 = $conn->query($sql);
             
           }else if($typeOfinv=="Gold"){
             $i = 0.10;
             $n=1;
-            $balance = balance($investd_amount,0.10,1);
-            $nwBal = Nwbalance($balance1,$balance);
-            $equity = $nwBal - $investd_amount;
-            $Proft = profit($nwBal,$deposit);
-
-            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft, equity = $equity
-            WHERE username = '$user'";
-            $result3 = $conn->query($sql);
+            $comp_balance = balance($investd_amount,0.10,1); 
+            $Inv_balance = profit($comp_balance,$Old_balance,);     
+            $New_bal = Nwbalance($Old_balance,$Inv_balance);
+            $equity = $New_bal - $invested;          
+            $Proft = profit($New_bal,$deposit);
+          
+          $sql ="UPDATE dashboard SET balance = $New_bal , profit_return = $Proft, equity = $equity
+           WHERE username = '$user'";
+          $result3 = $conn->query($sql);
             
           }elseif($typeOfinv=="Diamond"){
             $i = 0.20;
             $n=1;
-            $balance = balance($investd_amount,0.20,1); 
-            $nwBal = Nwbalance($balance1,$balance);
-            $equity = $nwBal - $investd_amount;
-            $Proft = profit($nwBal,$deposit);
-
-            $sql ="UPDATE dashboard SET balance = $nwBal , profit_return = $Proft, equity = $equity
-            WHERE username = '$user'";
+            $comp_balance = balance($investd_amount,0.20,1); 
+            $Inv_balance = profit($comp_balance,$Old_balance,);     
+            $New_bal = Nwbalance($Old_balance,$Inv_balance);
+            $equity = $New_bal - $invested;          
+            $Proft = profit($New_bal,$deposit);
+            
+            $sql ="UPDATE dashboard SET balance = $New_bal , profit_return = $Proft, equity = $equity
+             WHERE username = '$user'";
             $result3 = $conn->query($sql);
           }
-        
+          $result = "All investments are compounded successfully";
+          header("location:compound.php?results=$result");
     }
 
+    
 }
-$result = "All investments are compounded successfully";
-header("location:compound.php?results=$result");
   }
   else{
 

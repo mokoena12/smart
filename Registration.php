@@ -2,9 +2,10 @@
 //Data type for registration date column is register_date datetime default now();
 require_once "connect.php";
 //define vaariables and set to empty
-$firstnameErr =$approved= $middle_nameErr = $lastnameErr =  $countryErr = $emailErr = $cellphoneErr = $usernameErr  = $passwordErr =
-$re_enter_passwordErr = "";
-$firstname = $middle_name = $lastname = $country = $email = $cellphone = $username = $pass = $re_enter_pass = "";
+$firstnameErr =$approved= $middle_nameErr = $lastnameErr =  $countryErr = $emailErr = $usernameErr  = $passwordErr =
+$re_enter_passwordErr ="";
+$firstname = $middle_name = $lastname = $country = $email = $username = $pass = $re_enter_pass = $friend_name = $Succes = "";
+$cellphone = $cellphoneErr = 0;
 $error = $error1 = "";
 
 if(isset($_POST["name"])){
@@ -76,11 +77,94 @@ if(empty($_POST["name2"])){
     $error = "Password do not match";
 }
   }
+  
+  if(empty($_POST["telphone"])){
+    $cellphoneErr = "cellphone is required";
+  }
+  elseif(strlen($_POST["telphone"])<=9){
+   $approved=0;
+   $Cell_rr = "phone number must be atleast 10";
+  }else{
+    $cellphone = test_input($_POST["telphone"]);
+  }
+
+
+ if(empty($_POST["password"])){
+    $passwordErr = "password is required";
+    $approved = 0;
+
+  }else{
+    $pass = test_input($_POST["password"]);
+  }
+  if(empty($_POST["password2"])){
+    $approved = 0;
+
+    $re_enter_passwordErr = "please re_enter your password";
+  }else{
+    $re_enter_pass = test_input($_POST["password2"]);
+
     
+  if($password === $re_enter_pass){
+   
+}else{
+    $error = "Password do not match";
+    $approved = 0;
+}
+  }
+    
+  //Select in the database
+  $u = "SELECT username FROM registration WHERE username = '$username'";
+  $result = $conn->query($u);
+  if(empty($_POST["user"])){
+    $usernameErr = "username is required";
+    $approved = 0;
+
+  }elseif($result->num_rows>0){
+      $approved=0;
+      $U_rr = "Username already exist";
+    
+  }else{
+    $username = test_input($_POST["user"]);
+  }
+
+
+   $sql = "SELECT firstname,lastname FROM registration WHERE email = '$email'" ;
+   $result = $conn->query($sql);
+
+if($result->num_rows>0){
+    $approved = 0;
+    $email_rr = "Your email already exist";
+
+}
+ $C = "SELECT firstname,lastname FROM registration WHERE cellphone = '$cellphone' " ;
+   $result1 = $conn->query($C);
+
+if($result->num_rows>0){
+    $approved = 0;
+    $error1 = "Number is already registered";
+}
+} 
     
     $stmt = $conn->prepare("INSERT INTO registration (firstname,middle_name,lastname,country,email,cellphone,username,passwords,re_enter_pass)
     values(?,?,?,?,?,?,?,?,?)");
     $stmt->bind_param("sssssisss",$firstname,$middle_name,$lastname,$country,$email,$cellphone,$username,$pass,$re_enter_pass);
+    
+    if($approved == 0){
+    
+    } else{
+        $stmt->execute();
+       
+    }
+ 
+
+ $friend_name = "";
+if(isset($_GET["ref"])){
+  $friend_name = $firstname;
+  $stmt = $conn->prepare("INSERT INTO refferals (username,friend_name) VALUES($user,$friend_name)");
+  $stmt->bind_param("ss",$user,$friend_name);
+  $stmt->execute();
+
+} 
 
     $approved = 1;
 
@@ -116,7 +200,9 @@ if(empty($_POST["name2"])){
         mail($to,$subject,$message,$headers); */
 
         $approved = 1;
-        echo "registered successfully..";
+        $Succes = "registered successfully..";
+         
+
     }
     else{
         $approved = 0;
@@ -127,7 +213,7 @@ if(empty($_POST["name2"])){
 
 
     $conn->close();
-} 
+ 
      
 
 ?>

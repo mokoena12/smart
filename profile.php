@@ -14,9 +14,9 @@ else{
 }
 require_once "connect.php";
 
-$username = $phone = $country = $address =$email1 = $bank_name = $accnt_holder = $bit_addres = ""; $accont_num = 0;
+$username = $country = $address =$email1 = $bank_name = $accnt_holder = $bit_addres = ""; $accont_num = $phone = 0;
 $username_rr = $phone_rr = $country_rr = $address_rr = $bank_namerr = $accnt_holderrr = $bit_addresrr = $accont_numrr =""; 
-if(isset($_POST["full"],$_POST["bank"])){
+if(isset($_POST["phone"],$_POST["bank"],$_POST["role"])){
  
     $approved = 1;
     function test_input($data){
@@ -69,10 +69,10 @@ if(isset($_POST["full"],$_POST["bank"])){
 
     if(empty($_POST["phone"])){
         $phone_rr = "Phone number is required";
-      }elseif($_POST["phone"] < 9){
-          $phone_rr = "Number should be more than 8 ";
-          $approved = 0;
-      }else{
+      }elseif(strlen($_POST["phone"])<=9){
+        $approved=0;
+        $Cell_rr = "phone number must be atleast 10";
+       }else{
         $phone = test_input($_POST["phone"]);
         $sql ="UPDATE registration SET cellphone = $phone
       WHERE username = '$user'";
@@ -88,31 +88,31 @@ if(isset($_POST["full"],$_POST["bank"])){
       WHERE username = '$user'";
       $result2 = $conn->query($sql);
       }
-      if(empty($_POST["addres"])){
+
+
+      if(empty($_POST["role"])){
         $address_rr = "address is required";
         $approved = 0;
       }elseif(!filter_var($address, FILTER_VALIDATE_EMAIL)) {
         $address_rr = "Invalid email format";
         $approved = 0;
       }else{
-      $address = test_input($_POST["addres"]);
+      $address = test_input($_POST["role"]);
       $sql ="UPDATE registration SET  email = $address 
       WHERE username = '$user'";
       $result2 = $conn->query($sql);
       }
     
-      if(empty($_POST["full"])){
+      if(empty($_POST["users"])){
         $username_rr = "username is required";
         $approved = 0;
       }else{
-        $username =ucfirst(strtolower(test_input($_POST["full"]))) ;
+        $username =ucfirst(strtolower(test_input($_POST["users"]))) ;
         $sql ="UPDATE registration SET username = $username
     WHERE username = '$user'";
     $result2 = $conn->query($sql);
       }
     }
-
-
     
  ?>
 <!--
@@ -382,12 +382,7 @@ else{
                                                 <select  class="name-inputs" name="status"  id="status"  disabled>
                                                     <option value="Active">Active</option>
                                                 </select>
-                                            </div>
-                                            <div class="diveform">
-                                                <label for="fullname">Username </label>
-                                                    <input type="text" class="name-inputs" name="full" id="fullname">
-                                                    <div class="red-text"><?php  echo $username_rr; ?></div>
-                                            </div>
+                                            </div>                                         
                                             <div class="diveform">
                                                 <label for="phone">Phone</label>
                                                 <input type="tel" class="name-inputs" name="phone" id="phone" placeholder="Phone">
@@ -642,6 +637,7 @@ else{
                                                     <option value="Zambia">Zambia</option>
                                                     <option value="Zimbabwe">Zimbabwe</option>
                                                 </select>
+
                                             </div>
                                             <div class="diveform">
                                                 <label for="address">Address</label>
@@ -666,15 +662,7 @@ else{
                                             <div class="diveform">
                                                 <label for="userna">Username</label>
                                                 <input type="text" class="name-inputs" name="users" id="userna" placeholder="Username">
-                                                    
-                                            </div>
-                                            <div class="diveform">
-                                                <label for="passwar">Password</label>
-                                                    <input type="password" class="name-inputs" name="full" id="passwar" placeholder="Password">
-                                            </div>
-                                            <div class="diveform">
-                                                <label for="pass-comfirm">Confirm Password</label>
-                                                <input type="pass" class="name-inputs" name="passwar" id="passw" placeholder="Password">
+                                                <div class="red-text"><?php  echo $username_rr; ?></div>
                                             </div>
                                         </div>
                                         <div class="p-btnsub">

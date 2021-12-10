@@ -274,7 +274,7 @@ if(isset($_GET["invest_delete"])){
 $user = $_GET["invest_delete"];
 $amount = 0;
   $type= $_GET["type"];
-  $sql = "DELETE FROM investment WHERE user = '$user' AND typeOfInv='$type'";
+  $sql = "DELETE FROM investment WHERE user = '$user' AND date_inv='$type'";
   $select = "SELECT amount FROM investment WHERE user = '$user' AND typeOfInv='$type'";
   $select= $conn->query($select);
   while($row = $select->fetch_assoc()){
@@ -283,13 +283,13 @@ $amount = $amount + $row["amount"];
   $get_amount= "SELECT invested_amount,equity,balance FROM dashboard WHERE  username='$user'";
   $get_amount = $conn->query($get_amount)->fetch_assoc();
   $amount = $get_amount["invested_amount"] - $amount;
-  $equity = $get_amount["balance"] - $amount;
+  $equity = $get_amount["equity"] + $amount;
   
   $update = "UPDATE dashboard SET invested_amount=$amount, equity=$equity";
 
   if($conn->query($sql) && $conn->query($update)){
     
-    echo "Your $type investment is now closed. Please refresh the browser";
+    echo "Your  investment of $ $amount  and equity os $equity is now closed. Please refresh the browser";
   }
   else{
     echo "Failed to close your $type investment, Try again later";

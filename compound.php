@@ -39,6 +39,8 @@ Username: weballco
 Password:xKg08J9se1
 then navigate to  file manager cpanel under
 */
+//Your codes in profile.php for updating are not working please fix 
+// referral.php is giving us errors please fix that
 
 /*
 We must start with portifolio website for Company to prepare for upwork and some projects. So I created repository

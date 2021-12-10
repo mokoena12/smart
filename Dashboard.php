@@ -497,13 +497,42 @@ $ref_amnt = $n = 0;
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
-                                    <tr>
-                                        <td>Bronze</td>
-                                        <td>$100</td>
-                                        <td>3 weeks</td>
-                                        <td>06 Dec 2021</td>
-                                        <td ><h5  class="close-buttonn" onclick="investment('Bronze','Raps')">Close</h5></td>
+                                  <?php 
+                                  $investing= "SELECT typeOfInv,periods,user,amount,date_inv FROM investment WHERE user='$user'";
+                                  $result = $conn->query($investing);
+                                  if($result->num_rows> 0){
+                                    while($investing=$result->fetch_assoc()){
+                                      $date = $investing["date_inv"];
+                                      $user = $investing["user"];
+                                      echo "
+                                      
+                                      <tr>
+                                        <td>".$investing["typeOfInv"]."</td>
+                                        <td>".$investing["amount"]."</td>
+                                        <td>".$investing["periods"]."</td>
+                                        <td>".$investing["date_inv"]."</td>
+                                        <td ><h5  class='close-buttonn' onclick=\"investment('$date','$user')\">Close</h5></td>
                                     </tr>
+
+                                      ";
+                                    }
+
+                                  }
+                                  else{
+                                    echo "
+                                    <tr>
+                                    <td>None</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>none</td>
+                                    <td >none</h5></td>
+                                </tr>
+                                    ";
+                                   
+                                  }
+                                  
+                                  ?>
+                                    
                                 </tbody>
                             </table>
                         </div>

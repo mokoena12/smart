@@ -154,6 +154,7 @@ style='background-color:red; color:white;border-radius:3px;font-weight:bold;font
   $headers .= "From:info@smartinvesta.co.za"."\r\n";
 
   mail($to,$subject,$message,$headers); */
+  https://web.whatsapp.com/send?text=Luno:%20%E2%98%91%EF%B8%8F%20The%20Ultimate%20Guide%20for%20Beginners%20(%20Step%20By%20Step%20Guide%20)%20https://sgq.io/vlm0oom
   if($amount<$value){
     $invest_results = "unsuccessful, your amount ($amount) is less than min widthdrawal $value";
     header("Location:withdrawal.php?results=$invest_results");
@@ -275,7 +276,7 @@ $user = $_GET["invest_delete"];
 $amount = 0;
   $type= $_GET["type"];
   $sql = "DELETE FROM investment WHERE user = '$user' AND date_inv='$type'";
-  $select = "SELECT amount FROM investment WHERE user = '$user' AND typeOfInv='$type'";
+  $select = "SELECT amount FROM investment WHERE user = '$user' AND date_inv='$type'";
   $select= $conn->query($select);
   while($row = $select->fetch_assoc()){
 $amount = $amount + $row["amount"];
@@ -289,7 +290,7 @@ $amount = $amount + $row["amount"];
 
   if($conn->query($sql) && $conn->query($update)){
     
-    echo "Your  investment of $ $amount  and equity os $equity is now closed. Please refresh the browser";
+    echo "Your  investment of $$amount is successfully closed and  your equity  is $$equity. Please refresh the browser to see this changes";
   }
   else{
     echo "Failed to close your $type investment, Try again later";

@@ -271,8 +271,7 @@ style='background-color:red; color:white;border-radius:3px;font-weight:bold;font
 <?php 
 //Code to delete investment
 if(isset($_GET["invest_delete"])){
-
-  $user = $_GET["invest_delete"];
+$user = $_GET["invest_delete"];
 $amount = 0;
   $type= $_GET["type"];
   $sql = "DELETE FROM investment WHERE user = '$user' AND typeOfInv='$type'";

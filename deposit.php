@@ -163,9 +163,9 @@ else{
                                 <div class="payment-wallet">
                                     <select name="depositing-methods" id="methods-fund">
                                         <option value="">--Select Payment Method</option>
-                                        <option value="BITCOIN">BITCOIN</option>
-                                        <option value="BANK">BANK</option>
-                                        <option value="Instant EFT">Instant EFT</option>
+                                        <option value="BITCOIN">Luno</option>
+                                        <option value="BANK">Perfect Money</option>
+                                        <option value="Instant EFT">Skrill</option>
                                     </select>
                                 </div>
                                 <div class="for-bitcoin payment-wallet">
@@ -188,17 +188,22 @@ else{
                                     <span style="color:red;">The minimun deposit is $30</span>
 
                                         <p>
-                                            To deposit, please choose the payment method at the
-                                            Payment Methods panel and make the payment.
+                                            To deposit, please choose the payment method In the form below
                                         </p>
                                         <p>
-                                            If you choose Bitcoin method then you will have to deposit using Bitcoin wallet like Luno
+                                           We only accept payment from bitcoin wallets like Luno so you must have bitcoin wallet, you need
+                                           to make transfer from your local bank to your wallet then make transfer from your wallet to your smartinvesta account using
+                                           the adress provided below.
+
                                           </p>
                                           <p>
-                                            If you choose Bank card please be adviced we only accept Visa/mastercard payment mathods
+                                            Example: If you choose Luno then you will be redirected to luno  account,copy your smartinvesta wallet adress 
+                                            provided and  make transfer using Luno.
+                                            After transfer come again here and fill the deposit form to upload proof of payment it can be pdf or screenshot
                                           </p>
                                           <p>
-                                            If you choose Bank EFT then you must have online banking account and banking app
+                                            Your payment will reflect on your smartinvesta account within 4 hours,
+                                            then you can start investing
                                           </p>
 
                                     </strong>
@@ -280,7 +285,8 @@ else{
                         </div>
                         <div class="end-part">
                             <div class="end-shift">
-                                Showing 0 to 0 0f 0 entries 
+                                
+                                <?php echo " Showing $n to $n 0f 10 entries  "?>
                             </div>
                             <div class="prev-next">
                                 <ul>

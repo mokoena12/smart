@@ -154,6 +154,7 @@ style='background-color:red; color:white;border-radius:3px;font-weight:bold;font
   $headers .= "From:info@smartinvesta.co.za"."\r\n";
 
   mail($to,$subject,$message,$headers); */
+  https://web.whatsapp.com/send?text=Luno:%20%E2%98%91%EF%B8%8F%20The%20Ultimate%20Guide%20for%20Beginners%20(%20Step%20By%20Step%20Guide%20)%20https://sgq.io/vlm0oom
   if($amount<$value){
     $invest_results = "unsuccessful, your amount ($amount) is less than min widthdrawal $value";
     header("Location:withdrawal.php?results=$invest_results");

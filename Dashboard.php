@@ -1,4 +1,5 @@
 <?php
+
 //make shortcut icons for login.php and registration.php
 
 /* 

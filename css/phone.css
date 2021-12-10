@@ -1534,15 +1534,15 @@ header .logo img{
 }
 .last-blockdiv .socio{
   position: absolute;
-  width: 20em;
-  left: 5%;
+  width: 17em;
+  justify-content: center;
   z-index: 1;
   text-align: center;
+  left: 18%;
 }
 .last-blockdiv .socio a{
   font-size: 2em;
   margin: 7px;
-  left: 30;
   padding: 5px;
 }
 /* start of the dashboard page */

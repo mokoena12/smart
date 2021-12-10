@@ -1534,8 +1534,8 @@ header .logo img{
 }
 .last-blockdiv .socio{
   position: absolute;
-  width: 30em;
-  left: 10%;
+  width: 20em;
+  left: 5%;
   z-index: 1;
   text-align: center;
 }
@@ -2620,26 +2620,22 @@ text-align: center;
 }
 .profile-header {
   border-bottom: 1px solid #ccc;
-  line-height: 30px;
+  width: 100%;  
 }
 .profile-header ul {
+  width: 98%;
   display: flex;
-  flex: 0 0 100%;
-  flex-wrap: wrap;
+  flex-direction: row;
 
 }
 .profile-header ul li{
   list-style: none;
-  margin-right: 6px;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; 
 }
 .profile-header ul li a {
   text-decoration: none;
-  padding: 0.50em 1em;
   background-color: blue;
   color: white;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
 }
 .profile-header ul li a:active {
   background-color: white;

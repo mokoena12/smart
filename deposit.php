@@ -165,7 +165,7 @@ else{
                                         <option value="">--Select Payment Method</option>
                                         <option value="BITCOIN">Luno</option>
                                         <option value="BANK">Perfect Money</option>
-                                        <option value="Instant EFT">S</option>
+                                        <option value="Instant EFT">Skrill</option>
                                     </select>
                                 </div>
                                 <div class="for-bitcoin payment-wallet">
@@ -192,16 +192,18 @@ else{
                                         </p>
                                         <p>
                                            We only accept payment from bitcoin wallets like Luno so you must have bitcoin wallet, you need
-                                           to make transfer from you local bank to your wallet then make transfer from your wallet to your smartinvesta account
+                                           to make transfer from your local bank to your wallet then make transfer from your wallet to your smartinvesta account using
+                                           the adress provided below.
 
                                           </p>
                                           <p>
-                                            Example: If you choose Luno then you will be redirected to luno with luno adress to make transfer.
-                                            after transfer come again here and fill the deposit form to upload proof of payment it can be pdf or screenshot
+                                            Example: If you choose Luno then you will be redirected to luno  account,copy your smartinvesta wallet adress 
+                                            provided and  make transfer using Luno.
+                                            After transfer come again here and fill the deposit form to upload proof of payment it can be pdf or screenshot
                                           </p>
                                           <p>
-                                              F
-                                            Your payment will reflect on your smartinvesta account within 4 hours
+                                            Your payment will reflect on your smartinvesta account within 4 hours,
+                                            then you can start investing
                                           </p>
 
                                     </strong>

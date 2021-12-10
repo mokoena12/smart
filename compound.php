@@ -137,7 +137,7 @@ if($result4->num_rows> 0){
             
             $sql ="UPDATE dashboard SET balance = $New_bal , profit_return = $Proft, equity = $equity
              WHERE username = '$user'";
-           
+            $conn->query($sql);
 
 
          }else if($typeOfinv=="Titanium"){
@@ -151,7 +151,7 @@ if($result4->num_rows> 0){
           
           $sql ="UPDATE dashboard SET balance = $New_bal , profit_return = $Proft, equity = $equity
            WHERE username = '$user'";
-          $result3 = $conn->query($sql);
+           $conn->query($sql);
             
           }else if($typeOfinv=="Gold"){
             $i = 0.10;
@@ -164,7 +164,7 @@ if($result4->num_rows> 0){
           
           $sql ="UPDATE dashboard SET balance = $New_bal , profit_return = $Proft, equity = $equity
            WHERE username = '$user'";
-          $result3 = $conn->query($sql);
+           $conn->query($sql);
             
           }elseif($typeOfinv=="Diamond"){
             $i = 0.20;
@@ -177,7 +177,7 @@ if($result4->num_rows> 0){
             
             $sql ="UPDATE dashboard SET balance = $New_bal , profit_return = $Proft, equity = $equity
              WHERE username = '$user'";
-            $result3 = $conn->query($sql);
+            $conn->query($sql);
           }
           $result = "All investments are compounded successfully";
           header("location:compound.php?results=$result");

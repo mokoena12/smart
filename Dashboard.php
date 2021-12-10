@@ -28,8 +28,12 @@ We must start with portifolio website for Company to prepare for upwork and some
 //results or you must be redirected to our website
 
 //Test the website back and forth make sure the test everything in the website, create new account, deposit etc.
+
 //Please fix dashboard( the display for small phones the issues we discussed)and make your changes to server also
-//fix the tittle tag for registration 
+
+//fix the tittle tag for registration
+
+//Code deposit code instructions and deposit form;
 session_start();
 
 if (isset($_SESSION["investa_user"])){

@@ -31,17 +31,21 @@ your 'Registration is successfully' */
 /* 
 We moving to online server now so you need to learn about cpanel and web server it's easy like XAMPP server and github,
 to understand how cpanel works google it you can also read some guide here https://www.hostgator.com/blog/beginner-guide-cpanel/#:~:text=cPanel%20is%20the%20control%20panel%20that%20allows%20you,interface%20that%E2%80%99ll%20enable%20you%20to%20manage%20your%20website.
-From now onwards if there is any change you want to make in the website you will have make it in github and then login to web host using 
+From now onwards if there is any change you want to make in the website you will have make it in github and then login to our cpanel using the following link and details
 URL: https://da12.domains.co.za:2222
 Username: weballco
 Password:xKg08J9se1
-also in cpanel under file manager
+then navigate to  file manager cpanel under
 */
 
 /*
 We must start with portifolio website for Company to prepare for upwork and some projects. So I created repository
-  named Portifolio, please fork it to your github account then clone it to your local repo(local github) so you can have it in your computer and 
-  VS code the connect your remote repository of Portifolio with Local repo so that you can push your changes to online and pull request
+  named Portifolio,
+  follow the steps to start working with it
+  step 1. fork  the repo  to your github account 
+  step 2. Then clone it to your local repo(local github) so that you can have it in your computer and 
+  open it with VS code it must be in htdocs folder when clone it
+  step 3. Then connect your remote repository of Portifolio with Local repo of Portifolio so that you can push your changes to online and pull requestlike you did with Bitcoin Project
 */
  
 require_once "connect.php";

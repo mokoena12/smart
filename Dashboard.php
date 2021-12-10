@@ -7,7 +7,7 @@ From now onwards if there is any change you want to make in the website you will
 URL: https://da12.domains.co.za:2222
 Username: weballco
 Password:xKg08J9se1
-also in cpanel under file manager
+then navigate to  file manager cpanel under
 */
 
 
@@ -22,6 +22,11 @@ We must start with portifolio website for Company to prepare for upwork and some
 //Create google console account, learn about google console its easy. then create a site map for our website.
 
 //After the step above submit our website to google search engine
+//Once our website is submittedd to google search engine test it, go to google and type smartinvest.co.za it must appear on search
+//results or you must be redirected to our website
+
+//Test the website back and forth make sure the test everything in the website, create new account, deposit etc.
+
 session_start();
 
 if (isset($_SESSION["investa_user"])){

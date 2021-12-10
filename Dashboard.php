@@ -500,9 +500,19 @@ $ref_amnt = $n = 0;
                                         <th>Investment period</th>
                                         <th>Date</th>
                                         <th>Action</th>
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
+
+                                    <tr>
+                                        <td>Bronze</td>
+                                        <td>$100</td>
+                                        <td>3 weeks</td>
+                                        <td>06 Dec 2021</td>
+                                        <td ><button class="close-buttonn" onclick="investment('Bronze','Raps')">Close</button></td>
+                                        <td>Open</td>
+
                                   <?php 
                                   $investing= "SELECT typeOfInv,periods,user,amount,date_inv FROM investment WHERE user='$user'";
                                   $result = $conn->query($investing);
@@ -518,6 +528,7 @@ $ref_amnt = $n = 0;
                                         <td>".$investing["periods"]."</td>
                                         <td>".$investing["date_inv"]."</td>
                                         <td ><h5  class='close-buttonn' onclick=\"investment('$date','$user')\">Close</h5></td>
+
                                     </tr>
 
                                       ";

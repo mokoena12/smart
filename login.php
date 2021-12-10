@@ -19,7 +19,7 @@ function sanitize($value){
 
 session_start();
 if(isset($_SESSION["investa_user"])){
-    header("location:dashboard.php");
+    header("location:Dashboard.php");
 }
 
 if($_SERVER["REQUEST_METHOD"]== "POST"){

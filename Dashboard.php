@@ -1,8 +1,13 @@
 <?php
-
 //Create google console account, learn about google console its easy. then create a site map for our website.
 
 //After the step above submit our website to google search engine
+//Once our website is submittedd to google search engine test it, go to google and type smartinvest.co.za it must appear on search
+//results or you must be redirected to our website
+
+//Test the website back and forth make sure the test everything in the website, create new account, deposit etc.
+//Please fix dashboard( the display for small phones the issues we discussed)and make your changes to server also
+
 session_start();
 
 if (isset($_SESSION["investa_user"])){
@@ -33,6 +38,18 @@ $balance =  $row["balance"];
  $deposit = $row["deposit"];
  $Equity = $row["equity"];
 
+}
+
+$ref_amnt = $n = 0;
+  $sql_r="SELECT friend_name FROM refferals WHERE username = '$user'";
+  $result2 = $conn->query($sql_r);
+                     
+  if($result2 !== FALSE && $result2->num_rows> 0){               
+  while($n=0 && $row2 = $result2->fetch_assoc()){
+     $ref_amnt = $n*10;  
+      $sql_r="UPDATE dashboard SET refferal_bonus = $ref_amnt WHERE username = '$user'";
+      $result2 = $conn->query($sql_r);  
+  }
 }
 
 ?>
@@ -227,7 +244,7 @@ $balance =  $row["balance"];
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Referral Bonus</span>
-                  <span class="money_balance">$ <?php echo $referral_bonus;?></span>
+                  <span class="money_balance">$ <?php echo $ref_amnt;?></span>
                 </div>
               </div>
               <!-- end of bonus box -->
@@ -460,13 +477,42 @@ $balance =  $row["balance"];
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
-                                    <tr>
-                                        <td>Bronze</td>
-                                        <td>$100</td>
-                                        <td>3 weeks</td>
-                                        <td>06 Dec 2021</td>
-                                        <td ><h5  class="close-buttonn" onclick="investment('Bronze','Raps')">Close</h5></td>
+                                  <?php 
+                                  $investing= "SELECT typeOfInv,periods,user,amount,date_inv FROM investment WHERE user='$user'";
+                                  $result = $conn->query($investing);
+                                  if($result->num_rows> 0){
+                                    while($investing=$result->fetch_assoc()){
+                                      $date = $investing["date_inv"];
+                                      $user = $investing["user"];
+                                      echo "
+                                      
+                                      <tr>
+                                        <td>".$investing["typeOfInv"]."</td>
+                                        <td>".$investing["amount"]."</td>
+                                        <td>".$investing["periods"]."</td>
+                                        <td>".$investing["date_inv"]."</td>
+                                        <td ><h5  class='close-buttonn' onclick=\"investment('$date','$user')\">Close</h5></td>
                                     </tr>
+
+                                      ";
+                                    }
+
+                                  }
+                                  else{
+                                    echo "
+                                    <tr>
+                                    <td>None</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>none</td>
+                                    <td >none</h5></td>
+                                </tr>
+                                    ";
+                                   
+                                  }
+                                  
+                                  ?>
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -571,16 +617,7 @@ $balance =  $row["balance"];
                 </thead>
                 <tbody class="tablebody" >
                   <!-- This is the only part to be  changed-->
-                  <tr>
-                    <td>FOREX</td>
-                    <td>USDJPY</td>
-                    <td></td>
-                    <td>125.25</td>
-                    <td>105.25</td>
-                    <td>135.25</td>
-                    <td></td>
-                    <td><button class="clossing-btn">close</button></td>
-                  </tr>
+                   
                  <?php  
                    
                  $sql="SELECT trading_type,currency_pair,,trading_action ,lot_size,entry_price,stop_loss,take_profit FROM live_trading WHERE username = '$user'";

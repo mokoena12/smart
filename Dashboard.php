@@ -1,24 +1,33 @@
 <?php
+//make shortcut icons for login.php and registration.php
+
 /* 
 We moving to online server now so you need to learn about cpanel and web server it's easy like XAMPP server and github,
 to understand how cpanel works google it you can also read some guide here https://www.hostgator.com/blog/beginner-guide-cpanel/#:~:text=cPanel%20is%20the%20control%20panel%20that%20allows%20you,interface%20that%E2%80%99ll%20enable%20you%20to%20manage%20your%20website.
-From now onwards if there is any change you want to make in the website you will have make it in github and then login to web host using 
+From now onwards if there is any change you want to make in the website you will have make it in github and then login to our cpanel using the following link and details
 URL: https://da12.domains.co.za:2222
 Username: weballco
 Password:xKg08J9se1
-also in cpanel under file manager
+then navigate to  file manager cpanel under
 */
+
 
 /*
 We must start with portifolio website for Company to prepare for upwork and some projects. So I created repository
   named Portifolio, please fork it to your github account then clone it to your local repo(local github) so you can have it in your computer and 
   VS code the connect your remote repository of Portifolio with Local repo so that you can push your changes to online and pull request
 */
+
 /*The website is hosted now, anychange it must be applied to online server also*/
 
 //Create google console account, learn about google console its easy. then create a site map for our website.
 
 //After the step above submit our website to google search engine
+//Once our website is submittedd to google search engine test it, go to google and type smartinvest.co.za it must appear on search
+//results or you must be redirected to our website
+
+//Test the website back and forth make sure the test everything in the website, create new account, deposit etc.
+
 session_start();
 
 if (isset($_SESSION["investa_user"])){
@@ -49,6 +58,18 @@ $balance =  $row["balance"];
  $deposit = $row["deposit"];
  $Equity = $row["equity"];
 
+}
+
+$ref_amnt = $n = 0;
+  $sql_r="SELECT friend_name FROM refferals WHERE username = '$user'";
+  $result2 = $conn->query($sql_r);
+                     
+  if($result2 !== FALSE && $result2->num_rows> 0){               
+  while($n=0 && $row2 = $result2->fetch_assoc()){
+     $ref_amnt = $n*10;  
+      $sql_r="UPDATE dashboard SET refferal_bonus = $ref_amnt WHERE username = '$user'";
+      $result2 = $conn->query($sql_r);  
+  }
 }
 
 ?>
@@ -243,7 +264,7 @@ $balance =  $row["balance"];
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Referral Bonus</span>
-                  <span class="money_balance">$ <?php echo $referral_bonus;?></span>
+                  <span class="money_balance">$ <?php echo $ref_amnt;?></span>
                 </div>
               </div>
               <!-- end of bonus box -->
@@ -477,6 +498,7 @@ $balance =  $row["balance"];
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
+
                                     <tr>
                                         <td>Bronze</td>
                                         <td>$100</td>
@@ -484,7 +506,44 @@ $balance =  $row["balance"];
                                         <td>06 Dec 2021</td>
                                         <td ><button class="close-buttonn" onclick="investment('Bronze','Raps')">Close</button></td>
                                         <td>Open</td>
+
+                                  <?php 
+                                  $investing= "SELECT typeOfInv,periods,user,amount,date_inv FROM investment WHERE user='$user'";
+                                  $result = $conn->query($investing);
+                                  if($result->num_rows> 0){
+                                    while($investing=$result->fetch_assoc()){
+                                      $date = $investing["date_inv"];
+                                      $user = $investing["user"];
+                                      echo "
+                                      
+                                      <tr>
+                                        <td>".$investing["typeOfInv"]."</td>
+                                        <td>".$investing["amount"]."</td>
+                                        <td>".$investing["periods"]."</td>
+                                        <td>".$investing["date_inv"]."</td>
+                                        <td ><h5  class='close-buttonn' onclick=\"investment('$date','$user')\">Close</h5></td>
+
                                     </tr>
+
+                                      ";
+                                    }
+
+                                  }
+                                  else{
+                                    echo "
+                                    <tr>
+                                    <td>None</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>none</td>
+                                    <td >none</h5></td>
+                                </tr>
+                                    ";
+                                   
+                                  }
+                                  
+                                  ?>
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -589,16 +648,7 @@ $balance =  $row["balance"];
                 </thead>
                 <tbody class="tablebody" >
                   <!-- This is the only part to be  changed-->
-                  <tr>
-                    <td>FOREX</td>
-                    <td>USDJPY</td>
-                    <td></td>
-                    <td>125.25</td>
-                    <td>105.25</td>
-                    <td>135.25</td>
-                    <td></td>
-                    <td><button class="clossing-btn">close</button></td>
-                  </tr>
+                   
                  <?php  
                    
                  $sql="SELECT trading_type,currency_pair,,trading_action ,lot_size,entry_price,stop_loss,take_profit FROM live_trading WHERE username = '$user'";

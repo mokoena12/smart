@@ -7,7 +7,7 @@
 
 //Test the website back and forth make sure the test everything in the website, create new account, deposit etc.
 //Please fix dashboard( the display for small phones the issues we discussed)and make your changes to server also
-
+//fix the tittle tag for registration 
 session_start();
 
 if (isset($_SESSION["investa_user"])){
@@ -474,9 +474,19 @@ $ref_amnt = $n = 0;
                                         <th>Investment period</th>
                                         <th>Date</th>
                                         <th>Action</th>
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
+
+                                    <tr>
+                                        <td>Bronze</td>
+                                        <td>$100</td>
+                                        <td>3 weeks</td>
+                                        <td>06 Dec 2021</td>
+                                        <td ><button class="close-buttonn" onclick="investment('Bronze','Raps')">Close</button></td>
+                                        <td>Open</td>
+
                                   <?php 
                                   $investing= "SELECT typeOfInv,periods,user,amount,date_inv FROM investment WHERE user='$user'";
                                   $result = $conn->query($investing);
@@ -492,6 +502,7 @@ $ref_amnt = $n = 0;
                                         <td>".$investing["periods"]."</td>
                                         <td>".$investing["date_inv"]."</td>
                                         <td ><h5  class='close-buttonn' onclick=\"investment('$date','$user')\">Close</h5></td>
+
                                     </tr>
 
                                       ";

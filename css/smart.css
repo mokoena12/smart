@@ -536,7 +536,9 @@ header .logo img{
 
  /* smart investa last block*/
 .lastblock{
-    background: linear-gradient(to bottom left,rgb(7, 7, 7),rgb(3, 3, 3));   
+    background: linear-gradient(to bottom left,rgb(7, 7, 7),rgb(3, 3, 3));  
+    width: 100%;
+    height: 100%;
 }
 .lastblock h1{
     color: white;

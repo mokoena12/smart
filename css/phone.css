@@ -1522,6 +1522,7 @@ header .logo img{
   display: flex;
   flex-direction: row;
   margin: 0.3em;
+  margin-bottom: 3em;
 }
 
 .last-blockdiv>div{
@@ -1533,8 +1534,10 @@ header .logo img{
 }
 .last-blockdiv .socio{
   position: absolute;
-  width: 60%;
-  left: 30%;
+  width: 30em;
+  left: 10%;
+  z-index: 1;
+  text-align: center;
 }
 .last-blockdiv .socio a{
   font-size: 2em;

@@ -1,13 +1,5 @@
 <?php
 
-
-/*
-We must start with portifolio website for Company to prepare for upwork and some projects. So I created repository
-  named Portifolio, please fork it to your github account then clone it to your local repo(local github) so you can have it in your computer and 
-  VS code the connect your remote repository of Portifolio with Local repo so that you can push your changes to online and pull request
-*/
-/*The website is hosted now, anychange it must be applied to online server also*/
-
 //Create google console account, learn about google console its easy. then create a site map for our website.
 
 //After the step above submit our website to google search engine

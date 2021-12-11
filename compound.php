@@ -95,7 +95,7 @@ function balance($A,$i,$n) {
 }
 $test = " not compounded";
 
-function Nwbalance($Ba,$rowB){
+function Nwbalance($rowB, $Ba){
   $nwBal = $rowB + $Ba;
   return $nwBal; 
 }
@@ -127,9 +127,8 @@ if($result4->num_rows> 0){
           if($typeOfinv=="Bronze"){
             $i = 0.04;
             $n=1;
-            $comp_balance = balance($investd_amount,0.04,1); 
-            $Inv_balance = profit($comp_balance,$Old_balance,);     
-            $New_bal = Nwbalance($Old_balance,$Inv_balance);
+            $comp_balance = balance($investd_amount,0.04,1);                 
+            $New_bal = Nwbalance($Old_balance,$comp_balance);
             $equity = $New_bal - $invested;          
             $Proft = profit($New_bal,$deposit);
             

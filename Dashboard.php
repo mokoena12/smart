@@ -12,6 +12,8 @@
 //fix the tittle tag for registration
 
 //Code deposit code instructions and deposit form;
+//fix the hovering in dashboard cards for balance, deposit, referral_bonus,etc as we discussed
+
 session_start();
 
 if (isset($_SESSION["investa_user"])){
@@ -483,14 +485,6 @@ $ref_amnt = $n = 0;
                                 </thead>
                                 <tbody class="tbody">
 
-                                    <tr>
-                                        <td>Bronze</td>
-                                        <td>$100</td>
-                                        <td>3 weeks</td>
-                                        <td>06 Dec 2021</td>
-                                        <td ><button class="close-buttonn" onclick="investment('Bronze','Raps')">Close</button></td>
-                                        <td>Open</td>
-
                                   <?php 
                                   $investing= "SELECT typeOfInv,periods,user,amount,date_inv FROM investment WHERE user='$user'";
                                   $result = $conn->query($investing);
@@ -505,7 +499,8 @@ $ref_amnt = $n = 0;
                                         <td>".$investing["amount"]."</td>
                                         <td>".$investing["periods"]."</td>
                                         <td>".$investing["date_inv"]."</td>
-                                        <td ><h5  class='close-buttonn' onclick=\"investment('$date','$user')\">Close</h5></td>
+                                        <td ><button  class='close-buttonn' onclick=\"investment('$date','$user')\">Close</button></td>
+                                        <td>Opened</td>
 
                                     </tr>
 
@@ -521,6 +516,7 @@ $ref_amnt = $n = 0;
                                     <td>0</td>
                                     <td>none</td>
                                     <td >none</h5></td>
+                                    <td>Closed</td>
                                 </tr>
                                     ";
                                    

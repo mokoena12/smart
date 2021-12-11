@@ -1,9 +1,5 @@
 <?php
-//Create google console account, learn about google console its easy. then create a site map for our website.
 
-//After the step above submit our website to google search engine
-//Once our website is submittedd to google search engine test it, go to google and type smartinvest.co.za it must appear on search
-//results or you must be redirected to our website
 
 //Test the website back and forth make sure the test everything in the website, create new account, deposit etc.
 

@@ -1487,7 +1487,6 @@ a.elevation-1 {
 .selectionplan2 {
   width: 25em;
   height: 2em;
-  height: fit-content;
   margin-top: 1em;
   padding-left: 1em;
   border-radius: 6px;
@@ -2541,7 +2540,6 @@ a.elevation-1 {
 .selectionplan2 {
   width: 25em;
   height: 2em;
-  height: fit-content;
   margin-top: 1em;
   padding-left: 1em;
   border-radius: 6px;
@@ -2857,6 +2855,7 @@ margin-left: 15px;
   margin: 5px;
   border-radius: 4px;
  width: 60%;
+ border: none;
 }
 .tbody h5{
   color: white;
@@ -2921,10 +2920,20 @@ margin-left: 15px;
   align-content: center;
 }
 
-.last-blockdiv>div{
-  margin: 1em;
-  font-size: 2em;
+.last-blockdiv .socio{
+  position: absolute;
+  width: 30em;
+  left: 10%;
+  z-index: 1;
+  text-align: center;
 }
+.last-blockdiv .socio a{
+  font-size: 2em;
+  margin: 7px;
+  left: 30;
+  padding: 5px;
+}
+
 
 /* end-smart investa last blocka*/
 

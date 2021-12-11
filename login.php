@@ -1,4 +1,4 @@
-<?php
+<?php 
 require_once "connect.php";
 
 $pasword_username_err=$login_err="";
@@ -19,7 +19,7 @@ function sanitize($value){
 
 session_start();
 if(isset($_SESSION["investa_user"])){
-    header("location:dashboard.php");
+    header("location:Dashboard.php");
 }
 
 if($_SERVER["REQUEST_METHOD"]== "POST"){
@@ -61,8 +61,8 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
 
 $conn->close();
 
-?>
-<Doctype html>
+ ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- start meta tags-->
@@ -90,6 +90,7 @@ $conn->close();
 <link rel="stylesheet" href="fonts/css/svg-with-js.min.css">
 <link rel="stylesheet" href="fonts/css/v4-shims.css">
 <link rel="stylesheet" href="fonts/css/v4-shims.min.css">
+<link rel="shortcut icon" href="img/smart.investa.logo2.png" />
 
 <!-- links of styling-->
 <link rel="stylesheet" href="css/tablet.css">
@@ -152,6 +153,6 @@ $conn->close();
         <!-- end of form -->
     </div>
 
-</body>
+  </body>
 <!-- end of body -->
 </html>

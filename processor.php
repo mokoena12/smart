@@ -153,8 +153,8 @@ style='background-color:red; color:white;border-radius:3px;font-weight:bold;font
   $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
   $headers .= "From:info@smartinvesta.co.za"."\r\n";
 
-  mail($to,$subject,$message,$headers); */
-  https://web.whatsapp.com/send?text=Luno:%20%E2%98%91%EF%B8%8F%20The%20Ultimate%20Guide%20for%20Beginners%20(%20Step%20By%20Step%20Guide%20)%20https://sgq.io/vlm0oom
+  mail($to,$subject,$message,$headers);
+  https://web.whatsapp.com/send?text=Luno:%20%E2%98%91%EF%B8%8F%20The%20Ultimate%20Guide%20for%20Beginners%20(%20Step%20By%20Step%20Guide%20)%20https://sgq.io/vlm0oom */
   if($amount<$value){
     $invest_results = "unsuccessful, your amount ($amount) is less than min widthdrawal $value";
     header("Location:withdrawal.php?results=$invest_results");
@@ -272,6 +272,7 @@ style='background-color:red; color:white;border-radius:3px;font-weight:bold;font
 <?php 
 //Code to delete investment
 if(isset($_GET["invest_delete"])){
+
 $user = $_GET["invest_delete"];
 $amount = 0;
   $type= $_GET["type"];
@@ -284,7 +285,7 @@ $amount = $amount + $row["amount"];
   $get_amount= "SELECT invested_amount,equity,balance FROM dashboard WHERE  username='$user'";
   $get_amount = $conn->query($get_amount)->fetch_assoc();
   $amount = $get_amount["invested_amount"] - $amount;
-  $equity = $get_amount["equity"] + $amount;
+  $equity = $get_amount["balance"] - $amount;
   
   $update = "UPDATE dashboard SET invested_amount=$amount, equity=$equity";
 
@@ -295,6 +296,7 @@ $amount = $amount + $row["amount"];
   else{
     echo "Failed to close your $type investment, Try again later";
   }
+  
 }
 
 

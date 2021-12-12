@@ -272,6 +272,7 @@ style='background-color:red; color:white;border-radius:3px;font-weight:bold;font
 <?php 
 //Code to delete investment
 if(isset($_GET["invest_delete"])){
+
 $user = $_GET["invest_delete"];
 $amount = 0;
   $type= $_GET["type"];
@@ -295,6 +296,7 @@ $amount = $amount + $row["amount"];
   else{
     echo "Failed to close your $type investment, Try again later";
   }
+  
 }
 
 

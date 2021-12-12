@@ -1538,7 +1538,7 @@ header .logo img{
   justify-content: center;
   z-index: 1;
   text-align: center;
-  left: 18%;
+  left: 1%;
 }
 .last-blockdiv .socio a{
   font-size: 2em;
@@ -2543,6 +2543,7 @@ text-align: center;
 
 /* end of the withdrawal section */
 
+
 /* start of the profile */
 .profile-content {
   width: 100%;
@@ -2551,9 +2552,19 @@ text-align: center;
 }
 .profile-container {
   display: flex;
-  flex-direction: column;
-  flex: 0 0 100%;
+  flex-direction:column ;
   width: 100%;
+}
+.profile-flex {
+  display: flex;
+  flex-direction: row;
+  width: 97%;
+  padding-left: 11px;
+
+}
+.profile-flex .button{
+  width: 32%;
+  margin: 7px;
 }
 .profile-avater {
   display: flex;
@@ -2562,8 +2573,9 @@ text-align: center;
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 1em;
-  width: 100%;
+  padding: 6px;
+  margin: 13px;
+  width: 95%;
 
 }
 .profile-pic {
@@ -2598,9 +2610,9 @@ text-align: center;
   background-color: #6c757d;
   color: white;
   height: 2em;
-  width: 80%;
+  width: 25%;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.2em;
   border-radius: 4px;
 
 }
@@ -2610,44 +2622,20 @@ text-align: center;
 .profile-details {
   border: 1px solid #ccc;
   padding: 1em;
-  width: 100%;
+  width: 65%;
   margin-left: 1em;
   border-radius: 4px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3em;
-  margin-bottom: 2em;
 }
 .profile-header {
   border-bottom: 1px solid #ccc;
-  width: 100%;  
-}
-.profile-header ul {
-  width: 98%;
-  display: flex;
-  flex-direction: row;
-
-}
-.profile-header ul li{
-  list-style: none;
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; 
-}
-.profile-header ul li a {
-  text-decoration: none;
-  background-color: blue;
-  color: white;
-}
-.profile-header ul li a:active {
-  background-color: white;
-  color: black;
+  line-height: 30px;
 }
 .profile-content2 {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 95%;
   color: black;
-  height: 60%;
-  margin-top: 1em;
+  margin: 12px;
 }
 .name-inputs {
   width: 95%;
@@ -2703,7 +2691,16 @@ text-align: center;
 }
 .p-btnsub3 {
   margin-top: 50px;
-  margin-left: 20%;
+  margin-left: 30%;
+}
+
+#profile-btn1 {
+  width: 65%;
+  background-color: blue;
+  color: white;
+  font-size: 0.9em;
+  font-weight: bold;
+  border-radius: 4px;
 }
 /* end of banking details */
 /* end of the profile */

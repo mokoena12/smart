@@ -1,6 +1,5 @@
 <?php
 
-
 session_start();
 
 if (isset($_SESSION["investa_user"])){

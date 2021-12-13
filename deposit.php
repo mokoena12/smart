@@ -166,7 +166,13 @@ else{
                                         <option value="Luno">Bitcoin</option>
                                         <option value="Perect Money">Perfect Money</option>
                                         <option value="Skrill">Skrill</option>
+
                                     </select>
+                                </div>
+                                <div>
+                                    <label for="address-btc"><b>Bitcoin Address</b></label> <br>
+                                    <input type="text"name="dtc-id" id="id-bitcoin" placeholder="3JS6xFKu6D1ZNuGEahbgcjmWVRxaiW6JRy" disabled>
+                                    <button class="copy-text button">Copy</button>
                                 </div>
                                 <div class="for-bitcoin payment-wallet">
                                     <div>
@@ -176,43 +182,106 @@ else{
                                         <input class="button" type="submit"  id="depo-btc" value="Deposit">
                                     </div>
                                 </div>
+                                <div class="proof-deposit">
+                                    <label for="Proof-payment"><b>Proof of Payment</b> </label>
+                                    <div>
+                                        <input type="file" name="proof-pay" id="proof-file">
+                                        <input type="submit" class="shift-right " id="sub-proof" value="Upload POP">
+                                    </div>
+
+                                </div>
                             </form>
                         </div>
-                        <div class="notify-deposit">
-                            <div class="h5change">
-                                <h5>Instructions for Deposit</h5>
-                            </div>
-                            
-                                <div class="text-deposit">
-                                    <strong>
-                                    <span style="color:red;">The minimun deposit is $30</span>
 
-                                        <p>
-                                            To deposit, please choose the payment method In the form below
+                        <div class="notify-deposit" id="notify1">
+                            <div class="h5change">
+                                <h5>Instructions for Luno</h5>
+                            </div>
+                            <div class="text-deposit">
+                                <strong>
+                                <span style="color:red;">The minimun deposit is $30</span>
+
+                                    <p>
+                                        To deposit, please choose the payment method In the form below
+                                    </p>
+                                    <p>
+                                        We only accept payment from bitcoin wallets like Luno so you must have bitcoin wallet, you need
+                                        to make transfer from your local bank to your wallet then make transfer from your wallet to your smartinvesta account using
+                                        the adress provided below.
+
                                         </p>
                                         <p>
-                                           We only accept payment from bitcoin wallets like Luno so you must have bitcoin wallet, you need
-                                           to make transfer from your local bank to your wallet then make transfer from your wallet to your smartinvesta account using
-                                           the adress provided below.
+                                        Example: If you choose Luno then you will be redirected to luno  account,copy your smartinvesta wallet adress 
+                                        provided and  make transfer using Luno.
+                                        After transfer come again here and fill the deposit form to upload proof of payment it can be pdf or screenshot
+                                        </p>
+                                        <p>
+                                        Your payment will reflect on your smartinvesta account within 4 hours,
+                                        then you can start investing
+                                        </p>
 
-                                          </p>
-                                          <p>
-                                            Example: If you choose Luno then you will be redirected to luno  account,copy your smartinvesta wallet adress 
-                                            provided and  make transfer using Luno.
-                                            After transfer come again here and fill the deposit form to upload proof of payment it can be pdf or screenshot
-                                          </p>
-                                          <p>
-                                            Your payment will reflect on your smartinvesta account within 4 hours,
-                                            then you can start investing
-                                          </p>
+                                </strong>
+                            </div>
+                        </div>
+                        <div class="notify-deposit" id="notify2">
+                            <div class="h5change">
+                                <h5>Instructions for Pefect Money</h5>
+                            </div>
+                            <div class="text-deposit">
+                                <strong>
+                                <span style="color:red;">The minimun deposit is $30</span>
 
-                                    </strong>
-                                </div>
-                              
-                               
-                                
+                                    <p>
+                                        To deposit, please choose the payment method In the form below
+                                    </p>
+                                    <p>
+                                        We only accept payment from bitcoin wallets like Luno so you must have bitcoin wallet, you need
+                                        to make transfer from your local bank to your wallet then make transfer from your wallet to your smartinvesta account using
+                                        the adress provided below.
 
-                        
+                                        </p>
+                                        <p>
+                                        Example: If you choose Luno then you will be redirected to luno  account,copy your smartinvesta wallet adress 
+                                        provided and  make transfer using Luno.
+                                        After transfer come again here and fill the deposit form to upload proof of payment it can be pdf or screenshot
+                                        </p>
+                                        <p>
+                                        Your payment will reflect on your smartinvesta account within 4 hours,
+                                        then you can start investing
+                                        </p>
+
+                                </strong>
+                            </div>
+                        </div>
+                        <div class="notify-deposit" id="notify3">
+                            <div class="h5change">
+                                <h5>Instructions for Skrill</h5>
+                            </div>
+                            <div class="text-deposit">
+                                <strong>
+                                <span style="color:red;">The minimun deposit is $30</span>
+
+                                    <p>
+                                        To deposit, please choose the payment method In the form below
+                                    </p>
+                                    <p>
+                                        We only accept payment from bitcoin wallets like Luno so you must have bitcoin wallet, you need
+                                        to make transfer from your local bank to your wallet then make transfer from your wallet to your smartinvesta account using
+                                        the adress provided below.
+
+                                        </p>
+                                        <p>
+                                        Example: If you choose Luno then you will be redirected to luno  account,copy your smartinvesta wallet adress 
+                                        provided and  make transfer using Luno.
+                                        After transfer come again here and fill the deposit form to upload proof of payment it can be pdf or screenshot
+                                        </p>
+                                        <p>
+                                        Your payment will reflect on your smartinvesta account within 4 hours,
+                                        then you can start investing
+                                        </p>
+
+                                </strong>
+                            </div>
                         </div>
                     </div>
         

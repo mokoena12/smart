@@ -1,18 +1,5 @@
 <?php
-//Create google console account, learn about google console its easy. then create a site map for our website.
 
-//After the step above submit our website to google search engine
-//Once our website is submittedd to google search engine test it, go to google and type smartinvest.co.za it must appear on search
-//results or you must be redirected to our website
-
-//Test the website back and forth make sure the test everything in the website, create new account, deposit etc.
-
-//Please fix dashboard( the display for small phones the issues we discussed)and make your changes to server also
-
-//fix the tittle tag for registration
-
-//Code deposit code instructions and deposit form;
-//fix the hovering in dashboard cards for balance, deposit, referral_bonus,etc as we discussed
 
 session_start();
 

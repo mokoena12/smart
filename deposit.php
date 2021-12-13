@@ -163,9 +163,9 @@ else{
                                 <div class="payment-wallet">
                                     <select name="depositing-methods" id="methods-fund">
                                         <option value="">--Select Payment Method</option>
-                                        <option value="BITCOIN">Luno</option>
-                                        <option value="BANK">Perfect Money</option>
-                                        <option value="Instant EFT">Skrill</option>
+                                        <option value="Luno">Bitcoin</option>
+                                        <option value="Perect Money">Perfect Money</option>
+                                        <option value="Skrill">Skrill</option>
                                     </select>
                                 </div>
                                 <div class="for-bitcoin payment-wallet">

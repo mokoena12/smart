@@ -9,7 +9,7 @@ if (isset($_SESSION["investa_user"])){
 }
 else{
   $err = "Please login before you access dashboard";
-header("Location:login.php?user2=$err");<a href=""></a>
+header("Location:login.php?user2=$err");
 
 }
 

@@ -183,11 +183,12 @@ $balance =  $row["balance"];
           <!-- start of a new section for boxes -->
             <div class="dash_content">
               <!-- start of balance box -->
-              <div class="box_balance">
+              <div class="box_balance8" style="background-color: #007bff;">
                 <div class="info_icon">
+                  <span>view balance</span>
                   <a href="#" class="elevation-1">
                     <i class="fa fa-money"></i>
-                    <span>view balance</span>
+                    
                   </a>
                 </div>
                 <div class="infom">
@@ -200,11 +201,12 @@ $balance =  $row["balance"];
               <!-- end of the balance box  -->
       
               <!-- start of profit box money -->
-              <div class="box_balance2">
+              <div class="box_balance8" style="background-color: #dc3545;">
                 <div class="info_icon">
+                  <span>view Profit</span>
                   <a href="#" class="elevation-1">
                     <i class="fa fa-money"></i>
-                    <span>view Profit</span>
+                    
                   </a>
                 </div>
                 <div class="infom">
@@ -215,11 +217,12 @@ $balance =  $row["balance"];
               <!-- end of profit box -->
       
               <!-- start of bonus box -->
-              <div class="box_balance3">
+              <div class="box_balance8" style="background-color: #20c997;">
                 <div class="info_icon">
+                  <span>Refer a friend to earn $10</span>
                   <a href="#" >
                     <i class="fa fa-money"></i>
-                    <span>Refer a friend to earn $10</span>
+                   
                   </a>
                 </div>
                 <div class="infom">
@@ -242,11 +245,12 @@ $balance =  $row["balance"];
               <!-- end of bonus box -->
       
               <!-- start of total deposit box -->
-              <div  class="box_balance4">
+              <div  class="box_balance8" style="background-color: #ffc107;">
                 <div class="info_icon">
+                  <span>Amount Invested</span>
                   <a href="#" >
                     <i class="fa fa-money"></i>
-                    <span>Amount Invested</span>
+                   
                   </a>
                 </div>
                 <div class="infom">
@@ -258,12 +262,12 @@ $balance =  $row["balance"];
               <!-- end of deposit box -->
       
               <!-- start of total withdraw box -->
-              <div  class="box_balance5">
+              <div  class="box_balance8" style="background-color: #28a745;">
                 <div class="info_icon">
-                  <span>view balance</span>
+                  <span>view Withdrawal</span>
                   <a href="#" >
                     <i class="fa fa-money"></i>
-                    <span>view Withdrawal</span>
+                   
                   </a>
                 </div>
                 <div class="infom">
@@ -274,11 +278,12 @@ $balance =  $row["balance"];
               <!-- end of total withdraw box -->
       
               <!-- start of deposit box -->
-              <div  class="box_balance6">
+              <div  class="box_balance8" style=" background-color:#001f3f;">
                 <div class="info_icon">
+                  <span>Make a deposit now</span>
                   <a href="#" >
                     <i class="fa fa-exchange"></i>
-                    <span>Make a deposit now</span>
+                   
                   </a>
                 </div>
                 <div class="infom">
@@ -290,11 +295,12 @@ $balance =  $row["balance"];
       
       
               <!-- start of withdrawal -->
-              <div  class="box_balance7">
+              <div  class="box_balance8" style="background-color: #17a2b8;">
                 <div class="info_icon">
+                  <span>Available Amount to invest</span>
                   <a href="#" >
                     <i class="fa fa-exchange"></i>
-                    <span>Available Amount to invest</span>
+                   
                   </a>
                 </div>
                 <div class="infom">
@@ -306,11 +312,12 @@ $balance =  $row["balance"];
               <!-- end of withdrawal -->
       
               <!-- start of subscription -->
-              <div  class="box_balance8">
+              <div  class="box_balance8" style=" background-color:  #6c757d;">
                     <div class="info_icon">
+                    <span>Subscribe to our email</span>
                       <a href="#" >
                         <i class="fa fa-credit-card"></i>
-                        <span>Subscribe to our email</span>
+                        
 
                       </a>
                     </div>
@@ -323,11 +330,12 @@ $balance =  $row["balance"];
   
   
               <!-- start of the notification -->
-              <div  class="box_balance9">
+              <div  class="box_balance8" style="background-color: #17a2b8;width: 94%;">
                 <div class="info_icon">
+                  <span>0 notification</span>
                   <a href="#" >
                     <i class="fa fa-bullhorn"></i>
-                    <span>0 notification</span>
+                   
                   </a>
                 </div>
                 <div class="infom">

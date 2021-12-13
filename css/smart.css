@@ -1302,25 +1302,25 @@ border-radius: 50%;
   
 
   /* hover the boxes */
-  .info_icon a i:hover {
-    opacity: 0.5;
+  .info_icon a:hover {
     color: white;
   }
-  .info_icon span {
-      position: relative;
+  .box_balance8 .info_icon span {
+      position: absolute;
       background-color: black;
       color: white;
       border-radius: 4px;
       display: none;
-      width: 7em;
-      top: 1em;
+      top:inherit ;
+      left: inherit;
       z-index: 1;
+      width: auto;
+      padding: 3px;
+      margin-top: -2em;
       
   }
-  .info_icon a:hover span {
+  .box_balance8 .info_icon:hover span {
     display: block;
-    z-index: 1;
-    opacity: 1;
   }
   /* endof hover boxes */
 

@@ -8,9 +8,10 @@ $firstname = $middle_name = $lastname = $country = $email = $username = $pass = 
 $cellphone =  0; 
 $error = $error1 = $error2 = "";
 
+$approved = 1;
+
 if(isset($_POST["name"])){
  
-  
 
 function test_input($data) {
     $data = trim($data);
@@ -19,8 +20,6 @@ function test_input($data) {
     return $data;
     
   }
-
-  $approved = 1;
 
     if(empty($_POST["name"])){
       $firstnameErr = "firstname is required";
@@ -106,7 +105,7 @@ if(empty($_POST["name2"])){
 }
   }
    
-}  
+ 
   //Select in the database
   $u = "SELECT username FROM registration WHERE username = '$username'";
   $resultu = $conn->query($u);
@@ -115,7 +114,7 @@ if($resultu->num_rows>0){
       $error1 = "Username already exist";
       $approved = 0;
     
-   
+}
 
    $sql = "SELECT firstname,lastname FROM registration WHERE email = '$email'" ;
    $result = $conn->query($sql);
@@ -135,14 +134,15 @@ if($resultc->num_rows>0){
     
 }
 
-}
+
+
 
 $stmt = $conn->prepare("INSERT INTO registration (firstname,middle_name,lastname,country,email,cellphone,username,passwords,re_enter_pass)
 values(?,?,?,?,?,?,?,?,?)");
 $stmt->bind_param("sssssisss",$firstname,$middle_name,$lastname,$country,$email,$cellphone,$username,$pass,$re_enter_pass);
      
     if($approved == 0){
-    
+       
     } else{
         $stmt->execute();
 
@@ -175,23 +175,38 @@ $stmt->bind_param("sssssisss",$firstname,$middle_name,$lastname,$country,$email,
         $headers .= "From:info@smartinvesta.co.za"."\r\n";
 
         mail($to,$subject,$message,$headers); */
+
      
-$friend_name = "";
+$friend_name = ""; $user = $link_rr = "";
+
 if(isset($_GET["ref"])){
-  $friend_name = $firstname;
-  $stmt = $conn->prepare("INSERT INTO refferals (username,friend_name) VALUES($user,$friend_name)");
-  $stmt->bind_param("ss",$user,$friend_name);
-  $stmt->execute();
-}  
-   $Sql_init = "INSERT INTO dashboard (username,balance,profit_return,refferal_bonus,invested_amount,total_withdrawal,deposit,equity,subscription,notifications)
+  $user =$_GET["ref"];
+  $sql = "SELECT username FROM registration WHERE username = '$user'";
+  $result = $conn->query($sql);
+
+if($result->num_rows>0){
+
+  $friend_name = $username;
+  $stmt1 = $conn->prepare("INSERT INTO refferals (username,friend_name) VALUES(?,?)");
+  $stmt1->bind_param("ss",$user,$username);
+  $stmt1->execute();  
+    
+}
+}
+
+
+
+
+$Sql_init = "INSERT INTO dashboard (username,balance,profit_return,refferal_bonus,invested_amount,total_withdrawal,deposit,equity,subscription,notifications)
                 VALUES($username,0,0,0,0,0,0,0,'not subscribed','0')";
                 $conn->query($Sql_init);
 
-$go ="Registered Succesfully";
-header("location:login.php?user2=$go");
-
     $stmt->close();
-    $conn->close();    
+    $conn->close(); 
+
+    $go ="Registered Succesfully";
+  header("location:login.php?user2=$go");
+}       
 }
 
 ?>
@@ -596,7 +611,7 @@ else{
                             </select>
                         </div>
                         <div>
-                            <lable for="email">Email* <span style="color:red"><?php echo $emailErr; $email_rr;?> </span></lable><br>
+                            <lable for="email">Email* <span style="color:red"><?php echo $email_rr;?> </span></lable><br>
                             <input type="email" name="email" id="email"  class="box2_style" required>
                              
                         </div>

@@ -181,17 +181,17 @@ require_once "connect.php";
                                                                           
                                $friend_name = "";
                                $date_ref = "";
-                               $sql_email = "SELECT firstname, date_ref FROM refferals WHERE username='$user' ";
-                               $result_r = $conn->query($sql_email);
-                               if($result_r !== FALSE && $result_r->num_rows>0){
+                               $sql_email = "SELECT friend_name, date_ref FROM refferals WHERE username='$user' ";
+                               $results_r = $conn->query($sql_email);
+                               if($results_r->num_rows>0){
                                while($row1 = $results_r->fetch_assoc()){
                                 
-                                $friend_name = $row1["firstname"];
+                                $friend_name = $row1["friend_name"];
                                 $date_ref = $row1["date_ref"];
-                                echo "<td> $friend_name </td>
-                                <td>$date_ref</td>";
+                                echo "<tr><td> $friend_name </td>
+                                <td>$date_ref</td></tr>";
 
-                               } 
+                               }       
                                  }
                                  else{
                                 echo"  <td>none </td>

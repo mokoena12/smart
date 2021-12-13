@@ -1566,7 +1566,7 @@ header .logo img{
   height: 100%;
   box-shadow: 10px 2px 8px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)!important;
   overflow-y: hidden;
-  animation: slidings 2s linear;
+  animation: slidings 0.40s linear;
 }
 
   .sidebar-flex {
@@ -1841,7 +1841,7 @@ div.sidebar_profile {
   margin-right: 1em;
 }
 .money_balance { 
-  font-size: 0.80em;
+  font-size: 1.25em;
   font-weight: 700;
 
 }
@@ -1853,6 +1853,7 @@ div.sidebar_profile {
   box-shadow: 2px solid gray;
 }
 .info_icon {
+  display: none;
   text-align: center;
   width: 25%;
   margin-top: 0.7em;

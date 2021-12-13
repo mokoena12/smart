@@ -1315,14 +1315,13 @@ border-radius: 50%;
     color: white;
   }
   .info_icon span {
-      position: absolute;
+      position: relative;
       background-color: black;
       color: white;
-      width: 7em;
-      text-align: center;
       border-radius: 4px;
       display: none;
-      top: 4em;
+      width: 7em;
+      top: 1em;
       z-index: 1;
       
   }

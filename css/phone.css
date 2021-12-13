@@ -1566,7 +1566,7 @@ header .logo img{
   height: 100%;
   box-shadow: 10px 2px 8px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)!important;
   overflow-y: hidden;
-  animation: slidings 2s linear;
+  animation: slidings 0.40s linear;
 }
 
   .sidebar-flex {
@@ -1676,6 +1676,9 @@ div.sidebar_profile {
   border-radius: 3px;
   height: fit-content;
 
+}
+#search_d {
+  width: 28%;
 }
 .menu-left {
   position: absolute;
@@ -1838,7 +1841,7 @@ div.sidebar_profile {
   margin-right: 1em;
 }
 .money_balance { 
-  font-size: 0.80em;
+  font-size: 1.25em;
   font-weight: 700;
 
 }
@@ -1850,6 +1853,7 @@ div.sidebar_profile {
   box-shadow: 2px solid gray;
 }
 .info_icon {
+  display: none;
   text-align: center;
   width: 25%;
   margin-top: 0.7em;
@@ -2989,7 +2993,56 @@ div.box_header {
   margin-left: 30%;
 }
 /* end of registration form for tablet */
+#notify1 {
+  display: block;
+}
+#notify2 {
+  display: none;
+}
+#notify3 {
+  display: none;
+}
+#id-bitcoin {
+  height: 2.5em;
+  width: 80%;
+  margin: 0.35em 0 0.35em 0;
+}
+.copy-text {
+  position: absolute;
+  width: 14%;
+  height: 2.5em;
+  margin-left: 1%;
+  text-align: center;
+  margin-top: 0.35em;
+}
 
+.proof-deposit {
+  border: 1px solid #ccc;
+  padding: 1em;
+  border-radius: 3px;
+}
+.proof-deposit label {
+  margin-bottom: 1%;
+}
+.proof-deposit div input {
+  margin-top: 4%;
+}
+
+.proof-deposit div .shift-right {
+  
+  margin-left:5%;
+  
+}
+#sub-proof {
+  background-color: #6c757d;
+  color: white;
+  height: 2em;
+  width: 80%;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 4px;
 }
  
+}
+
 

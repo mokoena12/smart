@@ -337,7 +337,7 @@ else{
                                 <span class="users-control">
                                     <p>
                                         <b>Role:</b>
-                                        user
+                                         user
                                     </p>
                                 </span>
                                 <span class="users-control2">
@@ -358,14 +358,14 @@ else{
                                     </div>
                                 </form>
                             </div>
-                            <div class="profile-details">
-                                <div class="profile-header">
-                                    <ul class="profile-flex">
-                                        <li><button class="button profile" id="button_hover" onclick="profile(0)"> Account Details</button></li>
-                                        <li><button class="button profile" onclick="profile(1)">Login Details</button></li>
-                                        <li><button class="button profile" onclick="profile(2)">Banking Details</button></li>
-                                    </ul>
-                                </div>
+                                    <div class="profile-flex">
+                                        <button class="button profile" id="button_hover" onclick="profile(0)"> Account Details</button>
+                                        <button class="button profile" onclick="profile(1)">Login Details</button>
+                                        <button class="button profile" onclick="profile(2)">Banking Details</button>
+                                     </div>
+                                
+                            </div>
+
                                 <!-- end section for the avater -->
 
 
@@ -707,7 +707,14 @@ else{
                        
 
                     </div>
-                    <div>
+               
+                       
+                </section>
+                
+            </div>    <!-- end section for the footer -->
+        </div>   
+        
+        <div>
                         <!-- start section for the footer -->
                         <!-- start of the footer -->
                         <footer class="footer">
@@ -722,10 +729,5 @@ else{
                         </footer>
                         <!-- end of the footer -->
                     </div>
-                       
-                </section>
-                
-            </div>    <!-- end section for the footer -->
-        </div>         
     </body>
     </html>

@@ -2064,8 +2064,19 @@ left: 3px;
 }
 .profile-container {
   display: flex;
-  flex: 0 0 100%;
+  flex-direction:column ;
   width: 100%;
+}
+.profile-flex {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  padding-left: 27px;
+
+}
+.profile-flex .button{
+  width: 30%;
+  margin: 10px;
 }
 .profile-avater {
   display: flex;
@@ -2074,8 +2085,9 @@ left: 3px;
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 1em;
-  width: 35%;
+  padding: 8px;
+  margin: 10px;
+  width: 95%;
 
 }
 .profile-pic {
@@ -2110,9 +2122,9 @@ left: 3px;
   background-color: #6c757d;
   color: white;
   height: 2em;
-  width: 80%;
+  width: 25%;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.2em;
   border-radius: 4px;
 
 }
@@ -2130,36 +2142,13 @@ left: 3px;
   border-bottom: 1px solid #ccc;
   line-height: 30px;
 }
-.profile-header ul {
-  display: flex;
-  flex: 0 0 100%;
-  flex-wrap: wrap;
-
-}
-.profile-header ul li{
-  list-style: none;
-  margin-right: 6px;
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; 
-}
-.profile-header ul li a {
-  text-decoration: none;
-  padding: 0.50em 1em;
-  background-color: blue;
-  color: white;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-}
-.profile-header ul li a:active {
-  background-color: white;
-  color: black;
-}
 .profile-content2 {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 95%;
   color: black;
   height: 60%;
-  margin-top: 1em;
+  margin: 18px;
 }
 .name-inputs {
   width: 95%;
@@ -2216,6 +2205,15 @@ left: 3px;
 .p-btnsub3 {
   margin-top: 50px;
   margin-left: 30%;
+}
+
+#profile-btn1 {
+  width: 40%;
+  background-color: blue;
+  color: white;
+  font-size: 1.3em;
+  font-weight: bold;
+  border-radius: 6px;
 }
 /* end of banking details */
 /* end of the profile */

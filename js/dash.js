@@ -183,3 +183,48 @@ else{
  
 
 }
+function deposit(){
+  let value1 = document.getElementById("methods-fund").value;
+  let adress =  document.getElementById("deposit_adress");
+  let id =  document.getElementById("id-bitcoin");
+  let inst = document.getElementsByClassName("notify-deposit");
+  for(let i=0; i<3 ; i++){
+    inst[i].style.display="none";
+
+  }
+
+
+  if (value1 == "Luno"){
+    inst[0].style.display="block";
+    adress.innerHTML="Bitcoin Address";
+    id.value="3JS6xFKu6D1ZNuGEahbgcjmWVRxaiW6JRy";
+
+  }
+  else if(value1 == "Skrill"){
+    inst[1].style.display="block";
+    adress.innerHTML="Email Address";
+    id.value="info@smartinvesta.co.za";
+  }
+  else if(value1 == "Perect Money"){
+    inst[2].style.display="block";
+    adress.innerHTML="USD Account Number";
+    id.value="U34966590";
+
+  }
+  else{
+    inst[0].style.display="block";
+    adress.innerHTML="Email Address";
+    id.value="info@smartinvesta.co.za";
+  }
+
+}
+
+function deposit_link() {
+
+  var copyText = document.getElementById("id-bitcoin");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); 
+  navigator.clipboard.writeText(copyText.value);
+  alert("Text Copied to clipboard");
+
+}

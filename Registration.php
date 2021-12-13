@@ -2,14 +2,17 @@
 //Data type for registration date column is register_date datetime default now();
 require_once "connect.php";
 //define vaariables and set to empty
-$firstnameErr =$approved= $middle_nameErr = $lastnameErr =  $countryErr = $emailErr = $usernameErr  = $passwordErr =
-$re_enter_passwordErr ="";
-$firstname = $middle_name = $lastname = $country = $email = $username = $pass = $re_enter_pass = $friend_name = $Succes = "";
-$cellphone = $cellphoneErr = 0;
-$error = $error1 = "";
+$firstnameErr = $middle_nameErr = $lastnameErr =  $countryErr = $emailErr = $usernameErr  = $passwordErr =
+$re_enter_passwordErr = $cellphoneErr = $email_rr = "";
+$firstname = $middle_name = $lastname = $country = $email = $username = $pass = $re_enter_pass = $friend_name = "";
+$cellphone =  0; 
+$error = $error1 = $error2 = "";
+
+$approved = 1;
 
 if(isset($_POST["name"])){
  
+
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
@@ -20,76 +23,67 @@ function test_input($data) {
 
     if(empty($_POST["name"])){
       $firstnameErr = "firstname is required";
+      $approved = 0;
+    
     }else{
       $firstname =ucfirst(strtolower(test_input($_POST["name"])))  ;
     }
 
 if(empty($_POST["name2"])){
     $middle_nameErr = "none";
+    
+    
   }else{
     $middle_name = test_input($_POST["name2"]);
   }
 	
  if(empty($_POST["name3"])){
     $lastnameErr = "lastname is required";
+    $approved = 0;
+    
   }else{
     $lastname = (test_input($_POST["name3"]));
   }
   if(empty($_POST["country"])){
     $countryErr = "country is required";
+    $approved = 0;
+    
   }else{
     $country = test_input($_POST["country"]);
   }
 
   if(empty($_POST["email"])){
     $emailErr = "email is required";
+    $approved=0;
   }else{
     $email = test_input($_POST["email"]);
     //check if email is well formed
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $emailErr = "Invalid email format";
+        $approved = 0;
     }
   }
 
   if(empty($_POST["telphone"])){
     $cellphoneErr = "cellphone is required";
+    $approved = 0;
+  }
+  elseif(strlen($_POST["telphone"])<=9){
+   $cellphoneErr = "phone number must be atleast 10";
+   $approved = 0;
   }else{
     $cellphone = test_input($_POST["telphone"]);
   }
 
  if(empty($_POST["user"])){
     $usernameErr = "username is required";
+    $approved = 0;
   }else{
     $username = ucfirst((strtolower(test_input($_POST["user"]))));
   }
- if(empty($_POST["password"])){
-    $passwordErr = "password is required";
-  }else{
-    $pass = test_input($_POST["password"]);
-  }
-  if(empty($_POST["password2"])){
-    $re_enter_passwordErr = "please re_enter your password";
-  }else{
-    $re_enter_pass = test_input($_POST["password2"]);
-
-    
-  if($password != $re_enter_pass){
-    $error = "Password do not match";
-}
-  }
-  
-  if(empty($_POST["telphone"])){
-    $cellphoneErr = "cellphone is required";
-  }
-  elseif(strlen($_POST["telphone"])<=9){
-   $approved=0;
-   $Cell_rr = "phone number must be atleast 10";
-  }else{
-    $cellphone = test_input($_POST["telphone"]);
-  }
 
 
- if(empty($_POST["password"])){
+  if(empty($_POST["password"])){
     $passwordErr = "password is required";
     $approved = 0;
 
@@ -97,79 +91,62 @@ if(empty($_POST["name2"])){
     $pass = test_input($_POST["password"]);
   }
   if(empty($_POST["password2"])){
+    $re_enter_passwordErr = "please re_enter your password";
     $approved = 0;
 
-    $re_enter_passwordErr = "please re_enter your password";
   }else{
     $re_enter_pass = test_input($_POST["password2"]);
-
-    
-  if($password === $re_enter_pass){
+ 
+  if($pass === $re_enter_pass){
    
 }else{
     $error = "Password do not match";
     $approved = 0;
 }
   }
-    
+   
+ 
   //Select in the database
   $u = "SELECT username FROM registration WHERE username = '$username'";
-  $result = $conn->query($u);
-  if(empty($_POST["user"])){
-    $usernameErr = "username is required";
-    $approved = 0;
-
-  }elseif($result->num_rows>0){
-      $approved=0;
-      $U_rr = "Username already exist";
+  $resultu = $conn->query($u);
+     
+if($resultu->num_rows>0){
+      $error1 = "Username already exist";
+      $approved = 0;
     
-  }else{
-    $username = test_input($_POST["user"]);
-  }
-
+}
 
    $sql = "SELECT firstname,lastname FROM registration WHERE email = '$email'" ;
    $result = $conn->query($sql);
 
 if($result->num_rows>0){
-    $approved = 0;
     $email_rr = "Your email already exist";
+    $approved = 0;   
 
 }
+
  $C = "SELECT firstname,lastname FROM registration WHERE cellphone = '$cellphone' " ;
-   $result1 = $conn->query($C);
+ $resultc = $conn->query($C);
 
-if($result->num_rows>0){
+if($resultc->num_rows>0){
+    $error2 = "Number is already registered";
     $approved = 0;
-    $error1 = "Number is already registered";
+    
 }
-} 
-    
-    $stmt = $conn->prepare("INSERT INTO registration (firstname,middle_name,lastname,country,email,cellphone,username,passwords,re_enter_pass)
-    values(?,?,?,?,?,?,?,?,?)");
-    $stmt->bind_param("sssssisss",$firstname,$middle_name,$lastname,$country,$email,$cellphone,$username,$pass,$re_enter_pass);
-    
+
+
+
+
+$stmt = $conn->prepare("INSERT INTO registration (firstname,middle_name,lastname,country,email,cellphone,username,passwords,re_enter_pass)
+values(?,?,?,?,?,?,?,?,?)");
+$stmt->bind_param("sssssisss",$firstname,$middle_name,$lastname,$country,$email,$cellphone,$username,$pass,$re_enter_pass);
+     
     if($approved == 0){
-    
+       
     } else{
         $stmt->execute();
-       
-    }
- 
 
- $friend_name = "";
-if(isset($_GET["ref"])){
-  $friend_name = $firstname;
-  $stmt = $conn->prepare("INSERT INTO refferals (username,friend_name) VALUES($user,$friend_name)");
-  $stmt->bind_param("ss",$user,$friend_name);
-  $stmt->execute();
-
-} 
-
-    $approved = 1;
-
-    if($stmt->execute()){
-      
+         
         /*
         $to = $email;;
         $subject ="New Account";
@@ -199,22 +176,38 @@ if(isset($_GET["ref"])){
 
         mail($to,$subject,$message,$headers); */
 
-        $approved = 1;
-        $Succes = "registered successfully..";
-         
+     
+$friend_name = ""; $user = $link_rr = "";
 
-    }
-    else{
-        $approved = 0;
-        echo "cannot register";
-    }
+if(isset($_GET["ref"])){
+  $user =$_GET["ref"];
+  $sql = "SELECT username FROM registration WHERE username = '$user'";
+  $result = $conn->query($sql);
+
+if($result->num_rows>0){
+
+  $friend_name = $username;
+  $stmt1 = $conn->prepare("INSERT INTO refferals (username,friend_name) VALUES(?,?)");
+  $stmt1->bind_param("ss",$user,$username);
+  $stmt1->execute();  
+    
+}
+}
+
+
+
+
+$Sql_init = "INSERT INTO dashboard (username,balance,profit_return,refferal_bonus,invested_amount,total_withdrawal,deposit,equity,subscription,notifications)
+                VALUES($username,0,0,0,0,0,0,0,'not subscribed','0')";
+                $conn->query($Sql_init);
 
     $stmt->close();
+    $conn->close(); 
 
-
-    $conn->close();
- 
-     
+    $go ="Registered Succesfully";
+  header("location:login.php?user2=$go");
+}       
+}
 
 ?>
 
@@ -354,21 +347,22 @@ else{
                         </div>
                         <div>
                             <label for="name">First Name* </label><br>
+                            
                             <input type="text" name="name" id="name" class="box2_style" required>
-                            <div class="red-text"><?php  echo $firstnameErr; ?></div>
+                             
                         </div>
                         <div>
                             <label for="middlename">Middle Name(optional)</label><br>
                             <input type="text" name="name2" id="middlename" class="box2_style">
                         </div>
                         <div>
-                            <label for="surname">Last Name*</label><br>
+                            <label for="surname">Last Name* </label><br>
                             <input type="text" name="name3" id="surname" class="box2_style" required>
-                            <div class="red-text"><?php  echo $lastnameErr; ?></div>
+                             
                         </div>
                         <div>
-                            <label for="country">Country of Residence*</lable><br>
-                            <select  class="box2_style" name="country" id="country" required><div class="red-text"><?php  echo $countryErr; ?></div>
+                            <label for="country">Country of Residence* </span></lable><br>
+                            <select  class="box2_style" name="country" id="country" required> 
                                 <option value="">--select your country--</option>
                                 <option value="Afghanistan">Afghanistan</option>
                                 <option value="Åland Islands">Åland Islands</option>
@@ -617,14 +611,14 @@ else{
                             </select>
                         </div>
                         <div>
-                            <lable for="email">Email*</lable><br>
+                            <lable for="email">Email* <span style="color:red"><?php echo $email_rr;?> </span></lable><br>
                             <input type="email" name="email" id="email"  class="box2_style" required>
-                            <div class="red-text"><?php  echo $emailErr; ?></div>
+                             
                         </div>
                         <div>
-                            <lable for="phone">Cell-phone Number*</lable><br>
+                            <lable for="phone">Cell-phone Number* <span style="color:red"><?php echo $cellphoneErr; echo $error2; ?> </span></lable><br>
                             <input type="tel" name="telphone" id="phone"  class="box2_style" required>
-                            <div class="red-text"><?php  echo $cellphoneErr; ?></div>
+                            
                         </div>
 
                     
@@ -635,19 +629,17 @@ else{
                             <span class="box_header">Account Details</span>
                         </div>
                         <div>
-                            <label for="username">Username*</label><br>
+                            <label for="username">Username* <span style="color:red"><?php echo $usernameErr; echo $error1; ?> </span></label><br>
                             <input type="user" name="user" id="username"  class="box2_style" required>
-                            <div class="red-text"><?php  echo $usernameErr; ?></div>
                         </div>
                         <div>
-                            <lable for="password">Password*</lable><br>
+                            <lable for="password">Password* <span style="color:red"><?php echo $passwordErr; ?> </span></lable><br>
                             <input type="password" name="password" id="pass"  class="box2_style" required>
-                            <div class="red-text"><?php  echo $passwordErr; ?></div>
+                             
                         </div>
                         <div>
-                            <lable for="phone">Re-type Password* <span style="color:red"><?php echo $error?> </span></lable><br>
+                            <lable for="phone">Re-type Password* <span style="color:red"><?php echo $re_enter_passwordErr; echo $error; ?> </span></lable><br>
                             <input type="password" name="password2" id="pass2"  class="box2_style" required>
-                            <div class="red-text"><?php  echo $re_enter_passwordErr; echo $error; ?></div>
                         </div>
                     </div>
                     <div class="shift_upl">

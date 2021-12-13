@@ -19,8 +19,6 @@ $115  but my equity is zero
  in dashboard we don't get error.
  */
  
-/*redirect the user to login.php after registration if the registration was successfully with the message of
-your 'Registration is successfully' */
 
 //Don't forget to push all databases to git when done
  /*
@@ -72,12 +70,12 @@ $get_time = $conn->query($get_time)->fetch_assoc();
 $get_time = $get_time["times"];
 $date = ($get_time - $date)/60;
 $time =  round($date);
-//&& $time<0
+//
 
 
 if(isset($_POST["Admin_Password"]) ){
 
-  if($_POST["Admin_Password"]=="bbb" ){
+  if($_POST["Admin_Password"]=="bbb" && $time<0){
 
     $times = time() + 10*60;
 
@@ -97,7 +95,7 @@ function balance($A,$i,$n) {
 }
 $test = " not compounded";
 
-function Nwbalance($Ba,$rowB){
+function Nwbalance($rowB, $Ba){
   $nwBal = $rowB + $Ba;
   return $nwBal; 
 }
@@ -130,7 +128,7 @@ if($result4->num_rows> 0){
             $i = 0.04;
             $n=1;
             $comp_balance = balance($investd_amount,0.04,1); 
-            $Inv_balance = profit($comp_balance,$Old_balance,);     
+            $Inv_balance = profit($comp_balance,$investd_amount);                 
             $New_bal = Nwbalance($Old_balance,$Inv_balance);
             $equity = $New_bal - $invested;          
             $Proft = profit($New_bal,$deposit);
@@ -144,7 +142,7 @@ if($result4->num_rows> 0){
           $i = 0.05;
           $n=1;
           $comp_balance = balance($investd_amount,0.05,1); 
-            $Inv_balance = profit($comp_balance,$Old_balance,);     
+            $Inv_balance = profit($comp_balance,$investd_amount);                 
             $New_bal = Nwbalance($Old_balance,$Inv_balance);
             $equity = $New_bal - $invested;          
             $Proft = profit($New_bal,$deposit);
@@ -157,7 +155,7 @@ if($result4->num_rows> 0){
             $i = 0.10;
             $n=1;
             $comp_balance = balance($investd_amount,0.10,1); 
-            $Inv_balance = profit($comp_balance,$Old_balance,);     
+            $Inv_balance = profit($comp_balance,$investd_amount);                 
             $New_bal = Nwbalance($Old_balance,$Inv_balance);
             $equity = $New_bal - $invested;          
             $Proft = profit($New_bal,$deposit);
@@ -170,7 +168,7 @@ if($result4->num_rows> 0){
             $i = 0.20;
             $n=1;
             $comp_balance = balance($investd_amount,0.20,1); 
-            $Inv_balance = profit($comp_balance,$Old_balance,);     
+            $Inv_balance = profit($comp_balance,$investd_amount);                 
             $New_bal = Nwbalance($Old_balance,$Inv_balance);
             $equity = $New_bal - $invested;          
             $Proft = profit($New_bal,$deposit);

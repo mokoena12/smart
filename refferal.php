@@ -12,18 +12,11 @@ else{
   header("Location:login.php?user2=$err");
 
 }
-
 ?>
+
 <?php 
 require_once "connect.php";
 
-$friend_name = "";
-$sql_email = "SELECT firstname, date_reg FROM registration WHERE username='$user' ";
-$results = $conn->query($sql_email);
-if($results !== FALSE && $results->num_rows>0){
-  $row = $results->fetch_assoc(); 
-  $friend_name = $row["firstname"];
-  $date_ref = $row["date_reg"]; 
 ?>
 
 <!DOCTYPE html>
@@ -73,6 +66,7 @@ if($results !== FALSE && $results->num_rows>0){
   <script type="text/javascript" src="js/dash.js"></script>
   
   </head>
+
   <body class="turning">
     <div class="wrapper-box">
         <!-- start of the sidemanu -->
@@ -179,12 +173,32 @@ if($results !== FALSE && $results->num_rows>0){
                         <h5>Your referral members</h5>
                         <table class="table2">
                             <thead>
-                                <th><?php echo $friend_name; ?></th>
-                                <th><?php echo $date_ref; ?></th>
+                                <th>Name</th>
+                                <th>Date</th>
                             </thead>
                             <tbody class="tbody">
-                                <td>mokoena</td>
-                                <td>kgotlelelo</td>
+                              <?php
+                                                                          
+                               $friend_name = "";
+                               $date_ref = "";
+                               $sql_email = "SELECT firstname, date_ref FROM refferals WHERE username='$user' ";
+                               $result_r = $conn->query($sql_email);
+                               if($result_r !== FALSE && $result_r->num_rows>0){
+                               while($row1 = $results_r->fetch_assoc()){
+                                
+                                $friend_name = $row1["firstname"];
+                                $date_ref = $row1["date_ref"];
+                                echo "<td> $friend_name </td>
+                                <td>$date_ref</td>";
+
+                               } 
+                                 }
+                                 else{
+                                echo"  <td>none </td>
+                                  <td>none</td>";
+                                 }
+                              ?>
+                                
                             </tbody >
                         </table>
     

@@ -46,18 +46,6 @@ $balance =  $row["balance"];
 
 }
 
-$ref_amnt = $n = 0;
-  $sql_r="SELECT friend_name FROM refferals WHERE username = '$user'";
-  $result2 = $conn->query($sql_r);
-                     
-  if($result2 !== FALSE && $result2->num_rows> 0){               
-  while($n=0 && $row2 = $result2->fetch_assoc()){
-     $ref_amnt = $n*10;  
-      $sql_r="UPDATE dashboard SET refferal_bonus = $ref_amnt WHERE username = '$user'";
-      $result2 = $conn->query($sql_r);  
-  }
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -250,6 +238,18 @@ $ref_amnt = $n = 0;
                 </div>
                 <div class="infom">
                   <span class="personal_balance">Referral Bonus</span>
+                 <?php $ref_amnt = $n = 0;
+  $sql ="SELECT friend_name FROM refferals WHERE username = '$user'";
+  $result2 = $conn->query($sql);
+                     
+  if($result2 !== FALSE && $result2->num_rows> 0){               
+  while($row2 = $result2->fetch_assoc()){
+     $ref_amnt = $ref_amnt + 10;     
+  }
+  $sql="UPDATE dashboard SET refferal_bonus = $ref_amnt WHERE username = '$user'";
+    $conn->query($sql);
+  }
+?>
                   <span class="money_balance">$ <?php echo $ref_amnt;?></span>
                 </div>
               </div>

@@ -2070,6 +2070,11 @@ left: 3px;
   flex-direction:column ;
   width: 100%;
 }
+
+.prof{
+  border: 1px solid rgb(209, 196, 196);
+  border-radius: 4px;
+}
 .profile-flex {
   display: flex;
   flex-direction: row;

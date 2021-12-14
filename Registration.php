@@ -197,8 +197,8 @@ if($result->num_rows>0){
 
 
 
-$Sql_init = "INSERT INTO dashboard (username,balance,profit_return,refferal_bonus,invested_amount,total_withdrawal,deposit,equity,subscription,notifications)
-                VALUES($username,0,0,0,0,0,0,0,'not subscribed','0')";
+$Sql_init = "INSERT INTO dashboard (username,balance,profit_return,referral_bonus,invested_amount,total_withdrawal,deposit,equity,subscription,notifications)
+                VALUES('$username',0,0,0,0,0,0,0,'not subscribed','0')";
                 $conn->query($Sql_init);
 
     $stmt->close();

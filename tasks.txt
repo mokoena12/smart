@@ -1,0 +1,112 @@
+#-----------------------------#
+Since we hosted our side we must stop using web pages for tasks all of your tasks guys are going to be here.
+#---------------------------#
+
+
+
+
+#-----------------Tasks for Sunnyboy-------------------------#
+
+We moving to online server now so you need to learn about cpanel and web server it's easy like XAMPP server and github,
+to understand how cpanel works google it you can also read some guide here https://www.hostgator.com/blog/beginner-guide-cpanel/#:~:text=cPanel%20is%20the%20control%20panel%20that%20allows%20you,interface%20that%E2%80%99ll%20enable%20you%20to%20manage%20your%20website.
+From now onwards if there is any change you want to make in the website you will have make it in github and then login to our cpanel using the following link and details
+URL: https://da12.domains.co.za:2222
+Username: weballco
+Password:xKg08J9se1
+then navigate to  file manager cpanel under
+
+
+  6. Prepare the facebook account(page) and whatsapp so that we can start advitise
+
+  7.We must start with portifolio website for Company to prepare for upwork and some projects. So I created repository
+  named Portifolio, please fork it to your github account then clone it to your local repo(local github) so you can have it in your computer and 
+  VS code the connect your remote repository of Portifolio with Local repo so that you can push your changes to online and pull request
+
+  8.We must start with portifolio website for Company to prepare for upwork and some projects. So I created repository
+  named Portifolio,
+  follow the steps to start working with it
+  step 1. fork  the repo  to your github account 
+  step 2. Then clone it to your local repo(local github) so that you can have it in your computer and 
+  open it with VS code it must be in htdocs folder when clone it
+  step 3. Then connect your remote repository of Portifolio with Local repo of Portifolio so that you can push your changes to online and pull requestlike you did with Bitcoin Project
+
+  #==========================End===================================#
+
+
+  #================= Tasks for Evidence============================#
+
+  //Please fix the registration form, we lost some data when moving to Git also make sure it adds the user when registering
+/*Code referral.php you will have to create a table database named referral with following columns username,friend_name,date_ref. Check the structure of referral link 
+is https://www.smartinvesta.co.za/Registration.php?ref=Raps so you can see we are passing variable named ref with username of
+Raps using GET method. The task is the check during registration whether ref is set and if it is set take the value store it in referral table 
+and also store the name of person registering with this link*/
+
+//Code referral members table in referral.php using the table database above to do the work
+
+/*Make sure the equity is updated everytime we enter dashboard, like now my balance is $125 and Invested_amount is
+$115  but my equity is zero 
+ */ 
+ //referral bonus amount it shoulb be the total number of (referrals*10)
+
+//Initalize the dashboard during registration
+
+//In the recent trading history, the trading action column shoulb be sell or buy and status column shoulb be opened
+/*Please initialize the dashboard for a user after registration( we discussed about this) so that when we insert for a user
+ in dashboard we don't get error.
+ */
+ 
+
+//Don't forget to push all databases to git when done
+ /*
+//There was a conflict in withdrawal table database, please dob't change anything just import it as it is You added date_with =, remove that
+//send us database for investment 
+//code compound to properly, please import time_server table for your compound to work, login with password of Smartinvesta@2021.
+//The compound works in interval of 10 mins
+//Please push registration database for us don't duplicate it
+
+/* 
+We moving to online server now so you need to learn about cpanel and web server it's easy like XAMPP server and github,
+to understand how cpanel works google it you can also read some guide here https://www.hostgator.com/blog/beginner-guide-cpanel/#:~:text=cPanel%20is%20the%20control%20panel%20that%20allows%20you,interface%20that%E2%80%99ll%20enable%20you%20to%20manage%20your%20website.
+From now onwards if there is any change you want to make in the website you will have make it in github and then login to our cpanel using the following link and details
+URL: https://da12.domains.co.za:2222
+Username: weballco
+Password:xKg08J9se1
+then navigate to  file manager cpanel under
+*/
+//Your codes in profile.php for updating are not working please fix 
+// referral.php is giving us errors please fix that
+
+/*
+We must start with portifolio website for Company to prepare for upwork and some projects. So I created repository
+  named Portifolio,
+  follow the steps to start working with it
+  step 1. fork  the repo  to your github account 
+  step 2. Then clone it to your local repo(local github) so that you can have it in your computer and 
+  open it with VS code it must be in htdocs folder when clone it
+  step 3. Then connect your remote repository of Portifolio with Local repo of Portifolio so that you can push your changes to online and pull requestlike you did with Bitcoin Project
+*/
+1. Make sure you test your SQL statements before giving them to php like your INSERT INTO dashboard statement in
+registration.php was not working but I fixed it.
+
+#==========================End================================#
+
+
+#==============================Tasks for Kgotlelelo==================================#
+
+//Create google console account, learn about google console its easy. then create a site map for our website.
+
+//After the step above submit our website to google search engine
+//Once our website is submittedd to google search engine test it, go to google and type smartinvest.co.za it must appear on search
+//results or you must be redirected to our website
+
+//Test the website back and forth make sure the test everything in the website, create new account, deposit etc.
+
+//Please fix dashboard( the display for small phones the issues we discussed)and make your changes to server also
+
+//fix the tittle tag for registration
+
+//Code deposit code instructions and deposit form;
+//fix the hovering in dashboard cards for balance, deposit, referral_bonus,etc as we discussed
+//Fix the sign up link in login.php page and the spelling too
+
+#======================================End====================================#

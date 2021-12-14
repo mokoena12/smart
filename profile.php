@@ -1,3 +1,5 @@
+
+
 <?php
 
 session_start();
@@ -358,11 +360,7 @@ else{
                                     </div>
                                 </form>
                             </div>
-                                    <div class="profile-flex">
-                                        <button class="button profile" id="button_hover" onclick="profile(0)"> Account Details</button>
-                                        <button class="button profile" onclick="profile(1)">Login Details</button>
-                                        <button class="button profile" onclick="profile(2)">Banking Details</button>
-                                     </div>
+                                   
                                 
                             </div>
 
@@ -370,7 +368,15 @@ else{
 
 
                                 <!-- start sectin fo the profile contents -->
+                
+                                <div class="prof" >
+                                <div class="profile-flex">
+                                        <button class="button profile" id="button_hover" onclick="profile(0)"> Account Details</button>
+                                        <button class="button profile" onclick="profile(1)">Login Details</button>
+                                        <button class="button profile" onclick="profile(2)">Banking Details</button>
+                                     </div>
                                 <section class="displayers">
+                                
                                     <form action="processor.php" method="post">
                                         <div class="profile-content2">
                                             <div class="diveform" >
@@ -703,6 +709,7 @@ else{
                                 </section>
                         
                                 <!-- end of banking details -->
+                    </div>
                             </div>
                        
 

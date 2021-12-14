@@ -161,125 +161,105 @@ else{
                             </div>
                             <form action="processor.php" method="post" >
                                 <div class="payment-wallet">
-                                    <select name="depositing-methods" id="methods-fund">
+                                    <select name="depositing-methods" id="methods-fund" onclick="deposit()">
                                         <option value="">--Select Payment Method</option>
-                                        <option value="BITCOIN">Bitcoin</option>
-                                        <option value="Pefect Money">Perfect Money</option>
-                                        <option value="skrill">Skrill</option>
+                                        <option value="Luno">Bitcoin</option>
+                                        <option value="Skrill">Skrill</option>
+                                        <option value="Perect Money">Perfect Money</option>
+
                                     </select>
                                 </div>
                                 <div>
-                                    <label for="address-btc"><b>Bitcoin Address</b></label> <br>
-                                    <input type="text"name="dtc-id" id="id-bitcoin" placeholder="3JS6xFKu6D1ZNuGEahbgcjmWVRxaiW6JRy" disabled>
-                                    <button class="copy-text button">Copy</button>
+                                   <b> <label for="address-btc" id="deposit_adress">Bitcoin Address</label></b> <br>
+                                    <input type="text"name="dtc-id" id="id-bitcoin" value="3JS6xFKu6D1ZNuGEahbgcjmWVRxaiW6JRy" disabled>
+                                    <button type="button" class="copy-text button" onclick="deposit_link()">Copy</button>
                                 </div>
                                 <div class="for-bitcoin payment-wallet">
                                     <div>
                                         <input type="number" min="30" name="amount-paybtc" id="btc-amount" placeholder="Enter Amount" required>
                                     </div>
-                                    <div class="button-sub">
-                                        <input class="button" type="submit"  id="depo-btc" value="Deposit">
-                                    </div>
+                                   
                                 </div>
                                 <div class="proof-deposit">
                                     <label for="Proof-payment"><b>Proof of Payment</b> </label>
                                     <div>
-                                        <input type="file" name="proof-pay" id="proof-file">
-                                        <input type="submit" class="shift-right " id="sub-proof" value="Upload POP">
+                                        <input type="file" name="proof-pay" id="proof-file" required>
                                     </div>
 
+                                </div>
+                                <div class="button-sub">
+                                    <input class="button" type="submit"  id="depo-btc" value="Submit Form">
                                 </div>
                             </form>
                         </div>
 
                         <div class="notify-deposit" id="notify1">
                             <div class="h5change">
-                                <h5>Instructions for Luno</h5>
+                                <h5>Instructions for Bitcoin</h5>
                             </div>
                             <div class="text-deposit">
-                                <strong>
+                
                                 <span style="color:red;">The minimun deposit is $30</span>
+                                <p ><b>Steps to Deposit</b></p> 
 
-                                    <p>
-                                        To deposit, please choose the payment method In the form below
-                                    </p>
-                                    <p>
-                                        We only accept payment from bitcoin wallets like Luno so you must have bitcoin wallet, you need
-                                        to make transfer from your local bank to your wallet then make transfer from your wallet to your smartinvesta account using
-                                        the adress provided below.
+                                    <ol>
+                                        <li>Choose payment method to see relevant instructions</li>
+                                        <li>Login to your Bitcoin wallet like Luno </li>
+                                        <li>Copy the Bitcoin address provided in the form </li>
+                                        <li>Make transfer to Bitcoin Address provided </li>
+                                        <li>Come again here upload screenshot of payment or pdf as proof of payment </li>
+                                        <li>Go back to dashboard and you will see new balance</li>
+                                        <li>If your balance is not updated refresh dashboard </li>
+                                        <li> Contact us here <a href="mailto:info@smartinvesta.co.za">info@smartinvesta.co.za</a> if
+                                            you need help </li>
 
-                                        </p>
-                                        <p>
-                                        Example: If you choose Luno then you will be redirected to luno  account,copy your smartinvesta wallet adress 
-                                        provided and  make transfer using Luno.
-                                        After transfer come again here and fill the deposit form to upload proof of payment it can be pdf or screenshot
-                                        </p>
-                                        <p>
-                                        Your payment will reflect on your smartinvesta account within 4 hours,
-                                        then you can start investing
-                                        </p>
+                                    </ol>
+                                   
 
-                                </strong>
                             </div>
                         </div>
                         <div class="notify-deposit" id="notify2">
                             <div class="h5change">
-                                <h5>Instructions for Pefect Money</h5>
+                                <h5>Instructions for Skrill</h5>
                             </div>
                             <div class="text-deposit">
-                                <strong>
                                 <span style="color:red;">The minimun deposit is $30</span>
+                                <p ><b>Steps to Deposit</b></p> 
 
-                                    <p>
-                                        To deposit, please choose the payment method In the form below
-                                    </p>
-                                    <p>
-                                        We only accept payment from bitcoin wallets like Luno so you must have bitcoin wallet, you need
-                                        to make transfer from your local bank to your wallet then make transfer from your wallet to your smartinvesta account using
-                                        the adress provided below.
+                                    <ol>
+                                        <li>Choose payment method to see relevant instructions</li>
+                                        <li>Login to your Skrill Account</li>
+                                        <li>Copy the Email address provided in the form </li>
+                                        <li>Make transfer to Email address provided </li>
+                                        <li>Come again here upload screenshot of payment or pdf as proof of payment </li>
+                                        <li>Go back to dashboard and you will see new balance</li>
+                                        <li>If your balance is not updated refresh dashboard </li>
+                                        <li> Contact us here <a href="mailto:info@smartinvesta.co.za">info@smartinvesta.co.za</a> if
+                                        you need help </li>
 
-                                        </p>
-                                        <p>
-                                        Example: If you choose Luno then you will be redirected to luno  account,copy your smartinvesta wallet adress 
-                                        provided and  make transfer using Luno.
-                                        After transfer come again here and fill the deposit form to upload proof of payment it can be pdf or screenshot
-                                        </p>
-                                        <p>
-                                        Your payment will reflect on your smartinvesta account within 4 hours,
-                                        then you can start investing
-                                        </p>
-
-                                </strong>
+                                    </ol>
                             </div>
                         </div>
                         <div class="notify-deposit" id="notify3">
                             <div class="h5change">
-                                <h5>Instructions for Skrill</h5>
+                                <h5>Instructions for Perfect Money</h5>
                             </div>
                             <div class="text-deposit">
-                                <strong>
                                 <span style="color:red;">The minimun deposit is $30</span>
+                                <p ><b>Steps to Deposit</b></p> 
 
-                                    <p>
-                                        To deposit, please choose the payment method In the form below
-                                    </p>
-                                    <p>
-                                        We only accept payment from bitcoin wallets like Luno so you must have bitcoin wallet, you need
-                                        to make transfer from your local bank to your wallet then make transfer from your wallet to your smartinvesta account using
-                                        the adress provided below.
+                                    <ol>
+                                        <li>Choose payment method to see relevant instructions</li>
+                                        <li>Login to your Perfect Money Account</li>
+                                        <li>Copy the USD Account Number provided in the form </li>
+                                        <li>Make transfer to Account Number provided </li>
+                                        <li>Come again here upload screenshot of payment or pdf as proof of payment </li>
+                                        <li>Go back to dashboard and you will see new balance</li>
+                                        <li>If your balance is not updated refresh dashboard </li>
+                                        <li> Contact us here <a href="mailto:info@smartinvesta.co.za">info@smartinvesta.co.za</a> if
+                                        you need help </li>
 
-                                        </p>
-                                        <p>
-                                        Example: If you choose Luno then you will be redirected to luno  account,copy your smartinvesta wallet adress 
-                                        provided and  make transfer using Luno.
-                                        After transfer come again here and fill the deposit form to upload proof of payment it can be pdf or screenshot
-                                        </p>
-                                        <p>
-                                        Your payment will reflect on your smartinvesta account within 4 hours,
-                                        then you can start investing
-                                        </p>
-
-                                </strong>
+                                    </ol>
                             </div>
                         </div>
                     </div>

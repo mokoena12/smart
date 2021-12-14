@@ -1,15 +1,5 @@
 <?php
 
-
-//Test the website back and forth make sure the test everything in the website, create new account, deposit etc.
-
-//Please fix dashboard( the display for small phones the issues we discussed)and make your changes to server also
-
-//fix the tittle tag for registration
-
-//Code deposit code instructions and deposit form;
-//fix the hovering in dashboard cards for balance, deposit, referral_bonus,etc as we discussed
-
 session_start();
 
 if (isset($_SESSION["investa_user"])){

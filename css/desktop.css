@@ -1406,6 +1406,9 @@ li {
   margin-right: 1em;
   margin-right: 1em;
 }
+#last-box {
+  width: 31%;
+}
 .money_balance { 
   font-size: 1.25em;
   font-weight: 700;

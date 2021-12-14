@@ -33,6 +33,13 @@ $balance =  $row["balance"];
 }
 
 ?>
+<?php
+ $avatar = "files/Residence/$user.png";
+ if(!file_exists($avatar)){
+     header("location:upload.php");
+ }
+
+?>
 
 <!DOCTYPE html>
   <html lang="en">

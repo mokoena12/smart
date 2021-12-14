@@ -2126,6 +2126,7 @@ width: 90%;
   flex-direction: row;
   padding: 1em;
  align-content: center;
+ margin: 0;
 }
 .profile-container {
   display: flex;

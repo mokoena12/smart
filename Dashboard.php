@@ -330,7 +330,7 @@ $balance =  $row["balance"];
   
   
               <!-- start of the notification -->
-              <div  class="box_balance8" style="background-color: #17a2b8;width: 94%;">
+              <div  class="box_balance8" id="last-box" style="background-color: #17a2b8;">
                 <div class="info_icon">
                   <span>0 notification</span>
                   <a href="#" >

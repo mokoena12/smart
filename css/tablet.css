@@ -1522,6 +1522,9 @@ div.sidebar_profile {
   font-weight: 700;
 
 }
+#last-box {
+  width: 31%;
+}
 .fa {
   color: white;
   margin-top: 18px;

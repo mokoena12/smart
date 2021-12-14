@@ -29,11 +29,10 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
 	if(isset($_POST["name"])){
 
 		$param_pasword = sanitize($_POST["Password"]);
-        $param_username = sanitize($_POST["name"]);
+        $param_username = ucfirst(strtolower(sanitize($_POST["name"])));
 	    $sql="SELECT username,passwords FROM registration WHERE  passwords='$param_pasword' ";
         $result = $conn->query($sql);
 		//$param_pasword = hash('ripemd128',"$salt1$password$salt2");
-       
 		 
 		if($result->num_rows > 0){
             $row = $result->fetch_assoc(); 

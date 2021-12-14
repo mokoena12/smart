@@ -147,8 +147,8 @@ $stmt->bind_param("sssssisss",$firstname,$middle_name,$lastname,$country,$email,
         $stmt->execute();
 
          
-        /*
-        $to = $email;;
+        
+        $to = $email;
         $subject ="New Account";
 
         $message = "
@@ -174,7 +174,7 @@ $stmt->bind_param("sssssisss",$firstname,$middle_name,$lastname,$country,$email,
         $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
         $headers .= "From:info@smartinvesta.co.za"."\r\n";
 
-        mail($to,$subject,$message,$headers); */
+        
 
      
 $friend_name = ""; $user = $link_rr = "";
@@ -193,25 +193,6 @@ if($result->num_rows>0){
     
 }
 }
-
-
-
-
-$Sql_init = "INSERT INTO dashboard (username,balance,profit_return,referral_bonus,invested_amount,total_withdrawal,deposit,equity,subscription,notifications)
-                VALUES('$username',0,0,0,0,0,0,0,'not subscribed','0')";
-                $conn->query($Sql_init);
-
-    $stmt->close();
-    $conn->close(); 
-
-    $go ="Registered Succesfully";
-  header("location:login.php?user2=$go");
-}       
-}
-
-?>
-
-<?php
 
 $submit_err =$submit_err1 =$submit=  $submit1= "";
 if( isset($_FILES["btnFileUpload"])){
@@ -269,6 +250,26 @@ else{
 }
 
 }
+
+
+
+
+$Sql_init = "INSERT INTO dashboard (username,balance,profit_return,referral_bonus,invested_amount,total_withdrawal,deposit,equity,subscription,notifications)
+                VALUES('$username',0,0,0,0,0,0,0,'not subscribed','0')";
+                $conn->query($Sql_init);
+
+    $stmt->close();
+    $conn->close(); 
+
+    if( mail($to,$subject,$message,$headers)){$go =" Succesfully Registered";
+  header("location:login.php?user2=$go");}
+}       
+}
+
+?>
+
+<?php
+
 ?>
 
 <!DOCTYPE html>

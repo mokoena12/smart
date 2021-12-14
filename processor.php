@@ -1,9 +1,5 @@
 <?php
-//Belmiro's Tasks 
-//Need to test withdrawal when they are done
-//Create investment history when they are done
-//Fix the equity during live trading_type
-//Create pdf for terms and conditions
+
 
 function test_input($data) {
   $data = trim($data);
@@ -127,8 +123,8 @@ if(isset($_POST["widthdraw"])){
     $nw_with = $with +  $amount;
     $dash = "UPDATE dashboard SET balance = $nwBal, total_withdrawal = $nw_with
     WHERE username = '$user' ";
-      /*
-  $to = $email;;
+      
+  $to = $email;
   $subject ="Widthdrawal";
 
   $message = "
@@ -154,7 +150,7 @@ style='background-color:red; color:white;border-radius:3px;font-weight:bold;font
   $headers .= "From:info@smartinvesta.co.za"."\r\n";
 
   mail($to,$subject,$message,$headers);
-  https://web.whatsapp.com/send?text=Luno:%20%E2%98%91%EF%B8%8F%20The%20Ultimate%20Guide%20for%20Beginners%20(%20Step%20By%20Step%20Guide%20)%20https://sgq.io/vlm0oom */
+  
   if($amount<$value){
     $invest_results = "unsuccessful, your amount ($amount) is less than min widthdrawal $value";
     header("Location:withdrawal.php?results=$invest_results");
@@ -182,7 +178,7 @@ $selecting = "SELECT referral_bonus FROM dashboard WHERE  username='$user' ";
 $old_bal = $conn->query($selecting)->fetch_assoc();
 $old = $old_bal["referral_bonus"];
 $with = $old - $amount; 
-  /*
+  
   $to = $email;;
   $subject ="Referral Widthdrawal";
 
@@ -208,7 +204,7 @@ style='background-color:red; color:white;border-radius:3px;font-weight:bold;font
   $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
   $headers .= "From:info@smartinvesta.co.za"."\r\n";
 
-  mail($to,$subject,$message,$headers); */
+  mail($to,$subject,$message,$headers); 
   $sql = "INSERT INTO widthdrawal(username,amount,method) VALUES('$user',$amount,'$method')";
   $dash = "UPDATE dashboard SET referral_bonus = $with
   WHERE username = '$user' ";
@@ -231,7 +227,7 @@ if(isset($_POST["subject"])){
   $lastname = $_POST["lastname"];
   $country =  $_POST["country"];
   $body = $_POST["subject"];
-  /*
+
   $to = "info@smartinvesta.co.za;belmiromohlala34@gmail.com";
   $subject ="New message";
 
@@ -260,7 +256,7 @@ style='background-color:red; color:white;border-radius:3px;font-weight:bold;font
   $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
   $headers .= "From:info@smartinvesta.co.za"."\r\n";
 
-  mail($to,$subject,$message,$headers); */
+  mail($to,$subject,$message,$headers); 
   $results = "message received";
   header("Location:index.html?results=$results");
 

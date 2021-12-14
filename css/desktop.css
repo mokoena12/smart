@@ -1279,7 +1279,7 @@ margin-top: -3em;
   color: black;
 }
 
-li {
+.style li {
   list-style: none;
 }
 .style {
@@ -1793,12 +1793,14 @@ left: 15px;
   text-align: center;
   padding: 1em;
 }
-.text-deposit {
+.text-deposit span {
+  color: red;
+}
+.text-deposit p {
   color: blue;
 }
-.text-deposit strong p {
-  padding: 0 1em;
-  font-style: italic;
+.text-deposit ol li {
+  color: blue;
 }
 .form-deposit {
   margin-left: 1em;
@@ -2774,13 +2776,8 @@ margin-left: 15px;
   text-align: center;
   padding: 1em;
 }
-.text-deposit {
-  color: blue;
-}
-.text-deposit strong p {
-  padding: 0 1em;
-  font-style: italic;
-}
+
+
 .form-deposit {
   margin-left: 1em;
   color: black;

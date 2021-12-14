@@ -199,7 +199,7 @@ else{
                             </div>
                             <div class="text-deposit">
                 
-                                <span style="color:red;">The minimun deposit is $30</span>
+                                <span>The minimun deposit is $30</span>
                                 <p ><b>Steps to Deposit</b></p> 
 
                                     <ol>

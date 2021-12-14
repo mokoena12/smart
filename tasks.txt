@@ -89,6 +89,7 @@ We must start with portifolio website for Company to prepare for upwork and some
 registration.php was not working but I fixed it.
 
 //fix the refferal members table. it does not display members registered through link after reffering.
+// fix the withdrawal history table to show history after made a withdrawal
 #==========================End================================#
 
 

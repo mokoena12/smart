@@ -128,7 +128,8 @@ $conn->close();
                 </div>
             </div>
             <div class="icon">
-                <i class="fas fa-lightbulb">Login to your dashboard and start investing</i>
+                <i class="fas fa-lightbulb">Login to your dashboard and start investing
+                </i>
             </div>
 
             <div class="credentials">
@@ -144,7 +145,7 @@ $conn->close();
             </div>
             <div class="link_reg">
                 <a href="forgot.php">Forget password</a><br>
-                Don't have an account? <a href="#">Sigh up</a>
+                Don't have an account? <a href="Registration.php">Sign up</a>
             </div>
         
         

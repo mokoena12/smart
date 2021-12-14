@@ -2255,7 +2255,7 @@ text-align: center;
   margin: 1em;
 }
 .payment {
-  border: 1px solid gray;
+  border: 1px solid #ccc;
   height: 40%;
   width: 95%;
   padding: 1em;
@@ -2296,7 +2296,7 @@ text-align: center;
 
 .notify-deposit {
   border-radius: 3px;
-  border: 1px solid grey;
+  border: 1px solid #ccc;
   width: 95%;
   margin: 1em;
 }
